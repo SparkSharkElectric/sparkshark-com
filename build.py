@@ -18,6 +18,16 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 SITE = "https://www.sparkshark.com"
 
+# Path prefix for asset URLs (CSS/JS/img) and internal nav links.
+# - PRODUCTION (DNS cutover, custom domain): set to ""
+# - PREVIEW (GitHub Pages project URL sparksharkelectric.github.io/sparkshark-com/): set to "/sparkshark-com"
+# Override via env var: BASE=/sparkshark-com python3 build.py
+BASE = os.environ.get("BASE", "/sparkshark-com")
+
+# ServiceTitan Scheduler Pro embed (Custom Website default — same code works on GitHub Pages)
+ST_API_KEY = "mwr2241pezdya33y00nyx0ok"
+ST_SCHEDULER_ID = "sched_b2upae383kzlb9qjuhmqnyvt"
+
 # ============================================================================
 # BRAND CONSTANTS — single source of truth for NAP + schema
 # ============================================================================
@@ -211,6 +221,7 @@ def head(title, description, path, extra_schema=None):
 <link rel="apple-touch-icon" href="/img/logo.png">
 <link rel="stylesheet" href="/css/site.css">
 {schema_html}
+<script data-api-key="{ST_API_KEY}" data-schedulerid="{ST_SCHEDULER_ID}" defer id="se-widget-embed" src="https://embed.scheduler.servicetitan.com/scheduler-v1.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -328,7 +339,7 @@ def cta_block(headline="Need a residential electrician today?",
       <p>{sub}</p>
       <div class="final-cta__cta">
         <a class="btn btn--primary btn--lg" href="tel:{BRAND['phone_tel']}">Call {BRAND['phone_display']}</a>
-        <a class="btn btn--ghost-light btn--lg" href="/contact-us/">Request Service Online</a>
+        <button type="button" class="btn btn--ghost-light btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">Schedule Online</button>
       </div>
       <p class="final-cta__lic">Oklahoma Electrical License {BRAND['license']} · Licensed, bonded, insured · BBB Accredited since 2025</p>
     </div>
@@ -1876,8 +1887,26 @@ GitHub Pages, free tier. Custom domain via `CNAME` file at repo root.
 # ============================================================================
 # MAIN
 # ============================================================================
+def rewrite_internal_paths():
+    """Post-build pass: prefix BASE on every absolute internal path.
+    Skips full URLs (http://, https://, //protocol-relative), tel:, mailto:, #anchors.
+    No-op when BASE is empty (production)."""
+    if not BASE:
+        return
+    pattern = re.compile(r'(href|src|action)="(/(?!/)[^"]*)"')
+    rewritten = 0
+    for f in ROOT.rglob("*.html"):
+        if ".git" in str(f): continue
+        content = f.read_text()
+        new = pattern.sub(lambda m: f'{m.group(1)}="{BASE}{m.group(2)}"', content)
+        if new != content:
+            f.write_text(new)
+            rewritten += 1
+    print(f"  ✅ rewrote internal paths in {rewritten} files (BASE='{BASE}')")
+
+
 def main():
-    print("Building sparkshark.com...")
+    print(f"Building sparkshark.com (BASE='{BASE}')...")
     build_homepage()
     print(f"  ✅ homepage")
 
@@ -1947,6 +1976,9 @@ def main():
     build_llms_full_txt()
     build_readme()
     print(f"  ✅ sitemap.xml, llms.txt, llms-full.txt, README.md")
+
+    # Post-build: rewrite internal paths if BASE is set (preview mode)
+    rewrite_internal_paths()
 
     # Count all index.html files
     count = sum(1 for _ in ROOT.rglob("index.html"))
