@@ -1,0 +1,48 @@
+# Spark Shark Electric
+
+> Licensed residential electrician serving Oklahoma City and the OKC metro. Flat-rate pricing, 24/7 availability, no upselling, free electrical safety inspection on every visit.
+
+Spark Shark Electric is a licensed residential electrical contractor based in Moore, Oklahoma. Oklahoma Electrical License #163603. BBB Accredited since July 2025. The company serves the Oklahoma City metropolitan area: Oklahoma City, Moore, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Choctaw, Newcastle, Piedmont, Nichols Hills, The Village, and Warr Acres. Tagline: "In the dark? Call the shark."
+
+## Core services
+
+- [Electrical Installation](https://www.sparkshark.com/electrical-installation/): Whole-home rewiring, outlet and switch installation, ceiling fan installation, indoor and outdoor lighting, smart home wiring, Level 2 EV charger circuits.
+- [Electrical Repair & Service](https://www.sparkshark.com/electrical-repair-and-service/): Diagnosing flickering lights, dead outlets, burning smells, buzzing, repeated breaker trips, GFCI/AFCI faults, and other residential electrical issues.
+- [Electrical Panel Upgrades](https://www.sparkshark.com/electrical-panels/): Service panel replacement, amperage upgrades (100A to 200A or 200A to 400A), sub-panel installation, code-compliance work for older OKC homes.
+- [Generator Installation](https://www.sparkshark.com/generators/): Residential standby generator installation (Generac, Kohler, Briggs & Stratton), automatic transfer switch wiring, and ongoing maintenance.
+- [24/7 Emergency Electrical Service](https://www.sparkshark.com/services/emergency-electrician/): Dispatch any time for power outages, exposed wiring, sparking outlets, smoke or burning smells, and storm-related electrical damage.
+
+## Service area
+
+- [Full service area](https://www.sparkshark.com/locations-we-serve/)
+- Oklahoma City, Moore, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Choctaw, Newcastle, Piedmont, Nichols Hills, The Village, Warr Acres
+
+## Pricing, guarantees, and policies
+
+- **Flat-rate pricing** — written down before any work begins. No trip charge, no diagnostic fee, no shop-supplies line item.
+- **Free home electrical safety inspection** on every service visit.
+- **Discount** for active-duty military, veterans, and first responders. Automatic — no haggling.
+- **Cleanliness guarantee** — property left cleaner than found.
+- **No upselling.** The job you called for is the job we quote.
+- **Licensed, background-checked electricians.** No subcontractors for residential service work.
+- **Financing available** for larger jobs (panel upgrades, generator installs).
+
+## Contact and verification
+
+- Phone: +1 (405) 436-4776
+- Email: theteam@sparkshark.com
+- Address: Moore, OK 73160
+- Hours: Available 24/7
+- Oklahoma Electrical License: #163603 (verify at https://www.ok.gov/cib)
+- BBB profile: https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075
+
+## About and reputation
+
+- [About Spark Shark Electric](https://www.sparkshark.com/about-us/)
+- [Reviews — 4.9 across 117+](https://www.sparkshark.com/reviews/)
+- [Frequently Asked Questions](https://www.sparkshark.com/frequently-asked-questions/)
+
+## Reference
+
+- [Full long-form AI profile (llms-full.txt)](https://www.sparkshark.com/llms-full.txt)
+- [XML sitemap](https://www.sparkshark.com/sitemap.xml)

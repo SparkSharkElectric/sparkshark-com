@@ -1,0 +1,23 @@
+# sparkshark.com — robots.txt
+# Spark Shark Electric · Licensed residential electrician · Moore, OK 73160
+
+User-agent: *
+Allow: /
+Crawl-delay: 5
+
+# AI search / LLM crawlers — explicitly allowed
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: AndiBot
+User-agent: ExaBot
+User-agent: PhindBot
+User-agent: YouBot
+User-agent: FirecrawlAgent
+Allow: /
+
+Sitemap: https://www.sparkshark.com/sitemap.xml
