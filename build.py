@@ -1453,7 +1453,12 @@ def build_service_page(p):
         faq_html += '</div></div></section>'
 
     html = head(title, desc, p["path"], extra)
-    html += page_hero(h1, sub)
+    # Tier 2 service pages migrate to locked_hero one at a time per pacing rule.
+    # Each visually verified page lands here with its eyebrow override.
+    if p["path"] == "/electrical-panels/":
+        html += locked_hero(h1, sub, eyebrow_html="Panel upgrades")
+    else:
+        html += page_hero(h1, sub)
     html += proof_block()
     html += f'<section class="page-body"><div class="wrap-narrow">{body_html}</div></section>'
     html += faq_html
