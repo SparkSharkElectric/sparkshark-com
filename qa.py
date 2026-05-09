@@ -138,7 +138,12 @@ class PageResult:
 # ── Manifest ────────────────────────────────────────────────────────────────
 
 def load_manifest() -> list[str]:
-    """Return the ordered list of URL paths to check."""
+    """Return the ordered list of URL paths to check.
+
+    Skips sitemap entries whose target file doesn't exist on disk (with a
+    stderr warning). Sitemap consistency is build.py's responsibility, not
+    qa.py's — a stale entry shouldn't fail the content-quality gate.
+    """
     if not SITEMAP.exists():
         sys.stderr.write(
             f"qa.py: {SITEMAP.name} not found in {ROOT}. "
@@ -163,7 +168,16 @@ def load_manifest() -> list[str]:
         if p not in seen:
             seen.add(p)
             unique.append(p)
-    return unique
+    # Drop entries with no on-disk file (stale sitemap, deleted page, etc.).
+    filtered: list[str] = []
+    for p in unique:
+        if url_to_file(p).exists():
+            filtered.append(p)
+        else:
+            sys.stderr.write(
+                f"qa.py: skipping `{p}` — listed in sitemap but no file on disk\n"
+            )
+    return filtered
 
 
 def url_to_file(url: str) -> Path:
