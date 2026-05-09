@@ -103,8 +103,10 @@ p { font-size: 1rem; line-height: 1.7; color: var(--text-soft); }
 .btn:active { transform: translateY(0); }
 .btn--primary, .btn--orange { background: var(--orange); color: #0C192B; box-shadow: 0 0 0 0 var(--orange-glow), var(--shadow-md); }      /* navy text on brand orange — 6.27:1 (was #fff, 2.8:1) */
 .btn--primary:hover, .btn--orange:hover { background: var(--orange-deep); color: #0C192B; box-shadow: 0 0 0 8px var(--orange-glow), var(--shadow-md); }
-.btn--teal { background: var(--teal); color: #0C192B; box-shadow: var(--shadow-md); }      /* navy text on brand teal — 6.43:1 (was #fff, 2.48:1) */
-.btn--teal:hover { background: var(--teal-deep); color: #0C192B; }
+/* Secondary CTA — outline (Hick's Law / decision-paralysis fix). Background-deep contexts only.
+   Teal #14B8A6 on navy #0C192B = 6.42:1, well above WCAG AA. */
+.btn--teal { background: transparent; color: var(--teal); border: 2px solid var(--teal); box-shadow: none; }
+.btn--teal:hover { background: var(--teal); color: #0C192B; border-color: var(--teal); box-shadow: var(--shadow-md); }
 .btn--emerg { background: var(--emerg); color: #fff; box-shadow: var(--shadow-md); }
 .btn--emerg:hover { background: var(--emerg-deep); color: #fff; }
 .btn--ghost { background: transparent; color: var(--text); border: 1.5px solid var(--border-strong); }
@@ -142,8 +144,10 @@ p { font-size: 1rem; line-height: 1.7; color: var(--text-soft); }
 .hero { background: var(--bg-deep); color: var(--text-on-dark); padding: var(--s-9) 0 var(--s-10); position: relative; overflow: hidden; }
 .hero__inner { display: grid; gap: var(--s-7); position: relative; }
 .hero__text { max-width: 640px; }
-.hero h1 { color: var(--text-on-dark); margin-bottom: var(--s-4); font-size: clamp(2.1rem, 5vw, 3.25rem); line-height: 1.1; }
+.hero h1 { color: var(--text-on-dark); margin-bottom: var(--s-4); font-size: clamp(2.1rem, 5vw, 3.25rem); line-height: 1.1; text-wrap: balance; }
 .hero h1 .accent { color: var(--yellow); }
+.hero__eyebrow { color: var(--yellow); font-weight: 700; font-size: 1rem; letter-spacing: 0.02em; margin-bottom: var(--s-3); display: block; }
+.hero__eyebrow .alt { color: #fff; }
 .hero__sub { font-size: 1.125rem; color: var(--muted-on-dark); margin-bottom: var(--s-6); max-width: 580px; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-bottom: var(--s-5); }
 .hero__trust { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); color: var(--muted-on-dark); font-size: .92rem; }
