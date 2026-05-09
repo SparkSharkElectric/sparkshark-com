@@ -675,7 +675,7 @@ def build_homepage():
   <div class="wrap hero__inner">
     <div class="hero__text">
       <div class="hero__bolt" aria-hidden="true">
-        <svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg"><path d="M14 0L0 22h7l-3 14L24 12h-9l3-12z" fill="#FACC15"/></svg>
+        <svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg"><path d="M14 0L0 22h7l-3 14L24 12h-9l3-12z" fill="#FFD700"/></svg>
       </div>
       <h1>{h1_rendered}</h1>
       <p class="hero__sub">{sub_text}</p>
@@ -1969,7 +1969,7 @@ def build_redirect_stubs():
 <link rel="canonical" href="{target_full}">
 <meta name="robots" content="noindex, follow">
 <title>Redirecting to {target}</title>
-<style>body{{font-family:system-ui,sans-serif;background:#0C192B;color:#E6EDF7;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center;padding:24px;}}a{{color:#7DD3FC}}</style>
+<style>body{{font-family:system-ui,sans-serif;background:#0C192B;color:#E6EDF7;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center;padding:24px;}}a{{color:#86E2DD}}</style>
 </head>
 <body>
 <div>

@@ -1,7 +1,8 @@
 /* ==========================================================================
    Spark Shark Electric — site.css
    Design system + components for sparkshark.com
-   Brand: #0C192B navy hero/footer · #7DD3FC sky accent · white body
+   Brand: #0C192B navy · #F28C28 orange · #4A9BA5 teal · #FFD700 yellow · #F0F5F9 off-white · white body
+   Source of truth: SparkShark_BrandingGuidlines.pdf (p.6 Primary, p.8 Background)
    ========================================================================== */
 
 /* === RESET === */
@@ -21,23 +22,23 @@ ul, ol { list-style: none; }
 
   /* Surfaces */
   --bg: #ffffff;
-  --bg-elev: #f7fafc;
-  --bg-deep: #0C192B;
+  --bg-elev: #F0F5F9;             /* Brand off-white per Brand Guide p.6 (was #f7fafc Tailwind) */
+  --bg-deep: #0C192B;             /* Brand navy per Brand Guide p.6 */
   --bg-deep-2: #0f2138;
 
   /* Brand */
-  --accent: #7DD3FC;
-  --accent-deep: #0369A1;       /* sky-700 — WCAG AA passes 5.55:1 on white (was #0284C7, 4.09:1) */
-  --accent-hover: #075985;      /* sky-800 — pushed for hover differentiation (was #0369A1) */
+  --accent: #86E2DD;            /* Brand light teal per Brand Guide p.8 (was #7DD3FC Tailwind sky-300) — used for borders + chip-hover bg */
+  --accent-deep: #0369A1;       /* Tactical link color — WCAG AA 5.55:1 on white. Brand has no body-text-sized accent that hits 4.5:1 on white; this stays as a documented a11y exception until Brand Guide adds one. */
+  --accent-hover: #075985;      /* Hover state — sky-800 */
 
-  /* CTA palette (per 2026 Blueprint + screenshots) */
-  --orange: #F97316;          /* Call CTA — urgent, electrician industry standard */
-  --orange-deep: #EA580C;
-  --orange-glow: rgba(249, 115, 22, .35);
-  --teal: #14B8A6;            /* Book Now CTA — secondary, scheduler trigger */
-  --teal-deep: #0F766E;
-  --yellow: #FACC15;           /* Tagline accent — "In the dark? Call the shark!" */
-  --yellow-deep: #EAB308;
+  /* CTA palette — per SparkShark Brand Guide p.6 (Primary) + p.8 (Background variants) */
+  --orange: #F28C28;          /* Brand primary orange — Call CTA */
+  --orange-deep: #D9751F;     /* Darker hover — navy-text 5.48:1 */
+  --orange-glow: rgba(242, 140, 40, .35);
+  --teal: #4A9BA5;            /* Brand primary teal — Book Now CTA */
+  --teal-deep: #6CC0BB;       /* LIGHTER hover from brand p.8 — darker teal would fail navy-text contrast at AA */
+  --yellow: #FFD700;          /* Brand yellow per p.8 — tagline + lightning bolt accent */
+  --yellow-deep: #E6C200;
 
   /* Text */
   --text: #0F172A;
@@ -204,7 +205,7 @@ p { font-size: 1rem; line-height: 1.7; color: var(--text-soft); }
 .chip-row { display: flex; flex-wrap: wrap; gap: var(--s-2); justify-content: center; }
 .chip { padding: var(--s-2) var(--s-4); border: 1px solid var(--border-strong); border-radius: var(--r-pill); font-size: .9rem; color: var(--text-soft); background: var(--bg); }
 .chip--link { color: var(--accent-deep); border-color: var(--accent); }
-.chip--link:hover { background: var(--accent); color: #fff; text-decoration: none; }
+.chip--link:hover { background: var(--accent); color: #0C192B; text-decoration: none; }    /* navy on brand light teal — 11.26:1 (was #fff, ~1.5:1 fail) */
 
 /* === FINAL CTA === */
 .final-cta { background: var(--bg-deep); color: var(--text-on-dark); padding: var(--s-10) 0; position: relative; overflow: hidden; }
