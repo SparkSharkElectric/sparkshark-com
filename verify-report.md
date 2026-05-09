@@ -1,6 +1,6 @@
 # VERIFY items — to resolve before/after launch
 
-Total: 85 VERIFY tags across drafts (48 unique).
+Total: 83 VERIFY tags across drafts (48 unique).
 
 These are notes Brock left in copy-drafts/*.md asking for confirmation. They were stripped from rendered HTML at build time. Resolve each, then either remove the bracketed tag from the source draft or replace it with the verified value.
 
@@ -11,14 +11,13 @@ These are notes Brock left in copy-drafts/*.md asking for confirmation. They wer
 - (5×) [VERIFY: emergency response/dispatch promise]
 - (5×) [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]
 - (3×) [VERIFY: EV charger brands/certifications]
-- (3×) [VERIFY: financing provider and approved disclosure language]
 - (2×) [VERIFY: link to live GBP and current review count/star rating on publish day]
 - (2×) [VERIFY: current Thumbtack review count and rating on publish day]
 - (2×) [VERIFY: CIB license #00163603]
 - (2×) [VERIFY: aluminum wiring repair/remediation service]
 - (2×) [VERIFY: Oklahoma CIB license #00163603 active and in good standing]
 - (2×) [VERIFY: discount amount or percentage]
-- (2×) [VERIFY: workmanship warranty terms — confirm length and scope before publishing]
+- (2×) [VERIFY: financing provider and approved disclosure language]
 - (2×) [VERIFY: Generac dealer/program tier]
 - (1×) [VERIFY: CIB license #00163603 active and in good standing]
 - (1×) [VERIFY: workmanship warranty terms]
@@ -49,6 +48,7 @@ These are notes Brock left in copy-drafts/*.md asking for confirmation. They wer
 - (1×) [VERIFY: Brock's individual years in the electrical trade]
 - (1×) [VERIFY: CIB #00163603 active and in good standing per Oklahoma Construction Industries Board lookup]
 - (1×) [VERIFY: current Google review count and star rating as of publish day; current Thumbtack count and rating as of publish day]
+- (1×) [VERIFY: workmanship warranty terms — confirm length and scope before publishing]
 - (1×) [VERIFY: current Google star rating as of publish day — pull live before launch]
 - (1×) [VERIFY: current Google rating]
 - (1×) [VERIFY: current Google review count]

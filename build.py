@@ -1969,15 +1969,92 @@ Licensed Oklahoma electrical contractor (license number listed in the site foote
     write_page("/privacy-policy/", html)
 
     # ====================== TERMS ======================
+    # Hand-written body bypasses _render_draft_body() parser bug (recon #9 in
+    # cutover-session-prompt.md). Title/desc/h1/sub still pull from copy-draft so
+    # meta tags stay editable. Scope is strictly website terms-of-use (path a per
+    # session 11 research): service-work terms (warranty, payment, cancellation)
+    # live on the signed estimate where contract formation is clean. Mirrors the
+    # peer pattern at Mister Sparky and Mr. Electric of OKC/Tulsa.
     d = parse_draft("22-terms-and-condition.md")
     title = (d and d["title"]) or "Terms and Conditions | Spark Shark Electric"
-    desc = (d and d["desc"]) or "Terms and conditions for Spark Shark Electric — service agreements, warranty, payment terms."
-    h1 = (d and d["h1"]) or "Terms and Conditions"
-    sub = (d and d["sub"]) or "Service terms, warranty, payment, and website use."
+    desc = (d and d["desc"]) or "Terms of use for sparkshark.com. Acceptable use, IP, disclaimers, limitation of liability, and Oklahoma governing law."
+    h1 = "Terms and Conditions"
+    sub = "The terms that govern your use of sparkshark.com."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Terms", f"{SITE}/terms-and-condition/")])
     html = head(title, desc, "/terms-and-condition/", extra)
-    html += page_hero(h1, sub, eyebrow="Legal", with_cta=False)
-    body = _render_draft_body(d) if d else '<p>Service terms.</p>'
+    html += locked_hero(h1, sub, eyebrow_html="Terms")
+    body = '''<p class="lede"><strong>Effective: May 9, 2026 &middot; Last updated: May 9, 2026</strong></p>
+
+<p>These Terms and Conditions (the &ldquo;Terms&rdquo;) govern your access to and use of <strong>sparkshark.com</strong> (the &ldquo;Site&rdquo;). The Site is operated by <strong>Spark Shark Electric</strong>, a licensed residential electrical contractor serving Moore, Oklahoma City, and the OKC metro. By using the Site, you agree to these Terms. If you do not agree, please do not use the Site.</p>
+
+<p>These Terms govern <em>website use only</em>. The terms that apply to the actual electrical work we perform &mdash; warranty, pricing, payment, scope changes, cancellation, and similar &mdash; appear on the written estimate you receive and approve before any work begins. The estimate, not this page, is the binding agreement for service.</p>
+
+<h2>Acceptance of These Terms</h2>
+<p>By accessing or using the Site, submitting a form, requesting a quote, or otherwise interacting with sparkshark.com, you agree to be bound by these Terms and by our <a href="/privacy-policy/">Privacy Policy</a>, which is incorporated by reference. If you are using the Site on behalf of another person or a household, you represent that you have authority to do so and that they also agree to these Terms.</p>
+
+<h2>About Spark Shark Electric</h2>
+<p>Spark Shark Electric is a licensed Oklahoma electrical contractor (license number listed in the site footer) operating in the Oklahoma City metropolitan area. You can contact us at <a href="tel:+14054364776">(405) 436-4776</a> or <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a>, or by mail at Moore, OK 73160.</p>
+
+<h2>Eligibility</h2>
+<p>You must be at least 18 years old, or the age of majority in your jurisdiction if higher, to submit a service request, request a quote, or otherwise enter into a transaction through the Site. The Site is not directed to children under 13, and we do not knowingly collect personal information from children under 13 (see our <a href="/privacy-policy/">Privacy Policy</a>).</p>
+
+<h2>Service Requests Are Not Contracts</h2>
+<p>Submitting a contact form, booking widget request, phone call, text message, or email through or in connection with the Site is a <em>request for service</em>. It is not a contract for work, an offer, or an acceptance. No electrical work is contracted, scheduled, or guaranteed until you receive a written estimate from us and approve it in writing or by signed acceptance.</p>
+<p>The terms that govern the work itself &mdash; including pricing, payment, scope, warranty, cancellation, permits, and lien rights &mdash; are stated on that written estimate. Those terms supersede any informal description of services on the Site if there is any conflict.</p>
+
+<h2>Acceptable Use</h2>
+<p>You agree to use the Site lawfully and in good faith. You will not:</p>
+<ul>
+  <li>Use the Site for any unlawful, harmful, fraudulent, or deceptive purpose</li>
+  <li>Submit false contact information, impersonate another person, or misrepresent your relationship with anyone</li>
+  <li>Scrape, crawl, harvest, or use automated tools to extract content from the Site beyond ordinary search-engine indexing</li>
+  <li>Attempt to reverse engineer, decompile, probe, or interfere with the Site, its security, or any underlying infrastructure</li>
+  <li>Submit malware, viruses, or any code designed to disrupt, damage, or gain unauthorized access</li>
+  <li>Use the Site to send unsolicited promotional messages, conduct surveillance, or violate the privacy of others</li>
+  <li>Use the Site in any way that would damage, disable, or impair the Site or interfere with another visitor&rsquo;s use of it</li>
+</ul>
+
+<h2>Intellectual Property</h2>
+<p>The Site, its design, layout, text, graphics, photos, illustrations, the Spark Shark Electric brand and logo, the Spark Shark mascot, and all other content (collectively, the &ldquo;Content&rdquo;) are owned by Spark Shark Electric or our licensors and are protected by United States copyright, trademark, and other intellectual property laws.</p>
+<p>You are granted a limited, non-exclusive, non-transferable, revocable license to access and view the Content for your personal, non-commercial use in connection with evaluating or requesting our services. You may not copy, reproduce, modify, distribute, publicly display, frame, mirror, or create derivative works from any Content without our prior written permission, except for ordinary browser caching, printing of a single page for personal reference, and quoting short excerpts with attribution and a link back to sparkshark.com.</p>
+
+<h2>User Submissions</h2>
+<p>If you submit any content to us through the Site or in connection with our services &mdash; including form responses, photographs of your home or electrical issue, written descriptions, reviews, comments, or other materials (&ldquo;Submissions&rdquo;) &mdash; you represent and warrant that the Submission is yours or that you have all rights necessary to submit it, and that it does not infringe any third party&rsquo;s rights or violate any law.</p>
+<p>You grant Spark Shark Electric a worldwide, royalty-free, perpetual, irrevocable, non-exclusive license to use, reproduce, adapt, publish, and display your Submissions for purposes related to providing service, internal training, quality assurance, marketing, and portfolio examples. You may request that we remove identifiable photos of your property from public-facing marketing by contacting <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a>.</p>
+
+<h2>Third-Party Links and Services</h2>
+<p>The Site may link to third-party websites, services, and platforms (for example: Google Business Profile, Yelp, BBB, Thumbtack, Networx, Facebook, our payment processor, and our scheduling widget). These third parties are independent of Spark Shark Electric. We do not control them, do not endorse all of their content, and are not responsible for their availability, accuracy, terms, or privacy practices. Your use of any third-party service is governed by that service&rsquo;s own terms and privacy policy.</p>
+
+<h2>SMS and Text Messaging</h2>
+<p>Text-message communications between you and Spark Shark Electric are governed by the SMS / Text Messaging section of our <a href="/privacy-policy/">Privacy Policy</a>, including consent, opt-out, message frequency, message-and-data-rate disclosures, and how mobile information is handled. By providing your mobile number, you agree to those terms in addition to these Terms.</p>
+
+<h2>Disclaimer of Warranties</h2>
+<p>THE SITE AND ALL CONTENT, MATERIALS, AND INFORMATION ON IT ARE PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, SPARK SHARK ELECTRIC DISCLAIMS ALL WARRANTIES INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, AND UNINTERRUPTED OR ERROR-FREE OPERATION OF THE SITE.</p>
+<p>We make reasonable efforts to keep service descriptions, pricing examples, and informational content on the Site current, but the Site may contain errors, omissions, or out-of-date information. Nothing on the Site constitutes electrical, legal, code-compliance, or safety advice for your specific situation, and you should not rely on Site content as a substitute for an inspection or written estimate from a licensed electrician. <strong>This disclaimer applies to the Site only and does not affect the workmanship and materials warranty stated on your written estimate.</strong></p>
+
+<h2>Limitation of Liability</h2>
+<p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, SPARK SHARK ELECTRIC AND ITS OWNERS, EMPLOYEES, CONTRACTORS, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF, OR INABILITY TO USE, THE SITE &mdash; EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+<p>OUR AGGREGATE LIABILITY ARISING FROM OR RELATING TO THE SITE WILL NOT EXCEED ONE HUNDRED DOLLARS ($100). This cap applies only to claims arising from your use of the Site itself; claims arising from electrical work we perform are governed by the terms of your written estimate, not by this section.</p>
+<p>Nothing in these Terms limits liability that cannot be limited or excluded under applicable law, including liability for gross negligence, willful misconduct, fraud, personal injury or death caused by negligence, or any non-waivable statutory rights.</p>
+
+<h2>Indemnification</h2>
+<p>You agree to defend, indemnify, and hold harmless Spark Shark Electric and its owners, employees, contractors, and agents from any claims, demands, losses, liabilities, damages, costs, and expenses (including reasonable attorneys&rsquo; fees) arising out of: (a) your breach of these Terms; (b) your misuse of the Site; (c) your violation of any law or third-party right; or (d) any Submission you provide to us. We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which case you agree to cooperate with our defense.</p>
+
+<h2>Changes to These Terms</h2>
+<p>We may update these Terms from time to time to reflect changes in our services, the law, or our business practices. The current version will always be posted at sparkshark.com/terms-and-condition/ with an updated &ldquo;Last updated&rdquo; date at the top. If we make material changes, we will provide additional notice on the Site. Your continued use of the Site after changes are posted constitutes acceptance of the updated Terms.</p>
+
+<h2>Governing Law and Venue</h2>
+<p>These Terms are governed by the laws of the State of Oklahoma, without regard to its conflict-of-laws principles. You and Spark Shark Electric agree that any dispute arising out of or relating to these Terms or your use of the Site will be brought exclusively in the state or federal courts located in Cleveland County or Oklahoma County, Oklahoma, and you consent to the personal jurisdiction of those courts. Nothing in this section affects either party&rsquo;s right to seek emergency or injunctive relief in any court of competent jurisdiction.</p>
+
+<h2>Severability, Entire Agreement, Waiver</h2>
+<p>If any provision of these Terms is held to be invalid, illegal, or unenforceable, the remaining provisions will continue in full force and effect, and the invalid provision will be reformed to the minimum extent necessary to make it enforceable while preserving the parties&rsquo; original intent. These Terms, together with our <a href="/privacy-policy/">Privacy Policy</a> and any written estimate you receive from us, constitute the entire agreement between you and Spark Shark Electric concerning the Site. Our failure to enforce any provision is not a waiver of our right to enforce it later.</p>
+
+<h2>Contact Us</h2>
+<p><strong>Spark Shark Electric</strong><br>
+Phone: <a href="tel:+14054364776">(405) 436-4776</a><br>
+Email: <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a><br>
+Mail: Moore, OK 73160<br>
+Licensed Oklahoma electrical contractor (license number listed in the site footer).</p>'''
     html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
     html += footer_close()
     write_page("/terms-and-condition/", html)
