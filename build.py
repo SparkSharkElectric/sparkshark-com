@@ -1616,11 +1616,11 @@ def build_info_pages():
     d = parse_draft("18-contact-us.md")
     title = (d and d["title"]) or "Contact Spark Shark Electric | Free Estimates | Moore & OKC"
     desc = (d and d["desc"]) or "Contact Spark Shark Electric — call (405) 436-4776 24/7 or request service online."
-    h1 = (d and d["h1"]) or "Contact us"
-    sub = (d and d["sub"]) or "Call any time. Email any time. Or send a message — we'll respond same-day."
+    h1 = "Call us. **We'll answer.**"
+    sub = "Live 24/7 dispatch — Moore, Oklahoma City, and the metro. Day or night, we pick up the phone. Or send a service request below and we'll respond same-day."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Contact", f"{SITE}/contact-us/")])
     html = head(title, desc, "/contact-us/", extra)
-    html += page_hero(h1, sub, eyebrow="Get in touch", with_cta=False)
+    html += locked_hero(h1, sub)
     html += '''<section class="page-body"><div class="wrap"><div style="display:grid;gap:32px;grid-template-columns:1fr;">
     <style>@media (min-width: 760px) { .contact-grid { grid-template-columns: 1fr 1fr !important; } }</style>
     <div class="contact-grid" style="display:grid;gap:32px;grid-template-columns:1fr;">
