@@ -42,7 +42,7 @@ Q: Will an inspection report from you satisfy my insurance carrier?
 A: Most carriers accept a written safety inspection from a licensed Oklahoma electrical contractor. [VERIFY: Oklahoma CIB license #00163603]. If your carrier has a specific form, we'll complete it.
 
 Q: Are you licensed to work in Bethany?
-A: Yes. Licensed, bonded, and insured.
+A: Yes. Licensed and insured.
 
 Q: Do you handle Bethany permits and inspections?
 A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Bethany permit/inspection language].

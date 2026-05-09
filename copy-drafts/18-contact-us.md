@@ -30,9 +30,7 @@ Call any time. Email any time. Or send a service request — we'll respond same-
 - Address heading: Address
 - Address: Spark Shark Electric · [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]
 - Service area heading: Service area
-- Service area cities: Moore · Oklahoma City · Norman · Edmond · Yukon · Mustang · Bethany · Midwest City · Del City · Newcastle · Choctaw · Piedmont · Nichols Hills · The Village · Warr Acres
-- License heading: License
-- License text: [VERIFY: Oklahoma Electrical License #00163603 active and in good standing] · Licensed, bonded, and insured · BBB Accredited Business since July 2025
+- Service area cities: Moore · Oklahoma City · Norman · Edmond · Yukon · Mustang · Midwest City · Del City · Choctaw · Newcastle · Noble · Blanchard
 
 === SECTION: REQUEST SERVICE FORM ===
 - Form heading: Request service

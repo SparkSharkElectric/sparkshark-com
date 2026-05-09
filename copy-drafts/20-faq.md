@@ -29,7 +29,7 @@ Q: Do you offer emergency service?
 A: Yes. Spark Shark Electric provides live 24/7 emergency dispatch for residential electrical emergencies across the OKC metro. Call (405) 436-4776 any time.
 
 Q: Are you licensed and insured?
-A: Yes. [VERIFY: Oklahoma Electrical License #00163603 active and in good standing per Oklahoma Construction Industries Board lookup]. Licensed, bonded, and insured. BBB Accredited Business since July 2025.
+A: Yes. [VERIFY: Oklahoma Electrical License #00163603 active and in good standing per Oklahoma Construction Industries Board lookup]. Licensed and insured. BBB Accredited Business since July 2025.
 
 Q: Do you charge for estimates?
 A: No. Every estimate is free and written. We come out, look at the work, and put a flat-rate number in writing before any work begins.
@@ -38,7 +38,7 @@ Q: Do you charge a trip fee or diagnostic fee?
 A: No. No trip charge, no diagnostic fee, no shop-supplies line item. The number you see in the written estimate is the number you pay.
 
 Q: What areas do you serve?
-A: Moore, Oklahoma City, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Newcastle, Choctaw, Piedmont, Nichols Hills, The Village, and Warr Acres.
+A: Moore, Oklahoma City, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Choctaw, Newcastle, Noble, and Blanchard.
 
 Q: Do you do commercial work?
 A: No. Spark Shark Electric is a residential-only electrical contractor. We focus exclusively on homes.

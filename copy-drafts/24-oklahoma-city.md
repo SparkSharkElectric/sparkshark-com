@@ -45,7 +45,7 @@ Spark Shark Electric is a licensed residential electrician serving Oklahoma City
 
 === SECTION: Oklahoma City FAQ ===
 Q: Are you licensed to work in Oklahoma City?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603 active and in good standing]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma CIB license #00163603 active and in good standing]. Licensed and insured.
 
 Q: Do you handle Oklahoma City permits and inspections?
 A: Yes — we pull the permit and schedule the city inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Oklahoma City permit/inspection language].

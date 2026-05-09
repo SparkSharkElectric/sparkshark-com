@@ -40,7 +40,7 @@ Spark Shark Electric is a licensed residential electrician serving Mustang, Okla
 
 === SECTION: Mustang FAQ ===
 Q: Are you licensed to work in Mustang?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 
 Q: Do you charge a separate dispatch fee for Mustang?
 A: No. Same flat-rate pricing as every other OKC-metro city. No trip charge, no diagnostic fee.

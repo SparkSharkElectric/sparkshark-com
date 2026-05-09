@@ -39,7 +39,7 @@ Spark Shark Electric is a licensed residential electrician serving Del City, Okl
 
 === SECTION: Del City FAQ ===
 Q: Are you licensed to work in Del City?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 
 Q: Can you handle a Federal Pacific panel replacement?
 A: Yes — we replace Federal Pacific Stab-Lok, Zinsco/Sylvania, and other older or recalled panel brands every week.

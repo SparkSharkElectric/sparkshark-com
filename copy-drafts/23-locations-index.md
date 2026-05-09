@@ -11,7 +11,7 @@
 Areas We Serve | Spark Shark Electric — OKC Metro
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Spark Shark Electric serves the OKC metro from Moore, Oklahoma — Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Bethany, Del City, Newcastle.
+Spark Shark Electric serves the OKC metro from Moore, Oklahoma — Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Newcastle, Choctaw.
 
 === H1 (main page heading — visible on page) ===
 Areas Spark Shark Electric Serves
@@ -20,7 +20,7 @@ Areas Spark Shark Electric Serves
 Residential electrical service across the OKC metro from a base in Moore, Oklahoma. Same flat-rate pricing in every city, same 24/7 phone.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric in Moore, Oklahoma serves homeowners across the Oklahoma City metro — Moore, Oklahoma City, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Newcastle, and surrounding cities. Each city below has its own page with the local angle and specific service detail.
+Spark Shark Electric in Moore, Oklahoma serves homeowners across the Oklahoma City metro — Moore, Oklahoma City, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Newcastle, Choctaw, Noble, and Blanchard. Each city below has its own page with the local angle and specific service detail.
 
 === SECTION: Cities served (with separate landing pages) ===
 - Oklahoma City — older homes, panel capacity, repairs, 24/7 emergency — /oklahoma-city/
@@ -29,13 +29,12 @@ Spark Shark Electric in Moore, Oklahoma serves homeowners across the Oklahoma Ci
 - Edmond — EV chargers, smart home, panels in newer construction — /locations-we-serve/edmond/
 - Yukon — suburban growth, generators, panels, EV chargers — /locations-we-serve/yukon/
 - Mustang — growing-home builds, panels, generators, lighting — /locations-we-serve/mustang/
-- Bethany — older homes, safety inspections, panels, repair — /locations-we-serve/bethany/
 - Midwest City — older homes, storm readiness, panels, repairs — /locations-we-serve/midwest-city/
 - Del City — repairs, panels, emergency electrical, older housing stock — /locations-we-serve/del-city/
 - Newcastle — growing residential demand, panels, generators, outdoor lighting — /locations-we-serve/newcastle/
 
 === SECTION: Cities served (no separate landing page yet) ===
-- Choctaw, Piedmont, Nichols Hills, The Village, Warr Acres — full residential electrical service, no separate page yet. Call (405) 436-4776.
+- Choctaw, Noble, Blanchard — full residential electrical service, no separate page yet. Call (405) 436-4776.
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to every city page above, top 3 service pages (Panels, Generators, Emergency),

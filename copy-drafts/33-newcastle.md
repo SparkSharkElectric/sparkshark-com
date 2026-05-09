@@ -40,7 +40,7 @@ Spark Shark Electric is a licensed residential electrician serving Newcastle, Ok
 
 === SECTION: Newcastle FAQ ===
 Q: Are you licensed to work in Newcastle?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 
 Q: How much does a generator install cost in Newcastle?
 A: It depends on generator size, gas-line work, ATS complexity, and any panel modifications. We give a written flat-rate quote after a free site visit.

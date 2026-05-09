@@ -148,8 +148,8 @@ BRAND = {
     "bbb_since": "2025-07-14",
     "service_area": [
         "Oklahoma City", "Moore", "Norman", "Edmond", "Yukon",
-        "Mustang", "Bethany", "Midwest City", "Del City", "Choctaw",
-        "Newcastle", "Piedmont", "Nichols Hills", "The Village", "Warr Acres"
+        "Mustang", "Midwest City", "Del City", "Choctaw",
+        "Newcastle", "Noble", "Blanchard"
     ],
     "logo_url": f"{SITE}/img/logo.png",
     "mascot_url": f"{SITE}/img/mascot.png",
@@ -246,10 +246,10 @@ def base_schema():
                         "text": f"Yes. {BRAND['name']} is available 24/7 for electrical emergencies. Call {BRAND['phone_display']} any time."}},
                     {"@type": "Question", "name": "What areas do you serve?",
                      "acceptedAnswer": {"@type": "Answer",
-                        "text": "We serve the greater Oklahoma City metro area including Moore, OKC, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Choctaw, Newcastle, Piedmont, Nichols Hills, The Village, and Warr Acres."}},
+                        "text": "We serve the greater Oklahoma City metro area including Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Choctaw, Newcastle, Noble, and Blanchard."}},
                     {"@type": "Question", "name": "Are you licensed and insured?",
                      "acceptedAnswer": {"@type": "Answer",
-                        "text": f"Yes. {BRAND['name']} holds Oklahoma Electrical License {BRAND['license']} and is licensed, bonded, and insured."}},
+                        "text": f"Yes. {BRAND['name']} holds Oklahoma Electrical License {BRAND['license']} and is licensed and insured."}},
                     {"@type": "Question", "name": "Do you offer free estimates?",
                      "acceptedAnswer": {"@type": "Answer",
                         "text": f"Yes. We provide free, written estimates before any work begins. Flat-rate pricing — no trip charges, no diagnostic fees, no surprises. Call {BRAND['phone_display']}."}},
@@ -423,7 +423,6 @@ def footer_html():
           <li><a href="tel:{BRAND['phone_tel']}">{BRAND['phone_display']}</a></li>
           <li><a href="mailto:{BRAND['email']}">{BRAND['email']}</a></li>
           <li>{BRAND['city']}, {BRAND['state']} {BRAND['zip']}</li>
-          <li>License {BRAND['license']}</li>
           <li><a href="/contact-us/">Request Service</a></li>
         </ul>
       </div>
@@ -471,7 +470,6 @@ def cta_block(headline="Your electrical problem — solved today.",
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </div>
-      <p class="final-cta__lic">Oklahoma Electrical License {BRAND['license']} · Spark Shark Electric · Residential focus</p>
     </div>
     <div class="final-cta__mascot">
       <img src="/img/mascot.png" alt="" width="280" height="227" loading="lazy">
@@ -701,8 +699,6 @@ def build_homepage():
     <span class="trust-line__sep">·</span>
     <span>{BRAND["review_count"]}+ reviews</span>
     <span class="trust-line__sep">·</span>
-    <span>OK License {BRAND["license"]}</span>
-    <span class="trust-line__sep">·</span>
     <span>Background-checked team</span>
   </div>
 </section>'''
@@ -871,7 +867,6 @@ def build_homepage():
     final_kv = kv_from_bullets(final_bullets)
     final_headline = final_kv.get("headline", "Your electrical problem — solved today.")
     final_subhead = final_kv.get("subhead", "")
-    final_lic = final_kv.get("license footer", f"Oklahoma Electrical License {BRAND['license']} · Licensed, bonded, insured · BBB Accredited since 2025")
     html += f'''<section class="final-cta">
   <div class="wrap final-cta__inner">
     <div>
@@ -896,7 +891,6 @@ def build_homepage():
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
       </div>
-      <p class="final-cta__lic">{final_lic}</p>
     </div>
     <div class="final-cta__mascot">
       <img src="/img/mascot.png" alt="" width="280" height="227" loading="lazy">
@@ -1333,7 +1327,7 @@ SERVICE_PAGES = [
         ],
         "faqs": [
             ("Do you do commercial electrical work?", f"No. {BRAND['name']} is a residential-only electrical contractor. We focus exclusively on homes."),
-            ("Are you licensed?", f"Yes — Oklahoma Electrical License {BRAND['license']}. Licensed, bonded, and insured."),
+            ("Are you licensed?", f"Yes — Oklahoma Electrical License {BRAND['license']}. Licensed and insured."),
             ("Do you offer free estimates?", "Yes. Every estimate is free and written. Flat-rate pricing — no surprises."),
             ("How fast can you get out?", "Same-day for emergencies. Next-day to within a few days for scheduled work, depending on backlog.")
         ]
@@ -1580,8 +1574,7 @@ def build_info_pages():
         <h2>Direct contact</h2>
         <p style="margin-bottom:16px;"><strong>Phone</strong><br><a href="tel:+14054364776" style="font-size:1.4rem;font-weight:700;">(405) 436-4776</a><br>Available 24/7. We answer the phone.</p>
         <p style="margin-bottom:16px;"><strong>Email</strong><br><a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a></p>
-        <p style="margin-bottom:16px;"><strong>Service area</strong><br>Moore · Oklahoma City · Norman · Edmond · Yukon · Mustang · Bethany · Midwest City · Del City · Choctaw · Newcastle · Piedmont · Nichols Hills · The Village · Warr Acres</p>
-        <p style="margin-bottom:16px;"><strong>License</strong><br>Oklahoma Electrical License #163603<br>Licensed, bonded, and insured · BBB Accredited</p>
+        <p style="margin-bottom:16px;"><strong>Service area</strong><br>Moore · Oklahoma City · Norman · Edmond · Yukon · Mustang · Midwest City · Del City · Choctaw · Newcastle · Noble · Blanchard</p>
       </div>
       <div>
         <h2>Request service</h2>
@@ -1625,7 +1618,7 @@ def build_info_pages():
     sub = (d and d["sub"]) or "Common questions homeowners ask before they call."
     faqs = (d and d["faqs"]) or [
         ("Do you offer emergency service?", f"Yes. {BRAND['name']} is available 24/7. Call {BRAND['phone_display']}."),
-        ("Are you licensed and insured?", f"Yes. Oklahoma Electrical License {BRAND['license']}. Licensed, bonded, insured."),
+        ("Are you licensed and insured?", f"Yes. Oklahoma Electrical License {BRAND['license']}. Licensed and insured."),
     ]
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("FAQ", f"{SITE}/frequently-asked-questions/")])
     html = head(title, desc, "/frequently-asked-questions/", extra)
@@ -2067,7 +2060,7 @@ def build_llms_txt():
 
 > Licensed residential electrician serving Oklahoma City and the OKC metro. Flat-rate pricing, 24/7 availability, no upselling, free electrical safety inspection on every visit.
 
-{BRAND['name']} is a licensed residential electrical contractor based in {BRAND['city']}, Oklahoma. Oklahoma Electrical License {BRAND['license']}. BBB Accredited since July 2025. The company serves the Oklahoma City metropolitan area: Oklahoma City, Moore, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Choctaw, Newcastle, Piedmont, Nichols Hills, The Village, and Warr Acres. Tagline: "{BRAND['tagline']}"
+{BRAND['name']} is a licensed residential electrical contractor based in {BRAND['city']}, Oklahoma. Oklahoma Electrical License {BRAND['license']}. BBB Accredited since July 2025. The company serves the Oklahoma City metropolitan area: Oklahoma City, Moore, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Choctaw, Newcastle, Noble, and Blanchard. Tagline: "{BRAND['tagline']}"
 
 ## Core services
 
@@ -2080,7 +2073,7 @@ def build_llms_txt():
 ## Service area
 
 - [Full service area]({SITE}/locations-we-serve/)
-- Oklahoma City, Moore, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Choctaw, Newcastle, Piedmont, Nichols Hills, The Village, Warr Acres
+- Oklahoma City, Moore, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Choctaw, Newcastle, Noble, Blanchard
 
 ## Pricing, guarantees, and policies
 
@@ -2135,7 +2128,7 @@ def build_llms_full_txt():
 **Email:** {BRAND['email']}
 **Website:** {SITE}
 **Address:** {BRAND['city']}, {BRAND['state']} {BRAND['zip']}
-**Service region:** Oklahoma City metro area — OKC, Moore, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Choctaw, Newcastle, Piedmont, Nichols Hills, The Village, Warr Acres
+**Service region:** Oklahoma City metro area — OKC, Moore, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Choctaw, Newcastle, Noble, Blanchard
 
 ## Hours of Operation
 
@@ -2145,7 +2138,7 @@ def build_llms_full_txt():
 
 **Oklahoma Electrical License:** {BRAND['license']}
 **Licensing authority:** {BRAND['license_authority']} (https://oklahoma.gov/cib.html)
-**Status:** Licensed, bonded, and insured
+**Status:** Licensed and insured
 **BBB:** Accredited Business since July 14, 2025 — https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075
 
 ## Reviews & Ratings
@@ -2181,7 +2174,7 @@ def build_llms_full_txt():
 
 - **24/7 availability** — one of the few OKC-area electricians answering calls around the clock
 - **Locally owned** — based in {BRAND['city']}, Oklahoma; serving the OKC metro
-- **Licensed, bonded, and insured** — Oklahoma Electrical License {BRAND['license']}
+- **Licensed and insured** — Oklahoma Electrical License {BRAND['license']}
 - **Residential specialist** — focused exclusively on homes, not commercial jobs
 - **Same-day service available** — for urgent electrical needs
 - **Flat-rate pricing** — written estimates before work begins, no trip charges, no diagnostic fees
@@ -2194,7 +2187,7 @@ def build_llms_full_txt():
 A: Yes. {BRAND['name']} is available 24/7 for electrical emergencies. Call {BRAND['phone_display']} any time.
 
 **Q: What areas do you serve?**
-A: We serve the greater Oklahoma City metro area including Moore, OKC, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Choctaw, Newcastle, Piedmont, Nichols Hills, The Village, and Warr Acres.
+A: We serve the greater Oklahoma City metro area including Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Choctaw, Newcastle, Noble, and Blanchard.
 
 **Q: Do you install EV chargers?**
 A: Yes. We install Level 2 home EV charging stations (240V). Call {BRAND['phone_display']} or visit {SITE} for a quote.
@@ -2206,7 +2199,7 @@ A: Yes. We perform electrical panel upgrades from 100A to 200A service, main pan
 A: Yes. We install whole-home standby generators. Contact us at {BRAND['phone_display']}.
 
 **Q: Are you licensed and insured?**
-A: Yes. {BRAND['name']} holds Oklahoma Electrical License {BRAND['license']} and is licensed, bonded, and insured.
+A: Yes. {BRAND['name']} holds Oklahoma Electrical License {BRAND['license']} and is licensed and insured.
 
 **Q: Do you serve commercial properties?**
 A: No. {BRAND['name']} specializes in residential electrical work only. We do not serve commercial or industrial properties.
@@ -2338,7 +2331,6 @@ def main():
         ("/oklahoma-city/", "Oklahoma City"),
         ("/moore/", "Moore"),
         ("/locations-we-serve/del-city/", "Del City"),
-        ("/locations-we-serve/bethany/", "Bethany"),
         ("/locations-we-serve/newcastle/", "Newcastle"),
         ("/locations-we-serve/mustang/", "Mustang"),
         ("/locations-we-serve/yukon/", "Yukon"),
@@ -2351,10 +2343,10 @@ def main():
 
     # Locations index
     title = "Areas We Serve | OKC Metro Cities | Spark Shark Electric"
-    desc = "Spark Shark Electric serves 15 cities across the Oklahoma City metro — Moore, OKC, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, and more."
+    desc = "Spark Shark Electric serves 12 cities across the Oklahoma City metro — Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, and more."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Service Area", f"{SITE}/locations-we-serve/")])
     html = head(title, desc, "/locations-we-serve/", extra)
-    html += page_hero("Areas we serve", "Residential electrical service across the OKC metro. 15 cities, same flat-rate pricing, same 24/7 phone.", eyebrow="Service area")
+    html += page_hero("Areas we serve", "Residential electrical service across the OKC metro. 12 cities, same flat-rate pricing, same 24/7 phone.", eyebrow="Service area")
     html += proof_block()
     html += area_chips_block()
     html += '''<section class="page-body"><div class="wrap-narrow">
@@ -2366,11 +2358,10 @@ def main():
       <li><a href="/locations-we-serve/edmond/">Edmond</a></li>
       <li><a href="/locations-we-serve/yukon/">Yukon</a></li>
       <li><a href="/locations-we-serve/mustang/">Mustang</a></li>
-      <li><a href="/locations-we-serve/bethany/">Bethany</a></li>
       <li><a href="/locations-we-serve/midwest-city/">Midwest City</a></li>
       <li><a href="/locations-we-serve/del-city/">Del City</a></li>
       <li><a href="/locations-we-serve/newcastle/">Newcastle</a></li>
-      <li>Choctaw, Piedmont, Nichols Hills, The Village, Warr Acres — full service, no separate page yet</li>
+      <li>Choctaw, Noble, Blanchard — full service, no separate page yet</li>
     </ul>
     </div></section>'''
     html += cta_block()

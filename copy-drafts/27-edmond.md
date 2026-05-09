@@ -46,7 +46,7 @@ Q: Do I need to upgrade my panel for an EV charger?
 A: Often no — most newer Edmond homes have 200A panels with capacity for a 50A EV circuit. We verify on the site visit.
 
 Q: Are you licensed to work in Edmond?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 
 Q: Do you handle Edmond permits and inspections?
 A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Edmond permit/inspection language].

@@ -42,7 +42,7 @@ Q: Are you really 24/7?
 A: Yes. Live phone, day or night. For true emergencies we dispatch a licensed electrician as soon as one is available. [VERIFY: emergency response/dispatch promise].
 
 Q: Are you licensed to work in Norman?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603 active and in good standing]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma CIB license #00163603 active and in good standing]. Licensed and insured.
 
 Q: Do you handle Norman permits and inspections?
 A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Norman permit/inspection language].

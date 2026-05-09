@@ -1,0 +1,15 @@
+# Sandbox-phantom orphans from spark-fsm session 1 (2026-05-09)
+# These dirs exist on disk but were never wired into build.py (the canonical pipeline).
+# Ignoring them prevents `git add -A` from accidentally landing them.
+# To remove from disk: run `rm -rf _partials/ assets/ locations-we-serve/bethany/` from a real shell on the laptop.
+_partials/
+assets/
+
+# De-listed city — Bethany was removed from BRAND service_area + locations build dict in
+# session 2 (2026-05-09). The HTML directory on disk is a zombie until laptop cleanup.
+locations-we-serve/bethany/
+
+# Standard Python / build noise
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,20 +1,19 @@
 # VERIFY items — to resolve before/after launch
 
-Total: 85 VERIFY tags across drafts (47 unique).
+Total: 79 VERIFY tags across drafts (45 unique).
 
 These are notes Brock left in copy-drafts/*.md asking for confirmation. They were stripped from rendered HTML at build time. Resolve each, then either remove the bracketed tag from the source draft or replace it with the verified value.
 
 ## Unique VERIFY tags (sorted by frequency)
 
-- (10×) [VERIFY: Oklahoma CIB license #00163603]
-- (8×) [VERIFY: canonical business address]
-- (6×) [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]
+- (9×) [VERIFY: Oklahoma CIB license #00163603]
+- (7×) [VERIFY: canonical business address]
 - (5×) [VERIFY: emergency response/dispatch promise]
+- (5×) [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]
 - (3×) [VERIFY: EV charger brands/certifications]
 - (3×) [VERIFY: financing provider and approved disclosure language]
 - (2×) [VERIFY: link to live GBP and current review count/star rating on publish day]
 - (2×) [VERIFY: current Thumbtack review count and rating on publish day]
-- (2×) [VERIFY: Oklahoma Electrical License #00163603 active and in good standing]
 - (2×) [VERIFY: CIB license #00163603]
 - (2×) [VERIFY: aluminum wiring repair/remediation service]
 - (2×) [VERIFY: Oklahoma CIB license #00163603 active and in good standing]
@@ -36,7 +35,6 @@ These are notes Brock left in copy-drafts/*.md asking for confirmation. They wer
 - (1×) [VERIFY: City of Oklahoma City permit/inspection language]
 - (1×) [VERIFY: City of Moore permit/inspection language]
 - (1×) [VERIFY: City of Del City permit/inspection language]
-- (1×) [VERIFY: City of Bethany permit/inspection language]
 - (1×) [VERIFY: City of Newcastle permit/inspection language]
 - (1×) [VERIFY: City of Mustang permit/inspection language]
 - (1×) [VERIFY: City of Yukon permit/inspection language]

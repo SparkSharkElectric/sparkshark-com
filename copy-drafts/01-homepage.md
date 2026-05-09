@@ -60,14 +60,14 @@ Spark Shark Electric is a licensed residential electrical contractor based in Mo
 === SECTION: WHY US — 4 numbered items (title + sentence) ===
 - 1. Residential-only focus — We work on homes — not commercial buildings, not industrial. Every electrician on staff knows residential wiring, panels, and code.
 - 2. Flat-rate, written pricing — Every quote is written before any work begins. No trip charge, no diagnostic fee, no shop-supplies line item — the number we quote is the number you pay.
-- 3. Licensed and accountable — Licensed, bonded, and insured under Oklahoma Electrical License #163603. Background-checked employees — no subcontractors for residential service work.
+- 3. Licensed and accountable — Background-checked, licensed Oklahoma electricians. No subcontractors for residential service work.
 - 4. Live 24/7 emergency dispatch — A real person answers the phone, day or night. Emergency calls go straight to a licensed electrician on call.
 
-=== SECTION: SERVICE AREA (15 cities — chip row) ===
+=== SECTION: SERVICE AREA (12 cities — chip row) ===
 - Eyebrow: Service area
 - H2: Serving Moore, OKC & the surrounding metro
 - Subhead: Spark Shark Electric in Moore, Oklahoma — covering homeowners across the OKC metropolitan area with the same flat-rate pricing in every city.
-- Cities: Moore · Oklahoma City · Norman · Edmond · Yukon · Mustang · Bethany · Midwest City · Del City · Newcastle · Choctaw · Piedmont · Nichols Hills · The Village · Warr Acres
+- Cities: Moore · Oklahoma City · Norman · Edmond · Yukon · Mustang · Midwest City · Del City · Choctaw · Newcastle · Noble · Blanchard
 
 === SECTION: REVIEWS / SOCIAL PROOF ===
 - Eyebrow: What homeowners say
@@ -83,7 +83,6 @@ Spark Shark Electric is a licensed residential electrical contractor based in Mo
 - Subhead: Flat-rate, written pricing. Licensed Oklahoma electricians. Live 24/7 phone for emergencies.
 - Primary button: Call (405) 436-4776
 - Secondary button: Schedule Online
-- License footer: [VERIFY: Oklahoma Electrical License #00163603 active and in good standing] · Licensed, bonded, and insured · BBB Accredited Business since July 2025 · Spark Shark Electric · [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Hub-and-spoke. Every named service in the grid links to its dedicated service page.

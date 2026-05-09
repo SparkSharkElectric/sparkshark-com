@@ -42,7 +42,7 @@ Q: Do you offer a military or first-responder discount?
 A: Yes. [VERIFY: military/first responder discount terms — fixed amount or percentage]. Active-duty military, veterans, and first responders.
 
 Q: Are you licensed to work in Midwest City?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 
 Q: Can you repair my service mast after a storm?
 A: Yes. We handle service-mast repair, meter-base replacement, weatherhead, and the OG&E coordination required to restore power safely.

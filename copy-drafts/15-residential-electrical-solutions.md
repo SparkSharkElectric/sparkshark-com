@@ -42,7 +42,7 @@ Q: Do you do commercial electrical work?
 A: No. Spark Shark Electric is a residential-only electrical contractor. We focus exclusively on homes.
 
 Q: Are you licensed?
-A: Yes. [VERIFY: Oklahoma Electrical License #00163603 active and in good standing per Oklahoma CIB lookup]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma Electrical License #00163603 active and in good standing per Oklahoma CIB lookup]. Licensed and insured.
 
 Q: Do you offer free estimates?
 A: Yes. Every estimate is free and written. Flat-rate pricing — no surprises.

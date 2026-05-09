@@ -43,7 +43,7 @@ Q: How long does a whole-home generator install take in Yukon?
 A: Typical installs are two days — pad set, gas line tied in by a licensed plumber (we coordinate), ATS wired, and commissioning the next day. We pull the permit and schedule the inspection.
 
 Q: Are you licensed to work in Yukon?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed, bonded, and insured.
+A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 
 Q: Do you handle Yukon permits and inspections?
 A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Yukon permit/inspection language].
