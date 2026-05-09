@@ -1652,13 +1652,24 @@ def build_info_pages():
     d = parse_draft("19-reviews.md")
     title = (d and d["title"]) or "Spark Shark Electric Reviews | 4.9 Stars | 117+ Reviews"
     desc = (d and d["desc"]) or "Spark Shark Electric customer reviews — 4.9 stars across 117+ reviews on Google, BBB, and Yelp."
-    h1 = (d and d["h1"]) or "Reviews"
-    sub = (d and d["sub"]) or "What homeowners across the OKC metro say about Spark Shark Electric."
+    h1 = "Real homeowners. Real reviews. In **the OKC metro**"
+    sub = "Read every review on the third-party platforms below — Google, BBB, Thumbtack, Yelp, Facebook. We don't fabricate testimonials."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Reviews", f"{SITE}/reviews/")])
     html = head(title, desc, "/reviews/", extra)
-    html += page_hero(h1, sub, eyebrow="Customer reviews")
+    html += locked_hero(h1, sub, eyebrow_html="What homeowners say")
     rating_block = f'''<p class="lede" style="text-align:center;font-size:1.4rem;"><span class="stars">★★★★★</span><br><strong style="font-size:2rem;color:var(--text);">{BRAND["rating"]}</strong> across <strong>{BRAND["review_count"]}+</strong> reviews</p>'''
-    body = rating_block + (_render_draft_body(d, with_lede=False) if d else '''<p style="text-align:center;">We don't game review counts. Every review is from a real Oklahoma homeowner.</p>''')
+    body = rating_block + '''
+<h2>Read reviews on</h2>
+<ul>
+  <li><a href="https://www.google.com/maps/search/Spark+Shark+Electric+Moore+OK/" rel="noopener">Google Business Profile</a></li>
+  <li><a href="https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075" rel="noopener">Better Business Bureau</a> — BBB Accredited Business since July 2025</li>
+  <li><a href="https://www.thumbtack.com/ok/oklahoma-city/electrical-repairs/spark-shark-electric/service/489603470823817221" rel="noopener">Thumbtack</a></li>
+  <li><a href="https://www.yelp.com/biz/spark-shark-electric-moore" rel="noopener">Yelp</a></li>
+  <li><a href="https://www.facebook.com/sparksharkelectric/" rel="noopener">Facebook</a></li>
+</ul>
+<h2>Why reviews matter to us</h2>
+<p>Reviews are a public, verifiable record of the work. We can claim flat-rate pricing, clean job sites, and no-upselling all day on a website — but customer reviews on third-party platforms are the actual evidence. Read them on the platforms above, then call when you're ready.</p>
+<p>If you'd like to leave a review for Spark Shark Electric after a service visit, we'd appreciate an honest review on Google. We don't script reviews and we don't ask you to mention anyone by name.</p>'''
     html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
     html += cta_block()
     html += footer_close()
