@@ -47,8 +47,38 @@ python3 -m http.server 8000
 git add -A && git commit -m "..." && git push origin main
 ```
 
+## Quality Gate (`qa.py`)
+
+Pure-Python content-quality checker that runs after every build. Verifies each generated HTML page against an 8-rule registry: scaffolding leaks (`(centered, large)` in headings, `=== SECTION:` markers), unfilled `[VERIFY: …]` placeholders, orphan label bullets, stale strings (Flanco Electric, prior phone numbers, prior addresses), brand misspellings (`SparkShark`/`Sparkshark` flagged), NAP presence (phone / city / ZIP / license on every page), license placement (`#163603` only inside `<footer>`; JSON-LD ignored), and required marketing assets (mascot + logo `<img>` on primary marketing pages).
+
+```bash
+# After editing copy / build.py
+python3 build.py                 # rebuild the HTML
+python3 qa.py                    # full sweep — every sitemap page + /404.html
+python3 qa.py /reviews/          # check specific page(s)
+python3 qa.py --ci               # machine-readable for CI logs
+python3 qa.py --strict           # promote warnings (e.g., `owner`) to failures
+bash tests/test-detection.sh     # canary regression test (must PASS)
+```
+
+`qa.py` reads `sitemap.xml` for the URL manifest and writes `qa-report.md` at repo root. Sitemap entries with no on-disk file (e.g., zombie dirs from de-listed pages) are skipped with a stderr warning, not failed — sitemap consistency is `build.py`'s responsibility.
+
+**CI gate:** `.github/workflows/qa-on-pr.yml` runs `build → qa --ci → tests/test-detection.sh` on every PR + push to `main`. Any FAIL blocks merge. The full `qa-report.md` uploads as a workflow artifact (30-day retention). On failure, a structured comment is auto-posted to the PR with the per-page breakdown.
+
+**When CI is red:**
+1. Open the PR; the auto-posted "QA gate failed" comment has the per-page breakdown inline.
+2. If a real content bug fired, fix the source in `copy-drafts/*.md` (or `build.py`), run `python3 build.py`, commit + push. CI re-runs automatically.
+3. If `qa.py` is mis-firing on legit copy, mention `@claude` in a PR comment (Claude Code GitHub App) or run `subscribe_pr_activity` from Claude Code on the web — the next Claude session can investigate using this CLAUDE.md as context.
+
+**Adding rules:** Edit the registry at the top of `qa.py` — `STALE_STRINGS`, `SCAFFOLDING_PATTERNS`, `BRAND_MISSPELLINGS`, `DISCOURAGED_WORDS`, `NAP_REQUIREMENTS`, `MARKETING_PAGES`, `PLACEHOLDER_PATTERNS`. Adding a new stale string is a one-line list append. Brand / NAP values must stay in sync with `BRAND` in `build.py` (the dependency is documented in `qa.py`'s docstring).
+
+**Canary regression guard:** `tests/test-detection.sh` injects a known scaffolding bug (`<h2>RATING SUMMARY (centered, large)</h2>` + orphan `Stars:` / `Number:` bullets) into `reviews/index.html`, asserts `qa.py` catches it and names "centered, large" in the report, then restores the file. Runs after `qa.py --ci` in CI. If anyone weakens `qa.py` such that the canary stops firing, the PR is blocked.
+
 ## File Map
 ```text
+qa.py                             # Post-build quality gate. See "Quality Gate" above.
+tests/test-detection.sh           # Canary regression guard for qa.py.
+.github/workflows/qa-on-pr.yml    # CI: build + qa + canary on every PR/push.
 build.py                          # SOLE source of truth: page manifest, BRAND dict,
                                   # templates, schema generators. Edit here, then re-run.
 extract-copy-drafts.py            # Reads build.py and emits one editable .md per page
