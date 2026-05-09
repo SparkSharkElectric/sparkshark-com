@@ -60,7 +60,7 @@ Spark Shark Electric is a licensed residential electrical contractor based in Mo
 === SECTION: WHY US — 4 numbered items (title + sentence) ===
 - 1. Residential-only focus — We work on homes — not commercial buildings, not industrial. Every electrician on staff knows residential wiring, panels, and code.
 - 2. Flat-rate, written pricing — Every quote is written before any work begins. No trip charge, no diagnostic fee, no shop-supplies line item — the number we quote is the number you pay.
-- 3. Licensed and accountable — [VERIFY: Oklahoma CIB license #00163603]. Licensed, bonded, and insured. Background-checked employees — no subcontractors for residential service work.
+- 3. Licensed and accountable — Licensed, bonded, and insured under Oklahoma Electrical License #163603. Background-checked employees — no subcontractors for residential service work.
 - 4. Live 24/7 emergency dispatch — A real person answers the phone, day or night. Emergency calls go straight to a licensed electrician on call.
 
 === SECTION: SERVICE AREA (15 cities — chip row) ===

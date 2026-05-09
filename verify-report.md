@@ -1,12 +1,12 @@
 # VERIFY items — to resolve before/after launch
 
-Total: 86 VERIFY tags across drafts (47 unique).
+Total: 85 VERIFY tags across drafts (47 unique).
 
 These are notes Brock left in copy-drafts/*.md asking for confirmation. They were stripped from rendered HTML at build time. Resolve each, then either remove the bracketed tag from the source draft or replace it with the verified value.
 
 ## Unique VERIFY tags (sorted by frequency)
 
-- (11×) [VERIFY: Oklahoma CIB license #00163603]
+- (10×) [VERIFY: Oklahoma CIB license #00163603]
 - (8×) [VERIFY: canonical business address]
 - (6×) [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]
 - (5×) [VERIFY: emergency response/dispatch promise]
