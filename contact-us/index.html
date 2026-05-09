@@ -98,7 +98,87 @@
         </form>
       </div>
     </div>
-    </div></div></section><section class="emerg" aria-labelledby="emerg-h">
+    </div></div></section><section class="svc-map" aria-labelledby="svc-map-h" style="background:#0C192B;padding:48px 0;">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:24px;">
+      <span class="eyebrow" style="color:#FFD700;">Where we work</span>
+      <h2 id="svc-map-h" style="color:#fff;margin:8px 0 4px;font-size:1.75rem;">Service area at a glance</h2>
+      <p style="color:#94B6D8;margin:0;">12 OKC-metro cities — typically a 30-minute drive from Moore HQ.</p>
+    </div>
+    <div style="border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.4);">
+    <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"
+         role="img" aria-labelledby="map-title map-desc"
+         style="display:block;width:100%;height:auto;background:#0C192B;">
+      <title id="map-title">Spark Shark Electric service area map</title>
+      <desc id="map-desc">Moore, Oklahoma City, and 10 nearby OKC-metro communities served by Spark Shark Electric.</desc>
+      <defs>
+        <radialGradient id="sm-bg" cx="55%" cy="50%" r="65%">
+          <stop offset="0%" stop-color="#142139"/>
+          <stop offset="100%" stop-color="#0C192B"/>
+        </radialGradient>
+        <pattern id="sm-dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+          <circle cx="12" cy="12" r="1.2" fill="#1a2a44"/>
+        </pattern>
+        <radialGradient id="sm-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFD700" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="800" height="500" fill="url(#sm-bg)"/>
+      <rect width="800" height="500" fill="url(#sm-dots)"/>
+      <!-- Decorative lightning bolt -->
+      <path d="M 60,400 L 30,460 L 50,460 L 22,500 L 70,455 L 50,455 Z"
+            fill="#FFD700" opacity="0.07"/>
+      <!-- Stylized metro region -->
+      <path d="M 180,140 Q 340,90 500,115 Q 660,140 720,210 Q 740,310 690,410 Q 580,475 430,475 Q 270,475 200,410 Q 150,300 180,140 Z"
+            fill="#102338" stroke="#FFD700" stroke-width="1" stroke-dasharray="6 6" opacity="0.45"/>
+      <!-- Connection lines from Moore HQ to OKC + featured directions -->
+      <g stroke="#FFD700" stroke-width="1" stroke-dasharray="2 4" opacity="0.20" fill="none">
+        <line x1="430" y1="320" x2="450" y2="220"/>
+        <line x1="430" y1="320" x2="450" y2="115"/>
+        <line x1="430" y1="320" x2="320" y2="240"/>
+        <line x1="430" y1="320" x2="440" y2="445"/>
+        <line x1="430" y1="320" x2="225" y2="425"/>
+        <line x1="430" y1="320" x2="690" y2="195"/>
+      </g>
+      <!-- Title -->
+      <text x="40" y="60" font-family="Inter,system-ui,sans-serif" font-size="32" font-weight="800" fill="#FFD700">Service area</text>
+      <text x="40" y="92" font-family="Inter,system-ui,sans-serif" font-size="17" fill="#E6EDF7">12 OKC-metro cities · same flat-rate · same 24/7 phone</text>
+      <!-- Non-featured cities -->
+      <g font-family="Inter,system-ui,sans-serif" font-size="20" font-weight="500" fill="#E6EDF7">
+        <circle cx="450" cy="115" r="6" fill="#94B6D8"/><text x="464" y="121">Edmond</text>
+        <circle cx="320" cy="240" r="6" fill="#94B6D8"/><text x="232" y="246">Yukon</text>
+        <circle cx="310" cy="290" r="6" fill="#94B6D8"/><text x="206" y="296">Mustang</text>
+        <circle cx="290" cy="380" r="6" fill="#94B6D8"/><text x="170" y="386">Newcastle</text>
+        <circle cx="225" cy="425" r="6" fill="#94B6D8"/><text x="105" y="431">Blanchard</text>
+        <circle cx="440" cy="445" r="6" fill="#94B6D8"/><text x="454" y="451">Norman</text>
+        <circle cx="475" cy="410" r="6" fill="#94B6D8"/><text x="489" y="416">Noble</text>
+        <circle cx="520" cy="280" r="6" fill="#94B6D8"/><text x="534" y="286">Del City</text>
+        <circle cx="585" cy="320" r="6" fill="#94B6D8"/><text x="599" y="326">Midwest City</text>
+        <circle cx="690" cy="195" r="6" fill="#94B6D8"/><text x="640" y="180">Choctaw</text>
+      </g>
+      <!-- Oklahoma City (featured) -->
+      <circle cx="450" cy="220" r="26" fill="url(#sm-glow)"/>
+      <circle cx="450" cy="220" r="13" fill="#4A9BA5" stroke="#fff" stroke-width="3"/>
+      <text x="470" y="226" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="700" fill="#fff">Oklahoma City</text>
+      <!-- Moore HQ (featured, biggest) -->
+      <circle cx="430" cy="320" r="32" fill="url(#sm-glow)"/>
+      <circle cx="430" cy="320" r="15" fill="#F28C28" stroke="#fff" stroke-width="3"/>
+      <text x="455" y="320" font-family="Inter,system-ui,sans-serif" font-size="24" font-weight="800" fill="#fff">Moore</text>
+      <text x="455" y="346" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="600" fill="#FFD700">★ Spark Shark HQ</text>
+      <!-- Legend -->
+      <g transform="translate(40, 470)" font-family="Inter,system-ui,sans-serif" font-size="14" fill="#94B6D8">
+        <circle cx="8" cy="-2" r="7" fill="#F28C28"/><text x="22" y="3">HQ</text>
+        <circle cx="68" cy="-2" r="7" fill="#4A9BA5"/><text x="82" y="3">Major hub</text>
+        <circle cx="170" cy="-2" r="5" fill="#94B6D8"/><text x="182" y="3">Service city</text>
+      </g>
+    </svg>
+    </div>
+    <p style="text-align:center;color:#94B6D8;margin:20px 0 0;font-size:0.95rem;">
+      Don't see your city? Call us at <a href="tel:+14054364776" style="color:#FFD700;">(405) 436-4776</a> — we cover most of the OKC metro and may still be able to help.
+    </p>
+  </div>
+</section><section class="emerg" aria-labelledby="emerg-h">
   <div class="wrap">
     <div class="emerg__card">
       <div class="emerg__bolt" aria-hidden="true">⚡</div>
