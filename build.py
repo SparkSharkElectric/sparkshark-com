@@ -29,7 +29,7 @@ def _strip_verify(text):
     """Remove [VERIFY: ...] tags entirely; log them for the report."""
     found = re.findall(r'\[VERIFY:[^\]]*\]', text)
     VERIFY_LOG.extend(found)
-    return re.sub(r'\s*\[VERIFY:[^\]]*\]\s*', ' ', text).strip()
+    return re.sub(r'[ \t]*\[VERIFY:[^\]]*\][ \t]*', ' ', text).strip()
 
 def _strip_html_comments(text):
     return re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
@@ -53,7 +53,7 @@ def parse_draft(filename):
     out = {"title": "", "desc": "", "h1": "", "sub": "", "intro": "",
            "sections": [], "faqs": []}
 
-    parts = re.split(r'\n=== ([^=\n]+?) ===\n', text)
+    parts = re.split(r'\n=== (.+?) ===\n', text)
     for i in range(1, len(parts), 2):
         header = parts[i].strip()
         body = parts[i+1].strip() if i+1 < len(parts) else ""
