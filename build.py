@@ -674,6 +674,7 @@ def build_homepage():
     html += f'''<section class="hero">
   <div class="wrap hero__inner">
     <div class="hero__text">
+      <span class="hero__eyebrow">In the dark? <span class="alt">Call the shark!</span></span>
       <h1>{h1_rendered}</h1>
       <p class="hero__sub">{sub_text}</p>
       <div class="hero__cta">
