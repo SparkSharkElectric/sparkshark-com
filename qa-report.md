@@ -1,15 +1,21 @@
 # QA Report — sparkshark.com
 
-Run: 2026-05-09T17:00:00+00:00 | 39 pages | Pure-Python rule engine | strict=off
+Run: 2026-05-09T23:06:45+00:00 | 41 pages | Pure-Python rule engine | strict=off
 
 ## Summary
 
 - Verdict: **PASS**
-- Pages PASS: 39
+- Pages PASS: 41
 - Pages FAIL: 0
-- Warnings only: 0
+- Warnings only: 1
 
-## Passes (39)
+## Warnings (advisory; not blocking unless --strict)
+
+### /about-us/
+
+- discouraged word: `owner` (homeowner / ownership are allowed)
+
+## Passes (41)
 
 - /
 - /services/
@@ -35,13 +41,15 @@ Run: 2026-05-09T17:00:00+00:00 | 39 pages | Pure-Python rule engine | strict=off
 - /oklahoma-city/
 - /moore/
 - /locations-we-serve/del-city/
-- /locations-we-serve/bethany/
 - /locations-we-serve/newcastle/
 - /locations-we-serve/mustang/
 - /locations-we-serve/yukon/
 - /locations-we-serve/midwest-city/
 - /locations-we-serve/norman/
 - /locations-we-serve/edmond/
+- /locations-we-serve/choctaw/
+- /locations-we-serve/noble/
+- /locations-we-serve/blanchard/
 - /blogs/
 - /2026/05/07/power-out-what-to-do-when-call-electrician/
 - /2026/05/07/signs-you-need-electrical-panel-upgrade/
@@ -54,15 +62,4 @@ Run: 2026-05-09T17:00:00+00:00 | 39 pages | Pure-Python rule engine | strict=off
 ## Coverage
 
 - Rules run: 8
-- Pages checked: 39
-
-<!--
-This is a sample qa-report.md committed alongside qa.py at PR creation time
-(per the original setup brief). It is regenerated atomically on every run of
-`python3 qa.py`. CI uploads the regenerated copy as a build artifact named
-`qa-report` on every PR + push to main.
-
-Page count, list, and timestamps in this sample are illustrative — the real
-run reads sitemap.xml at execution time and reflects whatever build.py
-currently emits.
--->
+- Pages checked: 41

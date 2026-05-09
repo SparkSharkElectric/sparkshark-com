@@ -28,7 +28,7 @@ For larger structural changes (new service page, design system updates), run `py
 - **Phone:** (405) 436-4776 (everywhere — `tel:+14054364776`)
 - **Address:** Moore, OK 73160
 - **License:** #163603
-- **Rating:** 4.9/5 across 117+ reviews
+- **Rating:** 4.8/5 across 117+ reviews
 - **BBB Accredited:** Since 2025-07-14
 
 ## Schema architecture

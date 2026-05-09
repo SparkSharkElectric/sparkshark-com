@@ -1,0 +1,45 @@
+{
+  "_doc": "Manual Google Business Profile reviews paste. Shape mirrors _tools/fetch-gbp-reviews.mjs output, so the GBP API path can drop in without rework when access lands. Each review: { author, rating (1-5 int), text, relativeTime, publishTime (ISO 8601, optional) }. Curate the 5 best — quality > recency. After editing, run: python3 build.py && python3 qa.py --ci",
+  "source": "manual",
+  "fetchedAt": "2026-05-09T23:00:00Z",
+  "placeId": null,
+  "rating": "4.8",
+  "reviewCount": 117,
+  "reviews": [
+    {
+      "author": "Angela Gee",
+      "rating": 5,
+      "text": "Nikka was able to get me scheduled quickly and clearly communicated updates. Brock was a true professional and was able to quickly and thoroughly complete my repairs. Fast and reliable service at a reasonable price! Definitely my electrician of choice.",
+      "relativeTime": "11 weeks ago",
+      "publishTime": null
+    },
+    {
+      "author": "Timothy Brown",
+      "rating": 5,
+      "text": "Brock was absolutely the guy that you Hope shows up at your door when you have an electrical problem. Very smart, extremely analytically, gifted, great communicator, great tenacity And follow through.",
+      "relativeTime": "13 weeks ago",
+      "publishTime": null
+    },
+    {
+      "author": "jody garver",
+      "rating": 5,
+      "text": "I have found an electrician! Roger Torres is a true professional. He fixed the wiring in my garage to perfection. My circuit breaker box was \"whopperJawed\" as they say. Everything fixed and safe for this winter snap! The communication with Spark Shark was great. You will not go wrong hiring Roger and this company!",
+      "relativeTime": "15 weeks ago",
+      "publishTime": null
+    },
+    {
+      "author": "MJ Downing",
+      "rating": 5,
+      "text": "Bill and Roger are amazing! They replaced a bathroom LED light and GFI fast and at a great price.",
+      "relativeTime": "17 weeks ago",
+      "publishTime": null
+    },
+    {
+      "author": "Mackiel Brewer",
+      "rating": 5,
+      "text": "Bill was a very knowledgeable and professional technician. He took his time to evaluate the project and explained the issue. Even though hot tub is still not running, it wasn't due to Bill expertise. He ensured the hot tub had the correct voltage and explained the issue is likely a bad fuse or connector within the hot tub.",
+      "relativeTime": "23 weeks ago",
+      "publishTime": null
+    }
+  ]
+}

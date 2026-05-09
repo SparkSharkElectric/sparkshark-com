@@ -143,7 +143,7 @@ BRAND = {
     "zip": "73160",
     "license": "#163603",
     "license_authority": "Oklahoma Construction Industries Board",
-    "rating": "4.9",
+    "rating": "4.8",
     "review_count": "117",
     "bbb_since": "2025-07-14",
     "service_area": [
@@ -694,6 +694,52 @@ def escape_html(s):
 def escape_attr(s):
     return escape_html(s).replace('"', "&quot;")
 
+def load_reviews(path="data/gbp-reviews.json", limit=None):
+    """Load reviews from data/gbp-reviews.json. Shape mirrors _tools/fetch-gbp-reviews.mjs
+    output so a future GBP API path drops in without rework. Each review:
+    {author, rating (1-5), text, relativeTime, publishTime}.
+    Returns [] on any failure or empty list — callers must treat empty as "do not render"."""
+    try:
+        p = ROOT / path
+        with p.open(encoding="utf-8") as f:
+            data = json.load(f)
+        reviews = data.get("reviews", []) or []
+        if limit:
+            reviews = reviews[:limit]
+        return reviews
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return []
+
+def reviews_carousel(max_count=3):
+    """Render a grid of review cards from data/gbp-reviews.json. Returns "" when no
+    reviews — render is opt-in based on data presence so we never ship fake content."""
+    reviews = load_reviews(limit=max_count)
+    if not reviews:
+        return ""
+    cards = []
+    for r in reviews:
+        try:
+            rating = max(1, min(5, int(r.get("rating") or 5)))
+        except (TypeError, ValueError):
+            rating = 5
+        stars = "★" * rating + "☆" * (5 - rating)
+        text = (r.get("text") or "").strip()
+        if len(text) > 600:
+            text = text[:597].rstrip() + "…"
+        author = (r.get("author") or "Anonymous").strip()
+        rel = (r.get("relativeTime") or "").strip()
+        cite = f'<strong>{escape_html(author)}</strong>'
+        if rel:
+            cite += f' <span class="review-card__when">· {escape_html(rel)}</span>'
+        cards.append(f'''      <figure class="review-card">
+        <div class="review-card__stars" aria-label="{rating} out of 5 stars">{stars}</div>
+        <blockquote class="review-card__quote">{escape_html(text)}</blockquote>
+        <figcaption class="review-card__cite">{cite}</figcaption>
+      </figure>''')
+    return f'''    <div class="reviews-grid">
+{chr(10).join(cards)}
+    </div>'''
+
 def write_page(rel_path, html):
     """rel_path like '/electrical-panels/' — file goes to ./electrical-panels/index.html"""
     if rel_path == "/":
@@ -988,23 +1034,26 @@ def build_homepage():
   </div>
 </section>'''
 
-    # Reviews / Social proof section (new — from draft)
-    if reviews_bullets:
+    # Reviews / Social proof section — carousel (data-driven) + platform links fallback
+    review_cards_html = reviews_carousel(max_count=3)
+    if reviews_bullets or review_cards_html:
         review_eyebrow = reviews_kv.get("eyebrow", "What homeowners say")
         review_h2 = reviews_kv.get("h2", "Reviews from real OKC-metro homeowners")
         review_subhead = reviews_kv.get("subhead", "")
-        review_links_html = "\n        ".join(f'<li>{b}</li>' for b in review_links) if review_links else ""
+        review_links_html = "\n          ".join(f'<li>{b}</li>' for b in review_links) if review_links else ""
+        wrap_class = "wrap" if review_cards_html else "wrap-narrow"
+        rating_line = f'<p class="reviews-rating-line"><span class="stars">★★★★★</span> <strong>{BRAND["rating"]}</strong> across <strong>{BRAND["review_count"]}+</strong> reviews</p>'
+        platforms_html = f'<ul class="review-platforms">\n          {review_links_html}\n        </ul>' if review_links_html else ""
         html += f'''<section class="section section-elev" aria-labelledby="rev-h">
-  <div class="wrap-narrow">
+  <div class="{wrap_class}">
     <div class="services__head">
       <span class="eyebrow">{review_eyebrow}</span>
       <h2 id="rev-h">{review_h2}</h2>
       <p>{review_subhead}</p>
     </div>
-    <p style="text-align:center;font-size:1.4rem;"><span class="stars">★★★★★</span> <strong style="font-size:1.6rem;">{BRAND["rating"]}</strong> across <strong>{BRAND["review_count"]}+</strong> reviews</p>
-    <ul style="margin-top:24px;display:flex;flex-direction:column;gap:8px;">
-        {review_links_html}
-    </ul>
+    {rating_line}
+{review_cards_html}
+    {platforms_html}
   </div>
 </section>'''
 
@@ -1782,8 +1831,13 @@ def build_info_pages():
     html = head(title, desc, "/reviews/", extra)
     html += locked_hero(h1, sub, eyebrow_html="What homeowners say")
     rating_block = f'''<p class="lede" style="text-align:center;font-size:1.4rem;"><span class="stars">★★★★★</span><br><strong style="font-size:2rem;color:var(--text);">{BRAND["rating"]}</strong> across <strong>{BRAND["review_count"]}+</strong> reviews</p>'''
-    body = rating_block + '''
-<h2>Read reviews on</h2>
+    review_cards_html = reviews_carousel(max_count=5)
+    carousel_block = f'''
+<section aria-label="Recent customer reviews">
+{review_cards_html}
+</section>''' if review_cards_html else ""
+    platforms_block = '''
+<h2>Read every review on</h2>
 <ul>
   <li><a href="https://www.google.com/maps/search/Spark+Shark+Electric+Moore+OK/" rel="noopener">Google Business Profile</a></li>
   <li><a href="https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075" rel="noopener">Better Business Bureau</a> — BBB Accredited Business since July 2025</li>
@@ -1794,7 +1848,9 @@ def build_info_pages():
 <h2>Why reviews matter to us</h2>
 <p>Reviews are a public, verifiable record of the work. We can claim flat-rate pricing, clean job sites, and no-upselling all day on a website — but customer reviews on third-party platforms are the actual evidence. Read them on the platforms above, then call when you're ready.</p>
 <p>If you'd like to leave a review for Spark Shark Electric after a service visit, we'd appreciate an honest review on Google. We don't script reviews and we don't ask you to mention anyone by name.</p>'''
-    html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
+    body = rating_block + carousel_block + platforms_block
+    wrap_cls = "wrap" if review_cards_html else "wrap-narrow"
+    html += f'<section class="page-body"><div class="{wrap_cls}">{body}</div></section>'
     html += cta_block()
     html += footer_close()
     write_page("/reviews/", html)
