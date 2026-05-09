@@ -2117,7 +2117,6 @@ def build_sitemap():
         ("/oklahoma-city/", "0.7"),
         ("/moore/", "0.7"),
         ("/locations-we-serve/del-city/", "0.6"),
-        ("/locations-we-serve/bethany/", "0.6"),
         ("/locations-we-serve/newcastle/", "0.6"),
         ("/locations-we-serve/mustang/", "0.6"),
         ("/locations-we-serve/yukon/", "0.6"),
