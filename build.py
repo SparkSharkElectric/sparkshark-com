@@ -1407,6 +1407,27 @@ SERVICE_DRAFTS = {
     "/residential-electrical-solutions/": "15-residential-electrical-solutions.md",
 }
 
+# Tier-2 service pages on the locked-hero formula.
+# Each entry is path → service-category-specific eyebrow (lowercase noun phrase).
+# Locked_hero preserves the copy-draft H1 + sub and auto-accents the trailing
+# "in <city>" phrase. Pages NOT in this dict fall back to page_hero.
+LOCKED_HERO_SERVICES = {
+    "/electrical-panels/":               "Panel upgrades",
+    "/generators/":                      "Generators",
+    "/services/emergency-electrician/":  "24/7 emergency",
+    "/electrical-repair-and-service/":   "Repair & service",
+    "/electrical-installation/":         "Installation",
+    "/electrical-inspection-services/":  "Safety inspections",
+    "/smoke-detectors/":                 "Smoke & CO detectors",
+    "/switches-and-outlets/":            "Outlets & switches",
+    "/electrician-for-outdoor-lighting/":"Outdoor lighting",
+    "/ev-charger-installation/":         "EV charger",
+    "/smart-home-installation/":         "Smart home",
+    "/ceiling-fans/":                    "Ceiling fans",
+    "/indoor-lighting-installation/":    "Indoor lighting",
+    "/residential-electrical-solutions/":"Residential electrical",
+}
+
 
 def build_service_page(p):
     """Build a service page. Pulls copy from copy-drafts/{filename} if available."""
@@ -1453,10 +1474,9 @@ def build_service_page(p):
         faq_html += '</div></div></section>'
 
     html = head(title, desc, p["path"], extra)
-    # Tier 2 service pages migrate to locked_hero one at a time per pacing rule.
-    # Each visually verified page lands here with its eyebrow override.
-    if p["path"] == "/electrical-panels/":
-        html += locked_hero(h1, sub, eyebrow_html="Panel upgrades")
+    eyebrow = LOCKED_HERO_SERVICES.get(p["path"])
+    if eyebrow:
+        html += locked_hero(h1, sub, eyebrow_html=eyebrow)
     else:
         html += page_hero(h1, sub)
     html += proof_block()
@@ -1581,7 +1601,7 @@ def build_info_pages():
     sub = (d and d["sub"]) or "Everything we do — residential-only, licensed, flat-rate priced, available 24/7 for emergencies."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Services", f"{SITE}/services/")])
     html = head(title, desc, "/services/", extra)
-    html += page_hero(h1, sub, eyebrow="What we do")
+    html += locked_hero(h1, sub, eyebrow_html="What we do")
     html += proof_block()
     html += services_grid_block()
     html += emergency_block()
