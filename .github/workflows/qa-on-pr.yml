@@ -1,0 +1,104 @@
+name: QA
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+      - 'copy-drafts/**'
+      - 'home-staging-2026-05-07/**'
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+      - 'copy-drafts/**'
+      - 'home-staging-2026-05-07/**'
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build site
+        run: python3 build.py
+
+      - name: Run QA gate
+        run: python3 qa.py --ci
+
+      - name: Self-test (canary regression guard)
+        run: bash tests/test-detection.sh
+
+      - name: Upload qa-report.md
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-report
+          path: qa-report.md
+          retention-days: 30
+
+      - name: Post QA failure comment
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let summary = '_qa-report.md was not generated; check the workflow log._';
+            try {
+              const report = fs.readFileSync('qa-report.md', 'utf8');
+              const lines = report.split('\n');
+              // Cut at "## Passes" if present, else first 60 lines.
+              let cutoff = lines.findIndex((l, i) => i > 0 && l.startsWith('## Passes'));
+              if (cutoff < 0) cutoff = 60;
+              summary = lines.slice(0, cutoff).join('\n').trim();
+            } catch (e) {}
+
+            const marker = '<!-- qa-gate-failure-summary -->';
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = `${marker}\n\n` +
+              `## QA gate failed\n\n` +
+              `${summary}\n\n` +
+              `---\n\n` +
+              `**Full report:** download the \`qa-report\` artifact from the [workflow run](${runUrl}).\n\n` +
+              `**Next steps:**\n` +
+              `- If a content rule fired (stale string, NAP missing, scaffolding leak), fix the source in \`copy-drafts/*.md\` or \`build.py\`, run \`python3 build.py\` locally, commit + push. CI re-runs automatically.\n` +
+              `- If \`qa.py\` is mis-firing on legit copy, mention \`@claude\` in this thread, or have a Claude Code on the web session run \`subscribe_pr_activity\` on this PR. The repo's \`CLAUDE.md\` documents the QA gate so any Claude session can investigate without extra context.`;
+
+            const previous = await github.rest.issues.listComments({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              per_page: 100,
+            });
+            const existing = previous.data.find(c => c.body && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                comment_id: existing.id,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body,
+              });
+            }
