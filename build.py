@@ -521,7 +521,7 @@ def area_chips_block():
             slug = c.lower().replace(" ", "-")
             chips.append(f'<a class="chip chip--link" href="/locations-we-serve/{slug}/">{c}</a>')
         else:
-            chips.append(f'<span class="chip">{c}</span>')
+            chips.append(f'<a class="chip chip--link" href="/locations-we-serve/">{c}</a>')
     return f'''<section class="area" aria-labelledby="area-h">
   <div class="wrap">
     <div class="area__head">
@@ -835,7 +835,7 @@ def build_homepage():
             slug = cl.replace(" ", "-")
             chips.append(f'<a class="chip chip--link" href="/locations-we-serve/{slug}/">{c}</a>')
         else:
-            chips.append(f'<span class="chip">{c}</span>')
+            chips.append(f'<a class="chip chip--link" href="/locations-we-serve/">{c}</a>')
     html += f'''<section class="area" aria-labelledby="area-h">
   <div class="wrap">
     <div class="area__head">
