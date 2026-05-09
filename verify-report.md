@@ -1,12 +1,12 @@
 # VERIFY items — to resolve before/after launch
 
-Total: 79 VERIFY tags across drafts (45 unique).
+Total: 85 VERIFY tags across drafts (48 unique).
 
 These are notes Brock left in copy-drafts/*.md asking for confirmation. They were stripped from rendered HTML at build time. Resolve each, then either remove the bracketed tag from the source draft or replace it with the verified value.
 
 ## Unique VERIFY tags (sorted by frequency)
 
-- (9×) [VERIFY: Oklahoma CIB license #00163603]
+- (12×) [VERIFY: Oklahoma CIB license #00163603]
 - (7×) [VERIFY: canonical business address]
 - (5×) [VERIFY: emergency response/dispatch promise]
 - (5×) [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]
@@ -43,6 +43,9 @@ These are notes Brock left in copy-drafts/*.md asking for confirmation. They wer
 - (1×) [VERIFY: City of Midwest City permit/inspection language]
 - (1×) [VERIFY: City of Norman permit/inspection language]
 - (1×) [VERIFY: City of Edmond permit/inspection language]
+- (1×) [VERIFY: City of Choctaw permit/inspection language]
+- (1×) [VERIFY: City of Noble permit/inspection language]
+- (1×) [VERIFY: City of Blanchard permit/inspection language]
 - (1×) [VERIFY: Brock's individual years in the electrical trade]
 - (1×) [VERIFY: CIB #00163603 active and in good standing per Oklahoma Construction Industries Board lookup]
 - (1×) [VERIFY: current Google review count and star rating as of publish day; current Thumbtack count and rating as of publish day]

@@ -1595,6 +1595,9 @@ CITY_DRAFTS = {
     "/locations-we-serve/midwest-city/": "31-midwest-city.md",
     "/locations-we-serve/del-city/": "32-del-city.md",
     "/locations-we-serve/newcastle/": "33-newcastle.md",
+    "/locations-we-serve/choctaw/": "39-choctaw.md",
+    "/locations-we-serve/noble/": "40-noble.md",
+    "/locations-we-serve/blanchard/": "41-blanchard.md",
 }
 
 
@@ -1619,7 +1622,10 @@ def build_location_page(path, city, state="OK", description=None, intro=None):
         })
 
     html = head(title, desc, path, extra)
-    html += page_hero(h1, sub, eyebrow="Service area")
+    # Tier 3 city pages — locked-hero with locked tagline default eyebrow.
+    # Copy-draft H1s end with "in <City>, OK" (or similar), so locked_hero's
+    # "in <city>" regex auto-accents the trailing locator phrase.
+    html += locked_hero(h1, sub)
     html += proof_block()
     body = f'<p class="lede">{intro}</p>' if intro else ''
     if sections:
@@ -2210,13 +2216,15 @@ def build_sitemap():
         ("/oklahoma-city/", "0.7"),
         ("/moore/", "0.7"),
         ("/locations-we-serve/del-city/", "0.6"),
-        ("/locations-we-serve/bethany/", "0.6"),
         ("/locations-we-serve/newcastle/", "0.6"),
         ("/locations-we-serve/mustang/", "0.6"),
         ("/locations-we-serve/yukon/", "0.6"),
         ("/locations-we-serve/midwest-city/", "0.6"),
         ("/locations-we-serve/norman/", "0.6"),
         ("/locations-we-serve/edmond/", "0.6"),
+        ("/locations-we-serve/choctaw/", "0.6"),
+        ("/locations-we-serve/noble/", "0.6"),
+        ("/locations-we-serve/blanchard/", "0.6"),
         ("/blogs/", "0.6"),
         ("/2026/05/07/power-out-what-to-do-when-call-electrician/", "0.6"),
         ("/2026/05/07/signs-you-need-electrical-panel-upgrade/", "0.6"),
@@ -2514,7 +2522,7 @@ def main():
         build_service_page(sp)
     print(f"  ✅ {len(SERVICE_PAGES)} service pages")
 
-    # Locations
+    # Locations (Tier 3 — 12 cities per locked-12 service area)
     locations = [
         ("/oklahoma-city/", "Oklahoma City"),
         ("/moore/", "Moore"),
@@ -2525,6 +2533,9 @@ def main():
         ("/locations-we-serve/midwest-city/", "Midwest City"),
         ("/locations-we-serve/norman/", "Norman"),
         ("/locations-we-serve/edmond/", "Edmond"),
+        ("/locations-we-serve/choctaw/", "Choctaw"),
+        ("/locations-we-serve/noble/", "Noble"),
+        ("/locations-we-serve/blanchard/", "Blanchard"),
     ]
     for path, city in locations:
         build_location_page(path, city)

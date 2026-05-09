@@ -32,9 +32,9 @@ Spark Shark Electric in Moore, Oklahoma serves homeowners across the Oklahoma Ci
 - Midwest City — older homes, storm readiness, panels, repairs — /locations-we-serve/midwest-city/
 - Del City — repairs, panels, emergency electrical, older housing stock — /locations-we-serve/del-city/
 - Newcastle — growing residential demand, panels, generators, outdoor lighting — /locations-we-serve/newcastle/
-
-=== SECTION: Cities served (no separate landing page yet) ===
-- Choctaw, Noble, Blanchard — full residential electrical service, no separate page yet. Call (405) 436-4776.
+- Choctaw — older NE-23rd housing + new subdivisions, storm-prone east-OKC — /locations-we-serve/choctaw/
+- Noble — south-of-Norman corridor, ranch-style + acreage properties — /locations-we-serve/noble/
+- Blanchard — exurban SW metro, ranch + storm prep, newer-build growth — /locations-we-serve/blanchard/
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to every city page above, top 3 service pages (Panels, Generators, Emergency),
