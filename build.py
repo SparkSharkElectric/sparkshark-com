@@ -2405,7 +2405,11 @@ def main():
     desc = "Spark Shark Electric serves 12 cities across the Oklahoma City metro — Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, and more."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Service Area", f"{SITE}/locations-we-serve/")])
     html = head(title, desc, "/locations-we-serve/", extra)
-    html += page_hero("Areas we serve", "Residential electrical service across the OKC metro. 12 cities, same flat-rate pricing, same 24/7 phone.", eyebrow="Service area")
+    html += locked_hero(
+        "Residential electrical service in the **OKC metro**",
+        "12 cities, same flat-rate pricing, same licensed Oklahoma team, same 24/7 phone.",
+        eyebrow_html="Where we work",
+    )
     html += proof_block()
     html += area_chips_block()
     html += '''<section class="page-body"><div class="wrap-narrow">
