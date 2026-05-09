@@ -1,0 +1,49 @@
+name: QA
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+      - 'copy-drafts/**'
+      - 'home-staging-2026-05-07/**'
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
+      - 'copy-drafts/**'
+      - 'home-staging-2026-05-07/**'
+
+concurrency:
+  group: qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build site
+        run: python3 build.py
+
+      - name: Run QA gate
+        run: python3 qa.py --ci
+
+      - name: Self-test (canary regression guard)
+        run: bash tests/test-detection.sh
+
+      - name: Upload qa-report.md
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-report
+          path: qa-report.md
+          retention-days: 30
