@@ -1824,19 +1824,90 @@ def build_info_pages():
     write_page("/frequently-asked-questions/", html)
 
     # ====================== PRIVACY POLICY (KEEP 405-796-8111 — see memory) ======================
+    # Hand-written body bypasses _render_draft_body() parser bug (recon #9 in
+    # cutover-session-prompt.md). Title/desc still pull from copy-draft so meta
+    # tags stay editable. License #163603 stays out of the body — it's in the
+    # footer; NAP rule reads full HTML and finds it there.
     d = parse_draft("21-privacy-policy.md")
     title = (d and d["title"]) or "Privacy Policy | Spark Shark Electric"
-    desc = (d and d["desc"]) or "Privacy policy for Spark Shark Electric. How we collect, use, and protect your information."
-    h1 = (d and d["h1"]) or "Privacy Policy"
-    sub = (d and d["sub"]) or "How we collect, use, and protect your information."
+    desc = (d and d["desc"]) or "Privacy policy for Spark Shark Electric. How we collect, use, share, and protect your information."
+    h1 = "Privacy Policy"
+    sub = "How Spark Shark Electric collects, uses, shares, and protects your information."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Privacy Policy", f"{SITE}/privacy-policy/")])
     html = head(title, desc, "/privacy-policy/", extra)
-    html += page_hero(h1, sub, eyebrow="Legal", with_cta=False)
-    body = _render_draft_body(d) if d else ''
-    if not body:
-        body = '<p>This privacy policy describes how Spark Shark Electric collects, uses, and protects information.</p>'
-    # Inject a HIDDEN comment above any 405-796-8111 reference for downstream maintainers
-    body = body.replace("405-796-8111", "<!-- KEEP: SMS opt-out legal compliance — see project memory. Do not replace. -->405-796-8111")
+    html += locked_hero(h1, sub, eyebrow_html="Privacy")
+    body = '''<p class="lede"><strong>Effective: May 9, 2026 &middot; Last updated: May 9, 2026</strong></p>
+
+<p>This Privacy Policy explains how <strong>Spark Shark Electric</strong> collects, uses, shares, and protects information when you visit <strong>sparkshark.com</strong>, contact us by phone or text, request electrical service, or otherwise interact with our business. Spark Shark Electric is a licensed residential electrical contractor serving Moore, Oklahoma City, and the OKC metro.</p>
+
+<p>If you have questions about this policy, contact us at <a href="tel:+14054364776">(405) 436-4776</a> or <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a>.</p>
+
+<h2>Information We Collect</h2>
+<p><strong>Information you give us directly.</strong> When you book service, request a quote, or contact us, you may provide your name, phone number, email address, service address, a description of the electrical issue, and photos. When you pay an invoice, our payment processor collects card details on our behalf &mdash; we do not store full card numbers.</p>
+<p><strong>Information collected automatically when you use our website.</strong> We collect IP address, device and browser type, pages viewed, referring URL, time on site, and similar analytics through cookies and similar technologies. See &ldquo;Cookies and Analytics&rdquo; below.</p>
+<p><strong>Information from other sources.</strong> When you contact us through a third-party platform (Google Business Profile, Yelp, Thumbtack, BBB, Networx, Facebook), we receive the contact details and message you submit there. If you have used us before, we may already have service-history records associated with your address.</p>
+
+<h2>How We Use Information</h2>
+<ul>
+  <li>Schedule, dispatch, and perform the electrical work you request</li>
+  <li>Communicate with you about your appointment, technician ETA, completed work, invoices, warranty follow-up, and customer care</li>
+  <li>Process payments and issue receipts</li>
+  <li>Comply with legal, permitting, tax, and insurance obligations</li>
+  <li>Improve our website, marketing, and operations using aggregated, de-identified analytics</li>
+  <li>Respond to reviews and resolve customer-service requests</li>
+</ul>
+
+<h2>How We Share Information</h2>
+<p>We share information only with parties who help us deliver your service or as required by law. These parties are contractually limited and may not use your information for their own marketing.</p>
+<ul>
+  <li><strong>Service providers under contract:</strong> ServiceTitan (field-service management and ServiceTitan Payments for card processing), Vercel (website hosting), Google Analytics, and Termly (for handling privacy requests).</li>
+  <li><strong>Legal compliance and safety:</strong> when required by court order, subpoena, regulator, or to protect the rights, property, or safety of any person.</li>
+  <li><strong>Business transfers:</strong> in the event of a merger, acquisition, or sale of assets, your information may transfer to the successor entity, subject to this policy.</li>
+</ul>
+<p><strong>We do not sell your personal information. We do not share personal information for cross-context behavioral advertising.</strong></p>
+
+<h2>SMS / Text Messaging Terms</h2>
+<p>By providing your mobile number to Spark Shark Electric &mdash; on our booking form, by phone, in person, or to one of our technicians &mdash; you consent to receive text messages from Spark Shark Electric related to your service. These include appointment confirmations, technician-on-the-way notifications, scheduling changes, invoices, payment receipts, and follow-up communications. Message frequency varies based on your service activity.</p>
+<p><strong>Message and data rates may apply.</strong> Reply <strong>STOP</strong> to any message to opt out, or <strong>HELP</strong> for help. You can also opt out at any time by replying STOP, CANCEL, or UNSUBSCRIBE to <!-- KEEP: SMS opt-out legal compliance &mdash; see project memory. Do not replace. --><strong>405-796-8111</strong>, by emailing <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a>, or by calling <a href="tel:+14054364776">(405) 436-4776</a>. Carriers are not liable for delayed or undelivered messages.</p>
+<p><strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> Text-messaging originator opt-in data and consent are excluded from all categories of personal information disclosed in this Privacy Policy and will not be shared with any third party except subcontracted service providers (our SMS platform and field-service software) acting on our behalf to deliver the messages you have requested.</p>
+
+<h2>Cookies and Analytics</h2>
+<p>Our website uses cookies and similar technologies to remember your preferences and to measure how visitors use the site. We use <strong>Google Analytics 4</strong> for traffic and behavior analytics. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out browser add-on</a> or by adjusting your browser cookie settings.</p>
+<p>We do not currently respond to browser &ldquo;Do Not Track&rdquo; signals because no industry standard exists for honoring them, but you can use the controls above to limit tracking.</p>
+
+<h2>Your Privacy Rights</h2>
+<p>You may request to:</p>
+<ul>
+  <li>Access the personal information we hold about you</li>
+  <li>Correct information that is inaccurate</li>
+  <li>Delete information we are not legally required to retain</li>
+  <li>Withdraw consent for non-essential processing (such as marketing communications)</li>
+</ul>
+<p>To submit a request, email <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a> or call <a href="tel:+14054364776">(405) 436-4776</a>. You may also submit a Data Subject Access Request through our privacy-request portal: <a href="https://app.termly.io/dsar/6c4fb472-a504-4018-aec8-d2f8676dcfd0" rel="noopener">Termly DSAR portal</a>.</p>
+<p>We may need to verify your identity before completing the request.</p>
+
+<h2>Children&rsquo;s Privacy</h2>
+<p>Our website and services are not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+
+<h2>Data Security</h2>
+<p>We use reasonable administrative, technical, and physical safeguards designed to protect the information we collect. No system can guarantee absolute security, and we cannot promise that information transmitted to us will always be secure.</p>
+
+<h2>Data Retention</h2>
+<p>We retain your information only as long as needed to provide the service you requested and to satisfy legal, tax, permitting, warranty, or insurance obligations &mdash; typically up to seven (7) years for tax and accounting records. Marketing communications continue until you opt out. We delete information on request unless we are legally required to retain it.</p>
+
+<h2>California and Other State Residents</h2>
+<p>Spark Shark Electric serves the Oklahoma City metro and does not meet the applicability thresholds of the California Consumer Privacy Act (CCPA/CPRA), the Oklahoma Consumer Data Privacy Act (SB 546), or similar state laws. We do not sell your personal information, and we do not share personal information for cross-context behavioral advertising.</p>
+<p>Regardless of where you reside, you may request access to, correction of, or deletion of your personal information using the methods above.</p>
+
+<h2>Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. The latest version will always be posted at sparkshark.com/privacy-policy/ with a new &ldquo;Last updated&rdquo; date. If we make material changes, we will provide additional notice (such as a banner on the site or an email to active customers). Your continued use of our website or services after changes are posted constitutes acceptance of the updated policy.</p>
+
+<h2>Contact Us</h2>
+<p><strong>Spark Shark Electric</strong><br>
+Phone: <a href="tel:+14054364776">(405) 436-4776</a><br>
+Email: <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a><br>
+Mail: Moore, OK 73160<br>
+Licensed Oklahoma electrical contractor (license number listed in the site footer).</p>'''
     html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
     html += footer_close()
     write_page("/privacy-policy/", html)
