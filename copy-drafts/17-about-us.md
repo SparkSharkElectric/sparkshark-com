@@ -16,7 +16,7 @@ About Spark Shark Electric | Moore, OK Residential Electrician
 About Spark Shark Electric — a licensed residential electrical contractor in Moore, Oklahoma serving the OKC metro. Founder and CEO Brock Flanary. (405) 436-4776.
 
 === H1 (main page heading — visible on page) ===
-About Spark Shark Electric — Locally Led Residential Electrician in Moore, OK
+About **Spark Shark Electric** — Locally Led Residential Electrician in Moore, OK
 
 === HERO SUBTITLE (1–2 sentences under H1) ===
 Spark Shark Electric is a licensed residential electrical contractor based in Moore, Oklahoma. Led by Founder and CEO Brock Flanary, serving homeowners across the OKC metro 24/7.

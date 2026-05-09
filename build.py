@@ -638,6 +638,60 @@ def page_hero(h1, sub, eyebrow=None, with_cta=True):
 </section>'''
 
 
+def locked_hero(h1_text, sub_text, eyebrow_html=None, trust_bullets=None, mascot=True):
+    """Locked hero pattern — copy of build_homepage's `<section class='hero'>` block.
+
+    For Tier-1 marketing pages (about / locations / reviews / contact). Mirrors the
+    homepage hero: yellow eyebrow + H1 (with .accent on trailing 'in <city>') + sub
+    + dual orange/teal CTAs + mascot. No license footer line. Trust bullets optional.
+    """
+    eb = eyebrow_html if eyebrow_html is not None else (
+        'In the dark? <span class="alt">Call the shark!</span>'
+    )
+
+    # Render inline markdown (**bold**) on the H1, then apply the "in <city>" accent
+    # heuristic from build_homepage so trailing city names highlight in brand yellow.
+    h1_rendered = _render_inline(h1_text)
+    m = re.search(r'^(.*?\bin\s+)(.+)$', h1_rendered, re.IGNORECASE)
+    if m and len(m.group(2)) < 50:
+        h1_rendered = f'{m.group(1)}<span class="accent">{m.group(2)}</span>'
+
+    trust_html = ""
+    if trust_bullets:
+        items = "\n        ".join(f'<li>{b}</li>' for b in trust_bullets)
+        trust_html = f'''<ul class="hero__trust">
+        {items}
+      </ul>'''
+
+    mascot_html = ""
+    if mascot:
+        mascot_html = '''<div class="hero__mascot">
+      <img src="/img/mascot.png" alt="Spark Shark Electric mascot" width="380" height="309" loading="eager" fetchpriority="high">
+    </div>'''
+
+    return f'''<section class="hero">
+  <div class="wrap hero__inner">
+    <div class="hero__text">
+      <span class="hero__eyebrow">{eb}</span>
+      <h1>{h1_rendered}</h1>
+      <p class="hero__sub">{sub_text}</p>
+      <div class="hero__cta">
+        <a class="btn btn--orange btn--lg" href="tel:{BRAND['phone_tel']}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+          Call {BRAND['phone_display']}
+        </a>
+        <button type="button" class="btn btn--teal btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">
+          Book Now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      {trust_html}
+    </div>
+    {mascot_html}
+  </div>
+</section>'''
+
+
 # ============================================================================
 # HOMEPAGE — driven by copy-drafts/01-homepage.md
 # ============================================================================
@@ -1548,7 +1602,7 @@ def build_info_pages():
         "worksFor": {"@id": f"{SITE}/#localbusiness"},
     })
     html = head(title, desc, "/about-us/", extra)
-    html += page_hero(h1, sub, eyebrow="About")
+    html += locked_hero(h1, sub)
     html += proof_block()
     body = _render_draft_body(d) if d else ''
     if not body:
@@ -2305,10 +2359,15 @@ def rewrite_internal_paths():
     No-op when BASE is empty (production)."""
     if not BASE:
         return
+    # Static reference files that are NOT build outputs — leave them untouched.
+    # rewrite_internal_paths is non-idempotent (re-runs double the prefix), so
+    # any committed HTML that isn't regenerated on every build must be excluded.
+    SKIP_FILES = {"homepage-source-of-truth.html"}
     pattern = re.compile(r'(href|src|action)="(/(?!/)[^"]*)"')
     rewritten = 0
     for f in ROOT.rglob("*.html"):
         if ".git" in str(f): continue
+        if f.name in SKIP_FILES: continue
         content = f.read_text()
         new = pattern.sub(lambda m: f'{m.group(1)}="{BASE}{m.group(2)}"', content)
         if new != content:
