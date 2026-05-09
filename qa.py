@@ -53,8 +53,6 @@ MARKETING_PAGES = {
 # ── Rule data ────────────────────────────────────────────────────────────────
 
 SCAFFOLDING_PATTERNS: list[tuple[str, str]] = [
-    (r"\([^)]*\b(?:centered|large|small|medium|bold|wide|narrow)\b[^)]*\)",
-     "scaffolding leak: parenthetical layout cue rendered as copy"),
     (r"=== ?SECTION:", "scaffolding leak: literal `=== SECTION:` marker"),
     (r"(?m)^SECTION:", "scaffolding leak: line-anchored `SECTION:` marker"),
     (r"\bMETA DESCRIPTION\b", "scaffolding leak: `META DESCRIPTION` label rendered"),
@@ -62,6 +60,23 @@ SCAFFOLDING_PATTERNS: list[tuple[str, str]] = [
     (r"<h[1-6][^>]*>\s*(?:TITLE|H1|H2)\s*</h[1-6]>",
      "scaffolding leak: heading text is a label"),
 ]
+
+# Heading-scoped layout-cue tuple — the canonical "RATING SUMMARY (centered, large)"
+# bug shape. Matches a parenthetical inside <h1-6> that contains a position cue
+# (centered/aligned/left/right) paired with a size or weight cue (large/small/bold/...).
+# The pairing requirement avoids false-positives on legit prose like
+# "(electric vehicle charging, pool equipment, large workshops)".
+_POSITION_CUE = (
+    r"(?:centered|center|aligned|left-aligned|right-aligned|left|right)"
+)
+_SIZE_CUE = (
+    r"(?:large|small|medium|wide|narrow|tall|short|bold|light|xl|xs|md|sm|lg)"
+)
+LAYOUT_TUPLE_PATTERN = (
+    rf"\(\s*(?:{_POSITION_CUE}\s*,\s*{_SIZE_CUE}"
+    rf"|{_SIZE_CUE}\s*,\s*{_POSITION_CUE})\b[^)]*\)"
+)
+HEADING_PATTERN = r"<h[1-6][^>]*>(.*?)</h[1-6]>"
 
 PLACEHOLDER_PATTERNS: list[tuple[str, str]] = [
     (r"\[VERIFY:[^\]]*\]",
@@ -191,7 +206,14 @@ def _scan(patterns: list[tuple[str, str]], html: str) -> list[str]:
 
 
 def check_scaffolding(html: str) -> list[str]:
-    return _scan(SCAFFOLDING_PATTERNS, html)
+    issues = _scan(SCAFFOLDING_PATTERNS, html)
+    for h in re.finditer(HEADING_PATTERN, html, re.IGNORECASE | re.DOTALL):
+        for m in re.finditer(LAYOUT_TUPLE_PATTERN, h.group(1), re.IGNORECASE):
+            issues.append(
+                f"scaffolding leak: layout-cue tuple in heading "
+                f"— `{_trim(m.group(0))}`"
+            )
+    return issues
 
 
 def check_placeholders(html: str) -> list[str]:
@@ -215,6 +237,21 @@ def _strip_tags(html: str) -> str:
     return re.sub(r"<[^>]+>", " ", html)
 
 
+def _strip_json_ld(html: str) -> str:
+    """Remove <script type="application/ld+json">...</script> blocks.
+
+    JSON-LD is metadata for search engines (not user-visible) and contains the
+    license number by design. Stripping it before placement / visibility checks
+    avoids false-positives on legitimate schema fields.
+    """
+    return re.sub(
+        r'<script\b[^>]*type=["\']application/ld\+json["\'][^>]*>.*?</script>',
+        "",
+        html,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+
+
 def check_discouraged_words(html: str) -> list[str]:
     text = _strip_tags(html)
     return [msg for pattern, msg in DISCOURAGED_WORDS if re.search(pattern, text)]
@@ -225,10 +262,14 @@ def check_nap(html: str) -> list[str]:
 
 
 def check_license_placement(html: str) -> list[str]:
-    matches = list(re.finditer(LICENSE_TOKEN, html))
+    # JSON-LD legitimately includes the license; checking only user-visible
+    # markup keeps the rule focused on the brief's intent (hero / body /
+    # final-CTA placement).
+    visible = _strip_json_ld(html)
+    matches = list(re.finditer(LICENSE_TOKEN, visible))
     if not matches:
-        return []  # NAP rule covers absence
-    regions = footer_regions(html)
+        return []  # NAP rule covers absence (NAP is checked against full HTML)
+    regions = footer_regions(visible)
     if not regions:
         return [f"license `#{LICENSE_TOKEN}` present but no <footer> on page"]
     out_count = sum(1 for m in matches if not in_footer(m.start(), regions))
