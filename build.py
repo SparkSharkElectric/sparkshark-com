@@ -674,9 +674,6 @@ def build_homepage():
     html += f'''<section class="hero">
   <div class="wrap hero__inner">
     <div class="hero__text">
-      <div class="hero__bolt" aria-hidden="true">
-        <svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg"><path d="M14 0L0 22h7l-3 14L24 12h-9l3-12z" fill="#FFD700"/></svg>
-      </div>
       <h1>{h1_rendered}</h1>
       <p class="hero__sub">{sub_text}</p>
       <div class="hero__cta">

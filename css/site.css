@@ -26,17 +26,19 @@ ul, ol { list-style: none; }
   --bg-deep: #0C192B;             /* Brand navy per Brand Guide p.6 */
   --bg-deep-2: #0f2138;
 
-  /* Brand */
-  --accent: #86E2DD;            /* Brand light teal per Brand Guide p.8 (was #7DD3FC Tailwind sky-300) — used for borders + chip-hover bg */
-  --accent-deep: #0369A1;       /* Tactical link color — WCAG AA 5.55:1 on white. Brand has no body-text-sized accent that hits 4.5:1 on white; this stays as a documented a11y exception until Brand Guide adds one. */
-  --accent-hover: #075985;      /* Hover state — sky-800 */
+  /* Brand — web-tactical hybrid (Path B, 2026-05-09) */
+  /* Print/static design = Brand Guide p.6/p.8 muted seafoam. */
+  /* Web/CTAs = Tailwind sky-300 / teal-500 for conversion energy on backlit screens. */
+  --accent: #7DD3FC;            /* Tailwind sky-300 — borders, chip-hover bg, faq accents (was brand #86E2DD; reverted for screen vibrance) */
+  --accent-deep: #0369A1;       /* Tactical link color — WCAG AA 5.55:1 on white */
+  --accent-hover: #075985;      /* Sky-800 */
 
   /* CTA palette — per SparkShark Brand Guide p.6 (Primary) + p.8 (Background variants) */
   --orange: #F28C28;          /* Brand primary orange — Call CTA */
   --orange-deep: #D9751F;     /* Darker hover — navy-text 5.48:1 */
   --orange-glow: rgba(242, 140, 40, .35);
-  --teal: #4A9BA5;            /* Brand primary teal — Book Now CTA */
-  --teal-deep: #6CC0BB;       /* LIGHTER hover from brand p.8 — darker teal would fail navy-text contrast at AA */
+  --teal: #14B8A6;            /* Tailwind teal-500 — Book Now CTA. Brand teal #4A9BA5 reads dim on backlit screens; reverted for conversion energy (Path B 2026-05-09). 7.09:1 navy-text. */
+  --teal-deep: #2DD4BF;       /* Tailwind teal-400 (lighter for navy-text-friendly hover) — 9.11:1 navy contrast */
   --yellow: #FFD700;          /* Brand yellow per p.8 — tagline + lightning bolt accent */
   --yellow-deep: #E6C200;
 
