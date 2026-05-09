@@ -329,9 +329,24 @@ def head(title, description, path, extra_schema=None):
 <main id="main">'''
 
 
+def mobile_cta_bar():
+    """Sticky bottom CTA bar shown on mobile only — Call (orange) + Book Now (teal). Per Blueprint VI."""
+    return f'''<nav class="mobile-cta" aria-label="Primary contact actions">
+  <a class="mobile-cta__call" href="tel:{BRAND['phone_tel']}" aria-label="Call {BRAND['phone_display']}">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+    Call now
+  </a>
+  <button class="mobile-cta__book" type="button" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})" aria-label="Book online">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+    Book Now
+  </button>
+</nav>'''
+
+
 def footer_close():
     return f'''</main>
 {footer_html()}
+{mobile_cta_bar()}
 <script src="/js/site.js" defer></script>
 </body>
 </html>
@@ -342,7 +357,7 @@ def header_html():
     return f'''<header class="site-header">
   <div class="wrap site-header__inner">
     <a class="site-logo" href="/" aria-label="{BRAND['name']} home">
-      <img src="/img/logo.png" alt="" width="40" height="40" loading="eager">
+      <img src="/img/logo.png" alt="" width="44" height="44" loading="eager">
       <span>{BRAND['name']}</span>
     </a>
     <nav class="site-nav" aria-label="Main">
@@ -354,7 +369,7 @@ def header_html():
     </nav>
     <div class="header-cta">
       <a class="header-cta__phone" href="tel:{BRAND['phone_tel']}">{BRAND['phone_display']}</a>
-      <a class="btn btn--primary" href="tel:{BRAND['phone_tel']}">Call Now</a>
+      <a class="btn btn--orange" href="tel:{BRAND['phone_tel']}">Call Now</a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
       </button>
@@ -430,18 +445,34 @@ def footer_html():
 </footer>'''
 
 
-def cta_block(headline="Need a residential electrician today?",
-              sub="Flat-rate pricing. Written options before work begins. Available 24/7."):
+def cta_block(headline="Your electrical problem — solved today.",
+              sub=None):
+    sub_html = f'<p>{sub}</p>' if sub else ''
     return f'''<section class="final-cta">
   <div class="wrap final-cta__inner">
     <div>
+      <span class="final-cta__eyebrow">In the dark? <span class="alt">Call the shark!</span></span>
       <h2>{headline}</h2>
-      <p>{sub}</p>
-      <div class="final-cta__cta">
-        <a class="btn btn--primary btn--lg" href="tel:{BRAND['phone_tel']}">Call {BRAND['phone_display']}</a>
-        <button type="button" class="btn btn--ghost-light btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">Schedule Online</button>
+      {sub_html}
+      <div class="final-cta__rating">
+        <span class="stars" aria-label="{BRAND["rating"]} stars">★★★★★</span>
+        <span class="num">{BRAND["rating"]} on Google</span>
+        <span class="trust-line__sep">·</span>
+        <span class="reviews">{BRAND["review_count"]}+ Reviews</span>
+        <span class="trust-line__sep">·</span>
+        <a href="/reviews/">Read our reviews →</a>
       </div>
-      <p class="final-cta__lic">Oklahoma Electrical License {BRAND['license']} · Licensed, bonded, insured · BBB Accredited since 2025</p>
+      <div class="final-cta__cta">
+        <a class="btn btn--orange btn--lg" href="tel:{BRAND['phone_tel']}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+          Call {BRAND['phone_display']}
+        </a>
+        <button type="button" class="btn btn--teal btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">
+          Book Now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <p class="final-cta__lic">Oklahoma Electrical License {BRAND['license']} · Spark Shark Electric · Residential focus</p>
     </div>
     <div class="final-cta__mascot">
       <img src="/img/mascot.png" alt="" width="280" height="227" loading="lazy">
@@ -591,8 +622,14 @@ def page_hero(h1, sub, eyebrow=None, with_cta=True):
     cta = ""
     if with_cta:
         cta = f'''<div class="page-hero__cta">
-        <a class="btn btn--primary btn--lg" href="tel:{BRAND['phone_tel']}">Call {BRAND['phone_display']}</a>
-        <a class="btn btn--ghost-light btn--lg" href="/contact-us/">Request Service</a>
+        <a class="btn btn--orange btn--lg" href="tel:{BRAND['phone_tel']}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+          Call {BRAND['phone_display']}
+        </a>
+        <button type="button" class="btn btn--teal btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">
+          Book Now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
       </div>'''
     return f'''<section class="page-hero">
   <div class="wrap">
@@ -627,16 +664,30 @@ def build_homepage():
 
     html = head(title, desc, "/")
 
-    # Render H1: split on " — " or "&" so we can highlight the second part
-    # Or just put it all in. Keep simple.
+    # Highlight "Oklahoma City & Moore" (or whichever city pair) in yellow accent.
+    # Heuristic: wrap text after "in " in span.accent
+    h1_rendered = h1_text
+    m = re.search(r'^(.*?\bin\s+)(.+)$', h1_text, re.IGNORECASE)
+    if m and len(m.group(2)) < 50:
+        h1_rendered = f'{m.group(1)}<span class="accent">{m.group(2)}</span>'
+
     html += f'''<section class="hero">
   <div class="wrap hero__inner">
     <div class="hero__text">
-      <h1>{h1_text}</h1>
+      <div class="hero__bolt" aria-hidden="true">
+        <svg viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg"><path d="M14 0L0 22h7l-3 14L24 12h-9l3-12z" fill="#FACC15"/></svg>
+      </div>
+      <h1>{h1_rendered}</h1>
       <p class="hero__sub">{sub_text}</p>
       <div class="hero__cta">
-        <a class="btn btn--primary btn--lg" href="tel:{BRAND['phone_tel']}">Call {BRAND['phone_display']}</a>
-        <button type="button" class="btn btn--ghost-light btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">Schedule Online</button>
+        <a class="btn btn--orange btn--lg" href="tel:{BRAND['phone_tel']}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+          Call {BRAND['phone_display']}
+        </a>
+        <button type="button" class="btn btn--teal btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">
+          Book Now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
       </div>
       <ul class="hero__trust">
         {trust_html}
@@ -645,6 +696,17 @@ def build_homepage():
     <div class="hero__mascot">
       <img src="/img/mascot.png" alt="Spark Shark Electric mascot" width="380" height="309" loading="eager" fetchpriority="high">
     </div>
+  </div>
+</section>
+<section class="trust-line" aria-label="Reviews and credentials">
+  <div class="wrap trust-line__inner">
+    <span><span class="trust-line__star">★</span> {BRAND["rating"]}/5 on Google</span>
+    <span class="trust-line__sep">·</span>
+    <span>{BRAND["review_count"]}+ reviews</span>
+    <span class="trust-line__sep">·</span>
+    <span>OK License {BRAND["license"]}</span>
+    <span class="trust-line__sep">·</span>
+    <span>Background-checked team</span>
   </div>
 </section>'''
 
@@ -807,20 +869,35 @@ def build_homepage():
   </div>
 </section>'''
 
-    # Final CTA — pull from draft
+    # Final CTA — pull from draft, layer "In the dark? Call the shark!" eyebrow per screenshots
     final_bullets = find_section(d, "FINAL CTA") or []
     final_kv = kv_from_bullets(final_bullets)
-    final_headline = final_kv.get("headline", "Need a residential electrician today?")
-    final_subhead = final_kv.get("subhead", "Flat-rate pricing. Written options before work begins. Available 24/7.")
+    final_headline = final_kv.get("headline", "Your electrical problem — solved today.")
+    final_subhead = final_kv.get("subhead", "")
     final_lic = final_kv.get("license footer", f"Oklahoma Electrical License {BRAND['license']} · Licensed, bonded, insured · BBB Accredited since 2025")
     html += f'''<section class="final-cta">
   <div class="wrap final-cta__inner">
     <div>
+      <span class="final-cta__eyebrow">In the dark? <span class="alt">Call the shark!</span></span>
       <h2>{final_headline}</h2>
-      <p>{final_subhead}</p>
+      {f'<p>{final_subhead}</p>' if final_subhead else ''}
+      <div class="final-cta__rating">
+        <span class="stars" aria-label="{BRAND["rating"]} stars">★★★★★</span>
+        <span class="num">{BRAND["rating"]} on Google</span>
+        <span class="trust-line__sep">·</span>
+        <span class="reviews">{BRAND["review_count"]}+ Reviews</span>
+        <span class="trust-line__sep">·</span>
+        <a href="/reviews/">Read our reviews →</a>
+      </div>
       <div class="final-cta__cta">
-        <a class="btn btn--primary btn--lg" href="tel:{BRAND['phone_tel']}">Call {BRAND['phone_display']}</a>
-        <button type="button" class="btn btn--ghost-light btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">Schedule Online</button>
+        <a class="btn btn--orange btn--lg" href="tel:{BRAND['phone_tel']}">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+          Call {BRAND['phone_display']}
+        </a>
+        <button type="button" class="btn btn--teal btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">
+          Book Now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
       </div>
       <p class="final-cta__lic">{final_lic}</p>
     </div>

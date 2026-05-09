@@ -28,7 +28,7 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="site-logo" href="/sparkshark-com/" aria-label="Spark Shark Electric home">
-      <img src="/sparkshark-com/img/logo.png" alt="" width="40" height="40" loading="eager">
+      <img src="/sparkshark-com/img/logo.png" alt="" width="44" height="44" loading="eager">
       <span>Spark Shark Electric</span>
     </a>
     <nav class="site-nav" aria-label="Main">
@@ -40,7 +40,7 @@
     </nav>
     <div class="header-cta">
       <a class="header-cta__phone" href="tel:+14054364776">(405) 436-4776</a>
-      <a class="btn btn--primary" href="tel:+14054364776">Call Now</a>
+      <a class="btn btn--orange" href="tel:+14054364776">Call Now</a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
       </button>
@@ -63,8 +63,14 @@
     <h1>24/7 Emergency Electrician in Moore & Oklahoma City</h1>
     <p>Spark Shark Electric provides 24/7 emergency electrical service across Moore, Oklahoma City, Norman, Edmond, and the surrounding metro. Burning smells, hot panels, sparking outlets, partial power, sudden outages — call (405) 436-4776 any time.</p>
     <div class="page-hero__cta">
-        <a class="btn btn--primary btn--lg" href="tel:+14054364776">Call (405) 436-4776</a>
-        <a class="btn btn--ghost-light btn--lg" href="/sparkshark-com/contact-us/">Request Service</a>
+        <a class="btn btn--orange btn--lg" href="tel:+14054364776">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+          Call (405) 436-4776
+        </a>
+        <button type="button" class="btn btn--teal btn--lg" onclick="_scheduler.show({ schedulerId: 'sched_b2upae383kzlb9qjuhmqnyvt' })">
+          Book Now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
       </div>
   </div>
 </section><section class="proof" aria-label="Trust signals">
@@ -105,13 +111,28 @@
 </section><section class="final-cta">
   <div class="wrap final-cta__inner">
     <div>
-      <h2>Need a residential electrician today?</h2>
-      <p>Flat-rate pricing. Written options before work begins. Available 24/7.</p>
-      <div class="final-cta__cta">
-        <a class="btn btn--primary btn--lg" href="tel:+14054364776">Call (405) 436-4776</a>
-        <button type="button" class="btn btn--ghost-light btn--lg" onclick="_scheduler.show({ schedulerId: 'sched_b2upae383kzlb9qjuhmqnyvt' })">Schedule Online</button>
+      <span class="final-cta__eyebrow">In the dark? <span class="alt">Call the shark!</span></span>
+      <h2>Your electrical problem — solved today.</h2>
+      
+      <div class="final-cta__rating">
+        <span class="stars" aria-label="4.9 stars">★★★★★</span>
+        <span class="num">4.9 on Google</span>
+        <span class="trust-line__sep">·</span>
+        <span class="reviews">117+ Reviews</span>
+        <span class="trust-line__sep">·</span>
+        <a href="/sparkshark-com/reviews/">Read our reviews →</a>
       </div>
-      <p class="final-cta__lic">Oklahoma Electrical License #163603 · Licensed, bonded, insured · BBB Accredited since 2025</p>
+      <div class="final-cta__cta">
+        <a class="btn btn--orange btn--lg" href="tel:+14054364776">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+          Call (405) 436-4776
+        </a>
+        <button type="button" class="btn btn--teal btn--lg" onclick="_scheduler.show({ schedulerId: 'sched_b2upae383kzlb9qjuhmqnyvt' })">
+          Book Now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <p class="final-cta__lic">Oklahoma Electrical License #163603 · Spark Shark Electric · Residential focus</p>
     </div>
     <div class="final-cta__mascot">
       <img src="/sparkshark-com/img/mascot.png" alt="" width="280" height="227" loading="lazy">
@@ -172,6 +193,16 @@
     </div>
   </div>
 </footer>
+<nav class="mobile-cta" aria-label="Primary contact actions">
+  <a class="mobile-cta__call" href="tel:+14054364776" aria-label="Call (405) 436-4776">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.7 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.4 21 3 14.6 3 6.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.3 2.5z"/></svg>
+    Call now
+  </a>
+  <button class="mobile-cta__book" type="button" onclick="_scheduler.show({ schedulerId: 'sched_b2upae383kzlb9qjuhmqnyvt' })" aria-label="Book online">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+    Book Now
+  </button>
+</nav>
 <script src="/sparkshark-com/js/site.js" defer></script>
 </body>
 </html>
