@@ -369,7 +369,6 @@ def header_html():
     </nav>
     <div class="header-cta">
       <a class="header-cta__phone" href="tel:{BRAND['phone_tel']}">{BRAND['phone_display']}</a>
-      <a class="btn btn--orange" href="tel:{BRAND['phone_tel']}">Call Now</a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
       </button>
