@@ -17,6 +17,106 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 SITE = "https://www.sparkshark.com"
+DRAFTS_DIR = ROOT / "copy-drafts"
+
+
+# ============================================================================
+# DRAFT PARSER — copy-drafts/*.md is the source of truth for page copy
+# ============================================================================
+VERIFY_LOG = []  # collects all [VERIFY: ...] tags found, written to verify-report.md
+
+def _strip_verify(text):
+    """Remove [VERIFY: ...] tags entirely; log them for the report."""
+    found = re.findall(r'\[VERIFY:[^\]]*\]', text)
+    VERIFY_LOG.extend(found)
+    return re.sub(r'\s*\[VERIFY:[^\]]*\]\s*', ' ', text).strip()
+
+def _strip_html_comments(text):
+    return re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
+
+def _render_inline(text):
+    """Convert markdown-ish inline: **bold** -> <strong>, word [https://url] -> <a>."""
+    text = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', text)
+    text = re.sub(r'(\S+)\s+\[(https?://[^\]]+)\]', r'<a href="\2" rel="noopener">\1</a>', text)
+    return text
+
+def parse_draft(filename):
+    """Parse copy-drafts/{filename} into a structured dict.
+    Returns None if file missing. Strips [VERIFY: ...] tags from output.
+    """
+    p = DRAFTS_DIR / filename
+    if not p.exists():
+        return None
+    text = p.read_text(encoding="utf-8")
+    text = _strip_html_comments(text)
+
+    out = {"title": "", "desc": "", "h1": "", "sub": "", "intro": "",
+           "sections": [], "faqs": []}
+
+    parts = re.split(r'\n=== ([^=\n]+?) ===\n', text)
+    for i in range(1, len(parts), 2):
+        header = parts[i].strip()
+        body = parts[i+1].strip() if i+1 < len(parts) else ""
+        body = _strip_verify(body)
+
+        if header.startswith("TITLE"):
+            out["title"] = body.split('\n')[0].strip()
+        elif header.startswith("META DESCRIPTION"):
+            out["desc"] = " ".join(line.strip() for line in body.split('\n') if line.strip())
+        elif header.startswith("H1"):
+            out["h1"] = body.split('\n')[0].strip()
+        elif header.startswith("HERO SUBTITLE"):
+            out["sub"] = " ".join(line.strip() for line in body.split('\n') if line.strip())
+        elif header.startswith("INTRO"):
+            out["intro"] = " ".join(line.strip() for line in body.split('\n') if line.strip())
+        elif header.startswith("FAQ"):
+            faqs = []
+            current_q = None
+            current_a = []
+            for line in body.split('\n'):
+                stripped = line.strip()
+                if stripped.startswith('Q:'):
+                    if current_q:
+                        faqs.append((current_q, ' '.join(current_a).strip()))
+                    current_q = _strip_verify(stripped[2:].strip())
+                    current_a = []
+                elif stripped.startswith('A:'):
+                    current_a = [_strip_verify(stripped[2:].strip())]
+                elif stripped and current_q is not None:
+                    current_a.append(_strip_verify(stripped))
+            if current_q:
+                faqs.append((current_q, ' '.join(current_a).strip()))
+            out["faqs"] = faqs
+        elif header.startswith("SECTION:"):
+            section_title = header[8:].strip()
+            bullets = []
+            for line in body.split('\n'):
+                if line.startswith('- '):
+                    bullets.append(_render_inline(line[2:].strip()))
+            out["sections"].append((section_title, bullets))
+    return out
+
+
+def find_section(parsed, name_substring):
+    """Find a section whose title contains the substring (case-insensitive). Returns bullets list or None."""
+    if not parsed:
+        return None
+    for title, bullets in parsed["sections"]:
+        if name_substring.lower() in title.lower():
+            return bullets
+    return None
+
+
+def kv_from_bullets(bullets):
+    """Convert bullets like 'key: value' or 'Eyebrow: text' into a dict."""
+    out = {}
+    for b in bullets:
+        b_plain = re.sub(r'<[^>]+>', '', b)  # strip HTML for matching
+        if ':' in b_plain:
+            k, v = b_plain.split(':', 1)
+            out[k.strip().lower()] = v.strip()
+    return out
+
 
 # Path prefix for asset URLs (CSS/JS/img) and internal nav links.
 # - PRODUCTION (DNS cutover, custom domain): set to ""
@@ -505,39 +605,231 @@ def page_hero(h1, sub, eyebrow=None, with_cta=True):
 
 
 # ============================================================================
-# HOMEPAGE
+# HOMEPAGE — driven by copy-drafts/01-homepage.md
 # ============================================================================
 def build_homepage():
-    title = f"Spark Shark Electric | Licensed Electrician in Moore & OKC | 24/7 Service"
-    desc = f"Licensed residential electricians in Moore, OK and the Oklahoma City metro. 24/7 emergency service, flat-rate pricing, free safety inspection. Call {BRAND['phone_display']}."
+    d = parse_draft("01-homepage.md") or {}
+    title = d.get("title") or "Spark Shark Electric | Licensed Electrician in Moore & OKC | 24/7 Service"
+    desc = d.get("desc") or f"Licensed residential electricians in Moore, OK and the Oklahoma City metro. Call {BRAND['phone_display']}."
+    h1_text = d.get("h1") or "Residential Electricians in Oklahoma City & Moore"
+    sub_text = d.get("sub") or "Residential electrical help — answered 24/7."
+
+    # Trust points (3 short bullets shown on hero)
+    trust_bullets = find_section(d, "HERO TRUST POINTS") or [
+        "Flat-rate, written pricing", "Licensed Oklahoma electricians", "Live 24/7 emergency dispatch"
+    ]
+    trust_html = "\n        ".join(f'<li>{b}</li>' for b in trust_bullets)
+
+    # Reviews / Social proof section (new, from drafts)
+    reviews_bullets = find_section(d, "REVIEWS") or []
+    reviews_kv = kv_from_bullets(reviews_bullets)
+    review_links = [b for b in reviews_bullets if "<a " in b]
+
     html = head(title, desc, "/")
+
+    # Render H1: split on " — " or "&" so we can highlight the second part
+    # Or just put it all in. Keep simple.
     html += f'''<section class="hero">
   <div class="wrap hero__inner">
     <div class="hero__text">
-      <h1>Residential Electricians in <span class="accent">Oklahoma City &amp; Moore</span></h1>
-      <p class="hero__sub">Residential electrical help for Oklahoma City, Moore, and the OKC metro. Repairs, panels, generators, inspections, outlets, and emergency electrical issues — answered 24/7.</p>
+      <h1>{h1_text}</h1>
+      <p class="hero__sub">{sub_text}</p>
       <div class="hero__cta">
         <a class="btn btn--primary btn--lg" href="tel:{BRAND['phone_tel']}">Call {BRAND['phone_display']}</a>
-        <a class="btn btn--ghost-light btn--lg" href="/contact-us/">Request Service</a>
+        <button type="button" class="btn btn--ghost-light btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">Schedule Online</button>
       </div>
       <ul class="hero__trust">
-        <li>Flat-rate pricing</li>
-        <li>Licensed Oklahoma electricians</li>
-        <li>Available 24/7</li>
+        {trust_html}
       </ul>
     </div>
     <div class="hero__mascot">
-      <img src="/img/mascot.png" alt="Spark Shark mascot" width="380" height="309" loading="eager" fetchpriority="high">
+      <img src="/img/mascot.png" alt="Spark Shark Electric mascot" width="380" height="309" loading="eager" fetchpriority="high">
     </div>
   </div>
-</section>
-{proof_block()}
-{emergency_block()}
-{services_grid_block()}
-{why_block()}
-{area_chips_block()}
-{cta_block()}
-'''
+</section>'''
+
+    # Proof bar — pull from draft if present
+    proof_bullets = find_section(d, "PROOF BAR") or [
+        "Licensed Oklahoma electricians", "Flat-rate pricing", "Background-checked team",
+        "Written options before work begins", "Available 24/7"
+    ]
+    html += f'''<section class="proof" aria-label="Trust signals">
+  <div class="wrap"><ul class="proof__list">
+    {chr(10).join(f"<li>{b}</li>" for b in proof_bullets)}
+  </ul></div>
+</section>'''
+
+    # Emergency callout — pull from draft if present
+    em_bullets = find_section(d, "EMERGENCY CALLOUT") or []
+    em_kv = kv_from_bullets(em_bullets)
+    em_eyebrow = em_kv.get("eyebrow", "Electrical emergency?")
+    em_h2 = em_kv.get("h2", "Burning smell, hot panel, sparking outlet, or sudden power loss? Call now.")
+    html += f'''<section class="emerg" aria-labelledby="emerg-h">
+  <div class="wrap"><div class="emerg__card">
+    <div class="emerg__bolt" aria-hidden="true">⚡</div>
+    <div>
+      <span class="emerg__eyebrow">{em_eyebrow}</span>
+      <h2 id="emerg-h" class="emerg__h2">{em_h2}</h2>
+    </div>
+    <a class="btn btn--emerg btn--lg" href="tel:{BRAND['phone_tel']}">Call {BRAND['phone_display']}</a>
+  </div></div>
+</section>'''
+
+    # Services grid — header from draft, cards from draft
+    svc_header = find_section(d, "SERVICES GRID HEADER") or []
+    svc_kv = kv_from_bullets(svc_header)
+    svc_eyebrow = svc_kv.get("eyebrow", "Services")
+    svc_h2 = svc_kv.get("h2", "What we work on")
+    svc_subhead = svc_kv.get("subhead", "Residential-only electrical work.")
+
+    svc_cards_bullets = find_section(d, "SERVICES GRID — 8 cards") or []
+    svc_links = [
+        ("/electrical-panels/", "⚡"),
+        ("/generators/", "🔋"),
+        ("/services/emergency-electrician/", "🚨"),
+        ("/electrical-repair-and-service/", "🛠️"),
+        ("/electrical-installation/", "🏠"),
+        ("/electrical-inspection-services/", "🔍"),
+        ("/ev-charger-installation/", "🚗"),
+        ("/switches-and-outlets/", "💡"),
+    ]
+    cards_html = []
+    for i, b in enumerate(svc_cards_bullets[:8]):
+        # b format: "Title — Description"
+        if " — " in b:
+            t, ds = b.split(" — ", 1)
+        else:
+            t, ds = b, ""
+        link, emoji = svc_links[i] if i < len(svc_links) else ("/services/", "⚡")
+        cards_html.append(f'''<a class="svc-card" href="{link}">
+          <div class="svc-card__icon" aria-hidden="true">{emoji}</div>
+          <h3>{t.strip()}</h3>
+          <p>{ds.strip()}</p>
+        </a>''')
+    html += f'''<section class="services" aria-labelledby="svc-h">
+  <div class="wrap">
+    <div class="services__head">
+      <span class="eyebrow">{svc_eyebrow}</span>
+      <h2 id="svc-h">{svc_h2}</h2>
+      <p>{svc_subhead}</p>
+    </div>
+    <div class="services__grid">
+      {chr(10).join(cards_html)}
+    </div>
+  </div>
+</section>'''
+
+    # Why us — header + 4 numbered items
+    why_header = find_section(d, "WHY US HEADER") or []
+    why_kv = kv_from_bullets(why_header)
+    why_eyebrow = why_kv.get("eyebrow", "Why us")
+    why_h2 = why_kv.get("h2", "How we work")
+    why_subhead = why_kv.get("subhead", "Honest pricing, clean work, no surprises.")
+
+    why_items = find_section(d, "WHY US — 4") or []
+    why_html = []
+    for i, b in enumerate(why_items[:4], 1):
+        # b format: "1. Title — sentence"  or "Title — sentence"
+        m = re.match(r'^\s*(\d+)\.\s*(.+?)\s+—\s+(.+)$', b)
+        if m:
+            t, p = m.group(2), m.group(3)
+        elif " — " in b:
+            t, p = b.split(" — ", 1)
+        else:
+            t, p = b, ""
+        why_html.append(f'''<div class="why__item">
+        <span class="why__num">{i}</span>
+        <h3>{t.strip()}</h3>
+        <p>{p.strip()}</p>
+      </div>''')
+    html += f'''<section class="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="why__head">
+      <span class="eyebrow">{why_eyebrow}</span>
+      <h2 id="why-h">{why_h2}</h2>
+      <p>{why_subhead}</p>
+    </div>
+    <div class="why__grid">
+      {chr(10).join(why_html)}
+    </div>
+  </div>
+</section>'''
+
+    # Service area — header from draft, chips from BRAND constant
+    area_header = find_section(d, "SERVICE AREA") or []
+    area_kv = kv_from_bullets(area_header)
+    area_eyebrow = area_kv.get("eyebrow", "Service area")
+    area_h2 = area_kv.get("h2", "OKC Metro & surrounding cities")
+    area_subhead = area_kv.get("subhead", "Residential electrical service throughout the Oklahoma City metropolitan area.")
+
+    chips = []
+    linked_cities = {"oklahoma city": "/oklahoma-city/", "moore": "/moore/"}
+    sub_cities = {"del city","bethany","newcastle","mustang","yukon","midwest city","norman","edmond"}
+    for c in BRAND["service_area"]:
+        cl = c.lower()
+        if cl in linked_cities:
+            chips.append(f'<a class="chip chip--link" href="{linked_cities[cl]}">{c}</a>')
+        elif cl in sub_cities:
+            slug = cl.replace(" ", "-")
+            chips.append(f'<a class="chip chip--link" href="/locations-we-serve/{slug}/">{c}</a>')
+        else:
+            chips.append(f'<span class="chip">{c}</span>')
+    html += f'''<section class="area" aria-labelledby="area-h">
+  <div class="wrap">
+    <div class="area__head">
+      <span class="eyebrow">{area_eyebrow}</span>
+      <h2 id="area-h">{area_h2}</h2>
+      <p>{area_subhead}</p>
+    </div>
+    <div class="chip-row">
+      {chr(10).join(chips)}
+    </div>
+  </div>
+</section>'''
+
+    # Reviews / Social proof section (new — from draft)
+    if reviews_bullets:
+        review_eyebrow = reviews_kv.get("eyebrow", "What homeowners say")
+        review_h2 = reviews_kv.get("h2", "Reviews from real OKC-metro homeowners")
+        review_subhead = reviews_kv.get("subhead", "")
+        review_links_html = "\n        ".join(f'<li>{b}</li>' for b in review_links) if review_links else ""
+        html += f'''<section class="section section-elev" aria-labelledby="rev-h">
+  <div class="wrap-narrow">
+    <div class="services__head">
+      <span class="eyebrow">{review_eyebrow}</span>
+      <h2 id="rev-h">{review_h2}</h2>
+      <p>{review_subhead}</p>
+    </div>
+    <p style="text-align:center;font-size:1.4rem;"><span class="stars">★★★★★</span> <strong style="font-size:1.6rem;">{BRAND["rating"]}</strong> across <strong>{BRAND["review_count"]}+</strong> reviews</p>
+    <ul style="margin-top:24px;display:flex;flex-direction:column;gap:8px;">
+        {review_links_html}
+    </ul>
+  </div>
+</section>'''
+
+    # Final CTA — pull from draft
+    final_bullets = find_section(d, "FINAL CTA") or []
+    final_kv = kv_from_bullets(final_bullets)
+    final_headline = final_kv.get("headline", "Need a residential electrician today?")
+    final_subhead = final_kv.get("subhead", "Flat-rate pricing. Written options before work begins. Available 24/7.")
+    final_lic = final_kv.get("license footer", f"Oklahoma Electrical License {BRAND['license']} · Licensed, bonded, insured · BBB Accredited since 2025")
+    html += f'''<section class="final-cta">
+  <div class="wrap final-cta__inner">
+    <div>
+      <h2>{final_headline}</h2>
+      <p>{final_subhead}</p>
+      <div class="final-cta__cta">
+        <a class="btn btn--primary btn--lg" href="tel:{BRAND['phone_tel']}">Call {BRAND['phone_display']}</a>
+        <button type="button" class="btn btn--ghost-light btn--lg" onclick="_scheduler.show({{ schedulerId: '{ST_SCHEDULER_ID}' }})">Schedule Online</button>
+      </div>
+      <p class="final-cta__lic">{final_lic}</p>
+    </div>
+    <div class="final-cta__mascot">
+      <img src="/img/mascot.png" alt="" width="280" height="227" loading="lazy">
+    </div>
+  </div>
+</section>'''
+
     html += footer_close()
     write_page("/", html)
 
@@ -975,37 +1267,71 @@ SERVICE_PAGES = [
 ]
 
 
+# Map service paths to draft filenames
+SERVICE_DRAFTS = {
+    "/electrical-panels/": "02-electrical-panels.md",
+    "/generators/": "03-generators.md",
+    "/services/emergency-electrician/": "04-emergency-electrician.md",
+    "/electrical-repair-and-service/": "05-electrical-repair-and-service.md",
+    "/electrical-installation/": "06-electrical-installation.md",
+    "/electrical-inspection-services/": "07-electrical-inspection-services.md",
+    "/smoke-detectors/": "08-smoke-detectors.md",
+    "/switches-and-outlets/": "09-switches-and-outlets.md",
+    "/electrician-for-outdoor-lighting/": "10-outdoor-lighting.md",
+    "/ev-charger-installation/": "11-ev-charger-installation.md",
+    "/smart-home-installation/": "12-smart-home-installation.md",
+    "/ceiling-fans/": "13-ceiling-fans.md",
+    "/indoor-lighting-installation/": "14-indoor-lighting-installation.md",
+    "/residential-electrical-solutions/": "15-residential-electrical-solutions.md",
+}
+
+
 def build_service_page(p):
+    """Build a service page. Pulls copy from copy-drafts/{filename} if available."""
+    draft_file = SERVICE_DRAFTS.get(p["path"])
+    d = parse_draft(draft_file) if draft_file else None
+
+    title = (d.get("title") if d else None) or p["title"]
+    desc = (d.get("desc") if d else None) or p["desc"]
+    h1 = (d.get("h1") if d else None) or re.sub(r'<[^>]+>', '', p["h1"])
+    sub = (d.get("sub") if d else None) or p["sub"]
+    intro = (d.get("intro") if d else None) or p["intro"]
+    sections = d["sections"] if (d and d["sections"]) else p["sections"]
+    faqs = (d["faqs"] if d and d["faqs"] else p.get("faqs")) or []
+
     extra = [
-        breadcrumb_schema([("Home", f"{SITE}/"), ("Services", f"{SITE}/services/"), (p["h1"], f"{SITE}{p['path']}")]),
-        service_schema(p["service_name"], p["desc"], p["path"])
+        breadcrumb_schema([("Home", f"{SITE}/"), ("Services", f"{SITE}/services/"), (h1, f"{SITE}{p['path']}")]),
+        service_schema(p["service_name"], desc, p["path"])
     ]
-    if p.get("faqs"):
+    if faqs:
         extra.append({
             "@context": "https://schema.org", "@type": "FAQPage",
             "mainEntity": [
                 {"@type": "Question", "name": q,
                  "acceptedAnswer": {"@type": "Answer", "text": a}}
-                for q, a in p["faqs"]
+                for q, a in faqs
             ]
         })
 
-    body_html = f'<p class="lede">{p["intro"]}</p>'
-    for h2, items in p["sections"]:
+    body_html = f'<p class="lede">{intro}</p>' if intro else ''
+    for h2, items in sections:
+        # Skip section if h2 looks like a directive/note, not real content
+        if not items:
+            continue
         body_html += f'<h2>{h2}</h2><ul>'
         for li in items:
             body_html += f'<li>{li}</li>'
         body_html += '</ul>'
 
     faq_html = ""
-    if p.get("faqs"):
+    if faqs:
         faq_html = '<section class="faq section-elev"><div class="wrap"><div class="services__head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div><div class="faq__list">'
-        for q, a in p["faqs"]:
+        for q, a in faqs:
             faq_html += f'<details><summary>{q}</summary><p>{a}</p></details>'
         faq_html += '</div></div></section>'
 
-    html = head(p["title"], p["desc"], p["path"], extra)
-    html += page_hero(p["h1"], p["sub"])
+    html = head(title, desc, p["path"], extra)
+    html += page_hero(h1, sub)
     html += proof_block()
     html += f'<section class="page-body"><div class="wrap-narrow">{body_html}</div></section>'
     html += faq_html
@@ -1018,28 +1344,72 @@ def build_service_page(p):
 # ============================================================================
 # LOCATION PAGES
 # ============================================================================
+# City path → draft filename
+CITY_DRAFTS = {
+    "/oklahoma-city/": "24-oklahoma-city.md",
+    "/moore/": "25-moore.md",
+    "/locations-we-serve/norman/": "26-norman.md",
+    "/locations-we-serve/edmond/": "27-edmond.md",
+    "/locations-we-serve/yukon/": "28-yukon.md",
+    "/locations-we-serve/mustang/": "29-mustang.md",
+    "/locations-we-serve/bethany/": "30-bethany.md",
+    "/locations-we-serve/midwest-city/": "31-midwest-city.md",
+    "/locations-we-serve/del-city/": "32-del-city.md",
+    "/locations-we-serve/newcastle/": "33-newcastle.md",
+}
+
+
 def build_location_page(path, city, state="OK", description=None, intro=None):
-    title = f"{city} Electricians | Licensed, 24/7 | {BRAND['name']}"
-    desc = description or f"Licensed residential electricians serving {city}, {state}. Panel upgrades, generators, repair, 24/7 emergency. Call {BRAND['phone_display']}."
-    intro = intro or f"We serve {city} every week. Same flat-rate pricing, same licensed team, same 24/7 phone — no zone surcharges, no separate dispatch fees."
-    extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Service Area", f"{SITE}/locations-we-serve/"), (city, f"{SITE}{path}")])
+    """Build a city page; copy comes from copy-drafts/{filename} when present."""
+    draft_file = CITY_DRAFTS.get(path)
+    d = parse_draft(draft_file) if draft_file else None
+
+    title = (d.get("title") if d else None) or f"{city} Electricians | Licensed, 24/7 | {BRAND['name']}"
+    desc = (d.get("desc") if d else None) or description or f"Licensed residential electricians serving {city}, {state}. Call {BRAND['phone_display']}."
+    h1 = (d.get("h1") if d else None) or f"{city} Electricians"
+    sub = (d.get("sub") if d else None) or f"Licensed residential electrical service for {city} and the surrounding OKC metro. Available 24/7."
+    intro = (d.get("intro") if d else None) or intro or f"We serve {city} every week. Same flat-rate pricing, same licensed team, same 24/7 phone."
+    sections = d["sections"] if (d and d["sections"]) else []
+    faqs = (d["faqs"] if d and d["faqs"] else []) or []
+
+    extra = [breadcrumb_schema([("Home", f"{SITE}/"), ("Service Area", f"{SITE}/locations-we-serve/"), (city, f"{SITE}{path}")])]
+    if faqs:
+        extra.append({
+            "@context": "https://schema.org", "@type": "FAQPage",
+            "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]
+        })
+
     html = head(title, desc, path, extra)
-    html += page_hero(f"{city} Electricians", f"Licensed residential electrical service for {city} and the surrounding OKC metro. Available 24/7.", eyebrow="Service area")
+    html += page_hero(h1, sub, eyebrow="Service area")
     html += proof_block()
-    html += f'''<section class="page-body"><div class="wrap-narrow">
-    <p class="lede">{intro}</p>
-    <h2>What we do for {city} homeowners</h2>
-    <ul>
-      <li><a href="/electrical-panels/">Electrical panel upgrades</a> — service replacement, 100A→200A, sub-panels.</li>
-      <li><a href="/generators/">Whole-home generators</a> — Generac, Kohler, sized to your load.</li>
-      <li><a href="/services/emergency-electrician/">Emergency electrical service</a> — burning smells, hot panels, sparking outlets, partial power loss. 24/7.</li>
-      <li><a href="/electrical-repair-and-service/">Electrical repair</a> — flickering lights, dead outlets, breaker trips, GFCI faults.</li>
-      <li><a href="/electrical-installation/">Installation</a> — new circuits, rewires, smart-home, EV chargers.</li>
-      <li><a href="/electrical-inspection-services/">Safety inspections</a> — free with any service call.</li>
-    </ul>
-    <h2>Why we cover {city}</h2>
-    <p>We're a {BRAND['city']}-based residential electrical contractor. {city} is part of our standard service area — same flat-rate pricing, same response times, same licensed Oklahoma electricians. If you need an electrician in {city}, call {BRAND['phone_display']}.</p>
-    </div></section>'''
+    body = f'<p class="lede">{intro}</p>' if intro else ''
+    if sections:
+        for h2, items in sections:
+            if not items:
+                continue
+            body += f'<h2>{h2}</h2><ul>'
+            for li in items:
+                body += f'<li>{li}</li>'
+            body += '</ul>'
+    else:
+        # Fallback: templated services list
+        body += f'''<h2>What we do for {city} homeowners</h2>
+        <ul>
+          <li><a href="/electrical-panels/">Electrical panel upgrades</a> — service replacement, 100A→200A, sub-panels.</li>
+          <li><a href="/generators/">Whole-home generators</a> — Generac, Kohler, sized to your load.</li>
+          <li><a href="/services/emergency-electrician/">Emergency electrical service</a> — 24/7 dispatch.</li>
+          <li><a href="/electrical-repair-and-service/">Electrical repair</a></li>
+          <li><a href="/electrical-installation/">Installation</a></li>
+          <li><a href="/electrical-inspection-services/">Safety inspections</a></li>
+        </ul>'''
+    html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
+
+    if faqs:
+        html += '<section class="faq section-elev"><div class="wrap"><div class="services__head"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div><div class="faq__list">'
+        for q, a in faqs:
+            html += f'<details><summary>{q}</summary><p>{a}</p></details>'
+        html += '</div></div></section>'
+
     html += area_chips_block()
     html += cta_block(headline=f"Need an electrician in {city}?")
     html += footer_close()
@@ -1049,13 +1419,42 @@ def build_location_page(path, city, state="OK", description=None, intro=None):
 # ============================================================================
 # INFO PAGES
 # ============================================================================
+def _draft_or(filename, key, default):
+    d = parse_draft(filename)
+    if d and d.get(key):
+        return d[key]
+    return default
+
+
+def _render_draft_body(draft, with_lede=True):
+    """Render the intro + sections of a draft as HTML body."""
+    if not draft:
+        return ''
+    body = ''
+    if with_lede and draft.get("intro"):
+        body += f'<p class="lede">{draft["intro"]}</p>'
+    for h2, items in draft.get("sections", []):
+        if not items:
+            continue
+        body += f'<h2>{h2}</h2>'
+        if len(items) == 1 and len(items[0]) > 80 and ('<br>' in items[0] or len(items[0].split('. ')) > 1):
+            # Single long bullet = paragraph
+            body += f'<p>{items[0]}</p>'
+        else:
+            body += '<ul>' + ''.join(f'<li>{li}</li>' for li in items) + '</ul>'
+    return body
+
+
 def build_info_pages():
-    # SERVICES INDEX
-    title = "Electrical Services | Residential & Emergency | Spark Shark Electric"
-    desc = "Full list of residential electrical services in OKC and Moore — panels, generators, repair, installation, inspections, lighting, EV chargers, 24/7 emergency."
+    # ====================== SERVICES INDEX ======================
+    d = parse_draft("16-services-index.md")
+    title = (d and d["title"]) or "Electrical Services | Residential & Emergency | Spark Shark Electric"
+    desc = (d and d["desc"]) or "Full list of residential electrical services in OKC and Moore — panels, generators, repair, installation, inspections, lighting, EV chargers, 24/7 emergency."
+    h1 = (d and d["h1"]) or "Electrical Services"
+    sub = (d and d["sub"]) or "Everything we do — residential-only, licensed, flat-rate priced, available 24/7 for emergencies."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Services", f"{SITE}/services/")])
     html = head(title, desc, "/services/", extra)
-    html += page_hero("Electrical Services", "Everything we do — residential-only, licensed, flat-rate priced, available 24/7 for emergencies.", eyebrow="What we do")
+    html += page_hero(h1, sub, eyebrow="What we do")
     html += proof_block()
     html += services_grid_block()
     html += emergency_block()
@@ -1064,40 +1463,42 @@ def build_info_pages():
     html += footer_close()
     write_page("/services/", html)
 
-    # ABOUT
-    title = "About Spark Shark Electric | Licensed OKC & Moore Electricians"
-    desc = "About Spark Shark Electric — licensed residential electrical contractor based in Moore, OK. License #163603, BBB Accredited, 24/7 service across the OKC metro."
-    extra = breadcrumb_schema([("Home", f"{SITE}/"), ("About", f"{SITE}/about-us/")])
+    # ====================== ABOUT ======================
+    d = parse_draft("17-about-us.md")
+    title = (d and d["title"]) or "About Spark Shark Electric | Licensed OKC & Moore Electricians"
+    desc = (d and d["desc"]) or "About Spark Shark Electric — licensed residential electrical contractor based in Moore, OK."
+    h1 = (d and d["h1"]) or "About Spark Shark Electric"
+    sub = (d and d["sub"]) or "Residential electrical contractor based in Moore, Oklahoma. Licensed, bonded, insured, BBB Accredited, available 24/7."
+    extra = [breadcrumb_schema([("Home", f"{SITE}/"), ("About", f"{SITE}/about-us/")])]
+    # Person schema for Brock as Founder & CEO (Brock approved 2026-05-08; do NOT use 'owns' property)
+    extra.append({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": f"{SITE}/about-us/#person-founder",
+        "name": "Brock Flanary",
+        "jobTitle": "Founding CEO",
+        "worksFor": {"@id": f"{SITE}/#localbusiness"},
+    })
     html = head(title, desc, "/about-us/", extra)
-    html += page_hero("About Spark Shark Electric", "Residential electrical contractor based in Moore, Oklahoma. Licensed, bonded, insured, BBB Accredited, available 24/7.", eyebrow="About")
+    html += page_hero(h1, sub, eyebrow="About")
     html += proof_block()
-    html += '''<section class="page-body"><div class="wrap-narrow">
-    <p class="lede">Spark Shark Electric is a licensed residential electrical contractor serving the Oklahoma City metro from a base in Moore. We focus exclusively on homes — not commercial, not industrial.</p>
-    <h2>What we do, and what we don't</h2>
-    <p>We do residential electrical work. Panels, generators, repair, installation, inspections, lighting, EV chargers, smart home, smoke detectors, ceiling fans. Same-day repair, 24/7 emergency. <strong>That's it.</strong></p>
-    <p>We don't do commercial buildings. We don't do industrial work. We don't do new ground-up construction directly. The focus is intentional — homes are what we do every day, in the neighborhoods we live in.</p>
-    <h2>Credentials</h2>
-    <ul>
-      <li><strong>Oklahoma Electrical License #163603</strong> — issued by the Oklahoma Construction Industries Board. Licensed, bonded, insured.</li>
-      <li><strong>BBB Accredited Business since July 2025.</strong> <a href="https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075" rel="noopener">View profile</a>.</li>
-      <li><strong>4.9 rating across 117+ reviews.</strong> See <a href="/reviews/">our reviews</a>.</li>
-      <li><strong>Background-checked team.</strong> Every technician on staff. No subcontractors for residential service work.</li>
-    </ul>
-    <h2>How we price</h2>
-    <p>Flat-rate. Written down before any work begins. No trip charge, no diagnostic fee, no shop-supplies line item. The job you called for is the job we quote. If something else needs to happen mid-job, we stop, write it up, and you decide.</p>
-    <h2>How to reach us</h2>
-    <p>Call <a href="tel:+14054364776"><strong>(405) 436-4776</strong></a> any time, day or night. Email <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a>. Or use the <a href="/contact-us/">contact form</a> — we'll respond same-day.</p>
-    </div></section>'''
+    body = _render_draft_body(d) if d else ''
+    if not body:
+        body = '<p class="lede">Spark Shark Electric is a licensed residential electrical contractor serving the OKC metro from Moore.</p>'
+    html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
     html += cta_block()
     html += footer_close()
     write_page("/about-us/", html)
 
-    # CONTACT
-    title = "Contact Spark Shark Electric | Free Estimates | Moore & OKC"
-    desc = "Contact Spark Shark Electric — call (405) 436-4776 24/7 or request service online. Free estimates. Licensed Oklahoma electrical contractor #163603."
+    # ====================== CONTACT ======================
+    d = parse_draft("18-contact-us.md")
+    title = (d and d["title"]) or "Contact Spark Shark Electric | Free Estimates | Moore & OKC"
+    desc = (d and d["desc"]) or "Contact Spark Shark Electric — call (405) 436-4776 24/7 or request service online."
+    h1 = (d and d["h1"]) or "Contact us"
+    sub = (d and d["sub"]) or "Call any time. Email any time. Or send a message — we'll respond same-day."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Contact", f"{SITE}/contact-us/")])
     html = head(title, desc, "/contact-us/", extra)
-    html += page_hero("Contact us", "Call any time. Email any time. Or send a message — we'll respond same-day.", eyebrow="Get in touch", with_cta=False)
+    html += page_hero(h1, sub, eyebrow="Get in touch", with_cta=False)
     html += '''<section class="page-body"><div class="wrap"><div style="display:grid;gap:32px;grid-template-columns:1fr;">
     <style>@media (min-width: 760px) { .contact-grid { grid-template-columns: 1fr 1fr !important; } }</style>
     <div class="contact-grid" style="display:grid;gap:32px;grid-template-columns:1fr;">
@@ -1126,163 +1527,95 @@ def build_info_pages():
     html += footer_close()
     write_page("/contact-us/", html)
 
-    # REVIEWS
-    title = "Spark Shark Electric Reviews | 4.9 Stars | 117+ Reviews"
-    desc = "Spark Shark Electric customer reviews — 4.9 stars across 117+ reviews on Google, BBB, and Yelp. Licensed Oklahoma electricians serving the OKC metro."
+    # ====================== REVIEWS ======================
+    d = parse_draft("19-reviews.md")
+    title = (d and d["title"]) or "Spark Shark Electric Reviews | 4.9 Stars | 117+ Reviews"
+    desc = (d and d["desc"]) or "Spark Shark Electric customer reviews — 4.9 stars across 117+ reviews on Google, BBB, and Yelp."
+    h1 = (d and d["h1"]) or "Reviews"
+    sub = (d and d["sub"]) or "What homeowners across the OKC metro say about Spark Shark Electric."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Reviews", f"{SITE}/reviews/")])
     html = head(title, desc, "/reviews/", extra)
-    html += page_hero("Reviews", "What homeowners across the OKC metro say about Spark Shark Electric.", eyebrow="Customer reviews")
-    html += '''<section class="page-body"><div class="wrap-narrow">
-    <p class="lede" style="text-align:center;font-size:1.4rem;"><span class="stars">★★★★★</span><br><strong style="font-size:2rem;color:var(--text);">4.9</strong> across <strong>117+</strong> reviews</p>
-    <p style="text-align:center;">We don't game review counts. Every review is from a real Oklahoma homeowner. Read them on the platforms below — we link directly so you can verify.</p>
-    <h2>Read reviews on</h2>
-    <ul>
-      <li><a href="https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075" rel="noopener"><strong>Better Business Bureau</strong></a> — BBB Accredited Business since July 2025</li>
-      <li><a href="https://www.yelp.com/biz/spark-shark-electric-moore" rel="noopener"><strong>Yelp</strong></a></li>
-      <li><a href="https://www.thumbtack.com/ok/oklahoma-city/electrical-repairs/spark-shark-electric/service/489603470823817221" rel="noopener"><strong>Thumbtack</strong></a></li>
-      <li><a href="https://www.facebook.com/sparksharkelectric/" rel="noopener"><strong>Facebook</strong></a></li>
-    </ul>
-    <h2>Why reviews matter to us</h2>
-    <p>Reviews are a public, verifiable record of the work. We can claim flat-rate pricing, clean job sites, and no-upselling all day on a website — but customer reviews on third-party platforms are the actual evidence. Read them, and call when you're ready.</p>
-    </div></section>'''
+    html += page_hero(h1, sub, eyebrow="Customer reviews")
+    rating_block = f'''<p class="lede" style="text-align:center;font-size:1.4rem;"><span class="stars">★★★★★</span><br><strong style="font-size:2rem;color:var(--text);">{BRAND["rating"]}</strong> across <strong>{BRAND["review_count"]}+</strong> reviews</p>'''
+    body = rating_block + (_render_draft_body(d, with_lede=False) if d else '''<p style="text-align:center;">We don't game review counts. Every review is from a real Oklahoma homeowner.</p>''')
+    html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
     html += cta_block()
     html += footer_close()
     write_page("/reviews/", html)
 
-    # FAQ
-    title = "FAQ | Residential Electrician Questions | Spark Shark Electric"
-    desc = "Frequently asked questions for Spark Shark Electric — pricing, licensing, service area, emergency response, and what to expect from a residential electrical visit."
+    # ====================== FAQ ======================
+    d = parse_draft("20-faq.md")
+    title = (d and d["title"]) or "FAQ | Residential Electrician Questions | Spark Shark Electric"
+    desc = (d and d["desc"]) or "Frequently asked questions for Spark Shark Electric — pricing, licensing, service area, emergency response."
+    h1 = (d and d["h1"]) or "Frequently asked questions"
+    sub = (d and d["sub"]) or "Common questions homeowners ask before they call."
+    faqs = (d and d["faqs"]) or [
+        ("Do you offer emergency service?", f"Yes. {BRAND['name']} is available 24/7. Call {BRAND['phone_display']}."),
+        ("Are you licensed and insured?", f"Yes. Oklahoma Electrical License {BRAND['license']}. Licensed, bonded, insured."),
+    ]
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("FAQ", f"{SITE}/frequently-asked-questions/")])
     html = head(title, desc, "/frequently-asked-questions/", extra)
-    html += page_hero("Frequently asked questions", "Common questions homeowners ask before they call.", eyebrow="FAQ")
+    html += page_hero(h1, sub, eyebrow="FAQ")
     html += proof_block()
-    faqs = [
-        ("Do you offer emergency service?", f"Yes. {BRAND['name']} is available 24/7 for electrical emergencies. Call {BRAND['phone_display']} any time."),
-        ("Are you licensed and insured?", f"Yes. Oklahoma Electrical License {BRAND['license']}. Licensed, bonded, and insured. BBB Accredited."),
-        ("Do you charge for estimates?", "No. Every estimate is free and written. We come out, look at the work, and put a flat-rate number in writing before any work begins."),
-        ("Do you charge a trip fee or diagnostic fee?", "No. No trip charge, no diagnostic fee, no shop-supplies line item. The number you see is the number you pay."),
-        ("What areas do you serve?", "Oklahoma City, Moore, Norman, Edmond, Yukon, Mustang, Bethany, Midwest City, Del City, Choctaw, Newcastle, Piedmont, Nichols Hills, The Village, and Warr Acres."),
-        ("Do you do commercial work?", f"No. {BRAND['name']} is a residential-only electrical contractor. We focus exclusively on homes."),
-        ("Can you upgrade my electrical panel?", "Yes — service replacement, 100A→200A upgrades, sub-panels, code-compliance work. Same-day quote, permit pulled, inspection scheduled."),
-        ("Do you install whole-home generators?", "Yes — Generac, Kohler, Briggs &amp; Stratton. Sized to your load, gas line coordinated, automatic transfer switch installed and commissioned."),
-        ("Can you install an EV charger?", "Yes — Level 2 (240V) home charging stations, any UL-listed brand. We pull the permit, run the dedicated circuit, install the station, and commission it."),
-        ("How fast can you get out?", "Same-day for emergencies and most repair calls. Scheduled work is typically within a few days. We tell you the realistic schedule when you call."),
-        ("Are you BBB Accredited?", "Yes — BBB Accredited Business since July 14, 2025."),
-        ("How do I pay?", "Cash, check, or credit card. Financing available for larger jobs."),
-        ("Do you offer a discount for veterans or first responders?", "Yes — automatic, no haggling. Active-duty military, veterans, and first responders.")
-    ]
     faq_schema = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q, a in faqs]}
     html += '<section class="faq"><div class="wrap"><div class="faq__list">'
     for q, a in faqs:
         html += f'<details><summary>{q}</summary><p>{a}</p></details>'
     html += '</div></div></section>'
-    # Insert the FAQ schema specifically — already in base @graph, but adding a dedicated one improves rich-results match
     html = html.replace("</head>", f'<script type="application/ld+json">{json.dumps(faq_schema, separators=(",", ":"))}</script>\n</head>', 1)
     html += cta_block()
     html += footer_close()
     write_page("/frequently-asked-questions/", html)
 
-    # PRIVACY POLICY — keep 405-796-8111 SMS opt-out per project memory
-    title = "Privacy Policy | Spark Shark Electric"
-    desc = "Privacy policy for Spark Shark Electric. How we collect, use, and protect your information. SMS opt-out instructions and your rights."
+    # ====================== PRIVACY POLICY (KEEP 405-796-8111 — see memory) ======================
+    d = parse_draft("21-privacy-policy.md")
+    title = (d and d["title"]) or "Privacy Policy | Spark Shark Electric"
+    desc = (d and d["desc"]) or "Privacy policy for Spark Shark Electric. How we collect, use, and protect your information."
+    h1 = (d and d["h1"]) or "Privacy Policy"
+    sub = (d and d["sub"]) or "How we collect, use, and protect your information."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Privacy Policy", f"{SITE}/privacy-policy/")])
     html = head(title, desc, "/privacy-policy/", extra)
-    html += page_hero("Privacy Policy", "How we collect, use, and protect your information.", eyebrow="Legal", with_cta=False)
-    html += '''<section class="page-body"><div class="wrap-narrow">
-    <p class="lede">This privacy policy describes how Spark Shark Electric collects, uses, and protects information when you visit sparkshark.com or contact us for service.</p>
-
-    <h2>Information we collect</h2>
-    <p>When you submit our contact form, request service, or call us, we collect the information you provide: name, phone number, email address, service address, and a description of the work. We use this information only to respond to your request and schedule service.</p>
-
-    <h2>SMS communications</h2>
-    <p>If you opt in to text messaging from Spark Shark Electric, you'll receive appointment confirmations, service updates, and occasional service-related communications. Message and data rates may apply.</p>
-
-    <!-- KEEP: SMS opt-out legal compliance — see project memory project_privacy_policy_405_796_8111.md. The 405-796-8111 number is the legacy opt-out path for the prior subscriber list and must remain reachable. Do not replace. -->
-    <p><strong>You can opt out at any time</strong> by replying STOP, CANCEL, or UNSUBSCRIBE to 405-796-8111 and/or by emailing <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a>. We will remove you from the list within 24 hours.</p>
-
-    <h2>How we use your information</h2>
-    <p>We use the information you provide to: respond to your service request, schedule and dispatch a licensed electrician, confirm appointments, follow up after service, and send occasional service-related communications you've opted into. We do not sell, rent, or trade your personal information.</p>
-
-    <h2>Cookies &amp; analytics</h2>
-    <p>Our website may use cookies and standard analytics tools (such as Google Analytics) to understand site traffic. These tools collect non-identifying information like browser type, pages visited, and approximate location. You can disable cookies in your browser settings.</p>
-
-    <h2>Information security</h2>
-    <p>We take reasonable steps to protect the information you provide. We do not store credit card numbers; payment is processed at the time of service through a secure payment processor.</p>
-
-    <h2>Third parties</h2>
-    <p>We may use third-party services to operate the website (web hosting, email, contact-form processing, scheduling). These providers have access only to the information they need to perform their function and are obligated to keep it confidential.</p>
-
-    <h2>Your rights</h2>
-    <p>You can request a copy of the information we have about you, ask us to correct it, or ask us to delete it. To make any of these requests, email <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a> or call <a href="tel:+14054364776">(405) 436-4776</a>.</p>
-
-    <h2>Children</h2>
-    <p>Our services and website are not directed to children under 13. We do not knowingly collect personal information from children.</p>
-
-    <h2>Changes to this policy</h2>
-    <p>We may update this privacy policy from time to time. The "last updated" date below reflects the most recent revision.</p>
-
-    <h2>Contact</h2>
-    <p>For questions about this policy: email <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a> or call <a href="tel:+14054364776">(405) 436-4776</a>.</p>
-
-    <p style="margin-top:32px;color:var(--text-muted);font-size:.9rem;">Last updated: 2026-05-08.</p>
-    </div></section>'''
+    html += page_hero(h1, sub, eyebrow="Legal", with_cta=False)
+    body = _render_draft_body(d) if d else ''
+    if not body:
+        body = '<p>This privacy policy describes how Spark Shark Electric collects, uses, and protects information.</p>'
+    # Inject a HIDDEN comment above any 405-796-8111 reference for downstream maintainers
+    body = body.replace("405-796-8111", "<!-- KEEP: SMS opt-out legal compliance — see project memory. Do not replace. -->405-796-8111")
+    html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
     html += footer_close()
     write_page("/privacy-policy/", html)
 
-    # TERMS
-    title = "Terms and Conditions | Spark Shark Electric"
-    desc = "Terms and conditions for Spark Shark Electric — service agreements, warranty, payment terms, and use of sparkshark.com."
+    # ====================== TERMS ======================
+    d = parse_draft("22-terms-and-condition.md")
+    title = (d and d["title"]) or "Terms and Conditions | Spark Shark Electric"
+    desc = (d and d["desc"]) or "Terms and conditions for Spark Shark Electric — service agreements, warranty, payment terms."
+    h1 = (d and d["h1"]) or "Terms and Conditions"
+    sub = (d and d["sub"]) or "Service terms, warranty, payment, and website use."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Terms", f"{SITE}/terms-and-condition/")])
     html = head(title, desc, "/terms-and-condition/", extra)
-    html += page_hero("Terms and Conditions", "Service terms, warranty, payment, and website use.", eyebrow="Legal", with_cta=False)
-    html += '''<section class="page-body"><div class="wrap-narrow">
-    <h2>Service agreement</h2>
-    <p>When you accept a written estimate from Spark Shark Electric, you authorize us to perform the work described, at the price quoted, in the time frame discussed. Changes to scope require a written change order signed by both parties before additional work proceeds.</p>
-
-    <h2>Pricing and payment</h2>
-    <p>We charge flat-rate pricing. Estimates are written and provided before any work begins. There is no trip charge, no diagnostic fee, and no shop-supplies line item. Payment is due upon completion of the work unless other arrangements are made in writing. We accept cash, check, and major credit cards. Financing is available for larger jobs through approved third-party providers.</p>
-
-    <h2>Warranty</h2>
-    <p>All workmanship is warranted for one year from the date of service. Parts and equipment we install carry the manufacturer's warranty (typically 1–10 years depending on product). If a covered issue arises, contact us at <a href="tel:+14054364776">(405) 436-4776</a> and we will return at no charge.</p>
-
-    <h2>Permits and inspections</h2>
-    <p>Where Oklahoma code requires permits and inspections, we pull the permit and schedule the inspection as part of the flat-rate price. Your project is not "complete" until the inspection passes.</p>
-
-    <h2>Cancellation</h2>
-    <p>You may cancel a scheduled appointment with at least 24 hours notice without charge. Cancellations within 24 hours of the scheduled time may be subject to a small fee at our discretion to cover dispatch and parts ordered.</p>
-
-    <h2>Limitation of liability</h2>
-    <p>We carry liability insurance for our work. Our total liability for any claim arising from a service visit is limited to the amount paid for that service, except where applicable law provides otherwise.</p>
-
-    <h2>Use of sparkshark.com</h2>
-    <p>Information on sparkshark.com is provided for general informational purposes and may not reflect the most current pricing, availability, or regulations. Nothing on the website constitutes a binding offer; written estimates are the only binding pricing.</p>
-
-    <h2>Governing law</h2>
-    <p>These terms are governed by the laws of the State of Oklahoma. Any dispute arising under these terms will be resolved in the courts of Cleveland County, Oklahoma.</p>
-
-    <h2>Contact</h2>
-    <p>Questions about these terms: <a href="mailto:theteam@sparkshark.com">theteam@sparkshark.com</a> or <a href="tel:+14054364776">(405) 436-4776</a>.</p>
-
-    <p style="margin-top:32px;color:var(--text-muted);font-size:.9rem;">Last updated: 2026-05-08.</p>
-    </div></section>'''
+    html += page_hero(h1, sub, eyebrow="Legal", with_cta=False)
+    body = _render_draft_body(d) if d else '<p>Service terms.</p>'
+    html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
     html += footer_close()
     write_page("/terms-and-condition/", html)
 
-    # BLOGS INDEX
-    title = "Blog | Residential Electrical Tips | Spark Shark Electric"
-    desc = "Spark Shark Electric blog — practical residential electrical guidance for OKC metro homeowners. Panel upgrades, generators, safety, emergencies."
+    # ====================== BLOGS INDEX ======================
+    d = parse_draft("38-blogs-index.md")
+    title = (d and d["title"]) or "Blog | Residential Electrical Tips | Spark Shark Electric"
+    desc = (d and d["desc"]) or "Spark Shark Electric blog — practical residential electrical guidance for OKC metro homeowners."
+    h1 = (d and d["h1"]) or "Blog"
+    sub = (d and d["sub"]) or "Practical electrical guidance for homeowners in the OKC metro."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Blog", f"{SITE}/blogs/")])
     html = head(title, desc, "/blogs/", extra)
-    html += page_hero("Blog", "Practical electrical guidance for homeowners in the OKC metro.", eyebrow="Blog")
-    html += '''<section class="page-body"><div class="wrap-narrow">
-    <h2>Recent posts</h2>
+    html += page_hero(h1, sub, eyebrow="Blog")
+    body = _render_draft_body(d) if d else '''<h2>Recent posts</h2>
     <ul>
-      <li><a href="/2026/05/07/power-out-what-to-do-when-call-electrician/"><strong>Power Out? What to Do &amp; When to Call an Electrician</strong></a> — A storm-and-outage guide for OKC homeowners. What's safe to troubleshoot yourself, what isn't.</li>
-      <li><a href="/2026/05/07/signs-you-need-electrical-panel-upgrade/"><strong>6 Signs You Need an Electrical Panel Upgrade</strong></a> — The warning signs that mean it's time to replace your panel — and what happens if you don't.</li>
-      <li><a href="/2024/01/24/why-you-need-a-professional-for-generator-installation/"><strong>Why You Need a Professional for Generator Installation</strong></a> — Site prep, fuel, transfer switches, and the code requirements that make or break the install.</li>
-      <li><a href="/2024/01/03/stay-powered-up-essential-electrical-winter-safety-tips/"><strong>Essential Electrical Winter Safety Tips</strong></a> — Seasonal advice for keeping your home safe during Oklahoma's winter weather.</li>
-    </ul>
-    </div></section>'''
+      <li><a href="/2026/05/07/power-out-what-to-do-when-call-electrician/"><strong>Power Out? What to Do</strong></a></li>
+      <li><a href="/2026/05/07/signs-you-need-electrical-panel-upgrade/"><strong>6 Signs You Need a Panel Upgrade</strong></a></li>
+      <li><a href="/2024/01/24/why-you-need-a-professional-for-generator-installation/"><strong>Generator Installation</strong></a></li>
+      <li><a href="/2024/01/03/stay-powered-up-essential-electrical-winter-safety-tips/"><strong>Winter Safety Tips</strong></a></li>
+    </ul>'''
+    html += f'<section class="page-body"><div class="wrap-narrow">{body}</div></section>'
     html += cta_block()
     html += footer_close()
     write_page("/blogs/", html)
@@ -1496,19 +1829,31 @@ def build_blog_posts():
         }
     ]
 
+    # Blog draft filename map (Brock's edits affect title/desc/h1 only — body stays in-script)
+    blog_drafts_map = {
+        "/2026/05/07/power-out-what-to-do-when-call-electrician/": "34-blog-power-out.md",
+        "/2026/05/07/signs-you-need-electrical-panel-upgrade/": "35-blog-panel-upgrade-signs.md",
+        "/2024/01/03/stay-powered-up-essential-electrical-winter-safety-tips/": "36-blog-winter-safety.md",
+        "/2024/01/24/why-you-need-a-professional-for-generator-installation/": "37-blog-generator-installation.md",
+    }
     for post in posts:
-        extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Blog", f"{SITE}/blogs/"), (post["h1"].replace("&amp;", "&"), f"{SITE}{post['path']}")])
+        d = parse_draft(blog_drafts_map.get(post["path"], ""))
+        title = (d and d["title"]) or post["title"]
+        desc = (d and d["desc"]) or post["desc"]
+        h1 = (d and d["h1"]) or post["h1"]
+        h1_plain = h1.replace("&amp;", "&")
+        extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Blog", f"{SITE}/blogs/"), (h1_plain, f"{SITE}{post['path']}")])
         article_schema = {
             "@context": "https://schema.org", "@type": "Article",
-            "headline": post["h1"].replace("&amp;", "&"),
+            "headline": h1_plain,
             "datePublished": post["date"], "dateModified": post["date"],
             "author": {"@id": f"{SITE}/#org"},
             "publisher": {"@id": f"{SITE}/#org"},
             "mainEntityOfPage": {"@type": "WebPage", "@id": f"{SITE}{post['path']}"},
             "image": BRAND["logo_url"]
         }
-        html = head(post["title"], post["desc"], post["path"], [extra, article_schema])
-        html += page_hero(post["h1"], "", eyebrow=f"Blog · {post['date']}", with_cta=False)
+        html = head(title, desc, post["path"], [extra, article_schema])
+        html += page_hero(h1, "", eyebrow=f"Blog · {post['date']}", with_cta=False)
         html += f'<section class="page-body"><div class="wrap-narrow">{post["body"]}</div></section>'
         html += cta_block()
         html += footer_close()
@@ -1979,6 +2324,20 @@ def main():
 
     # Post-build: rewrite internal paths if BASE is set (preview mode)
     rewrite_internal_paths()
+
+    # Generate verify-report.md (lists every [VERIFY: ...] tag from drafts so Brock can resolve them)
+    if VERIFY_LOG:
+        from collections import Counter
+        seen = Counter(VERIFY_LOG)
+        with open(ROOT / "verify-report.md", "w", encoding="utf-8") as fh:
+            fh.write("# VERIFY items — to resolve before/after launch\n\n")
+            fh.write(f"Total: {sum(seen.values())} VERIFY tags across drafts ({len(seen)} unique).\n\n")
+            fh.write("These are notes Brock left in copy-drafts/*.md asking for confirmation. ")
+            fh.write("They were stripped from rendered HTML at build time. Resolve each, then either remove the bracketed tag from the source draft or replace it with the verified value.\n\n")
+            fh.write("## Unique VERIFY tags (sorted by frequency)\n\n")
+            for tag, count in seen.most_common():
+                fh.write(f"- ({count}×) {tag}\n")
+        print(f"  ✅ verify-report.md ({sum(seen.values())} VERIFY items, {len(seen)} unique)")
 
     # Count all index.html files
     count = sum(1 for _ in ROOT.rglob("index.html"))
