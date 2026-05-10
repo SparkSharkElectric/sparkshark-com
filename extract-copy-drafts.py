@@ -534,7 +534,7 @@ for fname, path, title, desc, h1, intro in blog_drafts:
         intro=intro,
         sections=[
             ("FULL BODY (current draft — see live preview to view formatted version)", [
-                f"Live preview: https://sparksharkelectric.github.io/sparkshark-com{path}",
+                f"Live preview path: {path} (open this path on whichever preview is currently live — Vercel preview URL or the github.io transitional preview)",
                 "The full body is in build.py inside build_blog_posts(). Edit there OR send me revised body text and I'll merge it.",
             ]),
         ],
