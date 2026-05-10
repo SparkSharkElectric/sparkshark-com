@@ -2327,8 +2327,8 @@ def build_redirect_stubs():
     """For URLs that don't carry their own value but may have backlinks."""
     redirects = [
         # Pages that returned homepage on the live WP site — preserve any link equity
-        ("/commercial-electrical-solutions/", "/services/"),
-        ("/industrial-electrical-solutions/", "/services/"),
+        ("/commercial-electrical-solutions/", "/"),
+        ("/industrial-electrical-solutions/", "/"),
         # Viktor's staging page — dev artifact, send to home
         ("/home-staging-2026-05-07/", "/"),
         # Dropped blog posts — redirect to most relevant page
