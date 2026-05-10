@@ -102,6 +102,7 @@ There is no legitimate path that bypasses this gate without Brock's explicit, wr
 - The Vercel migration delta plan that produced this gate lives in `/Users/brock/.claude/plans/parallel-gliding-pancake.md` (v4 at time of authoring) and is not part of the repo.
 - The future operational runbook for DNS day-of will live at `docs/migration/cutover-runbook.md` (not yet created — will be authored once this gate is at least partially green).
 - A Vercel-aware rewrite of the orphan-fragment-hardening memory note is also pending and will live at `docs/migration/2026-05-09-orphan-fragment-hardening.md` (post-launch).
+- The first successful Vercel preview validation is recorded at `docs/migration/vercel-preview-validation.md` (preview-validation evidence only — does not authorize DNS cutover or change any gate item status in this file).
 
 ---
 
