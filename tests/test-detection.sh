@@ -66,4 +66,34 @@ if ! grep -qi "centered, large" qa-report.md; then
   exit 1
 fi
 
-echo "PASS: qa.py correctly detected the canary bug in reviews/index.html"
+echo "PASS (1/2): qa.py correctly detected the scaffolding canary in reviews/index.html"
+
+# Restore before the next canary so it runs from a clean baseline.
+cp "$PAGE_BAK" reviews/index.html
+
+# ── Canary 2: orphan-fragment detection ────────────────────────────────────
+# Inject an orphan-period bullet (the exact shape produced by a stripped
+# [VERIFY:] tag) and confirm qa.py catches it AND names the orphan-period rule.
+python3 - <<'PY'
+from pathlib import Path
+p = Path("reviews/index.html")
+html = p.read_text(encoding="utf-8")
+canary = "\n<ul><li>. Manufacturer warranties on installed parts.</li></ul>\n"
+if "</body>" in html:
+    html = html.replace("</body>", canary + "</body>", 1)
+else:
+    html = html + canary
+p.write_text(html, encoding="utf-8")
+PY
+
+if python3 qa.py /reviews/ --ci; then
+  echo "FAIL: qa.py did not detect the orphan-fragment canary in reviews/index.html" >&2
+  exit 1
+fi
+
+if ! grep -qi "orphan-period bullet" qa-report.md; then
+  echo "FAIL: qa.py exited non-zero but 'orphan-period bullet' is not in qa-report.md" >&2
+  exit 1
+fi
+
+echo "PASS (2/2): qa.py correctly detected the orphan-fragment canary in reviews/index.html"

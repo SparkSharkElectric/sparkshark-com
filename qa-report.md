@@ -1,19 +1,13 @@
 # QA Report — sparkshark.com
 
-Run: 2026-05-09T23:34:25+00:00 | 41 pages | Pure-Python rule engine | strict=off
+Run: 2026-05-10T04:08:39+00:00 | 41 pages | Pure-Python rule engine | strict=on
 
 ## Summary
 
 - Verdict: **PASS**
 - Pages PASS: 41
 - Pages FAIL: 0
-- Warnings only: 1
-
-## Warnings (advisory; not blocking unless --strict)
-
-### /about-us/
-
-- discouraged word: `owner` (homeowner / ownership are allowed)
+- Warnings only: 0
 
 ## Passes (41)
 
@@ -61,5 +55,5 @@ Run: 2026-05-09T23:34:25+00:00 | 41 pages | Pure-Python rule engine | strict=off
 
 ## Coverage
 
-- Rules run: 8
+- Rules run: 9
 - Pages checked: 41

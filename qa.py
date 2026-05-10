@@ -90,6 +90,31 @@ PLACEHOLDER_PATTERNS: list[tuple[str, str]] = [
      "orphan label: `<strong>Label:</strong></p>` with no content"),
 ]
 
+# Orphan-fragment patterns — catches the visible-copy artifacts left by
+# build.py:_strip_verify() when a [VERIFY:...] tag is removed but punctuation,
+# enclosing markup, or sentence subjects around it remain.
+# Empty-element patterns are whitespace-tolerant. JSON-LD blocks are NOT
+# stripped before this check: the `. .` artifact is also wrong inside FAQPage
+# schema strings, so catch it everywhere.
+ORPHAN_FRAGMENT_PATTERNS: list[tuple[str, str]] = [
+    (r"<li>\.\s",
+     "orphan-period bullet: `<li>. ` (likely VERIFY-tag strip leftover)"),
+    (r"<p>\.\s",
+     "orphan-period paragraph: `<p>. ` (likely VERIFY-tag strip leftover)"),
+    (r"\.\s\.",
+     "double period: `. .` (likely VERIFY-tag strip leftover)"),
+    (r"headquartered at \.",
+     "empty address fragment: `headquartered at .`"),
+    (r"License [—\-] </strong>\.",
+     "empty license fragment: `License — </strong>.`"),
+    (r"<li>\s*</li>",
+     "empty list item: `<li></li>`"),
+    (r"<p>\s*</p>",
+     "empty paragraph: `<p></p>`"),
+    (r"<li>of\s",
+     "orphan `of` continuation in list item (subject likely stripped)"),
+]
+
 STALE_STRINGS = [
     "Flanco Electric",
     "(405) 796-8111",
@@ -234,6 +259,10 @@ def check_placeholders(html: str) -> list[str]:
     return _scan(PLACEHOLDER_PATTERNS, html)
 
 
+def check_orphan_fragments(html: str) -> list[str]:
+    return _scan(ORPHAN_FRAGMENT_PATTERNS, html)
+
+
 def check_stale_strings(html: str) -> list[str]:
     return [f"stale string found: `{s}`" for s in STALE_STRINGS if s in html]
 
@@ -322,6 +351,7 @@ def check_page(url: str) -> PageResult:
 
     res.issues.extend(check_scaffolding(html))
     res.issues.extend(check_placeholders(html))
+    res.issues.extend(check_orphan_fragments(html))
     res.issues.extend(check_stale_strings(html))
     res.issues.extend(check_brand_spelling(html))
     res.issues.extend(check_nap(html))
@@ -333,7 +363,7 @@ def check_page(url: str) -> PageResult:
 
 # ── Reporting ───────────────────────────────────────────────────────────────
 
-RULE_COUNT = 8
+RULE_COUNT = 9
 
 
 def render_report(results: list[PageResult], strict: bool) -> str:

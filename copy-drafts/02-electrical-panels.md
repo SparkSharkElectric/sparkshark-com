@@ -36,7 +36,7 @@ Spark Shark Electric in Moore, Oklahoma replaces residential electrical panels a
 - **Free site visit and inspection.** We come out, look at your existing panel and meter base, walk through your loads, and put it all in writing. No trip charge, no diagnostic fee.
 - **Permit pulled, inspection scheduled.** Every panel job gets a permit and an inspection. Required by Oklahoma residential code; we handle the paperwork.
 - **OG&E coordination.** Service upgrades require the utility to disconnect and reconnect the meter. We schedule that for you and keep the outage window as short as possible.
-- **Flat-rate priced.** One written number — no trip charge, no shop-supplies fee, no surprise add-ons. [VERIFY: workmanship warranty terms].
+- **Flat-rate priced.** One written number — no trip charge, no shop-supplies fee, no surprise add-ons.
 
 === SECTION: What's typically included ===
 - New main service panel sized for your load (200A is the most common upgrade target).
@@ -44,7 +44,7 @@ Spark Shark Electric in Moore, Oklahoma replaces residential electrical panels a
 - Whole-home surge protection at the panel.
 - All circuit re-terminations and labeling — every breaker labeled to its actual load.
 - Code-required AFCI/GFCI breakers where applicable.
-- Permit and inspection. [VERIFY: panel brands installed — Square D, Eaton/Cutler-Hammer, Siemens, Leviton].
+- Permit and inspection.
 
 === SECTION: Common Oklahoma City–area panel scenarios ===
 - **Mid-century OKC homes** built in the 1960s–1970s often need a service upgrade to support modern HVAC and kitchen loads.
@@ -60,7 +60,7 @@ Q: Do I need to be home?
 A: Yes — power to the home will be off for several hours during the upgrade. Plan for the day, and we'll coordinate the OG&E window to keep the outage as short as possible.
 
 Q: Do you pull the permit?
-A: Yes. Every panel job we do gets a permit and a city inspection. That's part of our flat rate — you don't pay the permit fee separately. [VERIFY: specific city permits/inspection language for Moore vs. OKC vs. Norman vs. Edmond].
+A: Yes. Every panel job we do gets a permit and a city inspection. That's part of our flat rate — you don't pay the permit fee separately.
 
 Q: Can you upgrade a Federal Pacific or Zinsco panel?
 A: Yes — and we usually recommend it. Both brands have well-documented failure modes, and many home insurance carriers now require replacement.

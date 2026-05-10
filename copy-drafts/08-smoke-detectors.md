@@ -41,7 +41,7 @@ Q: Can you interconnect older detectors?
 A: Sometimes — depends on whether the existing wiring includes the third (interconnect) conductor. We check during the visit.
 
 Q: Do I need carbon monoxide detectors?
-A: If you have any gas appliances, a fireplace, or an attached garage, carbon monoxide detectors are required by Oklahoma residential code near every sleeping area. [VERIFY: specific Moore vs. OKC code language].
+A: If you have any gas appliances, a fireplace, or an attached garage, carbon monoxide detectors are required by Oklahoma residential code near every sleeping area.
 
 Q: Are combination smoke/CO detectors okay?
 A: Yes — they're a good option for placement near sleeping areas and meet both requirements with a single unit.

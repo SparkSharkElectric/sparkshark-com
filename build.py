@@ -754,6 +754,7 @@ def write_page(rel_path, html):
 
 def page_hero(h1, sub, eyebrow=None, with_cta=True):
     eb = f'<span class="eyebrow">{eyebrow}</span>' if eyebrow else ""
+    sub_html = f"\n    <p>{sub}</p>" if sub else ""
     cta = ""
     if with_cta:
         cta = f'''<div class="page-hero__cta">
@@ -769,8 +770,7 @@ def page_hero(h1, sub, eyebrow=None, with_cta=True):
     return f'''<section class="page-hero">
   <div class="wrap">
     {eb}
-    <h1>{h1}</h1>
-    <p>{sub}</p>
+    <h1>{h1}</h1>{sub_html}
     {cta}
   </div>
 </section>'''
@@ -2474,7 +2474,7 @@ def build_llms_txt():
 
 - **Flat-rate pricing** — written down before any work begins. No trip charge, no diagnostic fee, no shop-supplies line item.
 - **Free home electrical safety inspection** on every service visit.
-- **Discount** for active-duty military, veterans, and first responders. Automatic — no haggling.
+- **Promotions and discounts** — ask our team when scheduling about any current promotions or available discounts.
 - **Cleanliness guarantee** — property left cleaner than found.
 - **No upselling.** The job you called for is the job we quote.
 - **Licensed, background-checked electricians.** No subcontractors for residential service work.

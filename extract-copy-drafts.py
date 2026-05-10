@@ -324,7 +324,7 @@ faqs_main = [
     ("How fast can you get out?", "Same-day for emergencies and most repair calls. Scheduled work is typically within a few days. We tell you the realistic schedule when you call."),
     ("Are you BBB Accredited?", "Yes — BBB Accredited Business since July 14, 2025."),
     ("How do I pay?", "Cash, check, or credit card. Financing available for larger jobs."),
-    ("Do you offer a discount for veterans or first responders?", "Yes — automatic, no haggling. Active-duty military, veterans, and first responders."),
+    ("Do you offer a discount for veterans or first responders?", "Ask our team when scheduling about any current promotions or available discounts."),
 ]
 draft_page(
     "20-faq.md",
