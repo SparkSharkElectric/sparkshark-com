@@ -28,7 +28,7 @@ Spark Shark Electric in Moore, Oklahoma installs Level 2 home EV chargers for OK
 - **Site visit** — confirm panel capacity, plan the circuit run, agree on charger location.
 - **Written flat-rate quote** with permit included where applicable.
 - **Install the dedicated 240V circuit** (typically 50A) from the panel to the charger location.
-- **Mount the charger** — any UL-listed station: Tesla Wall Connector, Ford Charge Station Pro, Chevy/GM, ChargePoint, Wallbox, Emporia, Grizzl-E, and others. [VERIFY: EV charger brands/certifications].
+- **Mount the charger** — any UL-listed station: Tesla Wall Connector, Ford Charge Station Pro, Chevy/GM, ChargePoint, Wallbox, Emporia, Grizzl-E, and others.
 - **Inspection** by the local jurisdiction.
 - **Commissioning** — verify charging current, walk you through the app, set schedules if you want them.
 

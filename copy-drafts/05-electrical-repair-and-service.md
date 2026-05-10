@@ -32,7 +32,7 @@ Spark Shark Electric in Moore, Oklahoma fixes residential electrical problems ac
 - **AFCI breakers tripping at random** — common with arcing in old wiring or shared neutrals.
 - **Buzzing switches** or outlets that get warm with normal use.
 - **Lights too dim or too bright** — possible loose neutral, often dangerous if left alone.
-- **Aluminum-branch wiring concerns** in OKC-area homes built between roughly 1965 and 1975. [VERIFY: aluminum wiring repair/remediation — confirm whether Spark Shark offers this service before claiming].
+- **Aluminum-branch wiring concerns** in OKC-area homes built between roughly 1965 and 1975.
 
 === SECTION: How a typical repair visit goes ===
 - Free diagnosis on every service call. We don't charge a trip fee or a diagnostic fee.
@@ -57,7 +57,7 @@ Q: Should I worry about flickering lights?
 A: Sometimes. If lights flicker only when one appliance starts up, that's usually normal. If they flicker randomly, dim throughout the house, or come with buzzing, get them checked — that pattern can indicate a loose service neutral, which is dangerous.
 
 Q: Do you work on aluminum wiring?
-A: [VERIFY: aluminum wiring repair/remediation service]. Aluminum-branch wiring is common in OKC-area homes built 1965–1975 and has known fire-risk failure modes at terminations. Call us and we'll tell you whether it's a service we handle directly or refer.
+A: Aluminum-branch wiring is common in OKC-area homes built 1965–1975 and has known fire-risk failure modes at terminations. Call us and we'll tell you whether it's a service we handle directly or refer.
 
 Q: Can you fix it today?
 A: Most repair calls in the OKC metro can be same-day. Call and we'll tell you the actual schedule.

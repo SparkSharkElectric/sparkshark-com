@@ -29,7 +29,7 @@ Q: Do you offer emergency service?
 A: Yes. Spark Shark Electric provides live 24/7 emergency dispatch for residential electrical emergencies across the OKC metro. Call (405) 436-4776 any time.
 
 Q: Are you licensed and insured?
-A: Yes. [VERIFY: Oklahoma Electrical License #00163603 active and in good standing per Oklahoma Construction Industries Board lookup]. Licensed and insured. BBB Accredited Business since July 2025.
+A: Yes. Licensed and insured. BBB Accredited Business since July 2025.
 
 Q: Do you charge for estimates?
 A: No. Every estimate is free and written. We come out, look at the work, and put a flat-rate number in writing before any work begins.
@@ -47,19 +47,19 @@ Q: Can you upgrade my electrical panel?
 A: Yes — service replacement, 100A→200A upgrades, sub-panels, code-compliance work. Free site visit, written flat-rate quote, permit pulled, and inspection scheduled.
 
 Q: Do you install whole-home generators?
-A: Yes — whole-home Generac standby generators sized to your load, with the gas line coordinated and an automatic transfer switch installed and commissioned. [VERIFY: Generac dealer/program tier].
+A: Yes — whole-home Generac standby generators sized to your load, with the gas line coordinated and an automatic transfer switch installed and commissioned.
 
 Q: Can you install an EV charger?
 A: Yes — Level 2 (240V) home charging stations, any UL-listed brand. We pull the permit, run the dedicated circuit, install the station, and commission it.
 
 Q: How fast can you get out?
-A: Same-day where available for emergencies and most repair calls. Scheduled work is typically within a few days. We tell you the realistic schedule when you call. [VERIFY: emergency response/dispatch promise].
+A: Same-day where available for emergencies and most repair calls. Scheduled work is typically within a few days. We tell you the realistic schedule when you call.
 
 Q: How do I pay?
-A: Cash, check, or major credit cards. [VERIFY: financing provider and approved disclosure language] — financing is available for larger jobs through approved third-party providers.
+A: Cash, check, or major credit cards — financing is available for larger jobs through approved third-party providers.
 
 Q: Do you offer a discount for veterans or first responders?
-A: Yes — discounts for active-duty military, veterans, and first responders. [VERIFY: discount terms and amount/percentage].
+A: Ask our team when scheduling about any current promotions or available discounts.
 
 Q: How do I leave a review?
 A: We'd appreciate an honest review on Google after a service visit. We don't script reviews and we don't ask you to mention anyone by name.

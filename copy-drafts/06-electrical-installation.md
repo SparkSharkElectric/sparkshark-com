@@ -44,13 +44,13 @@ Spark Shark Electric in Moore, Oklahoma installs new electrical work for homeown
 
 === FAQ ===
 Q: Do new outlets need a permit?
-A: A single new outlet typically doesn't, but a new circuit usually does. We always pull the permit when one applies — it's part of our flat rate. [VERIFY: specific city permits/inspection language for Moore vs. OKC vs. Edmond vs. Norman].
+A: A single new outlet typically doesn't, but a new circuit usually does. We always pull the permit when one applies — it's part of our flat rate.
 
 Q: Can you wire a hot tub?
 A: Yes — including the dedicated 50A or 60A GFCI-protected circuit and the disconnect at the equipment.
 
 Q: Can you install the EV charger I bought online?
-A: Yes. We wire the dedicated circuit, install any UL-listed wall-mount station per the manufacturer's instructions, and commission it. [VERIFY: EV charger brands/certifications].
+A: Yes. We wire the dedicated circuit, install any UL-listed wall-mount station per the manufacturer's instructions, and commission it.
 
 Q: Do you do new construction?
 A: We focus on residential remodels and existing-home installs. For ground-up new construction we partner with a few preferred general contractors.

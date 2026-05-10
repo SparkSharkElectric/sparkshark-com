@@ -30,7 +30,6 @@ Spark Shark Electric in Moore, Oklahoma installs whole-home Generac standby gene
 - **Sub-panels for managed loads** — optional, for homes where running everything at once would oversize the unit.
 - **Wi-Fi monitoring** — see status and run history from your phone.
 - **Annual maintenance** — oil change, filter, exercise-mode test, transfer-switch verification.
-- [VERIFY: Generac dealer/program tier — Certified Installer vs. Authorized Dealer vs. Premier Dealer. Do not claim "Premier" without confirmation.]
 
 === SECTION: Why a standby generator in Oklahoma ===
 - **Ice storms** routinely take down lines across the OKC metro for days at a time.
@@ -52,7 +51,7 @@ Spark Shark Electric in Moore, Oklahoma installs whole-home Generac standby gene
 
 === SECTION: Generators are part of a complete residential electrical system ===
 - A generator install often pairs with a panel upgrade. Spark Shark Electric handles both — and we'll cross-quote the panel and the generator in a single written estimate so you can plan the project once.
-- Annual maintenance keeps the unit ready for the day it actually has to run. We offer maintenance plans on units we install. [VERIFY: maintenance plan terms].
+- Annual maintenance keeps the unit ready for the day it actually has to run. We offer maintenance plans on units we install.
 
 === FAQ ===
 Q: How long can a standby generator run?

@@ -22,7 +22,7 @@ Residential Electrician in Midwest City, OK
 Licensed residential electrical service for Midwest City — panel upgrades, storm repair, whole-home generators, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Midwest City, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Midwest City's older housing stock with the services those homes most often need — panel upgrades, repair work, post-storm service-mast and meter-base repairs, and the whole-home generator installs that keep families running between events. Discounts for active military, veterans, and first responders. [VERIFY: discount terms]. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Midwest City, Oklahoma. Headquartered in Moore, we cover Midwest City's older housing stock with the services those homes most often need — panel upgrades, repair work, post-storm service-mast and meter-base repairs, and the whole-home generator installs that keep families running between events. Ask our team when scheduling about any current promotions or available discounts. Call (405) 436-4776.
 
 === SECTION: What we do for Midwest City homeowners ===
 - **Electrical panel upgrades** — service replacement, 100A→200A, sub-panels, Federal Pacific / Zinsco swaps.
@@ -34,21 +34,21 @@ Spark Shark Electric is a licensed residential electrician serving Midwest City,
 
 === SECTION: Why we cover Midwest City ===
 - **Older housing stock.** Midwest City has a strong base of mid-century homes that often need panel upgrades and modern code compliance.
-- **Active military and first-responder community.** Discounts for active military, veterans, and first responders. [VERIFY: discount amount or percentage].
+- **Active military and first-responder community.** Ask our team when scheduling about any current promotions or available discounts.
 - **Storm-prone region.** Service-mast and meter-base damage are routine post-storm calls. Whole-home generators are practical.
 
 === SECTION: Midwest City FAQ ===
 Q: Do you offer a military or first-responder discount?
-A: Yes. [VERIFY: military/first responder discount terms — fixed amount or percentage]. Active-duty military, veterans, and first responders.
+A: Ask our team when scheduling about any current promotions or available discounts.
 
 Q: Are you licensed to work in Midwest City?
-A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
+A: Yes. Licensed and insured.
 
 Q: Can you repair my service mast after a storm?
 A: Yes. We handle service-mast repair, meter-base replacement, weatherhead, and the OG&E coordination required to restore power safely.
 
 Q: Do you handle Midwest City permits and inspections?
-A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Midwest City permit/inspection language].
+A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies.
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to Emergency Electrician, Electrical Panels, Generators, Electrical Repair,

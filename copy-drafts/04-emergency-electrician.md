@@ -50,7 +50,7 @@ Spark Shark Electric in Moore, Oklahoma dispatches a licensed electrician 24 hou
 - **Live 24/7 phone.** A real person answers, day or night, weekend or holiday.
 - **Licensed Oklahoma electricians on call.** [VERIFY: CIB license #00163603] Background-checked team — no subcontractors for residential service.
 - **Residential-only focus.** We work on homes every day — your panel, your wiring, your fix.
-- **Flat-rate, written pricing.** Even on emergencies, you get a written number before approved work begins. [VERIFY: after-hours rate disclosure language].
+- **Flat-rate, written pricing.** Even on emergencies, you get a written number before approved work begins.
 
 === FAQ ===
 Q: Is there an extra charge for nights and weekends?
