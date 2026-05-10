@@ -119,9 +119,15 @@ def kv_from_bullets(bullets):
 
 
 # Path prefix for asset URLs (CSS/JS/img) and internal nav links.
-# - PRODUCTION (DNS cutover, custom domain): set to ""
-# - PREVIEW (GitHub Pages project URL sparksharkelectric.github.io/sparkshark-com/): set to "/sparkshark-com"
-# Override via env var: BASE=/sparkshark-com python3 build.py
+# - VERCEL PRODUCTION: set to "" (root-relative paths). Vercel runs
+#   `BASE="" python3 build.py` automatically per vercel.json `buildCommand`.
+# - GITHUB PAGES PREVIEW (transitional): set to "/sparkshark-com" so paths
+#   work under sparksharkelectric.github.io/sparkshark-com/. CI builds with
+#   this default, and the github.io preview keeps republishing during the
+#   migration window.
+# Default stays "/sparkshark-com" until the GH preview is retired post-DNS-cutover.
+# DNS cutover is gated by docs/migration/launch-gate.md — do not point the
+# custom domain at Vercel until every gate item is Approved or Not Applicable.
 BASE = os.environ.get("BASE", "/sparkshark-com")
 
 # ServiceTitan Scheduler Pro embed (Custom Website default — same code works on GitHub Pages)
@@ -2651,7 +2657,7 @@ def build_readme():
 
 Public marketing site for **{BRAND['name']}** — sparkshark.com.
 
-Static HTML hosted on GitHub Pages. No frameworks, no build step, no dependencies.
+Static HTML. Production hosting is moving to **Vercel** (DNS cutover gated by `docs/migration/launch-gate.md`); a transitional GitHub Pages preview remains live during the migration window. No frameworks, no Node toolchain — `build.py` (Python stdlib) generates every page.
 
 ## Repo structure
 
@@ -2663,14 +2669,15 @@ Static HTML hosted on GitHub Pages. No frameworks, no build step, no dependencie
 - `locations-we-serve/[city]/index.html` — city pages
 - `2026/05/07/[slug]/index.html` — blog posts
 - `build.py` — page generator (run if updating templates or content; templates are baked into pages once generated)
-- `CNAME` — custom domain ({BRAND['name']} → www.sparkshark.com)
+- `vercel.json` — Vercel deploy contract (buildCommand, redirects, headers)
+- `docs/migration/launch-gate.md` — Brock-Owned DNS Cutover Launch Gate (gates DNS flip)
 - `robots.txt`, `sitemap.xml`, `llms.txt`, `llms-full.txt`, `404.html`
 
 ## Editing pages
 
-You can edit any HTML file directly through the GitHub web UI (pencil icon → edit → commit). GitHub Pages will auto-deploy in ~30 seconds.
+For most copy/markup work, edit the source in `copy-drafts/*.md` or `build.py`'s manifest, run `python3 build.py` locally, and commit the regenerated HTML. Vercel rebuilds with `BASE=""` automatically on push (~10–30s deploy); the github.io preview also republishes from the same push during the transitional window.
 
-For larger structural changes (new service page, design system updates), run `python3 build.py` locally and commit the regenerated files.
+Direct hand-edits to generated `index.html` files are discouraged — they will be overwritten the next time `build.py` runs.
 
 ## Brand canon
 
@@ -2686,7 +2693,11 @@ Every page emits one canonical 4-node `@graph` (WebSite + Organization + LocalBu
 
 ## Hosting
 
-GitHub Pages, free tier. Custom domain via `CNAME` file at repo root.
+**Production target: Vercel.** Deploy contract in `vercel.json` — Vercel runs `BASE="" python3 build.py` at deploy time, so production HTML is always rebuilt from source rather than relying on whatever was committed. Custom domain (`www.sparkshark.com` primary, `sparkshark.com` apex auto-301) attached at the Vercel project level. **No `CNAME` file required.**
+
+**Transitional preview: GitHub Pages.** The github.io preview at `sparksharkelectric.github.io/sparkshark-com/` remains live during the migration window. CI builds with default `BASE=/sparkshark-com` for that preview. Both hosts work in parallel until the GH preview is retired post-cutover.
+
+**DNS cutover is blocked by `docs/migration/launch-gate.md`.** Until every gate item is Approved (or Not Applicable with written reason), the domain stays pointed at the legacy host. Only Brock may approve gate items.
 '''
     (ROOT / "README.md").write_text(txt, encoding="utf-8")
 

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "BASE=\"\" python3 build.py",
+  "outputDirectory": ".",
+  "trailingSlash": true,
+  "cleanUrls": false,
+  "redirects": [
+    { "source": "/commercial-electrical-solutions",  "destination": "/", "permanent": true },
+    { "source": "/commercial-electrical-solutions/", "destination": "/", "permanent": true },
+    { "source": "/industrial-electrical-solutions",  "destination": "/", "permanent": true },
+    { "source": "/industrial-electrical-solutions/", "destination": "/", "permanent": true },
+    { "source": "/home-staging-2026-05-07",  "destination": "/", "permanent": true },
+    { "source": "/home-staging-2026-05-07/", "destination": "/", "permanent": true },
+    { "source": "/2023/12/29/closing-the-deal-with-confidence-why-realtors-should-choose-spark-shark-for-home-repairs/", "destination": "/", "permanent": true },
+    { "source": "/2024/01/02/powering-tomorrow-a-comprehensive-guide-to-new-construction-wiring-with-spark-shark/",   "destination": "/electrical-installation/", "permanent": true },
+    { "source": "/2024/01/12/join-our-team-spark-shark-is-hiring-experienced-journeyman-electricians/", "destination": "/", "permanent": true },
+    { "source": "/2023/12/28/empower-your-home-the-case-for-upgrading-your-electrical-panel-with-spark-shark/", "destination": "/2026/05/07/signs-you-need-electrical-panel-upgrade/", "permanent": true },
+    { "source": "/2024/01/24/why-you-should-hire-a-professional-for-electrical-installations/", "destination": "/electrical-installation/", "permanent": true },
+    { "source": "/2023/12/29/powering-peace-of-mind-unveiling-the-benefits-of-a-home-generator-with-spark-shark/", "destination": "/generators/", "permanent": true },
+    { "source": "/2024/01/01/power-up-your-new-year-the-case-for-whole-home-surge-protectors-with-spark-shark/", "destination": "/electrical-installation/", "permanent": true },
+    { "source": "/2024/01/03/ground-fault-interrupters-the-power-of-gfi-outlets-by-spark-shark/", "destination": "/switches-and-outlets/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security",  "value": "max-age=31536000" },
+        { "key": "X-Content-Type-Options",     "value": "nosniff" },
+        { "key": "X-Frame-Options",            "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy",            "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy",         "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(html)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(img|css|js)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(sitemap\\.xml|robots\\.txt|llms\\.txt|llms-full\\.txt)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    }
+  ]
+}
