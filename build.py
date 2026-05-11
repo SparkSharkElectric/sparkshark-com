@@ -134,6 +134,25 @@ BASE = os.environ.get("BASE", "/sparkshark-com")
 ST_API_KEY = "mwr2241pezdya33y00nyx0ok"
 ST_SCHEDULER_ID = "sched_b2upae383kzlb9qjuhmqnyvt"
 
+# Tracking & verification — single source of truth.
+#
+# GTM_CONTAINER_ID:
+#   Single tracking deploy mechanism per the 2026-05-10 cutover decision. All
+#   downstream tag reconciliation (GA4, Google Ads, Clarity, etc.) happens inside
+#   the GTM UI — never hardcoded back into build.py. This sidesteps the multi-tag
+#   sprawl problem documented in migration-evidence-pack 6/06-current-tracking/
+#   tracking-ids.md.
+#
+# GSC_VERIFICATION_VALUE:
+#   The value Google Search Console expects in the `google-site-verification`
+#   meta tag. When empty, the meta is NOT emitted (conditional). This lets the
+#   tracking PR ship without blocking on GSC value resolution. To enable: paste
+#   the value GSC's HTML-tag-method dialog shows (not what GSC finds on the live
+#   WordPress site — that belongs to a different account). After updating: rerun
+#   `python3 build.py` and push.
+GTM_CONTAINER_ID = "GTM-TBCXCXGS"
+GSC_VERIFICATION_VALUE = ""
+
 # ============================================================================
 # BRAND CONSTANTS — single source of truth for NAP + schema
 # ============================================================================
@@ -307,12 +326,32 @@ def head(title, description, path, extra_schema=None):
         f'<script type="application/ld+json">{json.dumps(s, separators=(",", ":"))}</script>'
         for s in schemas
     )
+    gsc_meta = (
+        f'<meta name="google-site-verification" content="{escape_attr(GSC_VERIFICATION_VALUE)}">\n'
+        if GSC_VERIFICATION_VALUE
+        else ""
+    )
+    gtm_head = (
+        f"<!-- Google Tag Manager -->\n"
+        f"<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':"
+        f"new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],"
+        f"j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src="
+        f"'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);"
+        f"}})(window,document,'script','dataLayer','{GTM_CONTAINER_ID}');</script>\n"
+        f"<!-- End Google Tag Manager -->"
+    )
+    gtm_body = (
+        f'<!-- Google Tag Manager (noscript) -->\n'
+        f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_CONTAINER_ID}" '
+        f'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n'
+        f'<!-- End Google Tag Manager (noscript) -->'
+    )
     return f'''<!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{escape_html(title)}</title>
+{gsc_meta}<title>{escape_html(title)}</title>
 <meta name="description" content="{escape_attr(description)}">
 <link rel="canonical" href="{canonical}">
 <meta property="og:type" content="website">
@@ -327,9 +366,11 @@ def head(title, description, path, extra_schema=None):
 <link rel="apple-touch-icon" href="/img/logo.png">
 <link rel="stylesheet" href="/css/site.css">
 {schema_html}
+{gtm_head}
 <script data-api-key="{ST_API_KEY}" data-schedulerid="{ST_SCHEDULER_ID}" defer id="se-widget-embed" src="https://embed.scheduler.servicetitan.com/scheduler-v1.js"></script>
 </head>
 <body>
+{gtm_body}
 <a class="skip-link" href="#main">Skip to main content</a>
 {header_html()}
 <main id="main">'''
@@ -1810,15 +1851,56 @@ def build_info_pages():
       </div>
       <div>
         <h2>Request service</h2>
-        <form class="form" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="POST">
+        <form class="form" id="contact-form" action="/api/contact-form" method="POST">
           <div><label for="name">Name</label><input id="name" name="name" type="text" required></div>
           <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required></div>
           <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
           <div><label for="city">City</label><input id="city" name="city" type="text" placeholder="Moore, OKC, Norman..."></div>
           <div><label for="message">What's going on?</label><textarea id="message" name="message" required placeholder="Briefly describe the electrical issue or project..."></textarea></div>
+          <div aria-hidden="true" style="position:absolute;left:-9999px;">
+            <label for="company">Company (leave blank)</label>
+            <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <button class="btn btn--primary btn--lg" type="submit">Request service</button>
+          <p id="contact-form-status" role="status" aria-live="polite" style="display:none;font-size:.95rem;margin-top:12px;"></p>
           <p style="font-size:.85rem;color:var(--text-muted);">Or skip the form: <a href="tel:+14054364776"><strong>call (405) 436-4776</strong></a> — we answer 24/7.</p>
         </form>
+        <script>
+        (function(){
+          var f=document.getElementById('contact-form');
+          if(!f)return;
+          var s=document.getElementById('contact-form-status');
+          f.addEventListener('submit',function(e){
+            e.preventDefault();
+            s.style.display='block';
+            s.style.color='var(--text-muted)';
+            s.textContent='Sending\u2026';
+            var btn=f.querySelector('button[type="submit"]');
+            if(btn)btn.disabled=true;
+            var data=new FormData(f);
+            var payload={};data.forEach(function(v,k){payload[k]=v;});
+            fetch('/api/contact-form',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+              .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
+              .then(function(r){
+                if(r.ok){
+                  s.style.color='#0a7a3c';
+                  s.textContent='Thanks \u2014 we got your request. We answer 24/7 at (405) 436-4776 if it\'s urgent.';
+                  f.reset();
+                  if(window.dataLayer)window.dataLayer.push({event:'contact_form_submit',form_id:'contact-form'});
+                }else{
+                  s.style.color='#a31515';
+                  s.textContent='Sorry \u2014 something went wrong. Please call (405) 436-4776 or email theteam@sparkshark.com.';
+                  if(btn)btn.disabled=false;
+                }
+              })
+              .catch(function(){
+                s.style.color='#a31515';
+                s.textContent='Network error. Please call (405) 436-4776 or email theteam@sparkshark.com.';
+                if(btn)btn.disabled=false;
+              });
+          });
+        })();
+        </script>
       </div>
     </div>
     </div></div></section>'''
