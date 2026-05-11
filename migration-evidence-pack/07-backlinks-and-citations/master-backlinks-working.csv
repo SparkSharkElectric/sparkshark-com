@@ -48,6 +48,31 @@ websearch,https://www.instagram.com/thesparkshark/,instagram.com,yes,CONFIRMED 2
 # === FINDINGS NOT YET BACKLINKS BUT IMPORTANT CONTEXT ===
 # GTM live container: GTM-W7V4RS7C — NOT owned by Brock (orphaned, prior agency)
 # GTM Brock-owned: GTM-TBCXCXGS (account 6296666179 "Spark Shark") — not deployed
-# GA4 properties Brock can see: 480290314 Flanco Electric, 481482348 Spark Shark, 488680346 Spark Shark
-# Live GA4 measurement ID G-QK02QH3SWY is INSIDE the unowned GTM-W7V4RS7C — Brock has no access
-# Action: separate project to reclaim GTM ownership + migrate to Brock-owned GA4 property
+# REVISED 2026-05-11 evening: GA4 measurement ID G-QK02QH3SWY IS owned by Brock — lives in
+#   property 488680346 "Spark Shark" under Flanco Electric account 347644522. Confirmed via
+#   dataStreams API. The earlier "G-QK02QH3SWY is in unowned GTM and therefore data is locked"
+#   conclusion was WRONG. The GTM container layer is unowned but the GA4 destination layer
+#   is owned. Data is reachable. SA added to 488680346 + 480290314 via API at v1alpha
+#   accessBindings (UI add was blocked by a "doesn't match Google Account" validation bug).
+# Property 480290314 "Flanco Electric (Old)" tracks G-4TFM61SQED for flancoelectricok.com
+#   (the legacy Flanco domain) — useful for pre-rebrand historical context only.
+# === NEW REFERRER DOMAINS FROM GA4 PROPERTY 488680346 (since 2025-05-09) ===
+# See ga4-referrals-property-488680346-all-history.csv for full 229-row export.
+# NET NEW domains not in GSC/WebSearch sources (filtered for non-self, non-debug, non-staging):
+ga4,https://chatgpt.com/,chatgpt.com,n/a,GA4 referral 2025-05+ (5 sessions),2026-05,P2,LLM referral
+ga4,https://claude.ai/,claude.ai,n/a,GA4 referral 2025-05+ (5 sessions),2026-05,P2,LLM referral
+ga4,https://bluebbb.org/,bluebbb.org,n/a,GA4 referral (4 sessions); BBB variant,2026-05,P3,Verify
+ga4,https://goodleap.lightning.force.com/,goodleap.lightning.force.com,n/a,GA4 referral (4 sessions); GoodLeap financing partner Salesforce,2026-05,P3,Partner platform referral
+ga4,https://national.lightning.force.com/,national.lightning.force.com,n/a,GA4 referral (5 sessions); national contractor network Salesforce,2026-05,P3,Partner platform referral
+ga4,https://l.instagram.com/,l.instagram.com,n/a,GA4 referral (4 sessions); IG outbound wrapper,2026-05,P3,Already counted via instagram.com/thesparkshark
+ga4,https://moranalytics.com/,moranalytics.com,n/a,GA4 referral (4 sessions); SEO analytics tool,2026-05,P3,Verify mention/link
+ga4,https://servicetitan.lightning.force.com/,servicetitan.lightning.force.com,n/a,GA4 referral (3 sessions); ST internal Salesforce,2026-05,P3,Internal not a public backlink
+ga4,https://hometalk.com/,hometalk.com,n/a,GA4 referral (1 session); DIY home community,2026-05,P2,New backlink discovery
+ga4,https://featured.com/,featured.com,n/a,GA4 referral (1 session); already discovered via WebSearch (Brock profile),2026-05,P2,Confirmed via GA4
+ga4,https://linkedin.com/,linkedin.com,n/a,GA4 referral (1 session); already discovered via WebSearch,2026-05,P2,Confirmed via GA4
+ga4,https://mapquest.com/,mapquest.com,n/a,GA4 referral (1 session); already in GSC,2026-05,P1,Confirmed via GA4
+ga4,https://biztools.corp.google.com/,biztools.corp.google.com,n/a,GA4 referral (1 session); Google internal,2026-05,P3,Internal not a public backlink
+ga4,https://retool.plaid.io/,retool.plaid.io,n/a,GA4 referral (1 session); Plaid internal,2026-05,P3,Internal not a public backlink
+ga4,https://marketspacesales.com/,marketspacesales.com,n/a,GA4 referral (1 session),2026-05,P3,Verify
+ga4,https://yelp-sales--c.vf.force.com/,yelp.com,n/a,GA4 referral (3 sessions); Yelp ad sales Salesforce,2026-05,P3,Yelp internal
+ga4,https://shoguninc0000000000.lightning.force.com/,shogun-inc.salesforce,n/a,GA4 referral (1 session); Shogun Salesforce internal,2026-05,P3,Internal not a public backlink

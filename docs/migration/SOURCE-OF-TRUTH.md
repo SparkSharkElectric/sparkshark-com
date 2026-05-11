@@ -182,51 +182,68 @@ When Brock greenlights cleanup (separately approved — not in this session), th
 
 ---
 
-## 11. Analytics ownership gap (discovered 2026-05-11 evening, during backlink audit)
+## 11. Analytics ownership picture (corrected 2026-05-11 ~18:45 CT after API-level reclaim)
 
-A separate session-1 backlink-capture workstream surfaced a structural ownership problem that was previously characterized as "Coalition-era abandoned" but is actually larger. Captured here so it does NOT get lost before DNS flip.
+Initial finding (during backlink audit) read as: "live GA4 `G-QK02QH3SWY` is locked behind an unowned third-party GTM." The deeper investigation (later same evening) corrected this — **the GA4 destination IS owned, only the GTM container layer is unowned.** Captured in full so the cutover plan reflects the real picture.
 
 ### What's actually live on www.sparkshark.com
 
-- `GTM-W7V4RS7C` — Google Tag Manager container present in the live homepage `<noscript>` iframe + the `<script>` loader. **Brock does NOT own this container.** Its `gtm.js?id=GTM-W7V4RS7C` payload contains GA4 measurement ID `G-QK02QH3SWY` configured for the property — owner unknown. Years of GA4 traffic data have flowed to a third-party-controlled property as a result.
+- `GTM-W7V4RS7C` — Google Tag Manager container present in the live homepage `<noscript>` iframe + the `<script>` loader. **Brock does NOT own this container.** It is in someone else's GTM account (Coalition-era — prior marketing agency). Its `gtm.js?id=GTM-W7V4RS7C` payload references GA4 measurement ID `G-QK02QH3SWY`.
 - `GT-NGS794C2` — unified Google Tag (via Site Kit) firing alongside the GTM container. This is the one §4 row 2 + cutover-runbook Risk 6 already decided to migrate to.
 - `AW-17076116496` — Google Ads conversion account with label `Hf8UCO6r84cZEN7Iyq0p`. Visible separately.
 
-### What Brock actually owns (confirmed 2026-05-11 evening, screenshots in evidence pack)
+### What Brock actually owns (confirmed 2026-05-11 evening)
 
 | Asset | ID | Status |
 |---|---|---|
 | GTM account "Spark Shark" | `6296666179` | OWNED |
 | GTM container | `GTM-TBCXCXGS` (under that account, target `sparkshark.com`) | OWNED but NOT deployed on the live site |
 | GA4 account "Flanco Electric" | `347644522` | OWNED |
-| GA4 property "Flanco Electric ..." | `480290314` | OWNED — legacy pre-rebrand data lives here |
+| GA4 property `488680346` "Spark Shark" (under Flanco account!) | — | **OWNED. THIS IS THE LIVE PROPERTY.** Data stream `G-QK02QH3SWY` tracks `https://www.sparkshark.com/`, created 2025-05-09. ~1.1K active users since creation. Service account `sparkshark-seo-reader@fluid-emissary-493106-s2.iam.gserviceaccount.com` granted Viewer via API on 2026-05-11 (UI add was blocked by a GA4 validation bug; bypassed via `accessBindings.create` v1alpha endpoint). |
+| GA4 property `480290314` "Flanco Electric (Old)" | — | OWNED — data stream `G-4TFM61SQED` tracks `https://flancoelectricok.com` (the legacy Flanco domain, NOT sparkshark.com). Holds pre-rebrand history only. SA granted Viewer via same API. |
 | GA4 account "Spark Shark Analytics" | `348668675` | OWNED |
-| GA4 property "Spark Shark" (#1) | `481482348` | OWNED — service account `sparkshark-seo-reader@fluid-emissary-493106-s2.iam.gserviceaccount.com` has Viewer; data streams `G-JF1630186D` + `G-8SGD0GKF4F`; ~20 users in 90d, near-empty |
-| GA4 property "Spark Shark" (#2) | `488680346` | OWNED — first attempt to grant SA Viewer failed; retry with Admin role |
+| GA4 property `481482348` "Spark Shark" | — | OWNED — likely a setup artifact. Streams `G-JF1630186D` + `G-8SGD0GKF4F` for case-variant URIs; ~20 users in 90d. Not the live destination. SA has Viewer. |
 
-**Critical gap:** none of Brock's three accessible GA4 properties contains the live measurement ID `G-QK02QH3SWY`. That ID lives inside the unowned `GTM-W7V4RS7C` container.
+**Corrected verdict:** the GA4 destination layer for live `www.sparkshark.com` traffic is `G-QK02QH3SWY` → property `488680346`, **owned by Brock.** All historical referral data is recoverable (and was extracted on 2026-05-11; see evidence file below). The only unowned layer is `GTM-W7V4RS7C` itself.
 
-### Cutover implication (already planned, surfaced here for visibility)
+### Live property `488680346` — referral data extracted 2026-05-11
 
-The `build.py:153` swap planned in §4 row 2 + cutover-runbook Risk 6 (GTM → `gtag.js?id=GT-NGS794C2` loader) is also the moment the unowned `GTM-W7V4RS7C` stops loading on the live site. That is a feature, not a bug — DNS flip is the natural reclaim moment for the analytics stack.
+229 unique pageReferrer × source × medium rows since 2025-05-09. Top external referrers (non-self, non-debug, non-staging):
 
-**Pre-flip work to be sequenced before that swap is shipped:**
+| Source | Sessions | Notes |
+|---|---|---|
+| facebook.com / m.facebook.com / l.facebook.com / lm.facebook.com | 93 total | Confirms `facebook.com/sparksharkelectric` as a real driver |
+| yelp.com / m.yelp.com (+ ca/uk/admin variants) | 48 total | Confirms `yelp.com/biz/spark-shark-electric-moore` |
+| google.com / directory referrals | 32 | GBP "Directions" link clicks etc. |
+| chatgpt.com | 5 | **LLM referrals — new discovery, not in GSC** |
+| claude.ai | 5 | **LLM referrals — new discovery, not in GSC** |
+| national.lightning.force.com | 5 | Partner-platform / national contractor network (Salesforce) |
+| goodleap.lightning.force.com | 4 | GoodLeap financing partner (Salesforce) |
+| bluebbb.org | 4 | BBB variant — verify |
+| l.instagram.com | 4 | Already counted via `instagram.com/thesparkshark` |
+| moranalytics.com | 4 | New discovery — SEO analytics tool |
+| hometalk.com | 1 | New discovery — DIY home community |
+| featured.com | 1 | Confirmed via GA4 (already in WebSearch list) |
+| linkedin.com | 1 | Confirmed via GA4 |
+| mapquest.com | 1 | Confirmed via GA4 (already in GSC) |
 
-1. Confirm which GA4 measurement ID sits behind `GT-NGS794C2` (read from `migration-evidence-pack/06-current-tracking/05-ga4-data-streams.png`). Verify it maps to one of Brock's three properties above — not a fourth/unknown property. If unmappable, the swap from GTM to gtag.js is still strictly better than the status quo (Brock owns nothing today), but flag for follow-up.
-2. Retry adding the service account on GA4 property `488680346` (Spark Shark #2) with Admin role this time; check whether `G-QK02QH3SWY` is one of its data streams.
-3. Optionally pull legacy referral history from Flanco property `480290314` once Brock grants SA access — useful for the backlink workstream baseline (recent referrers may not be in GSC).
-4. **Do NOT touch** the old GTM container in any way — Brock has no admin access to it.
+Full export: `migration-evidence-pack/07-backlinks-and-citations/ga4-referrals-property-488680346-all-history.csv`.
+
+### Cutover implication (re-stated correctly)
+
+The `build.py:153` swap planned in §4 row 2 + cutover-runbook Risk 6 (GTM → `gtag.js?id=GT-NGS794C2` loader) retires the unowned `GTM-W7V4RS7C` from the live site. After that swap, the GA4 destination should remain `G-QK02QH3SWY` (Brock-owned property `488680346`) **provided the new `GT-NGS794C2` unified tag points at the same measurement ID**. Verify this before shipping the swap — pre-swap verification step is the same as in §4 row 2.
 
 ### Post-cutover follow-up
 
-- Wire Brock-owned `GTM-TBCXCXGS` into the new Vercel build if a future tag-manager surface is desired. Currently the §4-row-2 decision is "skip GTM, use gtag.js directly" — that decision still stands; the `GTM-TBCXCXGS` reclaim is just bookkeeping so Brock owns every layer of the new stack.
-- Audit whether any third-party still has crawl/data access via the old container (e.g., shared Google Ads accounts, Search Console properties they own pointed at sparkshark.com). Out of scope for cutover; queue for a separate access-audit.
+- Wire Brock-owned `GTM-TBCXCXGS` into the new Vercel build if a future tag-manager surface is desired. The §4-row-2 decision is "skip GTM, use gtag.js directly" — that decision still stands; the `GTM-TBCXCXGS` reclaim is just bookkeeping.
+- Audit whether any third party (Coalition successor, etc.) still has crawl/data access via the old `GTM-W7V4RS7C` container. Cannot affect Brock's GA4 data going forward once the swap ships, but worth understanding the historical access footprint. Out of scope for cutover.
 
 ### Evidence
 
 - `migration-evidence-pack/07-backlinks-and-citations/SESSION-2-HANDOFF.md` — full session-1 detail + session-2 plan
-- `migration-evidence-pack/07-backlinks-and-citations/master-backlinks-working.csv` — 27 unique referring domains / 40 URLs discovered through session 1; cross-links the GTM/GA4 finding in trailing comments
-- `~/.claude/projects/-Users-brock/memory/project_sparkshark_gtm_ga4_ownership.md` — auto-memory entry that carries the finding across future Claude sessions
+- `migration-evidence-pack/07-backlinks-and-citations/master-backlinks-working.csv` — referring domains + GA4-new-discovery rows
+- `migration-evidence-pack/07-backlinks-and-citations/ga4-referrals-property-488680346-all-history.csv` — 229-row full export
+- `~/.claude/projects/-Users-brock/memory/project_sparkshark_gtm_ga4_ownership.md` — auto-memory entry
 
 ---
 
