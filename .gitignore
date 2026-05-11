@@ -9,3 +9,6 @@ assets/
 __pycache__/
 *.pyc
 .DS_Store
+
+# Vercel local project link (deployment-config-as-state, not source)
+.vercel/
