@@ -1,15 +1,15 @@
 # QA Report — sparkshark.com
 
-Run: 2026-05-10T04:08:39+00:00 | 41 pages | Pure-Python rule engine | strict=on
+Run: 2026-05-11T02:22:26+00:00 | 42 pages | Pure-Python rule engine | strict=off
 
 ## Summary
 
 - Verdict: **PASS**
-- Pages PASS: 41
+- Pages PASS: 42
 - Pages FAIL: 0
 - Warnings only: 0
 
-## Passes (41)
+## Passes (42)
 
 - /
 - /services/
@@ -34,6 +34,7 @@ Run: 2026-05-10T04:08:39+00:00 | 41 pages | Pure-Python rule engine | strict=on
 - /locations-we-serve/
 - /oklahoma-city/
 - /moore/
+- /locations-we-serve/bethany/
 - /locations-we-serve/del-city/
 - /locations-we-serve/newcastle/
 - /locations-we-serve/mustang/
@@ -56,4 +57,4 @@ Run: 2026-05-10T04:08:39+00:00 | 41 pages | Pure-Python rule engine | strict=on
 ## Coverage
 
 - Rules run: 9
-- Pages checked: 41
+- Pages checked: 42

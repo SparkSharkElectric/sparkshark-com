@@ -298,10 +298,14 @@ Never rewrite history on main (no force-push, no rebase of pushed commits).
   recommend cutover until the gate is green.
 
 - vercel.json controls production behavior. Edits to redirects, headers, or
-  buildCommand affect the live site once Vercel is attached.
+  buildCommand affect the Vercel preview immediately and will affect the live
+  site at DNS cutover.
 
-- Vercel project not yet created/connected to repo (Brock action). Vercel
-  preview deploys begin once the project is connected to GitHub.
+- Vercel project IS connected to GitHub (team slug: spark-shark-electric).
+  Preview deploys are live; latest alias responds with HTTP 200 +
+  `x-vercel-cache: HIT`. buildCommand `BASE="" python3 build.py` runs on every
+  push to main. Production DNS (www.sparkshark.com → Vercel) is NOT yet flipped
+  — gated by docs/migration/launch-gate.md (currently 0/9 items Approved).
 ```
 
 ## Current Priority
