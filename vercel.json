@@ -18,7 +18,20 @@
     { "source": "/2024/01/24/why-you-should-hire-a-professional-for-electrical-installations/", "destination": "/electrical-installation/", "statusCode": 301 },
     { "source": "/2023/12/29/powering-peace-of-mind-unveiling-the-benefits-of-a-home-generator-with-spark-shark/", "destination": "/generators/", "statusCode": 301 },
     { "source": "/2024/01/01/power-up-your-new-year-the-case-for-whole-home-surge-protectors-with-spark-shark/", "destination": "/electrical-installation/", "statusCode": 301 },
-    { "source": "/2024/01/03/ground-fault-interrupters-the-power-of-gfi-outlets-by-spark-shark/", "destination": "/switches-and-outlets/", "statusCode": 301 }
+    { "source": "/2024/01/03/ground-fault-interrupters-the-power-of-gfi-outlets-by-spark-shark/", "destination": "/switches-and-outlets/", "statusCode": 301 },
+    { "source": "/2023/12/29/closing-the-deal-with-confidence-why-realtors-should-choose-flanco-electric-for-home-repairs/", "destination": "/", "statusCode": 301 },
+    { "source": "/2023/12/29/powering-peace-of-mind-unveiling-the-benefits-of-a-home-generator-with-flanco-electric/", "destination": "/generators/", "statusCode": 301 },
+    { "source": "/2024/01/03/ground-fault-interrupters-the-power-of-gfi-outlets-by-flanco-electric/", "destination": "/switches-and-outlets/", "statusCode": 301 },
+    { "source": "/2024/01/12/join-our-team-flanco-electric-is-hiring-experienced-journeyman-electricians/", "destination": "/", "statusCode": 301 },
+    { "source": "/2024/01/02/powering-tomorrow-a-comprehensive-guide-to-new-construction-wiring-with-flanco-electric/", "destination": "/electrical-installation/", "statusCode": 301 },
+    { "source": "/2024/01/01/power-up-your-new-year-the-case-for-whole-home-surge-protectors-with-flanco-electric/", "destination": "/electrical-installation/", "statusCode": 301 },
+    { "source": "/our-residential-electrical-services/", "destination": "/residential-electrical-solutions/", "statusCode": 301 },
+    { "source": "/projects/", "destination": "/reviews/", "statusCode": 301 },
+    { "source": "/2023/12/28/what-is-lorem-ipsum-2/", "destination": "/", "statusCode": 301 },
+    { "source": "/fiancing/", "destination": "/contact-us/", "statusCode": 301 },
+    { "source": "/price/", "destination": "/contact-us/", "statusCode": 301 },
+    { "source": "/repair/", "destination": "/electrical-repair-and-service/", "statusCode": 301 },
+    { "source": "/2023/12/28/where-does-it-come-from/", "destination": "/", "statusCode": 301 }
   ],
   "headers": [
     {
