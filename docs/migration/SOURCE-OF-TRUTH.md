@@ -238,6 +238,26 @@ The `build.py:153` swap planned in §4 row 2 + cutover-runbook Risk 6 (GTM → `
 - Wire Brock-owned `GTM-TBCXCXGS` into the new Vercel build if a future tag-manager surface is desired. The §4-row-2 decision is "skip GTM, use gtag.js directly" — that decision still stands; the `GTM-TBCXCXGS` reclaim is just bookkeeping.
 - Audit whether any third party (Coalition successor, etc.) still has crawl/data access via the old `GTM-W7V4RS7C` container. Cannot affect Brock's GA4 data going forward once the swap ships, but worth understanding the historical access footprint. Out of scope for cutover.
 
+### 🟡 Pre-cutover: relocate property `488680346` off the Flanco Electric account (Brock decision 2026-05-11)
+
+**Constraint set by Brock:** the live property must NOT remain in the Flanco Electric GA4 account. Sparkshark brand should not be tracked inside a property hierarchy owned by the legacy entity.
+
+**Recommended approach — move, don't recreate:**
+1. In GA4 → Admin → on property `488680346` → **Property Details** → **Move property**
+2. Destination account: **Spark Shark Analytics** (`348668675`)
+3. Confirm. Measurement ID `G-QK02QH3SWY` stays the same; data history is preserved; no change needed in `build.py` or in the tag loader.
+
+Why move > recreate: moving keeps the 229+ referral rows + ~1.1K user history that already exist. Recreating loses all of that and resets historical attribution to zero on DNS-flip day.
+
+**After the move:**
+- Property `481482348` (the empty placeholder already under Spark Shark Analytics) is redundant — delete it post-move to avoid confusion.
+- Re-verify the SA `sparkshark-seo-reader@…` still has Viewer on the moved property (GA4 moves usually preserve access bindings, but verify).
+- Update this §11 + cutover-runbook to note the new account assignment.
+
+**Sequencing:** do this BEFORE the `build.py:153` GTM→gtag.js swap and BEFORE DNS flip. The order is: (1) move property → (2) confirm tracking continuity → (3) ship tag swap → (4) reverify preview → (5) DNS flip.
+
+**If the move UI fails** (rare — usually requires Admin role on both source and destination accounts, which Brock has on both): create a new property under Spark Shark Analytics with a fresh measurement ID, update GTM/gtag.js to point at it, and accept the data-history reset as the cost of clean ownership. Note that this option still loses the legacy reference value of the 229 GA4 referral rows (they remain queryable under the Flanco property until/unless Brock deletes that property too).
+
 ### Evidence
 
 - `migration-evidence-pack/07-backlinks-and-citations/SESSION-2-HANDOFF.md` — full session-1 detail + session-2 plan
