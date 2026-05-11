@@ -154,8 +154,8 @@ BRAND = {
     "bbb_since": "2025-07-14",
     "service_area": [
         "Oklahoma City", "Moore", "Norman", "Edmond", "Yukon",
-        "Mustang", "Midwest City", "Del City", "Choctaw",
-        "Newcastle", "Noble", "Blanchard"
+        "Mustang", "Bethany", "Midwest City", "Del City", "Choctaw",
+        "Newcastle", "Piedmont", "Nichols Hills", "The Village", "Warr Acres"
     ],
     "logo_url": f"{SITE}/img/logo.png",
     "mascot_url": f"{SITE}/img/mascot.png",
@@ -2425,6 +2425,7 @@ def build_sitemap():
         ("/locations-we-serve/", "0.7"),
         ("/oklahoma-city/", "0.7"),
         ("/moore/", "0.7"),
+        ("/locations-we-serve/bethany/", "0.6"),
         ("/locations-we-serve/del-city/", "0.6"),
         ("/locations-we-serve/newcastle/", "0.6"),
         ("/locations-we-serve/mustang/", "0.6"),
@@ -2737,10 +2738,12 @@ def main():
         build_service_page(sp)
     print(f"  ✅ {len(SERVICE_PAGES)} service pages")
 
-    # Locations (Tier 3 — 12 cities per locked-12 service area)
+    # Locations (Tier 3 — 13 cities; piedmont, nichols-hills, the-village,
+    # warr-acres declared in BRAND['service_area'] for schema but await drafts)
     locations = [
         ("/oklahoma-city/", "Oklahoma City"),
         ("/moore/", "Moore"),
+        ("/locations-we-serve/bethany/", "Bethany"),
         ("/locations-we-serve/del-city/", "Del City"),
         ("/locations-we-serve/newcastle/", "Newcastle"),
         ("/locations-we-serve/mustang/", "Mustang"),
@@ -2757,12 +2760,12 @@ def main():
 
     # Locations index
     title = "Areas We Serve | OKC Metro Cities | Spark Shark Electric"
-    desc = "Spark Shark Electric serves 12 cities across the Oklahoma City metro — Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, and more."
+    desc = "Spark Shark Electric serves 13 cities across the Oklahoma City metro — Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Bethany, and more."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Service Area", f"{SITE}/locations-we-serve/")])
     html = head(title, desc, "/locations-we-serve/", extra)
     html += locked_hero(
         "Residential electrical service in the **OKC metro**",
-        "12 cities, same flat-rate pricing, same licensed Oklahoma team, same 24/7 phone.",
+        "13 cities, same flat-rate pricing, same licensed Oklahoma team, same 24/7 phone.",
         eyebrow_html="Where we work",
     )
     html += proof_block()
@@ -2776,10 +2779,13 @@ def main():
       <li><a href="/locations-we-serve/edmond/">Edmond</a></li>
       <li><a href="/locations-we-serve/yukon/">Yukon</a></li>
       <li><a href="/locations-we-serve/mustang/">Mustang</a></li>
+      <li><a href="/locations-we-serve/bethany/">Bethany</a></li>
       <li><a href="/locations-we-serve/midwest-city/">Midwest City</a></li>
       <li><a href="/locations-we-serve/del-city/">Del City</a></li>
       <li><a href="/locations-we-serve/newcastle/">Newcastle</a></li>
-      <li>Choctaw, Noble, Blanchard — full service, no separate page yet</li>
+      <li><a href="/locations-we-serve/choctaw/">Choctaw</a></li>
+      <li><a href="/locations-we-serve/noble/">Noble</a></li>
+      <li><a href="/locations-we-serve/blanchard/">Blanchard</a></li>
     </ul>
     </div></section>'''
     html += cta_block()
