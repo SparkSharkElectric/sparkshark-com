@@ -1,0 +1,2151 @@
+Phase 1 — raw chain log (sparkshark-audit/1.0)  2026-05-10T22:48:36Z
+
+# URL: http://sparkshark.com
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:36 GMT
+Content-Type: text/html
+Connection: keep-alive
+Server: cloudflare
+set-cookie: __cf_bm=O23RUnqF_fIQ97Fu1xNrmQJcX7gxakl9jbSQpMxCXr4-1778453316.1977-1.0.1.1-Bpue.uYchAqSGjVBixUE3MA1q5kDhnDXJ1BYUofrerL4_8F6tfnyA7PmpGu5i_1Prb842mDnVbqIxQDdeEo2dmpNvUXNgZQZoX.IabeMG9qL28wXi409xB1cau1stQHR; HttpOnly; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:36 GMT
+Location: http://www.sparkshark.com/
+CF-Cache-Status: BYPASS
+Vary: accept-encoding
+CF-RAY: 9f9c7e0a3972e7bb-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:36 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: accept-encoding
+Expires: Sun, 10 May 2026 23:34:24 GMT
+Location: https://www.sparkshark.com/
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 301 Moved Permanently
+X-Powered-By: WP Engine
+X-Redirect-By: WordPress
+X-Cacheable: non200
+Cache-Control: max-age=600, must-revalidate
+X-Cache: HIT: 1
+X-Cache-Group: normal
+Age: 141
+set-cookie: __cf_bm=rgMtgGZogRFmi9lQZQCr.mBPufC9uljB6TwpR99ox3g-1778453316.5864856-1.0.1.1-CVboTdiBrio2_4xeUSu0S573zJQ8auMemthGS.rqmy6Dh.VNLDdIF6FOMqar1RBJ78nJntMfB1C4oM8URtwTpHnjA7fd0vP2VFTAxFS_c4UIzRvY49ZrKEffL8VEePXM; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:36 GMT
+cf-cache-status: HIT
+CF-RAY: 9f9c7e0cad7d68c2-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:36 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=__E8WoYrUJUHbi7xI0bBuxeACbrhyuRiB4mS3Tyw4HE-1778453316.6722188-1.0.1.1-PlMSMs7jHY9jAJwYtYt354KGokWTpjq1q7VITKIQsQ6VzV7FGbxCBKXofJcZ9zQ8QRcgSOIwjcR5sDfzkXYLB8dJoDUoN9ZYoARI7XxJn8U67iFaWavUQ1ny6filZAoh; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:36 GMT
+cf-cache-status: HIT
+age: 312
+cf-ray: 9f9c7e0d3850f0a9-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:36 GMT
+content-type: text/html
+location: http://www.sparkshark.com/
+server: cloudflare
+set-cookie: __cf_bm=BbyqI08l1ZdvFPHIDV_w133kbAflA6fv9SuLR7hjjLU-1778453316.770761-1.0.1.1-JF0.kMB_hwDxeCs7zEWHr383big5sAnfa9FQive3oLpMBrM4x_8R4AQSW.n1XIWrEk5mg.RMELzjOspHMtyHzRGAkk.lElGBtDXjUQJmhJFJitKhy29wQKqt8tXdYxwp; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:36 GMT
+cf-cache-status: BYPASS
+vary: accept-encoding
+cf-ray: 9f9c7e0dde17c0e5-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:37 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: accept-encoding
+Expires: Sun, 10 May 2026 23:34:24 GMT
+Location: https://www.sparkshark.com/
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 301 Moved Permanently
+X-Powered-By: WP Engine
+X-Redirect-By: WordPress
+X-Cacheable: non200
+Cache-Control: max-age=600, must-revalidate
+X-Cache: HIT: 1
+X-Cache-Group: normal
+Age: 142
+set-cookie: __cf_bm=tdZlicrWqtbB4sjh1pQX4ZLcZMRINzd12diaXDC9NOE-1778453317.0377479-1.0.1.1-FuDANVf9fmjX8JJdWX0mguXGRtG59i6bJenIEMfSY4weX9vwQNaj2wM8dkBQ1PD4auLNXpBQ.aWcL1r.vHMQRTNK3D533S05NEOxEYVJbZAATdNT8JyyzJOn84AB_aGx; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:37 GMT
+cf-cache-status: HIT
+CF-RAY: 9f9c7e0f78e96c80-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:37 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=D7PRHU.ZKtQ0Wm4lPGNMitkq.MFU_BB.jnfbEOYcm60-1778453317.1263037-1.0.1.1-PDMypvwxvipCXIkAc3cL_WwBRW6LLHLVr8nsDRTz_zzyKrwR83ZnwP0.diSkWPASBPxgrMkOHT0E9qmA9sOGSUTSpI.kKdZcOKO6_JqHzNvuRB2wrzvOrZmjQlWiorZk; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:37 GMT
+cf-cache-status: HIT
+age: 313
+cf-ray: 9f9c7e100c4bb52d-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: http://www.sparkshark.com
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:37 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: accept-encoding
+Expires: Sun, 10 May 2026 23:34:24 GMT
+Location: https://www.sparkshark.com/
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 301 Moved Permanently
+X-Powered-By: WP Engine
+X-Redirect-By: WordPress
+X-Cacheable: non200
+Cache-Control: max-age=600, must-revalidate
+X-Cache: HIT: 1
+X-Cache-Group: normal
+Age: 142
+set-cookie: __cf_bm=Q_NsdLV7jGn0Vg5JhYinFtUfDKXdB7rEwQLcp2w.PFo-1778453317.2012115-1.0.1.1-Bo7e_bwn2CR3SYsioXSra47bdwaLTMwUv6HAT2AFvqwtr4arx8e1XxSOFnF7STMFEp3q6Wsj9Hnekb_McjxUAp5kTGNSi4l6TifADgc5RFoAv_Qdse1d8zeyxAIZRjbA; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:37 GMT
+cf-cache-status: HIT
+CF-RAY: 9f9c7e1088385060-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:37 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=6FP4NdyuPBuDuLgmqHHi8ZfoRH1nP98ZrmDihh6hOlk-1778453317.2870927-1.0.1.1-nBxVUvZDBAJYaiPkI3YGGQ3IgOh2wj5MzUjZym0rbLg.fG7mb5bYERonuCsz0MTjbOVFxL1IpbPOmA3qZki4gljM4tE9PHqMVkz4DEsTh_lS289VNp684VXoBj9LtIFP; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:37 GMT
+cf-cache-status: HIT
+age: 313
+cf-ray: 9f9c7e110fe5f0a0-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:37 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=BAyzyxDNRrT0btX796XKoJAtn5U9Lpt409H2hePZy34-1778453317.3731072-1.0.1.1-zuH_b.elcpqtDhYVbJz2dCvuWBpWywNowWaXHMzOKf0PBEqPSSi8zYdtgceUtOf28aV5yjaXCnBYlqcCeB714EJRuvuH4_f7k2j.wX3Y9VwFbptx2.Cqgk6k_wUXZR3k; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:37 GMT
+cf-cache-status: HIT
+age: 313
+cf-ray: 9f9c7e119ca1475c-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: http://sparkshark.com/
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:37 GMT
+Content-Type: text/html
+Connection: keep-alive
+Server: cloudflare
+set-cookie: __cf_bm=QB67r_frnWqfzaXG0whzPVEtnHp5kAXBfuz4OFZHQXM-1778453317.4412305-1.0.1.1-MgeP3nFTp0l6vjrUkUlMGQ6HVllhUuiqY_MoxUOEB8lnZ2QkzZ3OGLVv8_nCGCnqt4n0_5SonlbXQQNnWlBYod5UcWuG5EgiC5DZsLEGoHf105.f551IHVG678vQvc5m; HttpOnly; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:37 GMT
+Location: http://www.sparkshark.com/
+CF-Cache-Status: BYPASS
+Vary: accept-encoding
+CF-RAY: 9f9c7e120ef30864-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:37 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: accept-encoding
+Expires: Sun, 10 May 2026 23:34:24 GMT
+Location: https://www.sparkshark.com/
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 301 Moved Permanently
+X-Powered-By: WP Engine
+X-Redirect-By: WordPress
+X-Cacheable: non200
+Cache-Control: max-age=600, must-revalidate
+X-Cache: HIT: 1
+X-Cache-Group: normal
+Age: 142
+set-cookie: __cf_bm=oqzpJm6JK.mqu4qmZbS4wG2DKYb0XlfTDkAvwohPTnk-1778453317.6085985-1.0.1.1-lr9q.cDBlCpYPASAfQSeIYvNq62cMzghj8XzWAi150ZyFApJfjaC.2n3sFjxINYKkJPLpuNIMbpagyZjC4GTodfJA0wrA0Cesy5RhEMPSGOLddBNIDeX4oSeBDo7WiBG; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:37 GMT
+cf-cache-status: HIT
+CF-RAY: 9f9c7e130d3421d2-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:37 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=cH5rQnN41tQ.DDpYkxXFoHcJOaIRqBoYlcY0kVRfBmA-1778453317.6907635-1.0.1.1-ivBoDmUImEHkCQydO9X5ifhir.K6FAsEiT19SFxBpty473PAR0TSaIEf1Kh_VXf.fFH2lm46VXDfoEehh_VyCBdg79WKXSmVAcE_lFcpurF_81E_OS7SW37t1xs0Tuh0; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:37 GMT
+cf-cache-status: HIT
+age: 313
+cf-ray: 9f9c7e139e71194c-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:38 GMT
+content-type: text/html
+location: http://www.sparkshark.com/
+server: cloudflare
+set-cookie: __cf_bm=BFELi10m5il221nFXlFoWd_RayJdKjF59u.7HANxfig-1778453317.7786825-1.0.1.1-ywKL1fgVerv6ARvF.sir8XFuZ.7gHedKXSf.lMawWoSlwWnziL3X7CwfbnofPN.SQ26zRmeR2BgfFuzpFhRzSrcvL7BJG1BFKjd74MYfnbUhouERJbifxBv_pSynZKNa; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:38 GMT
+cf-cache-status: BYPASS
+vary: accept-encoding
+cf-ray: 9f9c7e141a634770-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:38 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: accept-encoding
+Expires: Sun, 10 May 2026 23:34:24 GMT
+Location: https://www.sparkshark.com/
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 301 Moved Permanently
+X-Powered-By: WP Engine
+X-Redirect-By: WordPress
+X-Cacheable: non200
+Cache-Control: max-age=600, must-revalidate
+X-Cache: HIT: 1
+X-Cache-Group: normal
+Age: 143
+set-cookie: __cf_bm=kI2Hbz_bTZ_sGZuZsjGEBn7ApmMvhU45LD9LVnE9_UA-1778453318.0548196-1.0.1.1-vX0Cgqfa.OArdc5HPHPmc2nTy.wqsqy_vkdcszVz99f5qPlzAPrD8xay3GitwG0I7Ahf_MlcevGDPyMLjrAh9zwdo81MeQ57JCVZGwAYKDq_z2TYS2Ewm7IIV7YTE9oM; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:38 GMT
+cf-cache-status: HIT
+CF-RAY: 9f9c7e15dc65a927-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:38 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=oEboEl7oX7FNTagl1wabMgCSkxHo2a00XkK6lbMWSLg-1778453318.1348212-1.0.1.1-i4rSp8cSaSfxdcioqLRPthTyFeWW_QcEjAlCeccVKXWdudbnVBj3H5iEbIbXEfqk4XoD6VEhzC2cVRAXxAPDGyHnprCGqpwRpjA5AG7IRpFLLAtlGckYLcw39h6iXRrk; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:38 GMT
+cf-cache-status: HIT
+age: 314
+cf-ray: 9f9c7e16581d31a6-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: http://www.sparkshark.com/
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:38 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: accept-encoding
+Expires: Sun, 10 May 2026 23:34:24 GMT
+Location: https://www.sparkshark.com/
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 301 Moved Permanently
+X-Powered-By: WP Engine
+X-Redirect-By: WordPress
+X-Cacheable: non200
+Cache-Control: max-age=600, must-revalidate
+X-Cache: HIT: 1
+X-Cache-Group: normal
+Age: 143
+set-cookie: __cf_bm=d4opXHpUjsg9MdkRaH98akCppc0abYlGwae8gYUvJJQ-1778453318.203548-1.0.1.1-5G45iH8_9c0XBolisCScMPSG89aJA.GXhBBmtclqrS4QRBKiqIdSgVJjtuNWK_tagCjnkkhTtXh9UklM4jDOHXNOaO1er7PGTBmIWblfVVQqukGJCN2Ho0GDhX9GHNk_; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:38 GMT
+cf-cache-status: HIT
+CF-RAY: 9f9c7e16c88cad97-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:38 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=U4vYTfA9dFRRNmJpCpALJ4YLnf20l5ES60eysWWSz_Y-1778453318.2913227-1.0.1.1-W8_TFB5XdnPMjBtPCmqEcNmUdBlFN_YxQNdNXRNAA19aA2n.Prmc5BF9DQGum1leUBu3vqnqlpsidmTX5d9QmrIBn2GsLdVt5M1uveff4Yw4krBZRDKY1S5w6g2jH_XO; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:38 GMT
+cf-cache-status: HIT
+age: 314
+cf-ray: 9f9c7e1759844776-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:38 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=.VbksvoVbkfP7xMijvtncYV25ObBNDqK2x0ouYS8jnI-1778453318.3765833-1.0.1.1-UyBw6Xg26i3oPVRp6rA9GA1BSgDgu1Xzvr07NZxT.9R3dv2nOdyT_VH8H0pW1ehXvjFpYO4WwBD7GyRhazpZDDR1p3YMMhDq2H2Mmsb4W1KCtvLKAeWZ9Vf2lmCQ2z3B; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:38 GMT
+cf-cache-status: HIT
+age: 314
+cf-ray: 9f9c7e17dfe0475a-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/about-us/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:38 GMT
+content-type: text/html
+location: http://www.sparkshark.com/about-us/
+server: cloudflare
+vary: accept-encoding
+set-cookie: __cf_bm=V4zNpyJ5ACztKmm3PiuSFmX0wnZYWPYsyJVO3TXkTao-1778453318.4678261-1.0.1.1-u7rWTC37iBJpNjXFcLrUX1tUmzuZGi988WerBoC0o3iJu.3JnWBcM.J2rHyBRrt6EsVl1n.YRhYXtFKScG51daAMxjABNZLBwXiEYsKY4YTGejX25aL3PIzGsx8Ff8pB; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:38 GMT
+cf-cache-status: BYPASS
+cf-ray: 9f9c7e186fcb26c3-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 200 OK
+Date: Sun, 10 May 2026 22:48:39 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding,Cookie
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Link: <https://www.sparkshark.com/wp-json/wp/v2/pages/328>; rel="alternate"; title="JSON"; type="application/json"
+Link: <https://www.sparkshark.com/?p=328>; rel=shortlink
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+X-Powered-By: WP Engine
+X-Cacheable: SHORT
+Cache-Control: max-age=600, must-revalidate
+X-Cache: MISS
+X-Cache-Group: normal
+set-cookie: __cf_bm=of5bfY.2QgEuLwPY8mEVnckgrlabNpa.gWeMn3wNurM-1778453318.70817-1.0.1.1-vydK0uTgvowQV3Py_JbcI7kmVPs59fi_.JdGGNnE06VDPm2eS_UuxkTJkAEsyge4uHrFD914n8mSt0IEaJ1PnorVIThE02H1bYCj37gIiHN5odWQaoTZGtP.Hi5aC97w; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:39 GMT
+Last-Modified: Sun, 10 May 2026 22:48:39 GMT
+CF-Cache-Status: MISS
+CF-RAY: 9f9c7e19eecf479a-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/about-us/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:40 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/328>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=328>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=.VW2wXbhuQp0AA8O3YvIsm2G1G9v7HfGLM90CLqRcwk-1778453319.6077824-1.0.1.1-Plknz5QwnagofxAskw.f7iRHqexa2nDiGRqV3Qm9pClD_uPyTkqv4P6brZUgW1Ke9G0pEhhUYOJKjn1VLp_a2XkiFZublMKgM2iGRwKsWlRiE3NC06XQDfgYT.7L.S_K; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:40 GMT
+last-modified: Sun, 10 May 2026 22:48:40 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7e1f8c794790-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/services/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:40 GMT
+content-type: text/html
+location: http://www.sparkshark.com/services/
+server: cloudflare
+vary: accept-encoding
+set-cookie: __cf_bm=_9X9HS5kM0igdQW5E1NtSkf6k_qkWwrUm1JzNza0z2g-1778453320.2859862-1.0.1.1-PwvVHoWcTapbJt.RGGtGsIdLcJCPceV2d2yryyka5KQePIkJmxYO0LnXghl5vDn_Fp0yVp9k4qSY_JZuko6ja57R.Ip.2zh1akNm7r2sTySfIdkzwJEOBK3tuPV7_xkq; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:40 GMT
+cf-cache-status: BYPASS
+cf-ray: 9f9c7e23cb207ffc-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 200 OK
+Date: Sun, 10 May 2026 22:48:41 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding,Cookie
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Link: <https://www.sparkshark.com/wp-json/wp/v2/pages/329>; rel="alternate"; title="JSON"; type="application/json"
+Link: <https://www.sparkshark.com/?p=329>; rel=shortlink
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+X-Powered-By: WP Engine
+X-Cacheable: SHORT
+Cache-Control: max-age=600, must-revalidate
+X-Cache: MISS
+X-Cache-Group: normal
+last-modified: Sun, 10 May 2026 22:48:41 GMT
+set-cookie: __cf_bm=_g6c6S.VLjTDZH6zYDorbLOXkTQ4xa_EMMdXMwsA490-1778453320.5629666-1.0.1.1-G5P.XisOse9t70PIZQEbvYz0ilh7yqTn58KmhhCEENkWxwXr3U5DyAtoN.gvoQT0.jP.AaOXzZ5.0t80qhEKs5NDWzuXN48rXCvPfdQletcu1hQshj3T_t2XTMGxX26y; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:41 GMT
+cf-cache-status: MISS
+CF-RAY: 9f9c7e258e9d7142-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/services/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:41 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/329>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=329>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:41 GMT
+set-cookie: __cf_bm=uH8SsC8zewHvvjX04PD5d5z7wXKyvQWxdv9L94yCGbA-1778453321.2993731-1.0.1.1-Vw4tBjKWl7QDuEUdasOsVFOfmd.8DSylSeQBGfJ_yBBhihTWcsKbCjaRtRrX0QT3W5M8avg5Ecv.mGY0iUQpOLOohICEgv_W8J4aNOrLaINiMW3_D2dqJBx.F2SSlDoA; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:41 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7e2a1bf0c55c-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/oklahoma-city/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:42 GMT
+content-type: text/html
+location: http://www.sparkshark.com/oklahoma-city/
+server: cloudflare
+vary: accept-encoding
+set-cookie: __cf_bm=59Qn3oMei1jz6Lw2UJQk8GC4T7xaJg.6.hLBJNuh0Mg-1778453321.9302683-1.0.1.1-se_LFTNO5Fyx5xwJGkF6DdSKzRiCcL7B0eLsunBIXiWg25mDRVKE6OaFQKqyJmn3LMRBkqxQjgzybIpuaCOTNofU8TXIXA2hwzCswiaxxQNSYJrlwP.3KH.pVWrd0nRE; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:42 GMT
+cf-cache-status: BYPASS
+cf-ray: 9f9c7e2e0d84e7d7-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 200 OK
+Date: Sun, 10 May 2026 22:48:42 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding,Cookie
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17487>; rel="alternate"; title="JSON"; type="application/json"
+Link: <https://www.sparkshark.com/?p=17487>; rel=shortlink
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+X-Powered-By: WP Engine
+X-Cacheable: SHORT
+Cache-Control: max-age=600, must-revalidate
+X-Cache: MISS
+X-Cache-Group: normal
+set-cookie: __cf_bm=dqdH5IqnIK54v1B.v6ZUpfsf_EO1N1Ou9keICnOlga4-1778453322.1733525-1.0.1.1-7Rr3F8lmQLF3ZedcwkA7_hb77JFTvwOI8Y59wrhB64T01vOnAMFOsSo8lrmJ_YWNbgpDuzZTzg5AG83Piy32sqISyVLgHryo727ys3niOyiLwwLUwMORN52TTLYHtZgw; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:42 GMT
+Last-Modified: Sun, 10 May 2026 22:48:42 GMT
+CF-Cache-Status: EXPIRED
+CF-RAY: 9f9c7e2f9efe45ef-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/oklahoma-city/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:43 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17487>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17487>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=T5RhBrQDV1MbyvQ9bra5pOIIpg.sue.mCQIDm46U.Os-1778453322.9456813-1.0.1.1-hQkL.8v9mrwToHV39ocedhgJCtN9e.13YDoIjUgEbUssfc6vfizo1X9qu2Dh4riIcDdQX06IkM3T0GG8p1s0r_QNwUq8b.P24A0Eu7zLrlvI.lOpYRrl.g1xmxjPgEhP; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:43 GMT
+last-modified: Sun, 10 May 2026 22:48:43 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7e346a40ccc4-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/this-url-does-not-exist-2026/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:43 GMT
+content-type: text/html
+location: http://www.sparkshark.com/this-url-does-not-exist-2026/
+server: cloudflare
+vary: accept-encoding
+set-cookie: __cf_bm=HnCvcOLICvg.e33g3HnT_AMZqtV77wBUBHqt38JKWBk-1778453323.7183764-1.0.1.1-oWpYsrt96HZXlQ8SUOLV_16w5dqqeLU9igr8sZC4za6Q3P.csS9PIm0UPg_ii65A6GsJyFaME3tmI6vlO_PsjvkJHvnJEW66YUfwgXRYxLtV8k6O7jadRMaL_SlI.8oH; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:43 GMT
+cf-cache-status: BYPASS
+cf-ray: 9f9c7e393a97f825-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 404 Not Found
+Date: Sun, 10 May 2026 22:48:44 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Cache-Control: no-cache, must-revalidate, max-age=0, no-store, private
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 404 Not Found
+X-Powered-By: WP Engine
+X-Cacheable: NO:Private
+X-Cache: MISS
+X-Cache-Group: normal
+set-cookie: __cf_bm=qeQoTZbWylVDTcfEQbXzdwInWH_vSlDKYBDwYuuRh60-1778453323.9563239-1.0.1.1-q4uB.f3szlA_9pH4GkBTibSRY_LJfbCxn9YOlEhD5IaxqtQK2bS.mSRLLRDyi14089dURGsVz.e6O8DPSHUWqHh3pSB5zWog.Q6Xok_Wa9lYGnIG8vW7LUOqbFXH3_LC; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:44 GMT
+CF-Cache-Status: BYPASS
+CF-RAY: 9f9c7e3abdce5bef-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/blog/legacy-post-slug-test/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:44 GMT
+content-type: text/html
+location: http://www.sparkshark.com/blog/legacy-post-slug-test/
+server: cloudflare
+set-cookie: __cf_bm=60LQKuOwi.LfnJvTkuQ7hGOlVB_EczRBOCM2_BrYZoU-1778453324.499234-1.0.1.1-yqitbtBRAArqTsGGv0Ic_58hM0JeoVkvCo8jnI3xaj252eXF9KsCtelAktr82m0WhcexUrWs.mJFO7pkpbYGDvAQXE93b4uMfk.4DqEhDiJLYC6L4E8AtMDHzTgoSlvc; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:44 GMT
+cf-cache-status: BYPASS
+vary: accept-encoding
+cf-ray: 9f9c7e3e1e6646c8-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 404 Not Found
+Date: Sun, 10 May 2026 22:48:45 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Cache-Control: no-cache, must-revalidate, max-age=0, no-store, private
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 404 Not Found
+X-Powered-By: WP Engine
+X-Cacheable: NO:Private
+X-Cache: MISS
+X-Cache-Group: normal
+set-cookie: __cf_bm=t3F_unVFpj__KXfidr93vKd7JndRTjP6blCa8bybJRk-1778453324.9119995-1.0.1.1-xg6IL9f3nx35StueLnsNzywNUPoVPv1v55bSPcmseHYpY6uF8BP3TB2pjMbeIG6D14GYo7Nu2lyRzdSr6dUXEDEPEOcr0RR7DN9IK6BLcd.YvjBIo5_XKcFbidoBH3lL; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:45 GMT
+CF-Cache-Status: BYPASS
+CF-RAY: 9f9c7e40bbd06c7c-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/?p=99999
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:45 GMT
+content-type: text/html
+location: http://www.sparkshark.com/?p=99999
+server: cloudflare
+set-cookie: __cf_bm=6omCkJqukUFzxmIKDeKvxY6zG14H1xG2jv4d9hlhNdo-1778453325.7043653-1.0.1.1-7.aaptPn4Ov6Up_K3V8x3Xt7Z0_dWyYWCcBuhy8c1TYm20zkT4R_UZepM6ayAKSZExqnIkAy20LasHqK9tDiG3tpPdsS0k8HKF4N4gZZUkr69vfGGsqdbBrBPx8NUM5E; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:45 GMT
+cf-cache-status: BYPASS
+vary: accept-encoding
+cf-ray: 9f9c7e45aa273156-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 404 Not Found
+Date: Sun, 10 May 2026 22:48:46 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Cache-Control: no-cache, must-revalidate, max-age=0, no-store, private
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 404 Not Found
+X-Powered-By: WP Engine
+X-Cacheable: NO:Private
+X-Cache: MISS
+X-Cache-Group: normal
+cf-cache-status: BYPASS
+set-cookie: __cf_bm=OBXdy5S1ZnRSPE0.oc50prPMr71yslsclMqC3KtU0qE-1778453325.9555676-1.0.1.1-41vU6QAuuJ2iK9l6vTjBpIH0z9.dtqWby1E6al0FFm5EWZJYGBUhh_UBvYXXHDHURZleEupCufl1il7hu6wqXWLzoZW3771ORcuyRD8vppmMsoaNHgRSof7vjACZmI4J; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:46 GMT
+CF-RAY: 9f9c7e473ec5fc16-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/About-Us/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:46 GMT
+content-type: text/html
+location: http://www.sparkshark.com/About-Us/
+server: cloudflare
+vary: accept-encoding
+set-cookie: __cf_bm=BW9Ii33m3FiEhD.nlPUt0MrlRTcIDOLO81c9biTgjgg-1778453326.4557836-1.0.1.1-UzmM6NopVZ2VI03CYi5tz.AzC.v2NpznNsQzN8mvJ7bmcBnBKYyAjR0k8_hMajbSqe8SPXMD1NB3tg1v96b0oAavUtC28k47v2askU2oxTKccWW._KABfKyPzvHiUdd5; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:46 GMT
+cf-cache-status: BYPASS
+cf-ray: 9f9c7e4a59f1478c-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 200 OK
+Date: Sun, 10 May 2026 22:48:47 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding,Cookie
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Link: <https://www.sparkshark.com/wp-json/wp/v2/pages/328>; rel="alternate"; title="JSON"; type="application/json"
+Link: <https://www.sparkshark.com/?p=328>; rel=shortlink
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+X-Powered-By: WP Engine
+X-Cacheable: SHORT
+Cache-Control: max-age=600, must-revalidate
+X-Cache: MISS
+X-Cache-Group: normal
+last-modified: Sun, 10 May 2026 22:48:47 GMT
+set-cookie: __cf_bm=EwD2kwxDh_km0E61W34RBoJhx0AwDa7IyeY4nSl0Q7U-1778453326.7252316-1.0.1.1-eRTYmhUJ46onqTljZlvqrRG0ueknGcSdks5GmBs2bTgkt0kCCrWFhXu3ElPrFC4BY9GZcraRYPTowi2tEZALFDA71_vulfds1JjdDJr5gOhrjfvMz8bFYtw11nF3R5No; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:47 GMT
+cf-cache-status: MISS
+CF-RAY: 9f9c7e4c0e24464d-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/SERVICES/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:47 GMT
+content-type: text/html
+location: http://www.sparkshark.com/SERVICES/
+server: cloudflare
+set-cookie: __cf_bm=IADx8YNEYCYcATl4QzdiRJrHdUJ2IylggJbfKf3qugc-1778453327.3067536-1.0.1.1-bPCW6faBWEnTTFGiSAnZWfdorUSs9e4K9T6zAMCcFKfWlDJy9.SsMukvWY9XEE1poY89wSXAIauNaJLM0qRHCZRN7MuYq9w75FlBPu9HTc4aTrMBa.8TZj_5c5YWfUeO; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:47 GMT
+cf-cache-status: BYPASS
+vary: accept-encoding
+cf-ray: 9f9c7e4fab85168b-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 200 OK
+Date: Sun, 10 May 2026 22:48:48 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Vary: Accept-Encoding,Cookie
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Link: <https://www.sparkshark.com/wp-json/wp/v2/pages/329>; rel="alternate"; title="JSON"; type="application/json"
+Link: <https://www.sparkshark.com/?p=329>; rel=shortlink
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+X-Powered-By: WP Engine
+X-Cacheable: SHORT
+Cache-Control: max-age=600, must-revalidate
+X-Cache: MISS
+X-Cache-Group: normal
+set-cookie: __cf_bm=MnDmLKSeWdJxdaorLxk0jKftfF8CRXWdWzVoX7BR6KI-1778453327.6701987-1.0.1.1-O3WKwthI8V7yWSInvCShXK4Ug0PgtNvvtSBOxoZUVmXKoSfIzr23SzBu1_rUFdcOezJ1EpP2WhfzR.0O5pikVP1ye4_UGrKPk4Spr100M.8IXX.1qmdx.nuRwHH5R.G6; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:48 GMT
+Last-Modified: Sun, 10 May 2026 22:48:48 GMT
+CF-Cache-Status: MISS
+CF-RAY: 9f9c7e51ec2b477b-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/index.html
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:48 GMT
+content-type: text/html
+location: http://www.sparkshark.com/index.html
+server: cloudflare
+set-cookie: __cf_bm=AMlJ1SLgX5gluU21aqaTQ4760h8Xx2MVjH3FKQuYDuw-1778453328.4616237-1.0.1.1-P_zvXhzmJJZiWjn6fH1bza42s_.E6GAFhHncu0UgrVFmS9ur81tmfy0.jVmTuMNwlYGtiV.5TySaqOhHQYAJnb8pNCZ7GskRWxg0S.UgnmB45mdYQ413BnI_5WK_7Hbl; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:48 GMT
+cf-cache-status: BYPASS
+vary: accept-encoding
+cf-ray: 9f9c7e56ead03acd-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 404 Not Found
+Date: Sun, 10 May 2026 22:48:49 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: Accept-Encoding
+Vary: Accept-Encoding
+Cache-Control: no-cache, must-revalidate, max-age=0, no-store, private
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 404 Not Found
+X-Powered-By: WP Engine
+X-Cacheable: NO:Private
+X-Cache: MISS
+X-Cache-Group: normal
+set-cookie: __cf_bm=g6psQILd2GAWcH3MAy5iJRCeZNaHwrKAh2aIo1HvdKw-1778453328.7024205-1.0.1.1-OVKGPGq3EhMu3hBaBLP3D3Mlbwd5zsS_7_m_McATkoEH0aHLuLdryoNo.YyvCqtnybARgYFaDZt3cW91GajyWaGSxlcnpcChZ3duEMReRtg3DmcSG70vLZqV_qyoOMMa; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:49 GMT
+CF-Cache-Status: BYPASS
+CF-RAY: 9f9c7e586aa8b66c-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://sparkshark.com/index.php
+HTTP/2 301 
+date: Sun, 10 May 2026 22:48:49 GMT
+content-type: text/html
+location: http://www.sparkshark.com/index.php
+server: cloudflare
+set-cookie: __cf_bm=dAuKc5v6dbNvh3yatr9WbHFXtGBMqj4pTT576dWK_zI-1778453329.3088634-1.0.1.1-o54thZhcU4O3dCi1kfcR35tIfOEqAHmoGQN3I57Djlc5ZlKFe.FsOf4yPfdZcWUbpAU87RHFjWl.D3sC9sgi._0EThJHfWaddwMLNFougZn6U2Jn7jQvBAPDq7LDCGXh; HttpOnly; Secure; Path=/; Domain=sparkshark.com; Expires=Sun, 10 May 2026 23:18:49 GMT
+cf-cache-status: BYPASS
+vary: accept-encoding
+cf-ray: 9f9c7e5c2ba56b71-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 10 May 2026 22:48:50 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+Server: cloudflare
+Vary: accept-encoding
+Expires: Sun, 10 May 2026 23:48:50 GMT
+Location: https://www.sparkshark.com/
+Permissions-Policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+Status: 301 Moved Permanently
+X-Powered-By: WP Engine
+X-Redirect-By: WordPress
+X-Cacheable: non200
+Cache-Control: max-age=600, must-revalidate
+X-Cache: MISS
+X-Cache-Group: normal
+set-cookie: __cf_bm=.OBNjMlNh40.q1gbOYN3HoA0OEimH7U.PHj0i9tbI7g-1778453329.7079077-1.0.1.1-Fy2KmwWBa55rQ1yPE4U57k.RqlMlrd2RqUnQjf9GQCgdanmscPdjRv33x3bdLfl7TSnrL4Nf9TNKMMUZxJW8.B1f253Kz12yqsuavgzbwKi_0GRvsXWlJqQOuzS0IPwl; HttpOnly; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:50 GMT
+CF-Cache-Status: MISS
+CF-RAY: 9f9c7e5eafc41d1e-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:48:50 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=7Lo_pc8yawMD1lyfjJ_5zoE9dur7MO4dfbjjp0lhDDg-1778453330.2549694-1.0.1.1-NYMG.speP_ZeHy6NHMh_eNDMxuG_BsP0fAaLflrd6e.0Td0.YHPBYDAS8OeDEd3M0Dv9UfnlURDmdCKSac4cc.UliyTfxVaPhdPJt4yYxCoSi12FbzgMjSDS1LtxLGEx; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:18:50 GMT
+cf-cache-status: HIT
+age: 326
+cf-ray: 9f9c7e621a243462-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:27 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=hAE9mfJBJD0EEAM9e908Q4PaUT9_vY5NSRaQHRAqvak-1778453367.87481-1.0.1.1-275QjBY9pPObsO5NNa0zlN2W96Y7taW4yfocDtJNdpcX6cYGlvmIppBFihv6_jLlIwBv10toaRX._u7Ptf.lxwce7uMolpbJHqU3DbGUpLOyUvjeaNpIiwuISfxmSoh6; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:27 GMT
+cf-cache-status: HIT
+age: 363
+cf-ray: 9f9c7f4d3cb34629-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/home-staging-2026-05-07/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:40 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20641>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20641>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=bjTmd7V7IKcu3YSD7HTbMyAtNCfR1pdXB9o0cdWh4G8-1778453379.5844975-1.0.1.1-41HSQo8anNyv6WYaqFCrUQl4wKze8UQe33qeR2.GDYPsWgsjmlQFGcVUPfb9zeFL.BJj3NoaaOJE5zJg.ix9T_0HTkrmqS4DNnZQ5AFMOe5rOa9fVyz5aTnF07Qt0yjz; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:40 GMT
+last-modified: Sun, 10 May 2026 22:49:40 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7f966b3e5060-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/del-city/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:41 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20673>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20673>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=Y0i35Ew9zHYS9GgygL4GA6NwkV81uPK4y2jEULMVnFg-1778453380.512471-1.0.1.1-pqEZU5oHQV7ipOOzvPHATneN2t30MD1Btlsf7Q.rYTHoro55vr0bZrfqmmof31IgZelYr3N4aR5gsyMGhXxJFHyZvOYnuGVRd7GWQXodatW9AJsK2gmluVJN7cC4Fcjh; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:41 GMT
+last-modified: Sun, 10 May 2026 22:49:41 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7f9c38626796-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/bethany/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:41 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20672>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20672>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:41 GMT
+set-cookie: __cf_bm=UKqZJI6JSZEx_fc4ISGnyXjyPmfvVdWEXSRXkRuNjEw-1778453381.363034-1.0.1.1-gdV2OlygniO7NFEXE1Vn6Z45c3QVO8A3fcg3bBsWxg.uh1.bIpuYGEnWcYuK4L6EWX2a9DZSc3ZW9QpDDgYIFaM85_QprEclSuLJPyP7Qds49jp9LKzNYH_vkWbtTFSe; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:41 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fa18dc06c3d-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/newcastle/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:42 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20671>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20671>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=qaa1YrJwE8_2BAjt7HXPy71pZ5ED6AS_VJVgWVMCYB4-1778453381.9666631-1.0.1.1-lDoynduRElXlbsh9BQR0WsqP1M_x84xEdEsk0S5oTeNkQKZOs6gQAmcWwNxzJmmFXurxScMLCimJpQ0LxrtoSZemWoaeJQaFEEmmdMz_GxFVg0kGsIZttO_dJw0PXstU; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:42 GMT
+last-modified: Sun, 10 May 2026 22:49:42 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fa54fb0c55c-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/mustang/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:43 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20670>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20670>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=BBu4QUmSNnccd6lDO0Tw1g.7ohOkZYvKkjaVUTVPsgw-1778453382.7804995-1.0.1.1-wRyujGvwTBMFA5Qi1VLf3V8tginbLAEV_elFswaikc_uQpkXsEScwP0QuupVIv5zkAmqCCg3et3IIFxw37i6fH3oucM49nljszwVpsnJqmKllmsuk963OHL6t1N4JH6N; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:43 GMT
+last-modified: Sun, 10 May 2026 22:49:43 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7faa5832e79e-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/yukon/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:44 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20669>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20669>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:44 GMT
+set-cookie: __cf_bm=xiEsemOtaMWFofu3VbCPMfzMOCcjIB9KaDQMv_wqsUU-1778453383.5314057-1.0.1.1-xXVVSK62T0tCCiwjp_s0soEn6gbwAgcOMCBQpzygEU934racKOzpruV43xRhnWlf27mor95lA5QCbs5tZwKWClxFWJuKyWLqMyOKhDgjVQAAHDiFh3melcPRHTsWyCaZ; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:44 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7faf1ac0fe58-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/midwest-city/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:44 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20668>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20668>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:44 GMT
+set-cookie: __cf_bm=fpuvh.NpErt.KqJkKHFxxUCB.lJNhUXJgEGACuN4.xg-1778453384.0904477-1.0.1.1-vi0MG2jiiThsjN1k2P3ZOEOMRkB6a4ddcsseCJxVVfGoiQLhmPpxTowsFCDrSSJAf8plyVl3x3hMIcN8OKh985XaQsk23ZF5I6maWg594qDj4uBtvH0IqpIMYgOK.BdQ; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:44 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fb28e4c72fb-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/norman/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:45 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20666>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20666>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:45 GMT
+set-cookie: __cf_bm=yWFBK9s6cT_X4rL0.gaiXqadNid_GTXq5_njkf7MdWs-1778453384.4903839-1.0.1.1-0nEpm.FaFkc2YO1iimzT9KZYHalM4irRGh4kcL94SozqMdiLlxNC.fg4ZwMJHAzlbR616OciJhqKmOfFL5uAoNwK_HDyHECPa37sQrxbXnPkHhsHq8JsMLuO9UOVGHvj; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:45 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fb50fdca88e-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/edmond/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:45 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20667>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20667>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:45 GMT
+set-cookie: __cf_bm=elyQSZl3CXsHblVvPqO4RorQ9.eUetaOWrDHVvnfnM8-1778453385.1395676-1.0.1.1-xcNDKNaTvIQBNarIVnna9eO0gy.VS8tK8l_LTSvxzKTkkUvGHqPxPF3sj9TW4zljjd5g4c5G5JQvgseAC51JD0RUJ89rmu85u2CGbCpXcFlaC7Gwt2L64JzH_AePUcT.; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:45 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fb91bf00d3a-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/contact-us/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:46 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/333>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=333>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=10MJTtxUycjRRmrvMYn5yXsZ9mMyTLJuaVRWJAAYZno-1778453385.7196677-1.0.1.1-qe34moy_hNM0H6yCxMMfirUe6GPnsxe1nRrlB004IWlbhSeau5DDhzZsIz20Ek8yqH45ESDSU0z5HN7HhQhJGrCrFfokC1zyx3EeTagsG4dL2mIvE1vMZx_RQXvaWSs_; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:46 GMT
+last-modified: Sun, 10 May 2026 22:49:46 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fbcbe63f09d-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:46 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=0.63BHYQxSwjhO13aVnXFLIFIWgUEw_biLidbI.iOUQ-1778453386.6168442-1.0.1.1-zBGsAd_CqMnIcNK_pZjP14tqXY3xFJFRjVqTrdLI.l98bX3GdGp2OYwQz8NJQrq24P8d5jcZ4VjX3X65_rK32yhWW95hUe18Ye8dHFP9GIYHc4MuO1qgTkqAK5Fzhtgw; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:46 GMT
+cf-cache-status: HIT
+age: 382
+cf-ray: 9f9c7fc25e4de7ff-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/reviews/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:47 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/3166>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3166>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=U35xpHsmSiYN0lQFQmEK9cl7S809DjWRoY8I8RC0uQo-1778453386.7027037-1.0.1.1-eZfrUpAya0Ol26nkwVe45HcuI9eowo4iz5x70eTHlg73u5kZ3iyvZcdNBj1txOiKzlesrtg3T5GvR8jNK6OWNCaDhSmB_IfA89qK16v6_97sqsSRpcgu4sRXMVGW2GOI; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:47 GMT
+last-modified: Sun, 10 May 2026 22:49:47 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fc2ed116a3f-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/ev-charger-installation/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:48 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/20684>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20684>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=EhxTt8hRCspBS3BKLj_d3B.Kp3Gl913AsLNKFFT_wEs-1778453387.4559371-1.0.1.1-6ZwM4ePEG5006XNd7bWvD6YU8C4nDpT2yHVHhU_NL5p6c77E8ApLSTUQu47y7KWoH9fJOnltIVQCJdic9M2MfFUWHdUtKNLz7u5E5eyxRaGWWwDnmKhOsJcBldIybYOg; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:48 GMT
+last-modified: Sun, 10 May 2026 22:49:48 GMT
+cf-cache-status: MISS
+cf-ray: 9f9c7fc799955e98-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/locations-we-serve/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:49 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17490>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17490>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=cZu5t3pf.WJUgNbrv7iACzAANqw1dt4m1_n27IWUX2U-1778453388.2201843-1.0.1.1-OJblmkaLXg51yRbqquJmtbTL5bAooZ1J3n.U0hvqDA1.kkI2eLijC3S8bJjW_GTA8csa_xigEaI6uizSpxdw9lXT07H01_ibHy_5m4cz4XkZ5xzMdOzplS4YiOx.Q1jw; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:49 GMT
+last-modified: Sun, 10 May 2026 22:49:48 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fcc5aaf14e1-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/electrical-panels/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:49 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/3216>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3216>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=IXqeLAp0irg_FQbRmktcJznpoh8awlWBsVJoB6MVh.w-1778453389.0986-1.0.1.1-QDs4WIWN8MHgAFp7wn.VhdBIpdYruLhQapP_ULaW8y5ghlhNv2e2IGeE.HKnKlIKbB9ysJdrlxdYTAlaqTvs7sOnq5IP4qjtw2pOJGBCiRNbvkeD_TCrqaJp6m5hlTVu; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:49 GMT
+last-modified: Sun, 10 May 2026 22:49:49 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fd1dc1fe7cf-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/residential-electrical-solutions/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:50 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/3177>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3177>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:50 GMT
+set-cookie: __cf_bm=on8RCrAUlyhtv3d4..5QhqbJL76BJShfxchxagE93sI-1778453389.851773-1.0.1.1-XHqYshQF_SP4H9J1dHR66kxDdD2TO83.Ld03m6fldxMwgsBQfpv1Bnyy7LxZquNKRcqqtRaK8FarnJeVS7olurKn9zbbpKMSfU_U0ZO5fQExKv3OLxtegt0QHxIdQOJb; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:50 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fd69ec2a4a1-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/services/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:50 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/329>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=329>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:41 GMT
+set-cookie: __cf_bm=ea1JOxcDxNAeouKjS_x3Gie6cfK94l1A7A3uNSOc_L4-1778453390.5403981-1.0.1.1-JMAyJP.7YlobVdXHhjqY30apD0GqDzefdrMo9Qag6_TSa8XW0eCI1h73w0LPgxZvi7yO1wBpC03Z5xk7vIQaK0.wiLEsCFttsEvnhzOBIDlobje.u4VrDaXmiwUX9_uY; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:50 GMT
+cf-cache-status: HIT
+age: 68
+cf-ray: 9f9c7fdadf8b486e-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/electrical-installation/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:51 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/3204>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3204>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=i64bvGHREt0.rjWCJuT48IOSll60qUU72MivjBpPz0E-1778453390.6322577-1.0.1.1-rxfHIcT72AjvaUmrkQ0I4K1YJdezSRm6FhlfABElfEXu5eaWFyO.Paqnd_xJjnnAPU.sL0pc6ItOM94pLnn_2w0jRsJl8wjidMVG.TpS9ycgVoFMlFmhKpGRlBypgNfJ; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:51 GMT
+last-modified: Sun, 10 May 2026 22:49:51 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fdb7c38e7bb-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/industrial-electrical-solutions/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:49:51 GMT
+content-type: text/html; charset=UTF-8
+location: https://www.sparkshark.com/
+server: cloudflare
+vary: accept-encoding
+expires: Sun, 10 May 2026 23:49:51 GMT
+status: 301 Moved Permanently
+x-powered-by: WP Engine
+x-redirect-by: redirection
+x-cacheable: non200
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+x-orig-cache-control: max-age=3600
+set-cookie: __cf_bm=.HbZmL8M6XIpKQvQxge._0l6hzVoHUkbjT_.1eXdw_s-1778453391.5199556-1.0.1.1-j8UbBEkiU3zEDSn46GI9MQe0UV1nhA5YyaRcIH32Dhy0ls_ziEQDirKQrGRU4Me1gR3qWwWUdXu1fOEQHvkkJRVhpT5b2CHCpqTd9iftSP09fFoXutLZIiEJRcyICpLv; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:51 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fe0fbaa4612-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:51 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=XzqgbFvtYzMSrVIjbq8wXPBZNtFubgwajRZ1oJ5y3eg-1778453391.7820122-1.0.1.1-s_tbbfz_IuxRD8E0iD_X93LG2EvF3SUgMokrCE9.rzOZdG.akNT5ochIzR.7IcACFEPO6CDoy.SWVsUrBobdeBIIiTck_yu08nJg8_tvlswemZOxTbhc_neJ3_kwhtXa; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:51 GMT
+cf-cache-status: HIT
+
+# URL: https://www.sparkshark.com/commercial-electrical-solutions/
+HTTP/2 301 
+date: Sun, 10 May 2026 22:49:52 GMT
+content-type: text/html; charset=UTF-8
+location: https://www.sparkshark.com/
+server: cloudflare
+vary: accept-encoding
+expires: Sun, 10 May 2026 23:49:52 GMT
+status: 301 Moved Permanently
+x-powered-by: WP Engine
+x-redirect-by: redirection
+x-cacheable: non200
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+x-orig-cache-control: max-age=3600
+set-cookie: __cf_bm=JAUm.fEwo3xV7.N8baTCEJqsVsiLzBGQSO3z9ZPpWF4-1778453391.8745089-1.0.1.1-ZTNIYFvftpdRqBp0LhEYmzJ7yLCz6MyXfXrpuABNlazpJDIScxUoh7bpzpGY7ttd4gBXP8ywvJsqzD.swb9cDGH2WsJVi1sVWkS8ujiAbLVP568TGXayI9sVLbY97Srg; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:52 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fe33b75478e-DFW
+alt-svc: h3=":443"; ma=86400
+
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:52 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=KUPNKTB86xI_TsNdR_qZuE9vD1vWszCsim5binkAX9s-1778453392.1782925-1.0.1.1-A.LKyVKNsb0wmZ29XfRjvRhy09Fv4Bt6OdR7NFq6aUa65y4PatAzgkBcgNlz5PF3sjJPZwVK5QMsD_248R9gAEOgc5mNz0dauEwxGl507RQ3Vc4k4CaGovYt84BEFHfQ; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:52 GMT
+cf-cache-status: HIT
+
+# URL: https://www.sparkshark.com/services/emergency-electrician/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:52 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17745>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17745>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:52 GMT
+set-cookie: __cf_bm=FlpcQLQlklYSinPCNHhcTccym_CPvieNwWrJMHe5AwA-1778453392.2809563-1.0.1.1-TXYnsLs7LWIX85ZiYVXIlR4tH6djUNXMPeo3oLg_trJGyz0JlYo6QlyYk5H4rVHG8NoF4hM1p_o.YXtC3QCBshEm2xIFGoGFB_Se2t5lQ9HefB5_soa3xxjiGcCNW36B; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:52 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fe5bf782d35-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/about-us/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:52 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/328>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=328>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=Y_KbH63qIVljqx6PEIYVu9j6AUkehFYmwr65kS9WNSo-1778453392.8870106-1.0.1.1-Y54Obfvp3FUFeJ4xhh3xmeI4djWvawQCO4wx9VsZ3l7Zpu1otrj11Dw2Q4K1u8qRLS_gPvqBfp8hsdiYa8XMgWN1p7oGKYEiecwwez3j06X89NCSEa6gUGrqZl0Pbl7r; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:52 GMT
+age: 72
+last-modified: Sun, 10 May 2026 22:48:40 GMT
+cf-cache-status: HIT
+cf-ray: 9f9c7fe98deaaf10-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/generators/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:53 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/3210>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3210>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:53 GMT
+set-cookie: __cf_bm=snlefOBgbpc6u1P1cfK.qE87MwHk48uX8hrfSiX1GGk-1778453392.985009-1.0.1.1-hGG1HgztXuZRiGGGNWahpGjvQ3dnJwPtF.rE18pTjocmbhGElYr0vsW045lZpz2QMK6uOGGuLy0D65C9kfsQr0bDJQzBzQhcdUOKnT7yJdPNGwGEqjsRal38E8BBjFIW; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:53 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fea2aee5e41-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/terms-and-condition/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:54 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/13990>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=13990>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:54 GMT
+set-cookie: __cf_bm=QOaiXRnt5DD.kwa52zt_Qnocp80z0B83_dZbCzutlhI-1778453393.6050527-1.0.1.1-0eNTxHWeYRUXZy8AyoT.HGLZBVkm3jufg4XADZQm5fvliirMzQtREiKzRqPeSR25b5C3CNdhPs_p0mF9Tmw7rwjGzVHg.ihQV9ynkqcH0EqTeZbYrAqXIkikTYyI9Ndi; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:54 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fee0eef6b76-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/electrical-repair-and-service/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:54 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/3195>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3195>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:54 GMT
+set-cookie: __cf_bm=VGmbwZvNHuUpeHC.9AX7mhas4LYMmmLUNtmpPItipv4-1778453394.2107413-1.0.1.1-4T7tNzeSDYxy0Bo95ap.x.yIpgqEPFLJf2Nqrvw554GkpSFxSxviuc2cjLhAO_AxkJpG2EUFMj9lMEZ4A5eilGnrOQtx6JISRK6FD9iiv9QoFyY7.mrpSJRlLUakNQEm; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:54 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7ff1cff5ea02-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/privacy-policy/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:55 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/3>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:55 GMT
+set-cookie: __cf_bm=liO1YIgt2Wcc0QVBdyJgVX9Gwroc7iaxx7ZDaEmFR4A-1778453394.8740005-1.0.1.1-P07QCLy6hFPC6p.eIWYOGjs0l6D3VojPxuBQdoaE101x64cK8y.xooBJT8G7QRNr8X2JM3xb9m2euzJ_dkROsJuanGe4eJASob8j0auKk6Xq6y8innbxIC1_doZpUCxt; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:55 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7ff5f9734784-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/frequently-asked-questions/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:56 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17737>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17737>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:56 GMT
+set-cookie: __cf_bm=Is.DZ8rYQ7vVkDQv5WSNe04yeoeRw.6I_tssVkHy1LM-1778453395.581649-1.0.1.1-9bUerhJ8xO9EuHXGbGynjgYgGMqSAxKEO_bkHNATovQsuqpwWQ9SIbyYSNpdFfAvsd3s1S15qH9jGJyv_Pr7FocHBUnnQ0w7CDLWSnJHi4Mb_SyN20QzfkzEIDDBKJK1; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:56 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7ffa6906e88f-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/electrician-for-outdoor-lighting/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:56 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17750>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17750>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:56 GMT
+set-cookie: __cf_bm=TbGvnjvHXPXNAvJtk5dRPAK9jtDLfsxpYs4kZCNKUIk-1778453396.1876006-1.0.1.1-0yOr5Iujd2IgfJX07id87mmQ1fOJMGp3oW3tr1b5vJmKbi1Jxqo3qeX8yjEWGYSfmaPvxnU62KCb7zYEHM94XA_2tSn_jFDjT49UYogZIdYdHsElhQAoIFKJuA8eh1ka; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:56 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7ffe2edf6b97-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/electrical-inspection-services/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:56 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17740>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17740>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:56 GMT
+set-cookie: __cf_bm=8yubOGQ_gsdkLvvSAaWtL4.vu.wQgJ9XVcHP53PBE44-1778453396.4536533-1.0.1.1-uYYKnWnGLio4xi5UhcUnEO.V7wfu4WleBLwZDq2TbMto46oeMi2Pdm9xmtSzSFU9QpdS.Y3fVxwwzzmG8L1raE2f8UyBC_hj49GTPSYfFW8jTqk5Fu60kldFP7zGvsgt; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:56 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c7fffddababf8-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/smoke-detectors/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:57 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17493>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17493>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=T4lX.SWHSFY0aIXywKCPMvcnITg_WO_K15DFl.Je1_g-1778453397.0329854-1.0.1.1-ONWiiiyFLjJl7e13rEgmR4ZVNRK0c_pUUby7IBEW42eaAZWvqxLfzLdMYpLDlPyVRnd7BfzSNmxsf2da6tlVxlsb84ZAzR0ONXg3XfAu7NXMwDJ8.xenarBc9VCr7dJ1; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:57 GMT
+last-modified: Sun, 10 May 2026 22:49:57 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c80037927f0ae-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/oklahoma-city/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:57 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17487>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17487>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=0BnqoE00ZQ6gOzL7Cn7uYqIA.U.LXQonml0pEqaaGck-1778453397.8819985-1.0.1.1-c4fPMRmIg5ptC1vA_QpFa.ERSpSfcNC5RUfiYfYhCs3_M4ehViFdHCazJATEu10HWXOGXXUMZk33NOtaWhgW7TaevdCzROM0UnidsLgxn8IPYy5gzdZYKNTX2xjuWgzf; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:57 GMT
+age: 74
+last-modified: Sun, 10 May 2026 22:48:43 GMT
+cf-cache-status: HIT
+cf-ray: 9f9c8008cdf0676d-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/moore/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:58 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17484>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17484>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=AyJIixn6LsHRtx4x9IcTqllI65v3FgTxWdNAdN_PCGE-1778453397.9800272-1.0.1.1-uK7LyJBgYh7qzAd4yk6xvkneW.UbeIPzKhPN7Agh04.yEv.u2dCJo9wbJS9EKWkPEfXgzjv_iJabe8c6vb7_B2mG3TyNTlqkNYaLimACdzoQlu72mVYjFsn.58l9vBqt; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:58 GMT
+last-modified: Sun, 10 May 2026 22:49:58 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c80095bf07142-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/switches-and-outlets/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:49:59 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/17481>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=17481>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:49:59 GMT
+set-cookie: __cf_bm=VKoeZF71._hNpGxsfFZjbWfEKrTaCNKKCBVUrEk9gGA-1778453398.7280395-1.0.1.1-jjU.fZMWrIViZfE9MHeTJQfxeTSzdAxpCwaxIljmVgSJN0mR0.sV.CT0yNUJOHie.Qi_ifvz_zMrw2c3qjUQcunQIS7ca2DzTv6vxD7xpj42Ui5UAs9C9zz6niC4aptA; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:19:59 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c800e09cbcb76-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/blogs/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:00 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/3483>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3483>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=Rs.tXG0oHdV37dT.X9EMSdXGWaS40H4GpFIWIPODr7o-1778453399.3523686-1.0.1.1-yul3w5aawBfs3uNxizAiBvkr.6X6wG0WbAeJtK864jDV0.iihLYrO04fwXiRw59ze_CF2NK61Nnu8nOl1w7jv3KUqY31pvmG6HcQOK1cNRvLRol7BxdJDcoySlGidlLb; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:00 GMT
+last-modified: Sun, 10 May 2026 22:49:59 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c8011fdf276ad-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/smart-home-installation/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:01 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/15651>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=15651>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=ieT8g1Qz35ftlV1E_ArgtLoItrv6df6bUzI1LF1r4.w-1778453400.159868-1.0.1.1-kuIa0.d0PoHkNo8lWEvg_KH_7E7N6gM3BCtxGqJH8xorJjmfzQI_Q7J.s5UwY_2brAdPQehygAdcH8QeRi454kUTkpAp6Ew1aMJo4UXT6AxstDkFEGAIFVg93z_r281j; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:01 GMT
+last-modified: Sun, 10 May 2026 22:50:00 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c8016fee9f076-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/ceiling-fans/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:01 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/15648>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=15648>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=oc_lvvrF4rShSElIzl3e4G3tveuc_muXeUY0nmk6ghM-1778453401.1598973-1.0.1.1-Oat_VI7uE5u9H3uwX5F5ugrFm6YRSQIyAcJ3vys6FEJHqfDJ38dH4VjPNv5acazduwa8xLfAaoflcZye6nJ8sSQr8N8sb9cBJRuf3r7J7QAbB1K70qyIp8KkewofpmjX; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:01 GMT
+last-modified: Sun, 10 May 2026 22:50:01 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c801d3ab9765b-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/indoor-lighting-installation/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:02 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/14118>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=14118>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:50:02 GMT
+set-cookie: __cf_bm=L5.kpTWg3po8FwwKdREPmTlST9TvUhGKi.V2VIwgEis-1778453401.9569736-1.0.1.1-z4_xsnO6VQ2KLx24OQwgHw0L2o.RNwqbaKShmDN0iSIdvS5H9tJCVnOYrHSqejA6zYd1zxeHdpCngSGOFZNeX9AdK7EyFiIav8LyRCT8H2dHXFlpW5Xcw51KRRpbOBea; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:02 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c8022380769f5-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:02 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/pages/314>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:48:07 GMT
+set-cookie: __cf_bm=uS6mNo2d5Z3pXXOwd8bgk3bqZt_Nc_eOiRYTBg_yekM-1778453402.5671644-1.0.1.1-umySo_8QK8imNrEyWWEb.Ulm5x3IluPZA84BMPkNQMImGGdwg7MHsHehENbN8vJPTsXT370iiNS5gjqQMkM2Yh43e7mVtcMxaZAagLChZlSp0Fnee.CEBvnaR_gFfuRW; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:02 GMT
+cf-cache-status: HIT
+age: 398
+cf-ray: 9f9c80260d7f6b38-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2026/05/07/power-out-what-to-do-when-call-electrician/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:03 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/20686>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20686>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=y2wI1HQQQM5oATMQ7UmKMLJ0oSAESPgGihd01ak3cFA-1778453402.656429-1.0.1.1-0rJanoumyXyuOn5vUvHAlIznGw4iR6ldHqg5tp3husjcuKfqLb1y8guMBNNFaOeQY6S9PNhyPZU3t.d0zYmGzmrjXjLGU4THR70qCPRMfJgXhVHeO_EFFlqS523pOWGM; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:03 GMT
+last-modified: Sun, 10 May 2026 22:50:03 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c80269e184864-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2026/05/07/signs-you-need-electrical-panel-upgrade/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:03 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/20685>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=20685>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=VU1_Pp4b_T0hnjgxpWp_0Z23mzAR34foN7E6AJP5N2k-1778453403.218379-1.0.1.1-eUw3TWd76Qe44Q9y5hitkGtF568H3Tj9VoRfh8Cn5mLD6CanrY4qh_e4pSVrrtX3QG1NFIkC3IgB8r204uxFMMccb_wdq34ODVT.01fW6E9ZJzhH8ZahrtCt6osCDGVU; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:03 GMT
+last-modified: Sun, 10 May 2026 22:50:03 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c802a1c048b0a-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2024/01/24/why-you-should-hire-a-professional-for-electrical-installations/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:04 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3587>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3587>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=itsyBFd1C2472kwoBZwGdTEm6uZAkWqfEfNgAq1pRnA-1778453403.9250417-1.0.1.1-bnNth7zplSs84N.8fYiV7JBfUwoIZBYh1N1xiAc_1Gwyba95a06P2nBcMzCCYpjMIdmomZ8sVe._94N7fJSvfD.jXmpkJQsOk0EXPHO8FJSUqA.Zt47VAlSo8TGNHscb; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:04 GMT
+last-modified: Sun, 10 May 2026 22:50:04 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c802e8bf845e8-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2023/12/29/powering-peace-of-mind-unveiling-the-benefits-of-a-home-generator-with-spark-shark/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:04 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3534>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3534>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+set-cookie: __cf_bm=wFYA9BiDS2PRrf4Qt1ul5Qi7CwJBAX7NC5uROaAaDsY-1778453404.4528124-1.0.1.1-5KtyLMC44WezIoDKn6rkbj4ItCgXKnDd70BPi.EpH0iJlFWZfKik6a14J40hW7av3XbzVV2Do4jEBOs8IP_7rySmPetxmrafZs2.FmC5ecnFQfr2yDCVJItiHYlOMvaY; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:04 GMT
+last-modified: Sun, 10 May 2026 22:50:04 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c8031da066bbc-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2023/12/29/closing-the-deal-with-confidence-why-realtors-should-choose-spark-shark-for-home-repairs/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:05 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3546>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3546>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=GBGIY8hoHRbQjW41Ve.hiJSRra6Zi2UbMs.C.qeINjE-1778453404.7373507-1.0.1.1-qnr3AHhompx.OGihfkffpxuGI6YX_vOnHOypYecVDTX9wZcXN9IL6_MoBNw5eRQKh3puWEDS1fkuCvZOtCyEeAO8WfCxaCYXa7Nv0tb4GmnS7LqOgeMeVgx6nXI8CeOm; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:05 GMT
+last-modified: Sun, 10 May 2026 22:50:05 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c80339eff46b8-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2024/01/01/power-up-your-new-year-the-case-for-whole-home-surge-protectors-with-spark-shark/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:05 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3563>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3563>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:50:05 GMT
+set-cookie: __cf_bm=ESaykDkRWUU1t78W5PqruxlXy.hXpGh.bG3UUghNS98-1778453405.4576352-1.0.1.1-Gt_tLcwmsHNYf5agXCmbGRLK0.GfkXvmmXmFcRxgLlc4ZNY7CLxggfCyjUwsvlytPFmRJdvu8NCodnYLirgJTnkyVHnFvxwcU8CI3BjShllTVIzav2Rm3_aqwzXtxVPb; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:05 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c80381f11e95a-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2024/01/02/powering-tomorrow-a-comprehensive-guide-to-new-construction-wiring-with-spark-shark/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:06 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3565>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3565>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=MQRXByELmlkV0I_n1RtD16fQ79l5pHqzt2wu0LhoJwI-1778453405.9523516-1.0.1.1-QLwobH3OM88SuD7._pIq2NY0So4rZyo9V70XM90RS6xIo3FlTqwdSHVf0wibQUKPNrS2cTNKzDgTmZwkLpd6Z7TIyH.AZ9VLJVXOCt9ZWn4PxbiomnBSUwG.jw635KDm; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:06 GMT
+last-modified: Sun, 10 May 2026 22:50:06 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c803b3b7d9179-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2024/01/03/ground-fault-interrupters-the-power-of-gfi-outlets-by-spark-shark/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:07 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3568>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3568>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:50:07 GMT
+set-cookie: __cf_bm=DiUaEy_Od12IN4gR7V2wlbdO9uCNUa1udih.zASs_vM-1778453406.587441-1.0.1.1-e8xy8qD8gRm3gnlWSTuCRDz2RjcOQ6TNAh9djZFlzY1YGbekE2Fo9N4miOb4.ELApWD4He1ZwuGV.nM8ooHfzMOG8k5F.VkhQAfSPundz_7TSHBfePn8390ZdxZopH8b; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:07 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c803f28352e6c-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2024/01/12/join-our-team-spark-shark-is-hiring-experienced-journeyman-electricians/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:08 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3579>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3579>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=0SGPPvhr1.qnatma1WsoC5EoIT5PSl50MClU0EfV9Zk-1778453407.4817033-1.0.1.1-BW7_U2mSJdf5kk_AZOPLKlTxkGhvG.l7cOzuU1EMEniiWRzwgjVLohJzDMBz9XRu7WyhQLc6PuqOUmvUNJKwwtugURi4nhbkHO7IzeGQ4Mwj9tpjCZATdCoiV1Ew5Zhy; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:08 GMT
+last-modified: Sun, 10 May 2026 22:50:08 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c8044ca504f01-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2024/01/03/stay-powered-up-essential-electrical-winter-safety-tips/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:09 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3574>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3574>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=yPWFONQhdwg7vQpY5z0HSUzgUTqlTpBpAYhdSlNuM7Q-1778453408.5924-1.0.1.1-zMo7nWndfnO7ceQEhGQ9ytb80kf7ctlForH7qfMZzwxdVnnADfDKt8fr6ElX_22FWTbE.4Po0eiO9JDIdR2cAlaHrA6KyF0UJUJUVpp4puggUAr3T0aTxmotmrasCD1R; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:09 GMT
+last-modified: Sun, 10 May 2026 22:50:09 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c804bb9f61db5-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2024/01/24/why-you-need-a-professional-for-generator-installation/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:10 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3584>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3584>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: MISS
+x-cache-group: normal
+set-cookie: __cf_bm=ekfooh1a.jrLTWIUO2lo6HrzRhOCtsEj8Wb8Jj7ZqKY-1778453409.390804-1.0.1.1-e8WrQv4HwR_1bSX3NDy2oQ6nQYpWP2Xp2n1Zix5zAq3qv7Dq9bsZVwfCyJcxZ5yIoPk2ectQRtDN9qenDlnJ9vpXYlvBrWy_Xs_L5ipRY1m0RlDMRm_zTDdlGWr4aKVA; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:10 GMT
+last-modified: Sun, 10 May 2026 22:50:10 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c8050b881f787-DFW
+alt-svc: h3=":443"; ma=86400
+
+
+# URL: https://www.sparkshark.com/2023/12/28/empower-your-home-the-case-for-upgrading-your-electrical-panel-with-spark-shark/
+HTTP/2 200 
+date: Sun, 10 May 2026 22:50:10 GMT
+content-type: text/html; charset=UTF-8
+server: cloudflare
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding
+vary: Accept-Encoding,Cookie
+link: <https://www.sparkshark.com/wp-json/>; rel="https://api.w.org/"
+link: <https://www.sparkshark.com/wp-json/wp/v2/posts/3518>; rel="alternate"; title="JSON"; type="application/json"
+link: <https://www.sparkshark.com/?p=3518>; rel=shortlink
+permissions-policy: private-state-token-redemption=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com"), private-state-token-issuance=(self "https://www.google.com" "https://www.gstatic.com" "https://recaptcha.net" "https://challenges.cloudflare.com" "https://hcaptcha.com")
+x-powered-by: WP Engine
+x-cacheable: SHORT
+cache-control: max-age=600, must-revalidate
+x-cache: HIT: 1
+x-cache-group: normal
+last-modified: Sun, 10 May 2026 22:50:10 GMT
+set-cookie: __cf_bm=bnxzrLSfgGvuT1Dp2sGaCamxwmuuyaPVphMpdpjJguk-1778453410.5258992-1.0.1.1-3HINS_ZwcAM8punS8GUSbDi_avgOPsiBdGQonLugvlzkDPPQ5K1H_exf.N_IRJiGMk0OHE7zigN2A9k3bJ3t5FrnYAKgkcX92UZV.qRXBTNC6svr6yRaZ2VJOrybEXg9; HttpOnly; Secure; Path=/; Domain=www.sparkshark.com; Expires=Sun, 10 May 2026 23:20:10 GMT
+cf-cache-status: EXPIRED
+cf-ray: 9f9c8057cf39fc87-DFW
+alt-svc: h3=":443"; ma=86400
+
