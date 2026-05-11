@@ -34,7 +34,7 @@ websearch,https://www.thumbtack.com/ok/oklahoma-city/electrical-repairs/spark-sh
 websearch,https://theorg.com/org/spark-shark-electric,theorg.com,yes,Brock listed as Founder,2026-05,P2,Brock-controlled profile
 websearch,https://agreatertown.com/oklahoma-city-ok/spark-shark-electric-0002297035233,agreatertown.com,yes,OKC directory listing,2026-05,P2,Citation/directory
 websearch,https://featured.com/p/brock-flanary,featured.com,yes,Brock-Flanary Founder profile,2026-05,P2,Personal brand page
-websearch,https://www.glassdoor.com/job-listing/licensed-journeyman-electrician-spark-shark-electric-JV_IC1136950_KO0,31_KE32,52.htm,glassdoor.com,yes,OKC journeyman posting,2026-05,P2,Job listing
+websearch,"https://www.glassdoor.com/job-listing/licensed-journeyman-electrician-spark-shark-electric-JV_IC1136950_KO0,31_KE32,52.htm",glassdoor.com,yes,OKC journeyman posting,2026-05,P2,Job listing
 websearch,https://www.linkedin.com/in/brock-flanary/,linkedin.com,yes,Brock personal page,2026-05,P2,Personal LinkedIn — Spark Shark referenced
 websearch,https://www.facebook.com/groups/300790061161463/posts/1488226589084465/,facebook.com,yes,Hiring post in OKC group,2026-05,P3,Group post — single mention
 COLLISION_FILTER,https://ca.linkedin.com/company/spark-shark-electric,linkedin.com,NO,Canada Spark Shark (Barrie ON),2026-05,IGNORE,Different business
