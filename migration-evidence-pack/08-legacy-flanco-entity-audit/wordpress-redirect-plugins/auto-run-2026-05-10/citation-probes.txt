@@ -1,0 +1,31 @@
+Phase 7b — citation-directory probes  2026-05-10T22:53:20Z
+yelp_flanco         https://www.yelp.com/search?find_desc=Flanco+Electric&find_loc=Oklahoma+City%2C+OK
+  →  http=403 hops=0
+
+yelp_sparkshark     https://www.yelp.com/search?find_desc=Spark+Shark+Electric&find_loc=Oklahoma+City%2C+OK
+  →  http=403 hops=0
+
+bbb                 https://www.bbb.org/search?find_country=USA&find_text=spark+shark+electric&find_loc=oklahoma+city
+  →  http=200 hops=0
+
+thumbtack           https://www.thumbtack.com/ok/oklahoma-city/electricians/
+  →  http=200 hops=1
+
+networx             https://www.networx.com/
+  →  http=403 hops=0
+
+angi                https://www.angi.com/companylist/oklahoma-city/electrical.htm
+  →  http=403 hops=0
+
+homeadvisor         https://www.homeadvisor.com/c.Electrical.Oklahoma-City.OK.html
+  →  http=403 hops=0
+
+bing                https://www.bing.com/maps?q=spark+shark+electric+oklahoma+city
+  →  http=200 hops=0
+
+proven              https://www.provenexpert.com/
+  →  http=200 hops=1
+
+gbp                 https://www.google.com/search?q=spark+shark+electric+oklahoma+city
+  →  http=200 hops=0
+

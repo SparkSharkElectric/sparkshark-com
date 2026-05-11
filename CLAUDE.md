@@ -305,11 +305,15 @@ Never rewrite history on main (no force-push, no rebase of pushed commits).
   Preview deploys are live; latest alias responds with HTTP 200 +
   `x-vercel-cache: HIT`. buildCommand `BASE="" python3 build.py` runs on every
   push to main. Production DNS (www.sparkshark.com → Vercel) is NOT yet flipped
-  — gated by docs/migration/launch-gate.md (currently 0/9 items Approved).
+  — gated by docs/migration/launch-gate.md (currently 5/9 items Approved
+  (Gates 1, 2, 3, 5, 6); 4 Not Provided (Gates 4, 7, 8, 9)).
 ```
 
 ## Current Priority
 ```text
+Single source of truth: docs/migration/SOURCE-OF-TRUTH.md (verdict, blockers,
+action queues, day-of sequence, rollback). Read it first.
+
 Get the new website live at www.sparkshark.com via Vercel — under the
 discipline of docs/migration/launch-gate.md.
 

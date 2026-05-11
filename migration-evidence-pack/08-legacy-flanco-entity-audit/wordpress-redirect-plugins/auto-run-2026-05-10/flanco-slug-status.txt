@@ -1,0 +1,19 @@
+=== Flanco-slug URL status (from Deep Research brief §3) ===
+https://www.sparkshark.com/2023/12/29/powering-peace-of-mind-unveiling-the-benefits-of-a-home-generator-with-flanco-electric/
+  hops=1 final=200 url=https://www.sparkshark.com/2023/12/29/powering-peace-of-mind-unveiling-the-benefits-of-a-home-generator-with-spark-shark/
+
+https://www.sparkshark.com/2023/12/29/closing-the-deal-with-confidence-why-realtors-should-choose-flanco-electric-for-home-repairs/
+  hops=1 final=200 url=https://www.sparkshark.com/2023/12/29/closing-the-deal-with-confidence-why-realtors-should-choose-spark-shark-for-home-repairs/
+
+https://www.sparkshark.com/2024/01/03/ground-fault-interrupters-the-power-of-gfi-outlets-by-flanco-electric/
+  hops=1 final=200 url=https://www.sparkshark.com/2024/01/03/ground-fault-interrupters-the-power-of-gfi-outlets-by-spark-shark/
+
+https://www.sparkshark.com/2024/01/12/join-our-team-flanco-electric-is-hiring-experienced-journeyman-electricians/
+  hops=1 final=200 url=https://www.sparkshark.com/2024/01/12/join-our-team-spark-shark-is-hiring-experienced-journeyman-electricians/
+
+https://www.sparkshark.com/2024/01/02/powering-tomorrow-a-comprehensive-guide-to-new-construction-wiring-with-flanco-electric/
+  hops=1 final=200 url=https://www.sparkshark.com/2024/01/02/powering-tomorrow-a-comprehensive-guide-to-new-construction-wiring-with-spark-shark/
+
+https://www.sparkshark.com/2024/01/01/power-up-your-new-year-the-case-for-whole-home-surge-protectors-with-flanco-electric/
+  hops=1 final=200 url=https://www.sparkshark.com/2024/01/01/power-up-your-new-year-the-case-for-whole-home-surge-protectors-with-spark-shark/
+
