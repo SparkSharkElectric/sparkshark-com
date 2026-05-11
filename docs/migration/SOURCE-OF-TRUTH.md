@@ -4,7 +4,7 @@
 **Status:** Canonical. Supersedes every file listed in §10.
 **Authority chain:** `docs/migration/launch-gate.md` controls DNS authority. This document summarizes state; it does not authorize cutover.
 
-> This is the one place to look. If anything in another doc disagrees with this one, prefer the readiness audit at `audits/migration-readiness/2026-05-11.md` and flag the disagreement in the §11 footnote.
+> This is the one place to look. If anything in another doc disagrees with this one, prefer the readiness audit at `audits/migration-readiness/2026-05-11.md` and flag the disagreement in the §12 footnote.
 
 ---
 
@@ -182,13 +182,62 @@ When Brock greenlights cleanup (separately approved — not in this session), th
 
 ---
 
-## 11. Known discrepancies (footnote)
+## 11. Analytics ownership gap (discovered 2026-05-11 evening, during backlink audit)
+
+A separate session-1 backlink-capture workstream surfaced a structural ownership problem that was previously characterized as "Coalition-era abandoned" but is actually larger. Captured here so it does NOT get lost before DNS flip.
+
+### What's actually live on www.sparkshark.com
+
+- `GTM-W7V4RS7C` — Google Tag Manager container present in the live homepage `<noscript>` iframe + the `<script>` loader. **Brock does NOT own this container.** Its `gtm.js?id=GTM-W7V4RS7C` payload contains GA4 measurement ID `G-QK02QH3SWY` configured for the property — owner unknown. Years of GA4 traffic data have flowed to a third-party-controlled property as a result.
+- `GT-NGS794C2` — unified Google Tag (via Site Kit) firing alongside the GTM container. This is the one §4 row 2 + cutover-runbook Risk 6 already decided to migrate to.
+- `AW-17076116496` — Google Ads conversion account with label `Hf8UCO6r84cZEN7Iyq0p`. Visible separately.
+
+### What Brock actually owns (confirmed 2026-05-11 evening, screenshots in evidence pack)
+
+| Asset | ID | Status |
+|---|---|---|
+| GTM account "Spark Shark" | `6296666179` | OWNED |
+| GTM container | `GTM-TBCXCXGS` (under that account, target `sparkshark.com`) | OWNED but NOT deployed on the live site |
+| GA4 account "Flanco Electric" | `347644522` | OWNED |
+| GA4 property "Flanco Electric ..." | `480290314` | OWNED — legacy pre-rebrand data lives here |
+| GA4 account "Spark Shark Analytics" | `348668675` | OWNED |
+| GA4 property "Spark Shark" (#1) | `481482348` | OWNED — service account `sparkshark-seo-reader@fluid-emissary-493106-s2.iam.gserviceaccount.com` has Viewer; data streams `G-JF1630186D` + `G-8SGD0GKF4F`; ~20 users in 90d, near-empty |
+| GA4 property "Spark Shark" (#2) | `488680346` | OWNED — first attempt to grant SA Viewer failed; retry with Admin role |
+
+**Critical gap:** none of Brock's three accessible GA4 properties contains the live measurement ID `G-QK02QH3SWY`. That ID lives inside the unowned `GTM-W7V4RS7C` container.
+
+### Cutover implication (already planned, surfaced here for visibility)
+
+The `build.py:153` swap planned in §4 row 2 + cutover-runbook Risk 6 (GTM → `gtag.js?id=GT-NGS794C2` loader) is also the moment the unowned `GTM-W7V4RS7C` stops loading on the live site. That is a feature, not a bug — DNS flip is the natural reclaim moment for the analytics stack.
+
+**Pre-flip work to be sequenced before that swap is shipped:**
+
+1. Confirm which GA4 measurement ID sits behind `GT-NGS794C2` (read from `migration-evidence-pack/06-current-tracking/05-ga4-data-streams.png`). Verify it maps to one of Brock's three properties above — not a fourth/unknown property. If unmappable, the swap from GTM to gtag.js is still strictly better than the status quo (Brock owns nothing today), but flag for follow-up.
+2. Retry adding the service account on GA4 property `488680346` (Spark Shark #2) with Admin role this time; check whether `G-QK02QH3SWY` is one of its data streams.
+3. Optionally pull legacy referral history from Flanco property `480290314` once Brock grants SA access — useful for the backlink workstream baseline (recent referrers may not be in GSC).
+4. **Do NOT touch** the old GTM container in any way — Brock has no admin access to it.
+
+### Post-cutover follow-up
+
+- Wire Brock-owned `GTM-TBCXCXGS` into the new Vercel build if a future tag-manager surface is desired. Currently the §4-row-2 decision is "skip GTM, use gtag.js directly" — that decision still stands; the `GTM-TBCXCXGS` reclaim is just bookkeeping so Brock owns every layer of the new stack.
+- Audit whether any third-party still has crawl/data access via the old container (e.g., shared Google Ads accounts, Search Console properties they own pointed at sparkshark.com). Out of scope for cutover; queue for a separate access-audit.
+
+### Evidence
+
+- `migration-evidence-pack/07-backlinks-and-citations/SESSION-2-HANDOFF.md` — full session-1 detail + session-2 plan
+- `migration-evidence-pack/07-backlinks-and-citations/master-backlinks-working.csv` — 27 unique referring domains / 40 URLs discovered through session 1; cross-links the GTM/GA4 finding in trailing comments
+- `~/.claude/projects/-Users-brock/memory/project_sparkshark_gtm_ga4_ownership.md` — auto-memory entry that carries the finding across future Claude sessions
+
+---
+
+## 12. Known discrepancies (footnote)
 
 When sources disagreed, the readiness audit at `audits/migration-readiness/2026-05-11.md` was treated as authoritative.
 
 1. **HTML runbook headline vs readiness audit verdict.** ~~The HTML runbook banner says "5 of 6 risks already structurally mitigated — remaining exposure is operational." The readiness audit (16:24 UTC) found a NEW material failure — Vercel custom-domain attachment on the wrong team (DOM-01 / DOM-02 FAIL) — which the HTML banner does not reflect (though it does flag the same concern in its "What this runbook does NOT cover" section). **Prefer the readiness audit:** the domain attachment is a second independent auto-fail trigger and Blocker #1 in §2 here.~~ **Discrepancy resolved 2026-05-11**: DOM-01/02 FAIL is now CLOSED — apex + www verified on `sparkshark-com` project via cross-team TXT claim. The HTML runbook's 5-of-6 reading is now accurate for the domain-attachment dimension.
 2. **Diff doc memory-citation provenance.** The seed-prompt diff doc cites three memory files that the cleanup-handoff manifest's initial grep did not find at `~/.claude/projects/-Users-brock/memory/`. The manifest later corrected this — the citations are real and live in session-scoped storage (path in §9). Both views are reconciled here; the memories are authoritative for the sub-tasks they describe.
 3. **Brock-owned queue scope.** ~~The HTML runbook's 5-item Brock queue (§4 above) predates the DOM-01/02 discovery. The Vercel domain-attachment fix is required before that queue is meaningful, but is not numbered inside the queue itself. It appears as Blocker #1 in §2 and as an explicit prerequisite note under §4. Future revisions of the runbook should fold it in as a numbered step.~~ **Moot 2026-05-11**: Blocker #1 is CLOSED; the 5-item Brock queue can be executed as written.
+4. **"Coalition-era abandoned" vs "loaded but unowned" — GTM-W7V4RS7C characterization.** The cutover-runbook Risk 6 narrative calls `GTM-W7V4RS7C` "Coalition-era GTM container — abandoned." Session-1 backlink audit (2026-05-11 evening) found the container ID still present in the live homepage `<noscript>` iframe AND its `gtm.js` configuration still contains GA4 measurement ID `G-QK02QH3SWY`. **"Loaded but unowned"** is the more accurate framing — the container is being requested and parsed by every visitor, even if Coalition has not added new tags inside it for some time. The functional impact is the same (the GTM swap planned in §4 row 2 still resolves it), but the framing matters for the post-cutover access-audit follow-up in §11. Prefer the §11 framing.
 
 ---
 

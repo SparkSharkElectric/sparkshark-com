@@ -1,0 +1,53 @@
+source_set,referring_url,referring_domain,confirmed_brock_owned,brand_match_evidence,last_seen,risk_tier,notes
+gsc,http://uscity.net/listing/spark_shark_electric-12248252,uscity.net,yes,Spark Shark Electric brand listing,2026-03-27,P2,HTTP not HTTPS
+gsc,https://best-electrician-moore.com/,best-electrician-moore.com,no,Third-party listicle,2026-03-12,P2,Third-party local listicle homepage
+gsc,https://best-electrician-moore.com/spark-shark-electric,best-electrician-moore.com,no,Spark Shark brand writeup,2026-03-21,P2,Third-party brand-specific writeup
+gsc,https://medium.com/family-kids/holiday-hosting-electrical-tips-for-a-safe-worry-free-gathering-7de0e0d42eed,medium.com,no,Medium article brand mention,2026-01-07,P3,Article — verify if brand-controlled
+gsc,https://smartelectricalservices.net/business/spark-shark-electric-ok-91055/,smartelectricalservices.net,no,Spark Shark OK directory entry,2026-03-28,P2,Third-party directory listing
+gsc,https://twitter.com/The_Spark_Shark,twitter.com,yes,Brock-owned X profile,2026-05-02,P2,Spark Shark official Twitter
+gsc,https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075,bbb.org,yes,BBB Moore profile,2026-02-27,P1,Verify NAP before DNS
+gsc,https://www.bbb.org/us/ok/oklahoma-city/profile/electrical-contractors/spark-shark-electric-0995-90130075/addressId/134759,bbb.org,yes,BBB OKC alt-address,2026-02-12,P1,Reconcile duplicate-address
+gsc,https://www.callupcontact.com/b/businessprofile/Spark_Shark_Electric/9878135,callupcontact.com,unknown,CallUpContact profile,2025-11-20,P2,Claim if possible
+gsc,https://www.chamberofcommerce.com/business-directory/oklahoma/moore/electrician/2034210950-spark-shark-electric,chamberofcommerce.com,yes,Moore directory listing,2026-03-25,P1,Verify NAP before DNS
+gsc,https://www.dexknows.com/chickasha-ok/electrical-power-systems-maintenance,dexknows.com,no,Generic category page,2026-04-03,P3,Co-citation noise
+gsc,https://www.mapquest.com/us/oklahoma/spark-shark-electric-778761940,mapquest.com,yes,Spark Shark OK profile,2026-02-27,P1,Verify NAP before DNS
+gsc,https://www.networx.com/c.flanco-electric,networx.com,yes,Legacy Flanco citation,2025-11-09,P0,Request takedown/rebrand
+gsc,https://www.pinterest.com/sparksharkelectric/,pinterest.com,yes,Brock-owned profile,2025-06-03,P2,Verify bio links
+gsc,https://www.provenexpert.com/en-us/spark-shark-electric/,provenexpert.com,yes,Reviews profile,2025-11-21,P2,Verify ownership
+gsc,https://www.reddit.com/r/AskElectricians/comments/1on2zvl/hey_folks_question_on_if_i_need_to_replace_my/,reddit.com,no,User mention,2025-11-30,P3,Monitor only
+gsc,https://www.superpages.com/macomb-ok/generators,superpages.com,no,Generic category page,2026-02-23,P3,Co-citation noise
+gsc,https://www.yellowpages.com/chickasha-ok/generators,yellowpages.com,no,Category page,2026-02-23,P3,Co-citation noise
+gsc,https://www.yellowpages.com/midwest-city-ok/lighting-consultants-designers,yellowpages.com,no,Category page,2026-04-10,P3,Co-citation noise
+gsc,https://www.yellowpages.com/moore-ok/lighting-fixtures,yellowpages.com,no,Category page,2026-04-29,P3,Co-citation noise
+gsc,https://www.yellowpages.com/norman-ok/generators,yellowpages.com,no,Category page,2026-03-11,P3,Co-citation noise
+gsc,https://www.yellowpages.com/oklahoma-city-ok/dr-sparks-dds,yellowpages.com,no,Dr Sparks DDS dentist,2026-04-14,P3,False positive (lexical only)
+gsc,https://www.yellowpages.com/oklahoma-city-ok/electrical-power-systems-maintenance,yellowpages.com,no,Category page,2026-03-17,P3,Co-citation noise
+gsc,https://www.yellowpages.com/oklahoma-city-ok/generators,yellowpages.com,no,Category page,2026-04-19,P3,Co-citation noise
+gsc,https://www.yellowpages.com/oklahoma-city-ok/hunzicker-lighting,yellowpages.com,no,Competitor listing,2026-05-03,P3,Co-citation noise
+gsc,https://www.yellowpages.com/oklahoma-city-ok/messer-electric,yellowpages.com,no,Competitor listing,2026-05-01,P3,Co-citation noise
+gsc,https://www.yellowpages.com/oklahoma-city-ok/power-generator-kohler,yellowpages.com,no,Category page,2026-04-06,P3,Co-citation noise
+gsc,https://x.com/The_Spark_Shark,x.com,yes,Brock-owned X profile,2026-05-02,P2,Same account as twitter.com
+websearch,https://www.yelp.com/biz/spark-shark-electric-moore,yelp.com,yes,Address 621 Sally Ct Moore matches,2026-04,P1,High-value review platform; claim
+websearch,https://www.facebook.com/sparksharkelectric/,facebook.com,yes,CONFIRMED 2026-05-11: OKC service area + 405-436-4776 + theteam@sparkshark.com (Brock screenshot),2026-05,P1,Brock-owned FB page
+websearch,https://www.tiktok.com/@sparkshark.com,tiktok.com,yes,Username = sparkshark.com,2026-05,P2,Brock-owned per username
+websearch,https://www.thumbtack.com/ok/oklahoma-city/electrical-repairs/spark-shark-electric/service/489603470823817221,thumbtack.com,yes,OKC service area match,2026-05,P1,Lead-gen platform; claim
+websearch,https://theorg.com/org/spark-shark-electric,theorg.com,yes,Brock listed as Founder,2026-05,P2,Brock-controlled profile
+websearch,https://agreatertown.com/oklahoma-city-ok/spark-shark-electric-0002297035233,agreatertown.com,yes,OKC directory listing,2026-05,P2,Citation/directory
+websearch,https://featured.com/p/brock-flanary,featured.com,yes,Brock-Flanary Founder profile,2026-05,P2,Personal brand page
+websearch,https://www.glassdoor.com/job-listing/licensed-journeyman-electrician-spark-shark-electric-JV_IC1136950_KO0,31_KE32,52.htm,glassdoor.com,yes,OKC journeyman posting,2026-05,P2,Job listing
+websearch,https://www.linkedin.com/in/brock-flanary/,linkedin.com,yes,Brock personal page,2026-05,P2,Personal LinkedIn — Spark Shark referenced
+websearch,https://www.facebook.com/groups/300790061161463/posts/1488226589084465/,facebook.com,yes,Hiring post in OKC group,2026-05,P3,Group post — single mention
+COLLISION_FILTER,https://ca.linkedin.com/company/spark-shark-electric,linkedin.com,NO,Canada Spark Shark (Barrie ON),2026-05,IGNORE,Different business
+COLLISION_FILTER,https://ca.nextdoor.com/pages/spark-shark-electric-cambridge-ca-on/,ca.nextdoor.com,NO,Ontario Spark Shark,2026-05,IGNORE,Different business
+COLLISION_FILTER,https://nextdoor.com/pages/spark-shark-llc-pewaukee-wi/,nextdoor.com,NO,Wisconsin Spark Shark LLC,2026-05,IGNORE,Different business
+COLLISION_FILTER,https://nextdoor.com/pages/the-spark-shark-elk-grove-ca/,nextdoor.com,NO,Elk Grove CA Spark Shark,2026-05,IGNORE,Different business
+COLLISION_FILTER,https://www.homeadvisor.com/rated.TheSparkShark.14439884.html,homeadvisor.com,NO,Elk Grove CA Spark Shark,2026-05,IGNORE,Different business
+COLLISION_FILTER,https://www.homeadvisor.com/rated.TheSparkShark.118072419.html,homeadvisor.com,NO,Sacramento CA Spark Shark,2026-05,IGNORE,Different business
+COLLISION_FILTER,https://www.instagram.com/sparksharkelectric/,instagram.com,NO,CONFIRMED 2026-05-11 NOT Brock's — Ontario business; Brock's IG is @thesparkshark,2026-05,IGNORE,Different business
+websearch,https://www.instagram.com/thesparkshark/,instagram.com,yes,CONFIRMED 2026-05-11: OKC Family Owned + 405-436-4776 + sparkshark.com link (Brock screenshot),2026-05,P1,Brock-owned IG
+# === FINDINGS NOT YET BACKLINKS BUT IMPORTANT CONTEXT ===
+# GTM live container: GTM-W7V4RS7C — NOT owned by Brock (orphaned, prior agency)
+# GTM Brock-owned: GTM-TBCXCXGS (account 6296666179 "Spark Shark") — not deployed
+# GA4 properties Brock can see: 480290314 Flanco Electric, 481482348 Spark Shark, 488680346 Spark Shark
+# Live GA4 measurement ID G-QK02QH3SWY is INSIDE the unowned GTM-W7V4RS7C — Brock has no access
+# Action: separate project to reclaim GTM ownership + migrate to Brock-owned GA4 property

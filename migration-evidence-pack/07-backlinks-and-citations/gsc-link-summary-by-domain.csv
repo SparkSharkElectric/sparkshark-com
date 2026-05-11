@@ -1,0 +1,18 @@
+linking_domain,unique_linking_urls,latest_last_crawled,contains_flanco_reference,likely_type,migration_priority,recommended_action
+bbb.org,2,2026-02-27,false,business/profile,P1 review before DNS,"Two BBB profiles (Moore + OKC). Claim/verify NAP, reconcile duplicate addressId before DNS cutover."
+best-electrician-moore.com,2,2026-03-21,false,content/blog/forum,P2 post-launch cleanup,Third-party local listicle with Spark Shark writeup. Verify accuracy after launch.
+callupcontact.com,1,2025-11-20,false,citation/directory,P2 post-launch cleanup,"Spark Shark business profile. Verify NAP, claim if possible."
+chamberofcommerce.com,1,2026-03-25,false,business/profile,P1 review before DNS,Spark Shark directory listing. Verify NAP before DNS cutover.
+dexknows.com,1,2026-04-03,false,citation/directory,P3 ignore/monitor,Generic category page only; no direct Spark Shark profile detected. Monitor.
+mapquest.com,1,2026-02-27,false,business/profile,P1 review before DNS,Spark Shark map listing. NAP-critical; claim/verify before cutover.
+medium.com,1,2026-01-07,false,content/blog/forum,P3 ignore/monitor,Single article reference. Monitor; no action unless brand-owned.
+networx.com,1,2025-11-09,true,citation/directory,P0 redirect/citation risk,FLANCO-ERA citation (/c.flanco-electric). Request takedown or rebrand to Spark Shark; conflicts with public NAP.
+pinterest.com,1,2025-06-03,false,social/profile,P2 post-launch cleanup,Spark Shark Pinterest profile. Verify ownership and bio links.
+provenexpert.com,1,2025-11-21,false,business/profile,P2 post-launch cleanup,Spark Shark reviews profile. Claim/verify.
+reddit.com,1,2025-11-30,false,content/blog/forum,P3 ignore/monitor,User thread. Monitor only.
+smartelectricalservices.net,1,2026-03-28,false,citation/directory,P2 post-launch cleanup,Third-party Spark Shark directory listing. Verify accuracy.
+superpages.com,1,2026-02-23,false,citation/directory,P3 ignore/monitor,Generic category page only; no direct Spark Shark profile. Monitor.
+twitter.com,1,2026-05-02,false,social/profile,P2 post-launch cleanup,Spark Shark X profile (twitter.com host). Verify links and bio.
+uscity.net,1,2026-03-27,false,citation/directory,P2 post-launch cleanup,Spark Shark directory listing (HTTP). Verify NAP; request HTTPS upgrade if possible.
+x.com,1,2026-05-02,false,social/profile,P2 post-launch cleanup,Spark Shark X profile (x.com host). Same account as twitter.com link.
+yellowpages.com,10,2026-05-03,false,citation/directory,P3 ignore/monitor,"Co-citation noise; competitor/category listings, no direct Spark Shark profile detected. Monitor only."
