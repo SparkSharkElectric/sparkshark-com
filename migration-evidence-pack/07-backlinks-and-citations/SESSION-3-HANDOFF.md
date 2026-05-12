@@ -1,5 +1,7 @@
 # Backlink Capture — Session 3 → 4 Handoff
 
+> **SUPERSEDED 2026-05-12 — see `SESSION-4-HANDOFF.md`.** Session 4 executed the WPE access-log pull described below: the WPE source turned out to be exhausted (no 90-day archive — see `wpe-access-log-snapshot-2026-05-12.md`), it added nothing material, and `master-backlinks-cumulative.csv` was renamed → `master-backlinks-final.csv`. The workstream is **complete**. This file is kept for trace; the references to `master-backlinks-cumulative.csv` below are historical (it's now `master-backlinks-final.csv`).
+
 **Written:** 2026-05-12. **Repo head at handoff:** `ae30f24` on `origin/main` (+ this handoff commit on top). Working tree is clean for this workstream — the only untracked files (`audits/`, `docs/migration/*-findings.md`, etc.) belong to other workstreams, not this one.
 
 **Read order before acting:**

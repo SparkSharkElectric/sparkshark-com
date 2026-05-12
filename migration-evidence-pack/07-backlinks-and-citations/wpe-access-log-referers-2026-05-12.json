@@ -1,0 +1,82 @@
+{
+  "nginx": {
+    "log_entries_returned": 1500,
+    "date_range_oldest_to_newest": [
+      "2026-05-11T14:36:57.000+00:00",
+      "2026-05-12T03:15:43.000+00:00"
+    ],
+    "nonnull_referer_count": 50,
+    "external_referers": [
+      "https://l.facebook.com/",
+      "https://t.co/",
+      "https://www.google.com/",
+      "https://www.google.com/search?q=wordpress"
+    ],
+    "all_unique_referers": [
+      "http://SPARKSHARK.COM",
+      "http://sparkshark.com",
+      "http://sparkshark.com/backup/",
+      "http://sparkshark.com/blog/",
+      "http://sparkshark.com/new/",
+      "http://sparkshark.com/old/",
+      "http://sparkshark.com/robots.txt",
+      "http://sparkshark.com/wordpress/",
+      "http://sparkshark.com/wp/",
+      "http://www.sparkshark.com/",
+      "http://www.sparkshark.com/archives/category/greatbooks/",
+      "http://www.sparkshark.com/blog/",
+      "http://www.sparkshark.com/new/",
+      "https://l.facebook.com/",
+      "https://t.co/",
+      "https://www.google.com/",
+      "https://www.google.com/search?q=wordpress",
+      "https://www.sparkshark.com/",
+      "https://www.sparkshark.com/?fbclid=IwY2xjawRvPAlleHRuA2FlbQIxMABicmlkETFjSEttZ3cwM1BUMkpHM2w1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHr9wbbM2Oot2dx01tugKnqtRGsTPvM-vNH5UMVAZqwAms3c0AtHqP3lRVJRc_aem_96pACEUXcm03jES63e5ORw",
+      "https://www.sparkshark.com/_jb_static/??d9126441d8",
+      "https://www.sparkshark.com/blogs/",
+      "https://www.sparkshark.com/contact-us/",
+      "https://www.sparkshark.com/securelogin/?redirect_to=https%3A%2F%2Fwww.sparkshark.com%2F2026%2F05%2F07%2Fsigns-you-need-electrical-panel-upgrade%2F",
+      "https://www.sparkshark.com/sitemap.xml"
+    ]
+  },
+  "php": {
+    "log_entries_returned": 1500,
+    "date_range_oldest_to_newest": [
+      "2026-05-11T08:59:33.000+00:00",
+      "2026-05-12T03:12:09.000+00:00"
+    ],
+    "nonnull_referer_count": 41,
+    "external_referers": [
+      "https://l.facebook.com/",
+      "https://t.co/",
+      "https://www.google.com/",
+      "https://www.google.com/search?q=wordpress"
+    ],
+    "all_unique_referers": [
+      "http://SPARKSHARK.COM",
+      "http://sparkshark.com",
+      "http://sparkshark.com/archives/2008/12/27/the-credit-repair-organizations-act-croa/",
+      "http://sparkshark.com/backup/",
+      "http://sparkshark.com/blog/",
+      "http://sparkshark.com/new/",
+      "http://sparkshark.com/old/",
+      "http://sparkshark.com/wordpress/",
+      "http://sparkshark.com/wp/",
+      "http://www.sparkshark.com",
+      "http://www.sparkshark.com/",
+      "http://www.sparkshark.com/archives/category/greatbooks/",
+      "http://www.sparkshark.com/blog/",
+      "http://www.sparkshark.com/new/",
+      "https://l.facebook.com/",
+      "https://t.co/",
+      "https://www.google.com/",
+      "https://www.google.com/search?q=wordpress",
+      "https://www.sparkshark.com/",
+      "https://www.sparkshark.com/?fbclid=IwY2xjawRvPAlleHRuA2FlbQIxMABicmlkETFjSEttZ3cwM1BUMkpHM2w1c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHr9wbbM2Oot2dx01tugKnqtRGsTPvM-vNH5UMVAZqwAms3c0AtHqP3lRVJRc_aem_96pACEUXcm03jES63e5ORw",
+      "https://www.sparkshark.com/blogs/",
+      "https://www.sparkshark.com/contact-us/",
+      "https://www.sparkshark.com/electrical-repair-and-service/",
+      "https://www.sparkshark.com/sitemap.xml"
+    ]
+  }
+}

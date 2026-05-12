@@ -1,11 +1,11 @@
-# Backlink Capture — Cumulative Summary (NOT final)
+# Backlink Capture — Final Summary
 
-**Status as of 2026-05-12 (Session 3 — Ahrefs AWT scrape landed; disavow file built; Ahrefs P2 candidates verified):**
-**145 rows / 129 unique referring domains** in `master-backlinks-cumulative.csv` — covering Google Search Console + open-web WebSearch + Bing index probe + GA4 referrals (live property 488680346 + Flanco-legacy property 480290314) + **Ahrefs Webmaster Tools (Site Explorer Backlinks + Referring Domains, scraped 2026-05-12)** + Wayback CDX enrichment pass. A ready-to-upload Google Disavow file (`disavow-sparkshark.com.txt`, 83 domains) sits alongside.
+**Status as of 2026-05-12 (Session 4 — WP Engine access logs pulled; last source exhausted; list stamped FINAL):**
+**145 rows / 129 unique referring domains** in `master-backlinks-final.csv` — covering Google Search Console + open-web WebSearch + Bing index probe + GA4 referrals (live property 488680346 + Flanco-legacy property 480290314) + **Ahrefs Webmaster Tools (Site Explorer Backlinks + Referring Domains, scraped 2026-05-12)** + Wayback CDX enrichment pass + **WP Engine access-log snapshot (2026-05-12)**. A ready-to-upload Google Disavow file (`disavow-sparkshark.com.txt`, 83 domains) sits alongside.
 
 **Headline from the Ahrefs pull:** Ahrefs' index for `sparkshark.com` is **dominated by junk** — not "5,000 editorial links," but **1,080 total backlinks of which ~895 come from just two scraper domains** linking pre-Spark-Shark *credit-repair / RSS* content still indexed at `sparkshark.com/archives/2008…2011/*`, plus **~79 throwaway SEO-PBN spam domains** (`.shop` / `.top` / `.click` / `.agency` / `seoexpress.*` / `rankvance*` etc.), almost all first-seen Sept 2025 → May 2026. **Ahrefs itself spam-flags 82 of the 90 referring domains.** Of the handful of net-new *plausibly-real* domains, on-page verification (2026-05-12) confirmed **3 real dofollow links** (`themusemark.com`, `anationofmoms.com`, `yplocal.us`) and reclassified a 4th (`hypnosistacticsguide.com`) as legacy junk. → **A Google Disavow file for these 83 domains is built and staged** (`disavow-sparkshark.com.txt`); submitting it is a post-launch task (see §1.6 + §4). Not a cutover blocker, but it changes the "link equity" story: there is very little of it, and a meaningful slice of the profile is mild reputational/SEO risk.
 
-**This is still explicitly NOT a "final" list.** Naming stays "cumulative" because WP Engine access logs remain unrun (API-token rotation pending) and were not deliberately closed out. See §7.
+**This is now the FINAL list.** The last unrun source — WP Engine server access logs — was pulled 2026-05-12 and added nothing material: the WPE User Portal exposes only a rolling **~1,500-request window** (≈13 h of traffic on this bot-heavy site — there is no 90-day access-log archive at WPE, and neither the Public API nor the SSH Gateway exposes web logs at all). That snapshot held 27 unique referers — 24 self-referrals and **3 external hosts**, all redirect-wrappers / SERP and all already represented (`google.com`, `l.facebook.com`, `t.co`) — **zero new referring domains, zero new editorial backlinks**. The source is exhausted; the file was renamed `master-backlinks-cumulative.csv` → `master-backlinks-final.csv`. Common Crawl/Athena remains deliberately deferred per Brock and is the only source not consulted. See §5.C and §7.
 
 **Sources consolidated:**
 - ✅ Google Search Console (28 URLs / 17 domains) — Apr–May 2026 (May 10 manual export)
@@ -14,12 +14,12 @@
 - ✅ GA4 referrals — live property 488680346 (`G-QK02QH3SWY`, 229 rows since 2025-05-09) + Flanco-legacy property 480290314 (153 rows). 13 net-new domain rows total. Full exports: `ga4-referrals-property-488680346-all-history.csv`, `ga4-referrals-property-480290314-flanco-legacy.csv`.
 - ✅ **Ahrefs Webmaster Tools — DONE 2026-05-12.** Scraped via Playwright MCP against Ahrefs' own `/v4/seBacklinks` + `/v4/seRefdomains` JSON endpoints (free-tier UI data; no paid API). Project `9816270` = verified `*.sparkshark.com/*` (subdomains, both protocols) — the superset of the `www.sparkshark.com` verified project (90 vs 71 referring domains). **1,000 of 1,080 URL-level backlinks** captured (free AWT hard-caps result offset at <1000; pulled traffic-DESC rows 0–999 + traffic-ASC rows 0–499 and de-duped by link-id, so the ~80 lowest-traffic rows we couldn't reach are more of the same two scraper domains). **All 90 referring domains** captured. Raw: `ahrefs-awt-backlinks-raw.json`, `ahrefs-awt-refdomains-raw.json`. CSVs: `ahrefs-awt-backlinks-scrape.csv` (1,000 rows, 29 cols), `ahrefs-awt-referring-domains-scrape.csv` (90 rows, 13 cols).
 - ✅ **Wayback CDX enrichment — DONE 2026-05-12.** archive.org was healthy this session (CDX + `/wayback/available` both responsive, ~7–12 s). Ran exact-URL CDX (`statuscode:200`) against all 143 distinct referring URLs in the master. **Only 2 had any archived snapshot:** `networx.com/c.flanco-electric` (1 snapshot, 2025-01-18 — confirms the P0 Flanco-era citation existed) and the Thumbtack listing (2 snapshots, Jul–Oct 2025). The other 141 returned 0 — consistent with the AWT-discovered links being overwhelmingly brand-new spam and the directory/social deep-URLs not being archived. `wayback_*` columns populated where hit; `wayback_snapshot_count_200 = 0` where confirmed absent.
-- 🟡 WP Engine access logs — **NOT YET RUN, but UNBLOCKED 2026-05-12** (WPE Customer Portal password + API token rotated; 1Password item `wp_engine` updated). This is the one remaining source. Next session: pull last-90-days server-side referrers and merge as `source_set=wpe-logs`, then decide "final" naming. See §5.C + `SESSION-3-HANDOFF.md`.
-- ⛔ Common Crawl Athena — **DEFERRED** per Brock decision.
+- ✅ **WP Engine access logs — DONE 2026-05-12.** Mechanism confirmed (all three retrieval paths checked with the rotated `wp_engine` creds): no Public-API logs endpoint exists, no web logs on the SSH-Gateway filesystem; the User Portal feed (`/installs/flancoelectric/site_logs_feed_data?environment=nginx`) is the only source and exposes just the **last ~1,500 requests** (≈13 h on this site — no 90-day archive at WPE). Snapshot pulled 2026-05-12 03:15 UTC: 27 unique referers, 24 self-referrals, **3 external hosts** — `google.com` ×4 (SERP/bot, not a backlink), `l.facebook.com` + `fbclid` self-referrals (corroborates the existing `facebook.com` row), `t.co` (corroborates the existing `twitter.com`/`x.com` rows). **No new referring domains; no new editorial backlinks.** `+wpe-logs` appended to those 3 existing rows (`last_seen_source=2026-05-12`); disavow file unchanged. Artifacts: `wpe-access-log-snapshot-2026-05-12.md`, `wpe-access-log-referers-2026-05-12.json`. See §5.C.
+- ⛔ Common Crawl Athena — **DEFERRED** per Brock decision (only source not consulted; given Ahrefs added nothing real, it would not change the picture).
 
 ---
 
-## 1. Topline numbers (cumulative as of 2026-05-12)
+## 1. Topline numbers (final as of 2026-05-12)
 
 | Tier | Rows | What it means |
 |---|---|---|
@@ -130,23 +130,30 @@ Scraped via Playwright MCP (`@playwright/mcp`, own persistent Chromium profile, 
 ### B. GA4 service-account access — ✅ RESOLVED 2026-05-11
 SA `sparkshark-seo-reader@…` has Viewer on all 3 of Brock's GA4 properties (added via `v1alpha accessBindings.create` after the UI grant hit a Workspace validation bug). Live `G-QK02QH3SWY` confirmed to live in Brock-owned property 488680346 (under the Flanco Electric GA4 account, not Spark Shark Analytics). See `docs/migration/SOURCE-OF-TRUTH.md` §11.
 
-### C. WP Engine access logs — ✅ UNBLOCKED 2026-05-12 (creds rotated), pull still pending
-WPE Customer Portal password + Public API token + username were rotated 2026-05-12 and the 1Password item `wp_engine` (vault SparkShark) was updated. **The access-log pull is now the only thing standing between "cumulative" and "final."** Next session does it — see `SESSION-3-HANDOFF.md` for the exact plan, but in short: confirm the log-retrieval mechanism (WPE Public API endpoint vs. SSH to the install's `~/logs/` via the 1Password `WP Engine SSH Key — flancoelectric (Spark Shark)` item vs. Customer-Portal download), pull last 90 days, extract `Referer`-header rows, normalize + run the brand-collision + spam filters, merge as `source_set=wpe-logs`, then rename to `master-backlinks-final.csv` if nothing else is outstanding.
+### C. WP Engine access logs — ✅ DONE 2026-05-12
+All three retrieval paths checked with the rotated `wp_engine` creds:
+1. **Public API** (`api.wpengineapi.com/v1`) — **no logs endpoint exists** (swagger enumerated; `/installs/{id}` has backups/domains/ssl/cache/usage but nothing for access or error logs). Used only to confirm the install: `flancoelectric` (id `03ba3838-…`, prod, `primary_domain=www.sparkshark.com`).
+2. **SSH** (1Password `WP Engine SSH Key — flancoelectric (Spark Shark)`) — connects fine (lands in `/home/wpe-user`; docroot symlinked at `~/sites/flancoelectric → /nas/content/live/flancoelectric`) but **WPE's SSH Gateway exposes no web access logs** — `~/logs/`, `/var/log/nginx`, `/var/log/apache2` all absent.
+3. **User Portal** — the only source. The `site_logs_feed_data?environment=nginx` feed returns exactly the **last 1,500 requests** (≈13 h on this site — `2026-05-11 14:36 → 2026-05-12 03:15 UTC` — because the request stream is dominated by bot/scanner noise: `/wp-json/...`, `/?author=1`, `/xmlrpc.php`, ACME-challenge probes, `/archives/2008/.../credit-repair...`). **WPE keeps no 90-day access-log archive** — a rolling ~1,500-request window is all that exists; deeper coverage would require setting up log forwarding/streaming *before* the traffic happens.
 
-### D. AWS Athena Common Crawl — deferred per Brock (~$5–15 query).
+Snapshot pulled 2026-05-12 03:15 UTC: 27 unique referers — 24 self-referrals (incl. a `?fbclid=…` homepage hit + legacy `/new,/old,/wp,/blog,/backup,/wordpress/` bot probes) and **3 external hosts**, none editorial backlinks: `google.com` ×4 (SERP/bot referral, not a backlink), `l.facebook.com` ×1 (corroborates the existing `facebook.com` row — a real live inbound click, consistent with the `fbclid` self-referrals), `t.co` ×1 (X/Twitter shortener — corroborates the existing `twitter.com`/`x.com` rows). Nothing matched the brand-collision patterns (Ontario/Wisconsin/California "Spark Shark") or the `.shop/.top/.click/seoexpress*/rankvance*` PBN patterns, so the filters had nothing to act on. **Merge:** no new rows; `+wpe-logs` appended to `source_set` (and `last_seen_source=2026-05-12`) on the `facebook.com` (P1, Brock-owned page), `twitter.com`, and `x.com` rows, flagged in `notes` as redirect-wrapper / fbclid corroboration rather than a newly-discovered editorial link; `disavow-sparkshark.com.txt` unchanged. **`master-backlinks-cumulative.csv` renamed → `master-backlinks-final.csv`.** Detail: `wpe-access-log-snapshot-2026-05-12.md`; data: `wpe-access-log-referers-2026-05-12.json`. **The WPE source is closed.**
+
+### D. AWS Athena Common Crawl — deferred per Brock (~$5–15 query). Only source not consulted; would not change the picture.
 
 ---
 
 ## 6. Files in this directory (artifact map)
 
 ```
-master-backlinks-cumulative.csv         # 145 rows / 129 unique referring domains. Canonical. NOT "final" (WPE logs pending).
+master-backlinks-final.csv              # 145 rows / 129 unique referring domains. Canonical, FINAL (renamed from master-backlinks-cumulative.csv on 2026-05-12 after the WPE access-log pull closed the last source).
 disavow-sparkshark.com.txt              # Ready-to-upload Google Disavow file (83 domain: entries) — generated from the DISAVOW-tier rows. Post-launch: upload at GSC -> Disavow links tool for sc-domain:sparkshark.com.
 master-backlinks-working.csv            # Mutable working log; rows appended as discovered (pre-Ahrefs state).
 ahrefs-awt-backlinks-raw.json           # Ahrefs /v4/seBacklinks dump — 1,000 of 1,080 URL-level rows, 29 cols, JSON.
 ahrefs-awt-refdomains-raw.json          # Ahrefs /v4/seRefdomains dump — all 90 referring domains, 13 cols, JSON.
 ahrefs-awt-backlinks-scrape.csv         # CSV form of the above backlinks dump.
 ahrefs-awt-referring-domains-scrape.csv # CSV form of the above refdomains dump.
+wpe-access-log-snapshot-2026-05-12.md   # WP Engine access-log pull writeup — mechanism (no Public-API endpoint, no SSH logs, portal ~1,500-request window, no 90-day archive), findings (3 external referers, all redirect-wrappers/SERP, zero new domains), merge applied.
+wpe-access-log-referers-2026-05-12.json # Slimmed WPE access-log dump: per-env entry counts, date ranges, full unique-referer set, external referers.
 ga4-referrals-property-488680346-all-history.csv   # 229 GA4 referral rows (live property), since 2025-05-09.
 ga4-referrals-property-480290314-flanco-legacy.csv # 153 GA4 referral rows (Flanco-legacy property).
 BACKLINK-SUMMARY.md                     # This document.
@@ -155,16 +162,16 @@ gsc-link-summary-by-domain.csv          # Per-domain rollup with risk tier + rec
 gsc-external-links-all-deduped.csv      # Session 1 GSC export (28 URLs / 17 domains).
 gsc-links-external-*.csv                # Raw GSC exports (audit trail).
 gsc-links-internal-*.csv                # Internal-link exports (out of scope for backlink audit).
-SESSION-2-HANDOFF.md                    # Session 1→2 handoff (kept for trace).
+SESSION-2-HANDOFF.md / SESSION-3-HANDOFF.md / SESSION-4-HANDOFF.md   # Per-session handoffs (kept for trace; SESSION-4 records the WPE pull + "final" stamp).
 ```
 
 Scripts (not committed; live in `/tmp/`): `merge_awt.py` (Ahrefs → master merge + classification + collision filter), `wayback_enrich.py` (CDX enrichment), plus the GA4 + dedup helpers from prior sessions.
 
 ---
 
-## 7. Confidence statement (updated 2026-05-12)
+## 7. Confidence statement (updated 2026-05-12 — FINAL)
 
-This list is **cumulative across the sources reached so far** — GSC, Bing index, open-web search, both relevant GA4 properties, **Ahrefs Webmaster Tools (full)**, and a Wayback CDX enrichment pass. It is **still NOT final**: the one remaining unreached source is **WP Engine server access logs** (blocked on API-token rotation), which would add real inbound-traffic referrer data. Common Crawl/Athena is deliberately deferred.
+This list is **final across every reachable source** — GSC, Bing index, open-web search, both relevant GA4 properties, **Ahrefs Webmaster Tools (full)**, a Wayback CDX enrichment pass, and the **WP Engine access-log snapshot** (the last source; mechanism-confirmed and exhausted — WPE keeps only a rolling ~1,500-request window, which yielded 3 external referers, all redirect-wrappers/SERP and all already represented). Common Crawl/Athena is deliberately deferred per Brock and is the only source not consulted; given Ahrefs (the deepest free index) added essentially nothing real, it would not change the picture.
 
 **Evidence quality by row:**
 - The ~39 GSC + WebSearch rows are **verified backlinks** (external page known to contain an `<a href>` to sparkshark.com).
@@ -172,4 +179,4 @@ This list is **cumulative across the sources reached so far** — GSC, Bing inde
 - The Ahrefs rows: the **83 DISAVOW-tier** are real links that *exist* but are spam/PBN/scraper/legacy junk (Ahrefs spam-flags 79 of them; the other 4 are pre-Flanco-era links to dead content) — staged for disavow. The **4 "already in master"** strengthen existing rows. The **4 P2 "verify the mention" candidates were checked on-page 2026-05-12**: 3 are real dofollow links (now P3), 1 is legacy junk (now DISAVOW).
 - The 7 collision-filter / IGNORE rows are confirmed NOT-Brock's businesses.
 
-**Floor / ceiling:** the *useful* editorial-and-citation backlink count is small — call it ~25–35 once the category-page / CRM-referrer / unverified noise is stripped out — and it is **unlikely to grow much**: Ahrefs (the deepest single source available for free) added essentially nothing real, and GSC's link graph is already captured. WP Engine logs may surface a handful more referrers. The bigger takeaway is the **83-domain spam/junk tail** (disavow file built) and the **domain's pre-Flanco history** — both post-launch cleanup items, neither a cutover blocker. "Final" naming will be applied only once the WPE-log stream is landed or Brock closes it out.
+**Floor / ceiling:** the *useful* editorial-and-citation backlink count is small — ~25–35 once the category-page / CRM-referrer / unverified noise is stripped out — and it did not grow: Ahrefs (the deepest free index) added essentially nothing real, GSC's link graph was already captured, and the WPE access-log snapshot added zero new referring domains. The bigger takeaway is the **83-domain spam/junk tail** (disavow file built, awaiting Brock's GSC upload) and the **domain's pre-Flanco history** — both post-launch cleanup items, neither a cutover blocker. The list is now stamped **final**.

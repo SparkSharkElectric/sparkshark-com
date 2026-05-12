@@ -1,5 +1,5 @@
 # Google Disavow file -- sparkshark.com
-# Generated 2026-05-11 from migration-evidence-pack/07-backlinks-and-citations/master-backlinks-cumulative.csv (risk_tier=DISAVOW rows).
+# Generated 2026-05-11 from migration-evidence-pack/07-backlinks-and-citations/master-backlinks-final.csv (risk_tier=DISAVOW rows). [file was master-backlinks-cumulative.csv at generation time; renamed to -final 2026-05-12 — contents unchanged, the WPE access-log pull added no new spam domains]
 # Underlying data: Ahrefs Webmaster Tools (Site Explorer Backlinks + Referring Domains), scraped 2026-05-12; entries below verified against the master CSV.
 #
 # HOW TO USE: Google Search Console -> Disavow links tool (https://search.google.com/search-console/disavow-links)
