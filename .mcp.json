@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "/Users/brock/.nvm/versions/node/v20.20.2/bin/npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "env": {
+        "PATH": "/Users/brock/.nvm/versions/node/v20.20.2/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    }
+  }
+}
