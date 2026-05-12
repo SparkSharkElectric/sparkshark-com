@@ -1,0 +1,107 @@
+# Google Disavow file -- sparkshark.com
+# Generated 2026-05-11 from migration-evidence-pack/07-backlinks-and-citations/master-backlinks-cumulative.csv (risk_tier=DISAVOW rows).
+# Underlying data: Ahrefs Webmaster Tools (Site Explorer Backlinks + Referring Domains), scraped 2026-05-12; entries below verified against the master CSV.
+#
+# HOW TO USE: Google Search Console -> Disavow links tool (https://search.google.com/search-console/disavow-links)
+#   -> select property sc-domain:sparkshark.com -> upload this file (upload REPLACES the prior file, it does not append).
+#   Re-pull Ahrefs AWT every ~30-60 days during/after the cutover window and regenerate -- the spam surge looked active as of May 2026.
+#   POST-LAUNCH task. NOT a DNS-cutover blocker.
+#
+# CONTENTS: 83 domains, all disavowed at the domain level.
+#
+#   A) Legacy / pre-Flanco junk domains (4) -- link to content from the domain's earlier lives (online-poker/casino
+#      affiliate ~2006; credit-repair affiliate blog ~2008-2011), still indexed at sparkshark.com/archives/* -- target URLs
+#      are now dead. Disavowing costs nothing. rss2.com is a feed republisher (borderline, not toxic) -- keep or drop at will.
+#
+#   B) SEO-PBN / link-scheme spam domains (79) -- throwaway .shop/.top/.click/.agency/.info/etc. domains, Ahrefs
+#      spam-flagged, nearly all first-seen Sept 2025 - May 2026. Automated spam-link surge / possible negative SEO. No
+#      editorial value; mild reputational/SEO risk. Anchors like "before finding seoexpress.com I spent too much on...".
+#
+# -----------------------------------------------------------------------------------------------------------------------
+
+# --- A) Legacy / pre-Flanco junk domains ---
+domain:debt-reduction-solution.com
+domain:hypnosistacticsguide.com
+domain:mu.nu
+domain:rss2.com
+
+# --- B) SEO-PBN / link-scheme spam domains (Ahrefs spam-flagged) ---
+domain:123webshop.shop
+domain:activeshop.shop
+domain:alljobs.info
+domain:analyticshaven.top
+domain:authoritybacklinks.shop
+domain:backlink-agency.pro
+domain:backlinker.shop
+domain:backlinksolutions.info
+domain:bestwebstats.com
+domain:booksreadr.org
+domain:buy-quality-backlinks.online
+domain:buybacklinks.agency
+domain:bye.fyi
+domain:domain.com.lc
+domain:domainanalysis.org
+domain:domainsc.com
+domain:egyptiandirectory.com
+domain:ekenkoshop.shop
+domain:getwebsiteworth.com
+domain:globalecommerce.org
+domain:highseo.shop
+domain:highseoranking.shop
+domain:indians.cc
+domain:jake.eu
+domain:kawaiishop.shop
+domain:kgzxkf.com
+domain:kmoshops.shop
+domain:linkrankpro.shop
+domain:linkseopro.shop
+domain:linksnatcher.com
+domain:lixil-reformshop.shop
+domain:metamagic.top
+domain:mysky-shop.shop
+domain:nettools.guru
+domain:newsblogsports.site
+domain:nexusnext.agency
+domain:optimizeflow.top
+domain:pbnseolinks.shop
+domain:premiumseolinks.shop
+domain:pudhe.com
+domain:quero.party
+domain:rank-top.click
+domain:rankinghighseo.shop
+domain:rankingseohigh.shop
+domain:ranklinkerpro.shop
+domain:rankongoogle.agency
+domain:rankpilot.shop
+domain:rankvance-agency.online
+domain:rankvanceagency.info
+domain:rankvanceauthority.info
+domain:rankvancelinks.info
+domain:rankvancelinks.online
+domain:rankvanceseo.website
+domain:rankxlinks.shop
+domain:rankyour.website
+domain:ready.pro
+domain:rent-a-shop.shop
+domain:seo-high-ranking.shop
+domain:seoagency.sale
+domain:seoexpress.online
+domain:seoexpress.shop
+domain:seoexpress.site
+domain:seoexpress.space
+domain:seoexpress.store
+domain:seoexpress.website
+domain:seolinkpro.shop
+domain:shop-inframe.shop
+domain:simplywebshop.shop
+domain:sitescooponline.com
+domain:thebacklink.shop
+domain:theguestposts.shop
+domain:thehighrankseo.shop
+domain:thehighseo.shop
+domain:therankinghighseo.shop
+domain:theseohighranking.shop
+domain:theseomasterhigh.shop
+domain:theseorankinghigh.shop
+domain:way2check.cv
+domain:websitesea.com

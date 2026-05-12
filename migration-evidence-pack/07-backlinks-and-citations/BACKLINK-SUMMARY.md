@@ -1,9 +1,9 @@
 # Backlink Capture — Cumulative Summary (NOT final)
 
-**Status as of 2026-05-12 (Session 3 — Ahrefs AWT scrape landed):**
-**145 rows / 129 unique referring domains** in `master-backlinks-cumulative.csv` — covering Google Search Console + open-web WebSearch + Bing index probe + GA4 referrals (live property 488680346 + Flanco-legacy property 480290314) + **Ahrefs Webmaster Tools (Site Explorer Backlinks + Referring Domains, scraped 2026-05-12)** + Wayback CDX enrichment pass.
+**Status as of 2026-05-12 (Session 3 — Ahrefs AWT scrape landed; disavow file built; Ahrefs P2 candidates verified):**
+**145 rows / 129 unique referring domains** in `master-backlinks-cumulative.csv` — covering Google Search Console + open-web WebSearch + Bing index probe + GA4 referrals (live property 488680346 + Flanco-legacy property 480290314) + **Ahrefs Webmaster Tools (Site Explorer Backlinks + Referring Domains, scraped 2026-05-12)** + Wayback CDX enrichment pass. A ready-to-upload Google Disavow file (`disavow-sparkshark.com.txt`, 83 domains) sits alongside.
 
-**Headline from the Ahrefs pull:** Ahrefs' index for `sparkshark.com` is **dominated by junk** — not "5,000 editorial links," but **1,080 total backlinks of which ~895 come from just two scraper domains** linking pre-Spark-Shark *credit-repair / RSS* content still indexed at `sparkshark.com/archives/2008…2011/*`, plus **~75 throwaway SEO-PBN spam domains** (`.shop` / `.top` / `.click` / `.agency` / `seoexpress.*` / `rankvance*` etc.), almost all first-seen Sept 2025 → May 2026. **Ahrefs itself spam-flags 82 of the 90 referring domains.** Only ~5 net-new *plausibly-real* referring domains came out of it. → **Recommend building a Google Disavow file for these 82 domains as a post-launch task** (see §1.6 + new action list item). This is not a cutover blocker, but it changes the "link equity" story: there is very little of it, and a meaningful slice of the profile is mild reputational/SEO risk.
+**Headline from the Ahrefs pull:** Ahrefs' index for `sparkshark.com` is **dominated by junk** — not "5,000 editorial links," but **1,080 total backlinks of which ~895 come from just two scraper domains** linking pre-Spark-Shark *credit-repair / RSS* content still indexed at `sparkshark.com/archives/2008…2011/*`, plus **~79 throwaway SEO-PBN spam domains** (`.shop` / `.top` / `.click` / `.agency` / `seoexpress.*` / `rankvance*` etc.), almost all first-seen Sept 2025 → May 2026. **Ahrefs itself spam-flags 82 of the 90 referring domains.** Of the handful of net-new *plausibly-real* domains, on-page verification (2026-05-12) confirmed **3 real dofollow links** (`themusemark.com`, `anationofmoms.com`, `yplocal.us`) and reclassified a 4th (`hypnosistacticsguide.com`) as legacy junk. → **A Google Disavow file for these 83 domains is built and staged** (`disavow-sparkshark.com.txt`); submitting it is a post-launch task (see §1.6 + §4). Not a cutover blocker, but it changes the "link equity" story: there is very little of it, and a meaningful slice of the profile is mild reputational/SEO risk.
 
 **This is still explicitly NOT a "final" list.** Naming stays "cumulative" because WP Engine access logs remain unrun (API-token rotation pending) and were not deliberately closed out. See §7.
 
@@ -25,21 +25,21 @@
 |---|---|---|
 | **P0** | 1 | Hard NAP/brand conflict — fix before DNS flip (`networx.com/c.flanco-electric`) |
 | **P1** | 8 | Verify NAP / claim profile before DNS flip |
-| **P2** | 24 | Post-launch cleanup (claim, verify bio) + 4 Ahrefs-discovered "verify the mention" candidates |
-| **P3** | 23 | Co-citation noise + GA4 internal-CRM referrers + Ahrefs feed-scraper junk — monitor, no action |
-| **DISAVOW** | 82 | **NEW.** Ahrefs-surfaced spam link-scheme / PBN domains (75) + legacy credit-repair / RSS scrapers (`rss2.com`, `debt-reduction-solution.com`, `mu.nu`). Recommend a Google Disavow file post-launch. |
+| **P2** | 20 | Post-launch cleanup (claim, verify bio). The 4 Ahrefs "verify the mention" candidates were resolved 2026-05-12 — 3 became P3 (confirmed real links), 1 became DISAVOW. |
+| **P3** | 26 | Co-citation noise + GA4 internal-CRM referrers + Ahrefs feed-scraper junk + 3 verified-real third-party links (`themusemark.com`, `anationofmoms.com`, `yplocal.us`) — monitor, no action |
+| **DISAVOW** | 83 | Ahrefs-surfaced spam link-scheme / PBN domains (79) + legacy / pre-Flanco junk (`rss2.com`, `debt-reduction-solution.com`, `mu.nu`, `hypnosistacticsguide.com`). Staged as `disavow-sparkshark.com.txt`; submit post-launch. |
 | **IGNORE** | 7 | Other "Spark Shark" businesses (Ontario / Wisconsin / California) — filter from any future scrape |
 | **Total rows** | **145** | across **129 unique referring domains** |
-| Real / actionable referring domains | **42** | i.e. non-DISAVOW, non-IGNORE (see §1.5 list) |
+| Real / actionable referring domains | **41** | i.e. non-DISAVOW, non-IGNORE (see §1.5 list) |
 | Confirmed Brock-owned | 21 | unchanged |
-| Confirmed not-owned | ~19 | |
-| Unknown (need on-page verification) | ~14 | mostly GA4-derived + 4 Ahrefs candidates |
+| Confirmed not-owned | ~22 | includes the 3 newly-verified third-party links |
+| Unknown (need on-page verification) | ~10 | mostly GA4-derived (chatgpt.com, claude.ai, hometalk.com, marketspacesales.com, partner CRMs) |
 
 **Reality check on "link equity":** for a DR-1 site, this is about what you'd expect — a thin profile of directory/citation listings + social profiles + a few editorial mentions, sitting under a pile of automated spam. The Ahrefs pull did **not** materially expand the useful inventory; it mostly revealed the spam surge + the domain's pre-Flanco history.
 
-## 1.5. The 42 real / actionable referring domains
+## 1.5. The 41 real / actionable referring domains
 
-`agreatertown.com · anationofmoms.com · bbb.org · best-electrician-moore.com · bluebbb.org · callupcontact.com · chamberofcommerce.com · chatgpt.com · claude.ai · coalitiontechnologies.com · dexknows.com · exchange.construction · facebook.com · featured.com · glassdoor.com · goodleap.lightning.force.com · hometalk.com · hypnosistacticsguide.com · mapquest.com · marketspacesales.com · medium.com · moranalytics.com · national.lightning.force.com · networx.com · pinterest.com · provenexpert.com · reddit.com · servicetitan.lightning.force.com · siteliner.com · smartelectricalservices.net · superpages.com · themusemark.com · theorg.com · thumbtack.com · tiktok.com · twitter.com · uscity.net · wpengine.com · x.com · yellowpages.com · yelp.com · yplocal.us`
+`agreatertown.com · anationofmoms.com · bbb.org · best-electrician-moore.com · bluebbb.org · callupcontact.com · chamberofcommerce.com · chatgpt.com · claude.ai · coalitiontechnologies.com · dexknows.com · exchange.construction · facebook.com · featured.com · glassdoor.com · goodleap.lightning.force.com · hometalk.com · mapquest.com · marketspacesales.com · medium.com · moranalytics.com · national.lightning.force.com · networx.com · pinterest.com · provenexpert.com · reddit.com · servicetitan.lightning.force.com · siteliner.com · smartelectricalservices.net · superpages.com · themusemark.com · theorg.com · thumbtack.com · tiktok.com · twitter.com · uscity.net · wpengine.com · x.com · yellowpages.com · yelp.com · yplocal.us`
 
 (Note: several of these are themselves noise — `*.lightning.force.com` are partner-CRM referrers not public backlinks; `yellowpages.com/superpages/dexknows` are category pages not Spark Shark profiles; `siteliner.com/coalitiontechnologies.com/wpengine.com` are tool/agency/staging referrers. The genuinely-Brock-owned subset and the high-trust citation profiles are enumerated in §2.)
 
@@ -50,8 +50,9 @@
 | **`rss2.com`** | 1 | ~542 | Feed-republisher; scraped a feed titled "the spark shark" (first seen 2024-01) + old `sparkshark.com/archives/*`. Not editorial. |
 | **`debt-reduction-solution.com`** | 1 | ~353 | Credit-repair PBN linking the pre-Flanco `sparkshark.com/archives/2008–2011/*` "credit repair" blog content. Spam-flagged. |
 | **`mu.nu`** | 1 | 1 | Old blog-farm; spam-flagged; first seen 2020. |
-| **SEO-PBN spam surge** | ~75 | ~150 | `.shop` / `.top` / `.click` / `.agency` / `.info` / `.online` / `.website` / `.space` / `.site` / `.store` TLDs; `seoexpress.*`, `rankvance*`, `*backlink*`, `*seolink*` patterns. Anchors like "before finding seoexpress.com I spent too much on…". Almost all first-seen Sept 2025 → May 2026 — this is the dashboard's "+51 referring domains in 30 days." |
-| **Plausibly-real, Ahrefs-only** | ~5 | ~6 | `themusemark.com` ("common electrical emergencies and how to respond" — looks editorial), `anationofmoms.com`, `yplocal.us` (directory listing), `hypnosistacticsguide.com` (DR1, 2023), + a couple already in the master via other sources. **Tier P2 — open each, confirm the on-page link before treating as a real backlink.** |
+| **SEO-PBN spam surge** | ~79 | ~150 | `.shop` / `.top` / `.click` / `.agency` / `.info` / `.online` / `.website` / `.space` / `.site` / `.store` TLDs; `seoexpress.*`, `rankvance*`, `*backlink*`, `*seolink*` patterns. Anchors like "before finding seoexpress.com I spent too much on…". Almost all first-seen Sept 2025 → May 2026 — this is the dashboard's "+51 referring domains in 30 days." → DISAVOW. |
+| **Net-new real links (verified 2026-05-12)** | 3 | 3 | **`anationofmoms.com`** (DR55) — dofollow `<a>` "emergency electrician" → `/services/emergency-electrician/` in a 1,482-word article; strongest new AWT link, looks like a guest-post placement. **`themusemark.com`** (DR49) — dofollow `<a>` "emergency electrical services" → same target, 1,305-word article, same guest-post pattern. **`yplocal.us`** (DR19, Ahrefs-spam-flagged) — auto-generated YpLocal directory listing, NAP correct (405-436-4776 / Moore / 73160), dofollow "Visit Our Website" → homepage. All three → P3 (monitor, no action). |
+| **Legacy junk (reclassified 2026-05-12)** | 1 | 1 | `hypnosistacticsguide.com` (DR1, 2023) — nofollow link, anchor = an old blog title "The Spark Shark » A Rant Related to Black Ops Underground Hypnosis", target = a dead pre-Flanco `sparkshark.com/archives/2010/...` URL. Same class as `rss2.com`/`debt-reduction-solution.com` → moved from P2 to DISAVOW. |
 | **Already in master** | 4 | — | `bbb.org`, `agreatertown.com`, `moranalytics.com`, `best-electrician-moore.com` — `source_set` updated to include `awt`. |
 
 **Domain history confirmed via Wayback CDX (incidental finding):** `sparkshark.com` was an **online-poker / casino-affiliate spam site ~2006** (`/10-Best-Online-Casinos.html`, Texas-Holdem pages), then a **credit-repair affiliate blog ~2008–2011** (`/archives/.../credit-repair-myths-exposed/` etc.), before becoming Flanco Electric and then Spark Shark Electric. This is the root of the `rss2.com` + `debt-reduction-solution.com` link mass and is worth knowing for the post-launch disavow decision and for any "why does this domain have weird old indexed pages" question.
@@ -76,7 +77,7 @@ Honorable mentions: Chamber of Commerce, MapQuest, Pinterest, X/Twitter, TikTok 
 2. **BBB duplicate addresses (P1).** Same business profiled at `/moore/...` and `/oklahoma-city/...addressId/134759`. Reconcile to one canonical address before launch.
 3. **Apex profile validation gap (P1).** ~9 of the 21 Brock-owned profiles carry presumed-correct-but-unverified NAP (Mapquest, Chamber, Pinterest, ProvenExpert, Twitter/X, TikTok, theorg, agreatertown, Featured). Open each, screenshot, fix in place.
 
-Not a cutover blocker but worth queuing: **the 82 spam/PBN/legacy-scraper domains → Google Disavow file** (Search Console → Disavow links tool, against `sc-domain:sparkshark.com`). The DISAVOW-tier rows in the CSV are the source list.
+Not a cutover blocker but worth queuing: **the 83 spam/PBN/legacy-junk domains → Google Disavow file** — already built as `disavow-sparkshark.com.txt`; remaining action is Brock uploading it at Search Console → Disavow links tool → `sc-domain:sparkshark.com`. The `risk_tier=DISAVOW` rows in the CSV are the source list.
 
 ---
 
@@ -94,7 +95,7 @@ Not a cutover blocker but worth queuing: **the 82 spam/PBN/legacy-scraper domain
 - [ ] Verify Facebook page bio links + featured info (owned).
 - [ ] Verify Instagram bio at `@thesparkshark` (owned).
 
-### P2 — Post-launch cleanup (24)
+### P2 — Post-launch cleanup (20)
 - [ ] Verify ownership + bio on Pinterest, ProvenExpert, theorg, agreatertown, Featured, TikTok.
 - [ ] Verify Twitter/X profile (treat `twitter.com` + `x.com` as one — `@The_Spark_Shark`).
 - [ ] Audit `uscity.net/listing/...` — HTTP-only, request HTTPS upgrade.
@@ -103,17 +104,18 @@ Not a cutover blocker but worth queuing: **the 82 spam/PBN/legacy-scraper domain
 - [ ] Verify/claim `callupcontact.com/.../Spark_Shark_Electric/9878135` (ownership unknown).
 - [ ] Update LinkedIn personal `linkedin.com/in/brock-flanary/` with current Spark Shark CEO title (never "owner").
 - [ ] Confirm Glassdoor job listing reflects current hiring state.
-- [ ] **NEW — Ahrefs "verify the mention" candidates:** open `themusemark.com` ("common electrical emergencies…"), `anationofmoms.com`, `yplocal.us`, `hypnosistacticsguide.com`; confirm whether a real on-page `<a href>` to sparkshark.com exists. Promote tier / ownership accordingly.
-- [ ] Verify GA4 "candidate backlink" mentions: chatgpt.com, claude.ai, moranalytics.com, hometalk.com, marketspacesales.com.
+- [ ] Verify GA4 "candidate backlink" mentions: chatgpt.com, claude.ai, hometalk.com, marketspacesales.com. (moranalytics.com handled — Ahrefs confirms 1 backlink.)
+- [x] ~~Ahrefs "verify the mention" candidates~~ — **DONE 2026-05-12.** `anationofmoms.com` + `themusemark.com` = confirmed real dofollow links (→ P3); `yplocal.us` = confirmed dofollow directory listing, NAP correct (→ P3); `hypnosistacticsguide.com` = nofollow link to dead pre-Flanco URL (→ DISAVOW).
 
-### P3 — Monitor only (23)
+### P3 — Monitor only (26)
 - [ ] No action on yellowpages.com / superpages.com / dexknows.com category pages (co-citation noise).
 - [ ] No action on Medium / Reddit / Facebook-group single-mention links.
 - [ ] No action on `*.lightning.force.com` partner-CRM referrers, `siteliner.com`, `coalitiontechnologies.com`, `wpengine.com` staging — referrers, not public backlinks.
-- [ ] Watch `rss2.com` — feed republisher; harmless but noisy. (Also a disavow candidate — see DISAVOW.)
+- [ ] No action on the 3 verified-real third-party links (`anationofmoms.com`, `themusemark.com`, `yplocal.us`) — confirmed dofollow, low risk; the two "magazine" articles look like guest-post placements but the anchors/targets are benign. If a future link audit ever flags purchased-link patterns, these are the ones to revisit.
 
-### DISAVOW — Post-launch (82)
-- [ ] Build a Google Disavow file from the `risk_tier=DISAVOW` rows in `master-backlinks-cumulative.csv` and submit it for `sc-domain:sparkshark.com`. Includes: ~75 SEO-PBN spam domains (`.shop`/`.top`/`.click`/`.agency`/`seoexpress.*`/`rankvance*`/etc.), `rss2.com`, `debt-reduction-solution.com`, `mu.nu`. Re-pull Ahrefs AWT every ~30–60 days during the cutover window and re-run this filter — the spam surge looked active as of May 2026.
+### DISAVOW — Post-launch (83) — ✅ FILE BUILT
+- [x] **`disavow-sparkshark.com.txt` is staged in this directory** (83 `domain:` entries, generated from the `risk_tier=DISAVOW` rows). **Remaining action: Brock uploads it** at Search Console → Disavow links tool → property `sc-domain:sparkshark.com`. POST-LAUNCH; not a cutover blocker.
+- [ ] Re-pull Ahrefs AWT every ~30–60 days during/after the cutover window, re-run the merge/classification, regenerate the disavow file, re-upload — the spam surge looked active as of May 2026.
 
 ### IGNORE — Filter from future scrapes (7)
 Other Spark Shark businesses (Canada / Wisconsin / California).
@@ -123,7 +125,7 @@ Other Spark Shark businesses (Canada / Wisconsin / California).
 ## 5. Blocked / remaining work
 
 ### A. Ahrefs AWT scrape — ✅ DONE 2026-05-12
-Scraped via Playwright MCP (`@playwright/mcp`, own persistent Chromium profile, Brock logged in once) against Ahrefs' `/v4/seBacklinks` + `/v4/seRefdomains` endpoints. Free-tier caps: result offset must stay <1000 per report (so 1,000 of 1,080 backlinks captured by combining traffic-DESC and traffic-ASC pages); referring-domains report has no such issue (all 90 captured). No paid API used. **Re-run procedure:** restart Claude Code in `/Users/brock/Projects/sparkshark-com`, ensure the `playwright` MCP is approved (the `.mcp.json` registering it was removed to `.mcp.json.removed-2026-05-11` — restore it or re-add `npx -y @playwright/mcp@latest`), navigate to `ahrefs.com` once to confirm the persisted login, then re-issue: dashboard → project 9816270 → it's all driven through the JSON API in `browser_evaluate` (see the merge/scrape scripts in `/tmp/` if still present, or just replay the input shapes documented in this session's transcript).
+Scraped via Playwright MCP (`@playwright/mcp`, own persistent Chromium profile, Brock logged in once) against Ahrefs' `/v4/seBacklinks` + `/v4/seRefdomains` endpoints. Free-tier caps: result offset must stay <1000 per report — got all 1,080 backlinks by combining traffic-DESC, traffic-ASC and first-seen-sorted pages; referring-domains report has no such issue (all 90 captured). No paid API used. The `playwright` MCP is now committed in repo `.mcp.json`. **Re-run procedure:** in `/Users/brock/Projects/sparkshark-com`, ensure the `playwright` MCP is approved (`/mcp`), navigate to `app.ahrefs.com/dashboard` once to confirm the persisted login, then drive it through `browser_evaluate` against the JSON API — verified project `9816270` (`*.sparkshark.com/*`, subdomains, both protocols) is the superset; the `seBacklinks` aggregation values are `GroupSimilarLinks` / `OneLinkPerDomain` / `AllLinks`; `seRefdomains` is a POST needing `{se_params, params, best_links_filter, backlinks_params}`. Input shapes are in this session's transcript / the `/tmp/merge_awt.py`+`/tmp/wayback_enrich.py` scripts if still present.
 
 ### B. GA4 service-account access — ✅ RESOLVED 2026-05-11
 SA `sparkshark-seo-reader@…` has Viewer on all 3 of Brock's GA4 properties (added via `v1alpha accessBindings.create` after the UI grant hit a Workspace validation bug). Live `G-QK02QH3SWY` confirmed to live in Brock-owned property 488680346 (under the Flanco Electric GA4 account, not Spark Shark Analytics). See `docs/migration/SOURCE-OF-TRUTH.md` §11.
@@ -139,6 +141,7 @@ SA `sparkshark-seo-reader@…` has Viewer on all 3 of Brock's GA4 properties (ad
 
 ```
 master-backlinks-cumulative.csv         # 145 rows / 129 unique referring domains. Canonical. NOT "final" (WPE logs pending).
+disavow-sparkshark.com.txt              # Ready-to-upload Google Disavow file (83 domain: entries) — generated from the DISAVOW-tier rows. Post-launch: upload at GSC -> Disavow links tool for sc-domain:sparkshark.com.
 master-backlinks-working.csv            # Mutable working log; rows appended as discovered (pre-Ahrefs state).
 ahrefs-awt-backlinks-raw.json           # Ahrefs /v4/seBacklinks dump — 1,000 of 1,080 URL-level rows, 29 cols, JSON.
 ahrefs-awt-refdomains-raw.json          # Ahrefs /v4/seRefdomains dump — all 90 referring domains, 13 cols, JSON.
@@ -166,7 +169,7 @@ This list is **cumulative across the sources reached so far** — GSC, Bing inde
 **Evidence quality by row:**
 - The ~39 GSC + WebSearch rows are **verified backlinks** (external page known to contain an `<a href>` to sparkshark.com).
 - The ~13 GA4-derived rows are **candidate backlinks** (non-empty Referer header; on-page link not yet confirmed for most). The two LLM referrals (chatgpt.com, claude.ai) are very likely real; the `*.lightning.force.com` rows are partner-CRM referrers, not public backlinks.
-- The Ahrefs rows: the **82 DISAVOW-tier** are real links that *exist* but are spam/PBN/scraper junk (Ahrefs spam-flags them; we'd disavow them). The **4 "already in master"** strengthen existing rows. The **~4 P2 candidates** need on-page verification before counting.
+- The Ahrefs rows: the **83 DISAVOW-tier** are real links that *exist* but are spam/PBN/scraper/legacy junk (Ahrefs spam-flags 79 of them; the other 4 are pre-Flanco-era links to dead content) — staged for disavow. The **4 "already in master"** strengthen existing rows. The **4 P2 "verify the mention" candidates were checked on-page 2026-05-12**: 3 are real dofollow links (now P3), 1 is legacy junk (now DISAVOW).
 - The 7 collision-filter / IGNORE rows are confirmed NOT-Brock's businesses.
 
-**Floor / ceiling:** the *useful* editorial-and-citation backlink count is small — call it ~25–35 once the category-page / CRM-referrer / unverified noise is stripped out — and it is **unlikely to grow much**: Ahrefs (the deepest single source available for free) added essentially nothing real, and GSC's link graph is already captured. WP Engine logs may surface a handful more referrers. The bigger takeaway is the **82-domain spam tail** and the **domain's pre-Flanco history** — both post-launch cleanup items, neither a cutover blocker. "Final" naming will be applied only once the WPE-log stream is landed or Brock closes it out.
+**Floor / ceiling:** the *useful* editorial-and-citation backlink count is small — call it ~25–35 once the category-page / CRM-referrer / unverified noise is stripped out — and it is **unlikely to grow much**: Ahrefs (the deepest single source available for free) added essentially nothing real, and GSC's link graph is already captured. WP Engine logs may surface a handful more referrers. The bigger takeaway is the **83-domain spam/junk tail** (disavow file built) and the **domain's pre-Flanco history** — both post-launch cleanup items, neither a cutover blocker. "Final" naming will be applied only once the WPE-log stream is landed or Brock closes it out.
