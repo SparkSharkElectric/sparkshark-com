@@ -25,15 +25,15 @@
 |---|---|---|
 | **P0** | 1 | Hard NAP/brand conflict — fix before DNS flip (`networx.com/c.flanco-electric`) |
 | **P1** | 8 | Verify NAP / claim profile before DNS flip |
-| **P2** | 20 | Post-launch cleanup (claim, verify bio). The 4 Ahrefs "verify the mention" candidates were resolved 2026-05-12 — 3 became P3 (confirmed real links), 1 became DISAVOW. |
-| **P3** | 26 | Co-citation noise + GA4 internal-CRM referrers + Ahrefs feed-scraper junk + 3 verified-real third-party links (`themusemark.com`, `anationofmoms.com`, `yplocal.us`) — monitor, no action |
+| **P2** | 17 | Post-launch cleanup (claim, verify bio). 2026-05-12: the 4 Ahrefs "verify the mention" candidates resolved (3→P3, 1→DISAVOW) and the 4 GA4 LLM/community candidates on-page-checked — 3 of them moved P2→P3 (`marketspacesales.com` was already P3); none is an on-page editorial backlink (see §1.7). |
+| **P3** | 29 | Co-citation noise + GA4 internal-CRM referrers + Ahrefs feed-scraper junk + 3 verified-real third-party links (`themusemark.com`, `anationofmoms.com`, `yplocal.us`) + the 4 on-page-checked GA4 candidates (`chatgpt.com`, `claude.ai`, `hometalk.com`, `marketspacesales.com`) — monitor, no action |
 | **DISAVOW** | 83 | Ahrefs-surfaced spam link-scheme / PBN domains (79) + legacy / pre-Flanco junk (`rss2.com`, `debt-reduction-solution.com`, `mu.nu`, `hypnosistacticsguide.com`). Staged as `disavow-sparkshark.com.txt`; submit post-launch. |
 | **IGNORE** | 7 | Other "Spark Shark" businesses (Ontario / Wisconsin / California) — filter from any future scrape |
 | **Total rows** | **145** | across **129 unique referring domains** |
 | Real / actionable referring domains | **41** | i.e. non-DISAVOW, non-IGNORE (see §1.5 list) |
 | Confirmed Brock-owned | 21 | unchanged |
 | Confirmed not-owned | ~22 | includes the 3 newly-verified third-party links |
-| Unknown (need on-page verification) | ~10 | mostly GA4-derived (chatgpt.com, claude.ai, hometalk.com, marketspacesales.com, partner CRMs) |
+| Unknown (need on-page verification) | ~6 | the 4 GA4 LLM/community candidates (`chatgpt.com`, `claude.ai`, `hometalk.com`, `marketspacesales.com`) were on-page-checked 2026-05-12 → none is an on-page backlink (see §1.7); the rest are mostly `*.lightning.force.com` partner-CRM referrers, not public backlinks |
 
 **Reality check on "link equity":** for a DR-1 site, this is about what you'd expect — a thin profile of directory/citation listings + social profiles + a few editorial mentions, sitting under a pile of automated spam. The Ahrefs pull did **not** materially expand the useful inventory; it mostly revealed the spam surge + the domain's pre-Flanco history.
 
@@ -56,6 +56,19 @@
 | **Already in master** | 4 | — | `bbb.org`, `agreatertown.com`, `moranalytics.com`, `best-electrician-moore.com` — `source_set` updated to include `awt`. |
 
 **Domain history confirmed via Wayback CDX (incidental finding):** `sparkshark.com` was an **online-poker / casino-affiliate spam site ~2006** (`/10-Best-Online-Casinos.html`, Texas-Holdem pages), then a **credit-repair affiliate blog ~2008–2011** (`/archives/.../credit-repair-myths-exposed/` etc.), before becoming Flanco Electric and then Spark Shark Electric. This is the root of the `rss2.com` + `debt-reduction-solution.com` link mass and is worth knowing for the post-launch disavow decision and for any "why does this domain have weird old indexed pages" question.
+
+## 1.7. GA4 LLM / community "candidate backlink" mentions — on-page check (2026-05-12)
+
+The 4 GA4-referer rows that lacked on-page confirmation were checked. **None turned into a confirmed on-page editorial backlink.** All four were demoted/kept at P3 (monitor, not actionable):
+
+| Domain | GA4 signal | On-page check (2026-05-12) | Verdict |
+|---|---|---|---|
+| **`chatgpt.com`** | 5 sessions (property 488680346, since 2025-05-09) | No public shared-conversation artifact surfaces (`site:chatgpt.com` + name searches turned up nothing). But the referer itself confirms **ChatGPT served a `sparkshark.com` link inside a (private) conversation** — a real AI-citation / **GEO win**, just not an indexable on-page link. | P2→P3. Real LLM citation signal; not actionable. |
+| **`claude.ai`** | 5 sessions | Same as ChatGPT — Claude linked `sparkshark.com` in a (private) conversation; no public artifact to verify. **Both major LLMs are citing the site** — good GEO signal. | P2→P3. Real LLM citation signal; not actionable. |
+| **`hometalk.com`** | 1 session | No on-page link found anywhere — `site:hometalk.com` empty, Hometalk's own site search empty, zero web footprint. Likely a community-thread or email-newsletter link that's since rotated out, or referer noise. | P2→P3. Not on-page-confirmed. |
+| **`marketspacesales.com`** | 1 session | Domain is **unreachable** (ECONNREFUSED — dead/parked) and has no Spark Shark footprint anywhere. Almost certainly **referrer spam** (a bot hitting GA with a fake `Referer` to seed the domain into analytics), not a backlink. | Stays P3 (was already P3). Not actionable; drop from future scrapes. |
+
+(`moranalytics.com` — the 5th former-candidate — was resolved last session: Ahrefs confirms 1 real backlink.) Net effect: P2 20→17, P3 26→29, total still 145; the "useful editorial backlink" count is unchanged.
 
 ---
 
@@ -104,13 +117,14 @@ Not a cutover blocker but worth queuing: **the 83 spam/PBN/legacy-junk domains �
 - [ ] Verify/claim `callupcontact.com/.../Spark_Shark_Electric/9878135` (ownership unknown).
 - [ ] Update LinkedIn personal `linkedin.com/in/brock-flanary/` with current Spark Shark CEO title (never "owner").
 - [ ] Confirm Glassdoor job listing reflects current hiring state.
-- [ ] Verify GA4 "candidate backlink" mentions: chatgpt.com, claude.ai, hometalk.com, marketspacesales.com. (moranalytics.com handled — Ahrefs confirms 1 backlink.)
+- [x] ~~Verify GA4 "candidate backlink" mentions: chatgpt.com, claude.ai, hometalk.com, marketspacesales.com~~ — **DONE 2026-05-12** (see §1.7). None is an on-page editorial backlink: ChatGPT + Claude are real LLM citations (a GEO signal, not a link), `hometalk.com` has no findable on-page link, `marketspacesales.com` is dead / likely referrer-spam. All 4 → P3, monitor only. (`moranalytics.com` handled earlier — Ahrefs confirms 1 backlink.)
 - [x] ~~Ahrefs "verify the mention" candidates~~ — **DONE 2026-05-12.** `anationofmoms.com` + `themusemark.com` = confirmed real dofollow links (→ P3); `yplocal.us` = confirmed dofollow directory listing, NAP correct (→ P3); `hypnosistacticsguide.com` = nofollow link to dead pre-Flanco URL (→ DISAVOW).
 
-### P3 — Monitor only (26)
+### P3 — Monitor only (29)
 - [ ] No action on yellowpages.com / superpages.com / dexknows.com category pages (co-citation noise).
 - [ ] No action on Medium / Reddit / Facebook-group single-mention links.
 - [ ] No action on `*.lightning.force.com` partner-CRM referrers, `siteliner.com`, `coalitiontechnologies.com`, `wpengine.com` staging — referrers, not public backlinks.
+- [ ] No action on the 4 on-page-checked GA4 candidates (§1.7): `chatgpt.com` + `claude.ai` (real LLM citations — track as a GEO signal, but there's no link to "fix"), `hometalk.com` (no findable on-page link), `marketspacesales.com` (dead domain / likely referrer-spam — drop from future scrapes).
 - [ ] No action on the 3 verified-real third-party links (`anationofmoms.com`, `themusemark.com`, `yplocal.us`) — confirmed dofollow, low risk; the two "magazine" articles look like guest-post placements but the anchors/targets are benign. If a future link audit ever flags purchased-link patterns, these are the ones to revisit.
 
 ### DISAVOW — Post-launch (83) — ✅ FILE BUILT
@@ -175,7 +189,7 @@ This list is **final across every reachable source** — GSC, Bing index, open-w
 
 **Evidence quality by row:**
 - The ~39 GSC + WebSearch rows are **verified backlinks** (external page known to contain an `<a href>` to sparkshark.com).
-- The ~13 GA4-derived rows are **candidate backlinks** (non-empty Referer header; on-page link not yet confirmed for most). The two LLM referrals (chatgpt.com, claude.ai) are very likely real; the `*.lightning.force.com` rows are partner-CRM referrers, not public backlinks.
+- The ~13 GA4-derived rows are **candidate backlinks** (non-empty Referer header). The 4 LLM/community ones were on-page-checked 2026-05-12 (§1.7): `chatgpt.com` + `claude.ai` are confirmed-real *AI citations* but not indexable on-page links (a GEO signal, not a backlink to fix), `hometalk.com` has no findable on-page link, `marketspacesales.com` is dead / almost certainly referrer-spam — all 4 are P3. The `*.lightning.force.com` rows are partner-CRM referrers, not public backlinks.
 - The Ahrefs rows: the **83 DISAVOW-tier** are real links that *exist* but are spam/PBN/scraper/legacy junk (Ahrefs spam-flags 79 of them; the other 4 are pre-Flanco-era links to dead content) — staged for disavow. The **4 "already in master"** strengthen existing rows. The **4 P2 "verify the mention" candidates were checked on-page 2026-05-12**: 3 are real dofollow links (now P3), 1 is legacy junk (now DISAVOW).
 - The 7 collision-filter / IGNORE rows are confirmed NOT-Brock's businesses.
 
