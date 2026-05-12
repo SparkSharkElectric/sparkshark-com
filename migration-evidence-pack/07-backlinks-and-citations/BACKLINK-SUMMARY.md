@@ -1,172 +1,172 @@
 # Backlink Capture — Cumulative Summary (NOT final)
 
-**Status as of 2026-05-11 evening:**
-55 deduped rows in `master-backlinks-cumulative.csv` (committed alongside this doc) — covering Google Search Console (May 10 audit) + open-web WebSearch pass + Bing index probe + GA4 referrals from the live property + collision-filter rows.
+**Status as of 2026-05-12 (Session 3 — Ahrefs AWT scrape landed):**
+**145 rows / 129 unique referring domains** in `master-backlinks-cumulative.csv` — covering Google Search Console + open-web WebSearch + Bing index probe + GA4 referrals (live property 488680346 + Flanco-legacy property 480290314) + **Ahrefs Webmaster Tools (Site Explorer Backlinks + Referring Domains, scraped 2026-05-12)** + Wayback CDX enrichment pass.
 
-**This is explicitly NOT a "final" list.** Major sources are still unrun (Ahrefs AWT, WP Engine access logs, Common Crawl). Final naming will only be applied when those run or are deliberately closed out. See §7 confidence statement.
+**Headline from the Ahrefs pull:** Ahrefs' index for `sparkshark.com` is **dominated by junk** — not "5,000 editorial links," but **1,080 total backlinks of which ~895 come from just two scraper domains** linking pre-Spark-Shark *credit-repair / RSS* content still indexed at `sparkshark.com/archives/2008…2011/*`, plus **~75 throwaway SEO-PBN spam domains** (`.shop` / `.top` / `.click` / `.agency` / `seoexpress.*` / `rankvance*` etc.), almost all first-seen Sept 2025 → May 2026. **Ahrefs itself spam-flags 82 of the 90 referring domains.** Only ~5 net-new *plausibly-real* referring domains came out of it. → **Recommend building a Google Disavow file for these 82 domains as a post-launch task** (see §1.6 + new action list item). This is not a cutover blocker, but it changes the "link equity" story: there is very little of it, and a meaningful slice of the profile is mild reputational/SEO risk.
+
+**This is still explicitly NOT a "final" list.** Naming stays "cumulative" because WP Engine access logs remain unrun (API-token rotation pending) and were not deliberately closed out. See §7.
 
 **Sources consolidated:**
 - ✅ Google Search Console (28 URLs / 17 domains) — Apr–May 2026 (May 10 manual export)
-- ✅ Bing Webmaster API (`GetUrlLinks`) — index returned 0 inbound links as of session 1; re-check in 24–72h
+- ✅ Bing Webmaster API (`GetUrlLinks`) — index returned 0 inbound links (re-probed 2026-05-11, no change). Bing's index is empty for sparkshark.com.
 - ✅ Open-web WebSearch pass (+10 Brock-owned/-referencing + 7 collision-filter rows)
-- ✅ **GA4 referrals (property 488680346) — 229 pageReferrer rows since 2025-05-09.** Resolved 2026-05-11 evening: the SA was added via v1alpha `accessBindings.create` after UI grant was blocked by a Workspace validation bug. The live `G-QK02QH3SWY` measurement ID lives in this property (under Brock's Flanco Electric GA4 account 347644522, NOT under Spark Shark Analytics). Full export: `ga4-referrals-property-488680346-all-history.csv`. 9 new domain rows merged into the cumulative CSV; see §1.5.
-- ⛔ **Ahrefs Webmaster Tools** — **NOT RUN.** Chrome MCP not connected. See "Blocked work" below.
-- 🟡 Wayback CDX enrichment — **DEFERRED.** Attempted via both `cdx/search/cdx` and `/wayback/available` endpoints this session. archive.org returned timeouts on unfiltered CDX queries and empty `archived_snapshots` responses on `/wayback/available` for known-archived URLs (verified against `wikipedia.org/wiki/Oklahoma_City` as a baseline — returned empty, indicating a degraded backend). Reattempt in a future session when archive.org is healthy.
-- ⛔ WP Engine access logs — **NOT RUN.** Pending API token rotation after 2026-05-11 leak.
+- ✅ GA4 referrals — live property 488680346 (`G-QK02QH3SWY`, 229 rows since 2025-05-09) + Flanco-legacy property 480290314 (153 rows). 13 net-new domain rows total. Full exports: `ga4-referrals-property-488680346-all-history.csv`, `ga4-referrals-property-480290314-flanco-legacy.csv`.
+- ✅ **Ahrefs Webmaster Tools — DONE 2026-05-12.** Scraped via Playwright MCP against Ahrefs' own `/v4/seBacklinks` + `/v4/seRefdomains` JSON endpoints (free-tier UI data; no paid API). Project `9816270` = verified `*.sparkshark.com/*` (subdomains, both protocols) — the superset of the `www.sparkshark.com` verified project (90 vs 71 referring domains). **1,000 of 1,080 URL-level backlinks** captured (free AWT hard-caps result offset at <1000; pulled traffic-DESC rows 0–999 + traffic-ASC rows 0–499 and de-duped by link-id, so the ~80 lowest-traffic rows we couldn't reach are more of the same two scraper domains). **All 90 referring domains** captured. Raw: `ahrefs-awt-backlinks-raw.json`, `ahrefs-awt-refdomains-raw.json`. CSVs: `ahrefs-awt-backlinks-scrape.csv` (1,000 rows, 29 cols), `ahrefs-awt-referring-domains-scrape.csv` (90 rows, 13 cols).
+- ✅ **Wayback CDX enrichment — DONE 2026-05-12.** archive.org was healthy this session (CDX + `/wayback/available` both responsive, ~7–12 s). Ran exact-URL CDX (`statuscode:200`) against all 143 distinct referring URLs in the master. **Only 2 had any archived snapshot:** `networx.com/c.flanco-electric` (1 snapshot, 2025-01-18 — confirms the P0 Flanco-era citation existed) and the Thumbtack listing (2 snapshots, Jul–Oct 2025). The other 141 returned 0 — consistent with the AWT-discovered links being overwhelmingly brand-new spam and the directory/social deep-URLs not being archived. `wayback_*` columns populated where hit; `wayback_snapshot_count_200 = 0` where confirmed absent.
+- ⛔ WP Engine access logs — **NOT RUN.** Blocked on WPE API-token rotation after the 2026-05-11 leak (1Password item `wp_engine`). Until then, server-side referrer headers are unavailable.
 - ⛔ Common Crawl Athena — **DEFERRED** per Brock decision.
 
 ---
 
-## 1. Topline numbers (cumulative as of 2026-05-11 evening)
+## 1. Topline numbers (cumulative as of 2026-05-12)
 
-| Tier | Count | What it means |
+| Tier | Rows | What it means |
 |---|---|---|
-| **P0** | 1 | Hard NAP/brand conflict — fix before DNS flip |
+| **P0** | 1 | Hard NAP/brand conflict — fix before DNS flip (`networx.com/c.flanco-electric`) |
 | **P1** | 8 | Verify NAP / claim profile before DNS flip |
-| **P2** | 19 | Post-launch cleanup (claim, verify, refresh bio) — +4 from GA4 LLM/new-domain finds |
-| **P3** | 19 | Co-citation noise + GA4 internal-platform referrers (Salesforce CRMs etc.) — monitor, no action |
-| **IGNORE** | 7 | Other "Spark Shark" businesses (Canada / Wisconsin / California) — filter from any future scrape |
-| **Total real backlinks (cumulative)** | **48** | (excludes IGNORE collisions) |
-| Confirmed Brock-owned | 21 | |
-| Confirmed not-owned | 17 | |
-| Unknown | **10** | mostly GA4-derived (LLM referrals, partner CRMs) — need on-page verification to confirm "real" backlinks vs. paste-and-click referrers |
+| **P2** | 24 | Post-launch cleanup (claim, verify bio) + 4 Ahrefs-discovered "verify the mention" candidates |
+| **P3** | 23 | Co-citation noise + GA4 internal-CRM referrers + Ahrefs feed-scraper junk — monitor, no action |
+| **DISAVOW** | 82 | **NEW.** Ahrefs-surfaced spam link-scheme / PBN domains (75) + legacy credit-repair / RSS scrapers (`rss2.com`, `debt-reduction-solution.com`, `mu.nu`). Recommend a Google Disavow file post-launch. |
+| **IGNORE** | 7 | Other "Spark Shark" businesses (Ontario / Wisconsin / California) — filter from any future scrape |
+| **Total rows** | **145** | across **129 unique referring domains** |
+| Real / actionable referring domains | **42** | i.e. non-DISAVOW, non-IGNORE (see §1.5 list) |
+| Confirmed Brock-owned | 21 | unchanged |
+| Confirmed not-owned | ~19 | |
+| Unknown (need on-page verification) | ~14 | mostly GA4-derived + 4 Ahrefs candidates |
 
-## 1.5. New domains from GA4 (added this session)
+**Reality check on "link equity":** for a DR-1 site, this is about what you'd expect — a thin profile of directory/citation listings + social profiles + a few editorial mentions, sitting under a pile of automated spam. The Ahrefs pull did **not** materially expand the useful inventory; it mostly revealed the spam surge + the domain's pre-Flanco history.
 
-9 net-new referring domains from GA4 property 488680346 (live `G-QK02QH3SWY`), not previously in GSC/WebSearch:
+## 1.5. The 42 real / actionable referring domains
 
-| Domain | GA4 sessions | Tier | Notable |
+`agreatertown.com · anationofmoms.com · bbb.org · best-electrician-moore.com · bluebbb.org · callupcontact.com · chamberofcommerce.com · chatgpt.com · claude.ai · coalitiontechnologies.com · dexknows.com · exchange.construction · facebook.com · featured.com · glassdoor.com · goodleap.lightning.force.com · hometalk.com · hypnosistacticsguide.com · mapquest.com · marketspacesales.com · medium.com · moranalytics.com · national.lightning.force.com · networx.com · pinterest.com · provenexpert.com · reddit.com · servicetitan.lightning.force.com · siteliner.com · smartelectricalservices.net · superpages.com · themusemark.com · theorg.com · thumbtack.com · tiktok.com · twitter.com · uscity.net · wpengine.com · x.com · yellowpages.com · yelp.com · yplocal.us`
+
+(Note: several of these are themselves noise — `*.lightning.force.com` are partner-CRM referrers not public backlinks; `yellowpages.com/superpages/dexknows` are category pages not Spark Shark profiles; `siteliner.com/coalitiontechnologies.com/wpengine.com` are tool/agency/staging referrers. The genuinely-Brock-owned subset and the high-trust citation profiles are enumerated in §2.)
+
+## 1.6. Ahrefs profile breakdown (the junk picture)
+
+| Bucket | Domains | Backlinks | Notes |
 |---|---|---|---|
-| chatgpt.com | 5 | P2 | **LLM referral — new class of backlink** |
-| claude.ai | 5 | P2 | **LLM referral — new class of backlink** |
-| moranalytics.com | 4 | P2 | SEO analytics tool — verify the mention |
-| bluebbb.org | 4 | P3 | BBB variant — verify it's not a scraper clone |
-| hometalk.com | 1 | P2 | DIY home community |
-| marketspacesales.com | 1 | P3 | Verify mention |
-| national.lightning.force.com | 5 | P3 | Internal CRM (Salesforce) — referrer, not a public backlink |
-| goodleap.lightning.force.com | 4 | P3 | GoodLeap financing partner CRM — same |
-| servicetitan.lightning.force.com | 3 | P3 | ServiceTitan internal CRM — same |
+| **`rss2.com`** | 1 | ~542 | Feed-republisher; scraped a feed titled "the spark shark" (first seen 2024-01) + old `sparkshark.com/archives/*`. Not editorial. |
+| **`debt-reduction-solution.com`** | 1 | ~353 | Credit-repair PBN linking the pre-Flanco `sparkshark.com/archives/2008–2011/*` "credit repair" blog content. Spam-flagged. |
+| **`mu.nu`** | 1 | 1 | Old blog-farm; spam-flagged; first seen 2020. |
+| **SEO-PBN spam surge** | ~75 | ~150 | `.shop` / `.top` / `.click` / `.agency` / `.info` / `.online` / `.website` / `.space` / `.site` / `.store` TLDs; `seoexpress.*`, `rankvance*`, `*backlink*`, `*seolink*` patterns. Anchors like "before finding seoexpress.com I spent too much on…". Almost all first-seen Sept 2025 → May 2026 — this is the dashboard's "+51 referring domains in 30 days." |
+| **Plausibly-real, Ahrefs-only** | ~5 | ~6 | `themusemark.com` ("common electrical emergencies and how to respond" — looks editorial), `anationofmoms.com`, `yplocal.us` (directory listing), `hypnosistacticsguide.com` (DR1, 2023), + a couple already in the master via other sources. **Tier P2 — open each, confirm the on-page link before treating as a real backlink.** |
+| **Already in master** | 4 | — | `bbb.org`, `agreatertown.com`, `moranalytics.com`, `best-electrician-moore.com` — `source_set` updated to include `awt`. |
 
-**Evidence caveat:** GA4 captures Referer headers, which include both clicks from `<a href>` (real backlinks) AND paste-and-click navigations (no link on the source page). The five `P2` domains above are **candidate backlinks pending on-page verification** — open each, search the rendered DOM/source for `sparkshark.com`. Once a verified on-page link exists, promote `confirmed_brock_owned`/risk tier. Don't claim "real backlink" without that evidence.
-
-GA4 also reconfirmed seven already-listed domains (facebook, yelp, mapquest, linkedin, featured.com etc.), strengthening the existing rows. Full domain rollup in `ga4-referrals-property-488680346-all-history.csv`.
+**Domain history confirmed via Wayback CDX (incidental finding):** `sparkshark.com` was an **online-poker / casino-affiliate spam site ~2006** (`/10-Best-Online-Casinos.html`, Texas-Holdem pages), then a **credit-repair affiliate blog ~2008–2011** (`/archives/.../credit-repair-myths-exposed/` etc.), before becoming Flanco Electric and then Spark Shark Electric. This is the root of the `rss2.com` + `debt-reduction-solution.com` link mass and is worth knowing for the post-launch disavow decision and for any "why does this domain have weird old indexed pages" question.
 
 ---
 
-## 2. Top 5 link equity assets (Brock-owned, high traffic potential)
+## 2. Top link-equity assets (Brock-owned / high-trust)
 
-1. **BBB Moore profile** — `bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075` (P1). High-trust signal. Plus a duplicate OKC `addressId/134759` profile that needs to be reconciled (one BBB business, two addresses).
-2. **Yelp** — `yelp.com/biz/spark-shark-electric-moore` (P1). High-value review platform; address 621 Sally Ct Moore matches Brock's. Claim if not already.
-3. **Thumbtack** — `thumbtack.com/ok/oklahoma-city/electrical-repairs/spark-shark-electric/service/489603470823817221` (P1). Lead-gen platform; claim listing.
-4. **Facebook Business page** — `facebook.com/sparksharkelectric/` (P1). Confirmed Brock-owned (OKC service area + 405-436-4776 + theteam@sparkshark.com per screenshot 2026-05-11).
-5. **Instagram** — `instagram.com/thesparkshark/` (P1). Confirmed Brock-owned (OKC Family Owned + 405-436-4776 + sparkshark.com link per screenshot). **Not** `@sparksharkelectric` — that handle is the Ontario business.
+1. **BBB Moore profile** — `bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075` (P1). DR 93 root. Plus a duplicate OKC `addressId/134759` profile that needs reconciling (one business, two addresses). Ahrefs confirms 2 live backlinks here.
+2. **Yelp** — `yelp.com/biz/spark-shark-electric-moore` (P1). 621 Sally Ct Moore matches Brock's NAP. Claim if not already.
+3. **Thumbtack** — `thumbtack.com/ok/oklahoma-city/electrical-repairs/spark-shark-electric/service/489603470823817221` (P1). Lead-gen platform; claim. (Wayback-archived Jul–Oct 2025.)
+4. **Facebook Business page** — `facebook.com/sparksharkelectric/` (P1). Confirmed Brock-owned.
+5. **Instagram** — `instagram.com/thesparkshark/` (P1). Confirmed Brock-owned. **Not** `@sparksharkelectric` (= the Ontario business).
 
-Honorable mentions: Chamber of Commerce, MapQuest, Pinterest, X/Twitter, TikTok (`@sparkshark.com`), ProvenExpert, theorg, Featured.com Brock profile, agreatertown, LinkedIn personal.
-
----
-
-## 3. Top 3 risks (must fix before DNS flip)
-
-1. **`networx.com/c.flanco-electric` (P0).** Last seen 2025-11-09. Active Flanco-era citation under the prior brand name. Conflicts with the Spark Shark public NAP. **Request takedown or rebrand.**
-2. **BBB duplicate addresses (P1).** Same Spark Shark business profiled at two distinct BBB URLs (`/moore/...` and `/oklahoma-city/...addressId/134759`). Reconcile to a single canonical address before launch so review signals aren't split.
-3. **Apex profile validation gap (P1).** Of the 21 Brock-owned profiles, 9 carry NAP that is presumed-correct but not verified row-by-row in this audit (Mapquest, Chamber of Commerce, Pinterest, ProvenExpert, Twitter/X, TikTok, theorg, agreatertown, Featured). At least one phone/address-mismatch on a top result will degrade post-cutover trust signals. **Action:** open each, screenshot, fix in place where Brock controls login.
+Honorable mentions: Chamber of Commerce, MapQuest, Pinterest, X/Twitter, TikTok (`@sparkshark.com`), ProvenExpert, theorg, Featured.com (Brock profile), agreatertown, LinkedIn (personal).
 
 ---
 
-## 4. P0/P1/P2/P3 action list
+## 3. Top risks (must fix before DNS flip)
+
+1. **`networx.com/c.flanco-electric` (P0).** Last seen 2025-11-09 (GSC); Wayback-archived 2025-01-18. Active Flanco-era citation under the prior brand. Conflicts with the Spark Shark public NAP. **Request takedown or rebrand.**
+2. **BBB duplicate addresses (P1).** Same business profiled at `/moore/...` and `/oklahoma-city/...addressId/134759`. Reconcile to one canonical address before launch.
+3. **Apex profile validation gap (P1).** ~9 of the 21 Brock-owned profiles carry presumed-correct-but-unverified NAP (Mapquest, Chamber, Pinterest, ProvenExpert, Twitter/X, TikTok, theorg, agreatertown, Featured). Open each, screenshot, fix in place.
+
+Not a cutover blocker but worth queuing: **the 82 spam/PBN/legacy-scraper domains → Google Disavow file** (Search Console → Disavow links tool, against `sc-domain:sparkshark.com`). The DISAVOW-tier rows in the CSV are the source list.
+
+---
+
+## 4. Action list
 
 ### P0 — Before DNS flip (1)
-- [ ] Request `networx.com/c.flanco-electric` takedown or rebrand to Spark Shark URL.
+- [ ] Request `networx.com/c.flanco-electric` takedown or rebrand to a Spark Shark URL.
 
 ### P1 — Before DNS flip (8)
 - [ ] Reconcile two BBB profiles into one canonical address.
-- [ ] Verify NAP on `chamberofcommerce.com/business-directory/oklahoma/moore/electrician/2034210950-spark-shark-electric`.
+- [ ] Verify NAP on `chamberofcommerce.com/.../spark-shark-electric`.
 - [ ] Verify NAP on `mapquest.com/us/oklahoma/spark-shark-electric-778761940`.
-- [ ] Claim/verify Yelp listing at `yelp.com/biz/spark-shark-electric-moore`.
-- [ ] Claim/verify Thumbtack listing at the long Spark Shark URL.
-- [ ] Verify Facebook page bio links + featured info (already confirmed owned).
-- [ ] Verify Instagram bio at `@thesparkshark` (already confirmed owned).
+- [ ] Claim/verify Yelp at `yelp.com/biz/spark-shark-electric-moore`.
+- [ ] Claim/verify Thumbtack at the long Spark Shark URL.
+- [ ] Verify Facebook page bio links + featured info (owned).
+- [ ] Verify Instagram bio at `@thesparkshark` (owned).
 
-### P2 — Post-launch cleanup (15)
-- [ ] Verify ownership and bio on Pinterest, ProvenExpert, theorg, agreatertown, Featured, TikTok.
-- [ ] Verify Twitter/X profile (treat `twitter.com` + `x.com` as one — same `@The_Spark_Shark` account).
-- [ ] Audit `uscity.net/listing/spark_shark_electric-12248252` — HTTP-only, request HTTPS upgrade.
-- [ ] Audit two `best-electrician-moore.com` listicles for accurate Spark Shark mention.
-- [ ] Audit `smartelectricalservices.net/business/spark-shark-electric-ok-91055/` (third-party directory).
-- [ ] Verify/claim `callupcontact.com/b/businessprofile/Spark_Shark_Electric/9878135` (ownership unknown).
-- [ ] Update LinkedIn personal at `linkedin.com/in/brock-flanary/` with current Spark Shark CEO title (per global-CLAUDE.md "Founder, CEO" rules — never "owner").
-- [ ] Confirm `glassdoor.com/job-listing/...spark-shark-electric...` reflects current hiring state.
+### P2 — Post-launch cleanup (24)
+- [ ] Verify ownership + bio on Pinterest, ProvenExpert, theorg, agreatertown, Featured, TikTok.
+- [ ] Verify Twitter/X profile (treat `twitter.com` + `x.com` as one — `@The_Spark_Shark`).
+- [ ] Audit `uscity.net/listing/...` — HTTP-only, request HTTPS upgrade.
+- [ ] Audit `best-electrician-moore.com` listicles for accurate Spark Shark mention.
+- [ ] Audit `smartelectricalservices.net/business/spark-shark-electric-ok-91055/`.
+- [ ] Verify/claim `callupcontact.com/.../Spark_Shark_Electric/9878135` (ownership unknown).
+- [ ] Update LinkedIn personal `linkedin.com/in/brock-flanary/` with current Spark Shark CEO title (never "owner").
+- [ ] Confirm Glassdoor job listing reflects current hiring state.
+- [ ] **NEW — Ahrefs "verify the mention" candidates:** open `themusemark.com` ("common electrical emergencies…"), `anationofmoms.com`, `yplocal.us`, `hypnosistacticsguide.com`; confirm whether a real on-page `<a href>` to sparkshark.com exists. Promote tier / ownership accordingly.
+- [ ] Verify GA4 "candidate backlink" mentions: chatgpt.com, claude.ai, moranalytics.com, hometalk.com, marketspacesales.com.
 
-### P3 — Monitor only (15)
-- [ ] No action on yellowpages.com category/competitor pages (co-citation noise, no Spark Shark profile).
-- [ ] No action on superpages.com / dexknows.com generic category pages.
-- [ ] No action on Medium / Reddit / Facebook group single-mention links.
+### P3 — Monitor only (23)
+- [ ] No action on yellowpages.com / superpages.com / dexknows.com category pages (co-citation noise).
+- [ ] No action on Medium / Reddit / Facebook-group single-mention links.
+- [ ] No action on `*.lightning.force.com` partner-CRM referrers, `siteliner.com`, `coalitiontechnologies.com`, `wpengine.com` staging — referrers, not public backlinks.
+- [ ] Watch `rss2.com` — feed republisher; harmless but noisy. (Also a disavow candidate — see DISAVOW.)
+
+### DISAVOW — Post-launch (82)
+- [ ] Build a Google Disavow file from the `risk_tier=DISAVOW` rows in `master-backlinks-cumulative.csv` and submit it for `sc-domain:sparkshark.com`. Includes: ~75 SEO-PBN spam domains (`.shop`/`.top`/`.click`/`.agency`/`seoexpress.*`/`rankvance*`/etc.), `rss2.com`, `debt-reduction-solution.com`, `mu.nu`. Re-pull Ahrefs AWT every ~30–60 days during the cutover window and re-run this filter — the spam surge looked active as of May 2026.
 
 ### IGNORE — Filter from future scrapes (7)
-Other Spark Shark businesses (Canada / Wisconsin / California). Cross-domain hit list maintained in the working CSV.
+Other Spark Shark businesses (Canada / Wisconsin / California).
 
 ---
 
-## 5. Blocked work — Brock-action required
+## 5. Blocked / remaining work
 
-### A. Chrome MCP for Ahrefs scrape — TOP-PRIORITY GAP
-- **Symptom:** Session 2's #1 deliverable was the Ahrefs AWT scrape via `mcp__claude-in-chrome__*` tools. ToolSearch confirms those tools are NOT in the deferred tool list for this session.
-- **Why it matters:** Free Ahrefs AWT typically surfaces 5–50× more referring URLs than GSC (~28 → potentially 100s–1000s). Without it the inventory is materially incomplete relative to what's discoverable.
-- **Fix path A (preferred):** install/connect the claude-in-chrome browser extension and re-run this session. Reference: https://www.claude.com/product/claude-code (extension listing).
-- **Fix path B (manual fallback):** Brock logs into `ahrefs.com/webmaster-tools` → Spark Shark site → **Backlinks** report → screenshot the table or paste rows into a CSV → drop file at `migration-evidence-pack/07-backlinks-and-citations/ahrefs-awt-manual.csv`. Repeat for **Referring Domains** report. Claude will dedup + merge into the master list.
-- **Fix path C (not recommended):** Ahrefs CSV export requires the Lite plan ($129/mo). Skip unless multi-month link-monitoring is desired.
+### A. Ahrefs AWT scrape — ✅ DONE 2026-05-12
+Scraped via Playwright MCP (`@playwright/mcp`, own persistent Chromium profile, Brock logged in once) against Ahrefs' `/v4/seBacklinks` + `/v4/seRefdomains` endpoints. Free-tier caps: result offset must stay <1000 per report (so 1,000 of 1,080 backlinks captured by combining traffic-DESC and traffic-ASC pages); referring-domains report has no such issue (all 90 captured). No paid API used. **Re-run procedure:** restart Claude Code in `/Users/brock/Projects/sparkshark-com`, ensure the `playwright` MCP is approved (the `.mcp.json` registering it was removed to `.mcp.json.removed-2026-05-11` — restore it or re-add `npx -y @playwright/mcp@latest`), navigate to `ahrefs.com` once to confirm the persisted login, then re-issue: dashboard → project 9816270 → it's all driven through the JSON API in `browser_evaluate` (see the merge/scrape scripts in `/tmp/` if still present, or just replay the input shapes documented in this session's transcript).
 
-### B. GA4 service-account access on Flanco properties — ✅ RESOLVED 2026-05-11 evening
-- **Original symptom:** SA returned 403 PERMISSION_DENIED on properties 480290314 + 488680346; UI add was blocked by a "doesn't match Google Account" Workspace validation bug.
-- **Resolution:** bypassed via `POST /v1alpha/properties/{id}/accessBindings` using a Brock-authorized OAuth token (analytics.manage.users scope, obtained via OAuth Playground). Both adds returned HTTP 200; SA now has Viewer on all 3 of Brock's GA4 properties.
-- **What we pulled:** 229 referral rows from property 488680346 (the LIVE property — stream `G-QK02QH3SWY` → `https://www.sparkshark.com/`, created 2025-05-09). Full export: `ga4-referrals-property-488680346-all-history.csv`. 9 net-new domains merged into the cumulative CSV (see §1.5).
-- **Side benefit realized:** confirmed that `G-QK02QH3SWY` lives in Brock-owned property 488680346 (under the Flanco Electric account, NOT under Spark Shark Analytics). This closes most of the analytics-ownership concern in `docs/migration/SOURCE-OF-TRUTH.md` §11 — only the GTM container layer remains unowned, the GA4 destination is owned.
-- **Note for future sessions:** if UI grant fails for an SA with a similar "doesn't match Google Account" error, use the v1alpha API path directly (v1beta returns 404 — accessBindings was kept at v1alpha).
+### B. GA4 service-account access — ✅ RESOLVED 2026-05-11
+SA `sparkshark-seo-reader@…` has Viewer on all 3 of Brock's GA4 properties (added via `v1alpha accessBindings.create` after the UI grant hit a Workspace validation bug). Live `G-QK02QH3SWY` confirmed to live in Brock-owned property 488680346 (under the Flanco Electric GA4 account, not Spark Shark Analytics). See `docs/migration/SOURCE-OF-TRUTH.md` §11.
 
-### C. WP Engine API token rotation — NOT DONE
-- **Symptom:** 1Password item `wp_engine` (vault SparkShark) last `updated_at` is 2026-05-02. The leak that triggered the rotation requirement happened 2026-05-11 (during this session's predecessor). Token has not been rotated.
-- **What this blocks:** WP Engine Public API access for access-log retrieval (`GET /v1/installs/{id}/logs`), which would surface server-side referrer headers and complement the GSC/AWT picture with real inbound-traffic data.
-- **Fix:** at `my.wpengine.com` → API Access → revoke the current token and generate a new one → update 1Password item `wp_engine` field `API_Token` (CONCEALED) and field `API Username` (the new UUID).
-- **Standing reminder:** the leaked Customer Portal **password** also needs rotation per Brock's 2026-05-11 evening memory note.
+### C. WP Engine API token rotation — NOT DONE (blocks access-log retrieval)
+1Password item `wp_engine` (vault SparkShark) — token + Customer Portal password both leaked 2026-05-11; not yet rotated. Fix: `my.wpengine.com` → API Access → revoke + regenerate → update `wp_engine` fields `API_Token` (CONCEALED) + `API Username`. Then `GET /v1/installs/{id}/logs` for last-90-days server-side referrers. **This is the last source between "cumulative" and "final."**
 
-### D. AWS Athena Common Crawl — deferred per Brock
-- Status unchanged from session 1. ~$5-15 query; covers open-web inbound links beyond Ahrefs/GSC. Reopen when ready.
+### D. AWS Athena Common Crawl — deferred per Brock (~$5–15 query).
 
 ---
 
 ## 6. Files in this directory (artifact map)
 
 ```
-master-backlinks-working.csv       # Mutable working log; rows appended as discovered
-master-backlinks-cumulative.csv    # 55 deduped rows, normalized URLs; NOT "final" — Ahrefs + WPE + Athena still pending
-ga4-referrals-property-488680346-all-history.csv  # 229 GA4 referral rows since 2025-05-09 (this session's add)
-BACKLINK-SUMMARY.md                # This document
-BACKLINK_RISK_FINDINGS.md          # May 10 GSC classification (source-of-truth for tiers)
-gsc-link-summary-by-domain.csv     # Per-domain rollup with risk tier + recommended action
-gsc-external-links-all-deduped.csv # Session 1 GSC export (28 URLs / 17 domains)
-gsc-links-external-*.csv           # Raw GSC exports (preserved for audit trail)
-gsc-links-internal-*.csv           # Internal-link exports (out of scope for backlink audit)
-SESSION-2-HANDOFF.md               # Session 1→2 handoff doc (kept for trace)
+master-backlinks-cumulative.csv         # 145 rows / 129 unique referring domains. Canonical. NOT "final" (WPE logs pending).
+master-backlinks-working.csv            # Mutable working log; rows appended as discovered (pre-Ahrefs state).
+ahrefs-awt-backlinks-raw.json           # Ahrefs /v4/seBacklinks dump — 1,000 of 1,080 URL-level rows, 29 cols, JSON.
+ahrefs-awt-refdomains-raw.json          # Ahrefs /v4/seRefdomains dump — all 90 referring domains, 13 cols, JSON.
+ahrefs-awt-backlinks-scrape.csv         # CSV form of the above backlinks dump.
+ahrefs-awt-referring-domains-scrape.csv # CSV form of the above refdomains dump.
+ga4-referrals-property-488680346-all-history.csv   # 229 GA4 referral rows (live property), since 2025-05-09.
+ga4-referrals-property-480290314-flanco-legacy.csv # 153 GA4 referral rows (Flanco-legacy property).
+BACKLINK-SUMMARY.md                     # This document.
+BACKLINK_RISK_FINDINGS.md               # May 10 GSC classification (source-of-truth for the original P0–P3 tiers).
+gsc-link-summary-by-domain.csv          # Per-domain rollup with risk tier + recommended action.
+gsc-external-links-all-deduped.csv      # Session 1 GSC export (28 URLs / 17 domains).
+gsc-links-external-*.csv                # Raw GSC exports (audit trail).
+gsc-links-internal-*.csv                # Internal-link exports (out of scope for backlink audit).
+SESSION-2-HANDOFF.md                    # Session 1→2 handoff (kept for trace).
 ```
 
-Script artifacts (not committed; live in `/tmp/sparkshark-backlinks/`):
-- `ga4_pull.py`, `ga4_check_all.py` — GA4 Data API pull scripts (rerun once access granted)
-- `wayback_fast.py`, `wayback_v3.py` — Wayback enrichment attempts (deferred; reattempt when archive.org is healthy)
-- `dedup_pipeline.py` — Normalization + dedup pipeline (idempotent; safe to rerun)
+Scripts (not committed; live in `/tmp/`): `merge_awt.py` (Ahrefs → master merge + classification + collision filter), `wayback_enrich.py` (CDX enrichment), plus the GA4 + dedup helpers from prior sessions.
 
 ---
 
-## 7. Confidence statement (updated 2026-05-11 evening)
+## 7. Confidence statement (updated 2026-05-12)
 
-This list is **cumulative across the sources we have reached so far** — GSC, Bing index, open-web search, and now the live GA4 property's referral history. It is **NOT final** and is **materially incomplete vs. what is discoverable** until at minimum:
-1. Ahrefs Webmaster Tools data is captured (via Chrome MCP scrape OR manual UI export by Brock OR Lite-tier CSV export)
-2. WP Engine access logs are pulled (after API token rotation)
+This list is **cumulative across the sources reached so far** — GSC, Bing index, open-web search, both relevant GA4 properties, **Ahrefs Webmaster Tools (full)**, and a Wayback CDX enrichment pass. It is **still NOT final**: the one remaining unreached source is **WP Engine server access logs** (blocked on API-token rotation), which would add real inbound-traffic referrer data. Common Crawl/Athena is deliberately deferred.
 
 **Evidence quality by row:**
-- The 39 rows from GSC + WebSearch are **verified backlinks** — each is an external page known to contain an `<a href>` pointing to sparkshark.com (either via GSC's link graph or via WebSearch confirmation).
-- The 9 new GA4-derived rows in §1.5 are **candidate backlinks** — they sent traffic to sparkshark.com with a non-empty `Referer` header, but on-page link presence has NOT been verified for any of them yet. The two LLM referrals (chatgpt.com, claude.ai) are highly likely to be real links (LLMs include URLs in answers) but should still be opened and confirmed. The partner-CRM rows (Salesforce Lightning) are referrers, not public-web backlinks.
-- The 7 collision-filter rows are confirmed NOT-Brock's businesses (Ontario / Wisconsin / California Spark Sharks).
+- The ~39 GSC + WebSearch rows are **verified backlinks** (external page known to contain an `<a href>` to sparkshark.com).
+- The ~13 GA4-derived rows are **candidate backlinks** (non-empty Referer header; on-page link not yet confirmed for most). The two LLM referrals (chatgpt.com, claude.ai) are very likely real; the `*.lightning.force.com` rows are partner-CRM referrers, not public backlinks.
+- The Ahrefs rows: the **82 DISAVOW-tier** are real links that *exist* but are spam/PBN/scraper junk (Ahrefs spam-flags them; we'd disavow them). The **4 "already in master"** strengthen existing rows. The **~4 P2 candidates** need on-page verification before counting.
+- The 7 collision-filter / IGNORE rows are confirmed NOT-Brock's businesses.
 
-The Brock-owned vs. third-party split is high-confidence (handles cross-checked against NAP). The collision filter has caught 7 wrong-business hits so far; rerun against any new source.
-
-**Floor / ceiling estimate:** treat the 48 real-backlink rows as the floor. Post-Ahrefs and post-WPE-log expansion typically lands between 80 and several hundred URLs for a local-service site like this. Final "no more sources to check" status will only be claimed once those two streams are either landed or deliberately closed out by Brock.
+**Floor / ceiling:** the *useful* editorial-and-citation backlink count is small — call it ~25–35 once the category-page / CRM-referrer / unverified noise is stripped out — and it is **unlikely to grow much**: Ahrefs (the deepest single source available for free) added essentially nothing real, and GSC's link graph is already captured. WP Engine logs may surface a handful more referrers. The bigger takeaway is the **82-domain spam tail** and the **domain's pre-Flanco history** — both post-launch cleanup items, neither a cutover blocker. "Final" naming will be applied only once the WPE-log stream is landed or Brock closes it out.
