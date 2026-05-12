@@ -156,12 +156,32 @@ Out of scope — these are tracked elsewhere and need their own discipline:
 
 ---
 
+## Next-session intake brief
+
+Five additional artifacts were authored 2026-05-11 and remain untracked in the working tree:
+
+- `audits/migration-readiness/2026-05-11-2013utc-reverification.md` — independent re-audit at 20:13 UTC; verdict unchanged from canonical 16:24 UTC run.
+- `audits/site-hygiene/2026-05-11-technical.md` + `2026-05-11-plain-english.md` — score 76/100; HIGH items: favicon = full logo scaled down, competing GTM containers (already resolved by Risk 6 option-3 decision above).
+- `docs/migration/coalition-findings.md` — Coalition Technologies Oct–Dec 2025 engagement detail; source of `GTM-W7V4RS7C` and `G-QK02QH3SWY`.
+- `docs/migration/online-presence-inventory.md` — ~25 external surfaces; 14 gaps catalogued.
+- `docs/migration/prior-seo-evidence.md` — cross-vendor umbrella (Strategy Zoo current, Coalition cancelled, Flanco-era pending separate session).
+
+Full triage plan (Phase 1 read-only triage → Phase 2 single action-item tracker → Phase 3 PR sequencing → Phase 4 out-of-scope flags) lives in `SOURCE-OF-TRUTH.md` §13. Do not duplicate that plan here; this section is a pointer + manifest only. Begin by reading the 5 artifacts; pause after Phase 1 to confirm commit-destination with Brock before staging anything.
+
+---
+
 ## Sources
 
 - `sparkshark-com/vercel.json`
 - `sparkshark-com/sitemap.xml`
 - `sparkshark-com/docs/migration/launch-gate.md`
+- `sparkshark-com/docs/migration/SOURCE-OF-TRUTH.md` (canonical state; §13 next-session intake brief)
+- `sparkshark-com/audits/migration-readiness/2026-05-11-2013utc-reverification.md` (untracked — independent 20:13 UTC vantage)
+- `sparkshark-com/audits/site-hygiene/2026-05-11-technical.md` + `2026-05-11-plain-english.md` (untracked — 76/100, 2 HIGH items)
+- `sparkshark-com/docs/migration/coalition-findings.md` (untracked — Coalition Oct–Dec 2025 detail)
+- `sparkshark-com/docs/migration/online-presence-inventory.md` (untracked — ~25 surfaces, 14 gaps)
+- `sparkshark-com/docs/migration/prior-seo-evidence.md` (untracked — cross-vendor SEO umbrella)
 - `/Users/brock/Downloads/migration-evidence-pack 6/04-google-search-console/`
 - `/Users/brock/Downloads/migration-evidence-pack 6/07-backlinks-and-citations/`
 - Cross-references: `.claude/rules/seo-geo-verification.md`, `.claude/rules/leverage-suggestions.md`
-- Memory entries: `project_cutover_2026_05_11`, `project_spark_shark_residential_only_constraint`, `project_cutover_reality_check_2026_05_10`
+- Memory entries: `project_cutover_2026_05_11`, `project_spark_shark_residential_only_constraint`, `project_cutover_reality_check_2026_05_10`, `project_sparkshark_gtm_ga4_ownership`
