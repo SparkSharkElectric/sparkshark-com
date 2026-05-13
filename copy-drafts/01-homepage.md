@@ -27,10 +27,10 @@ Spark Shark Electric is a licensed residential electrical contractor based in Mo
 - Live 24/7 emergency dispatch
 
 === SECTION: PROOF BAR (5 short proof statements between hero and emergency) ===
-- Residential-only — homes are all we work on
-- Flat-rate, written quotes — no trip fee, no diagnostic fee
+- Residential-only: homes are all we work on
+- Flat-rate, written quotes with no trip fee or diagnostic fee
 - Background-checked, licensed Oklahoma electricians
-- BBB Accredited Business — July 2025
+- BBB Accredited Business since July 2025
 - Live 24/7 phone for true emergencies
 
 === SECTION: EMERGENCY CALLOUT (above services grid) ===
@@ -45,10 +45,10 @@ Spark Shark Electric is a licensed residential electrical contractor based in Mo
 === SECTION: SERVICES GRID — 8 cards (each = title + 1 sentence) ===
 - Electrical Panel Upgrades — Replace outdated panels and fuse boxes. 100A to 200A service upgrades, sub-panels, and code-compliance work for older Oklahoma City homes.
 - Generator Installation — Whole-home Generac standby generators sized for your load, permitted, and professionally commissioned for Oklahoma's storm season.
-- Emergency Service — Burning smells, hot panels, sparking outlets, partial power loss — 24/7 dispatch routed to a licensed electrician.
+- Emergency Service — Burning smells, hot panels, sparking outlets, partial power loss. 24/7 dispatch routed to a licensed electrician.
 - Repair & Service — Flickering lights, dead outlets, repeated breaker trips, GFCI/AFCI faults. Diagnosed and fixed by licensed residential electricians.
 - Installation — Whole-home rewiring, new circuits, smart-home wiring, ceiling fans, and EV charger circuits.
-- Safety Inspections — Full residential electrical safety inspection with a written report — included with every paid service visit.
+- Safety Inspections — Full residential electrical safety inspection with a written report, included with every paid service visit.
 - EV Charger Installation — Level 2 (240V) home EV charging stations. Permit-pulled, code-compliant, and compatible with any UL-listed charger.
 - Lighting & Outlets — Indoor and outdoor lighting, ceiling fans, recessed cans, switches, GFCI/AFCI outlets, and dimmers.
 
@@ -58,21 +58,21 @@ Spark Shark Electric is a licensed residential electrical contractor based in Mo
 - Subhead: A modern, residential-only electrical company built around clear pricing, clean work, and licensed accountability.
 
 === SECTION: WHY US — 4 numbered items (title + sentence) ===
-- 1. Residential-only focus — We work on homes — not commercial buildings, not industrial. Every electrician on staff knows residential wiring, panels, and code.
-- 2. Flat-rate, written pricing — Every quote is written before any work begins. No trip charge, no diagnostic fee, no shop-supplies line item — the number we quote is the number you pay.
+- 1. Residential-only focus — We work on homes, not commercial buildings, not industrial. Every electrician on staff knows residential wiring, panels, and code.
+- 2. Flat-rate, written pricing — Every quote is written before any work begins. No trip charge, no diagnostic fee, no shop-supplies line item. The number we quote is the number you pay.
 - 3. Licensed and accountable — Background-checked, licensed Oklahoma electricians. No subcontractors for residential service work.
 - 4. Live 24/7 emergency dispatch — A real person answers the phone, day or night. Emergency calls go straight to a licensed electrician on call.
 
 === SECTION: SERVICE AREA (12 cities — chip row) ===
 - Eyebrow: Service area
 - H2: Serving Moore, OKC & the surrounding metro
-- Subhead: Spark Shark Electric in Moore, Oklahoma — covering homeowners across the OKC metropolitan area with the same flat-rate pricing in every city.
+- Subhead: Spark Shark Electric in Moore, Oklahoma, covering homeowners across the OKC metropolitan area with the same flat-rate pricing in every city.
 - Cities: Moore · Oklahoma City · Norman · Edmond · Yukon · Mustang · Midwest City · Del City · Choctaw · Newcastle · Noble · Blanchard
 
 === SECTION: REVIEWS / SOCIAL PROOF ===
 - Eyebrow: What homeowners say
 - H2: Reviews from real OKC-metro homeowners
-- Subhead: We don't paste fake testimonials and we don't ask customers to mention anyone by name. Read reviews on the platforms below — every link goes to a public, third-party profile you can verify.
+- Subhead: We don't paste fake testimonials and we don't ask customers to mention anyone by name. Read reviews on the platforms below. Every link goes to a public, third-party profile you can verify.
 - Google Business Profile [VERIFY: link to live GBP and current review count/star rating on publish day]
 - BBB profile [https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075]
 - Thumbtack profile [https://www.thumbtack.com/ok/oklahoma-city/electrical-repairs/spark-shark-electric/service/489603470823817221] [VERIFY: current Thumbtack review count and rating on publish day]
