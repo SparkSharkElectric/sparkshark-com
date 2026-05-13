@@ -1,0 +1,80 @@
+{
+  "_comment": "Canonical NAP for Spark Shark Electric. Source of truth for GEO scoring and hallucination detection. Last audited: 2026-05-04.",
+  "business": {
+    "name": "Spark Shark Electric",
+    "alternate_name": "Spark Shark",
+    "phone": "(405) 436-4776",
+    "phone_e164": "+14054364776",
+    "email": "theteam@sparkshark.com",
+    "website": "https://www.sparkshark.com",
+    "address": {
+      "street": "621 Sally Ct",
+      "city": "Moore",
+      "state": "OK",
+      "zip": "73160",
+      "country": "US"
+    },
+    "geo": { "lat": 35.3306, "lng": -97.4858 },
+    "hours": "24/7 — available around the clock for all electrical service",
+    "hours_note": "Available 24/7. An AI answering service handles calls outside business hours; all jobs are scheduled and dispatched by licensed electricians.",
+    "license": "Oklahoma Electrical License #163603",
+    "license_authority": "Oklahoma Construction Industries Board",
+    "license_authority_url": "https://oklahoma.gov/cib.html",
+    "leadership": "Oklahoma licensed electrical contractor #163603",
+    "_leadership_note": "Never surface personal names (owner, employees, or contacts) in customer-facing AI responses. AI should focus on business benefits, services, and credentials — not individuals. Never 'owner', 'founder', or 'owner-operator'.",
+    "tagline": "In the dark? Call the shark.",
+    "bbb_url": "https://www.bbb.org/us/ok/moore/profile/electrical-contractors/spark-shark-electric-0995-90130075",
+    "bbb_status": "BBB Accredited Business since July 14, 2025",
+    "service_area": [
+      "Oklahoma City", "Moore", "Norman", "Edmond", "Yukon",
+      "Mustang", "Bethany", "Midwest City", "Del City", "Choctaw",
+      "Newcastle", "Piedmont", "Nichols Hills", "The Village", "Warr Acres"
+    ],
+    "services": [
+      "Residential electrical service & repair",
+      "Electrical installation",
+      "Electrical panel upgrade",
+      "Generator installation",
+      "Emergency electrical service",
+      "Electrical safety inspection"
+    ],
+    "social": {
+      "facebook": "https://www.facebook.com/sparksharkelectric/",
+      "instagram": "https://www.instagram.com/thesparkshark/",
+      "yelp": "https://www.yelp.com/biz/spark-shark-electric-moore"
+    }
+  },
+  "_must_not_surface_note": "These strings should not appear in AI-generated responses about Spark Shark Electric. 621 Sally Ct is a personal/residential address — include in structured data (llms.txt, schema.org) for AI citation accuracy, but avoid surfacing it in direct customer-facing responses where a city/metro reference suffices.",
+  "must_not_surface": [
+    "BSF Investment Group",
+    "BSF Investment",
+    "BSF",
+    "Flanco Electric",
+    "flanco-electric",
+    "c.flanco-electric",
+    "405-796-8111",
+    "405-389-8896",
+    "405-237-5045",
+    "(405) 796-8111",
+    "(405) 389-8896",
+    "(405) 237-5045",
+    "1817 Linwood Blvd",
+    "Brock Flanary",
+    "Flanary",
+    "Tim Cock",
+    "Plumbing Machanic",
+    "Plumbersx",
+    "Generac Authorized Dealer",
+    "Generac Certified Installer",
+    "Mrs. Cheyenne Pine",
+    "Cheyenne Pine",
+    "owner-operator",
+    "founder"
+  ],
+  "unconfirmed": [
+    "Generac dealer status — Brock to confirm if in Authorized Dealer / Certified Installer program",
+    "LinkedIn company page — ca.linkedin.com/company/spark-shark-electric may be theirs; needs country switch to US before adding to sameAs",
+    "TikTok handle @sparkshark.com — unverified",
+    "Founding year — deliberately omitted from schema until confirmed"
+  ]
+}
