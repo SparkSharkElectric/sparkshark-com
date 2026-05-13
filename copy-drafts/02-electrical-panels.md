@@ -27,9 +27,9 @@ Spark Shark Electric in Moore, Oklahoma replaces residential electrical panels a
 === SECTION: When you need a panel upgrade ===
 - Your home has a **fuse box** (any age) or a panel rated below 100A.
 - **Breakers trip repeatedly**, even with normal use.
-- You're adding a **major load** — EV charger, hot tub, central A/C, electric range, or whole-home generator.
+- You're adding a **major load**: EV charger, hot tub, central A/C, electric range, or whole-home generator.
 - The panel is **corroded, rusted, or feels warm to the touch**.
-- Your panel brand is on a **known recall or insurance-flagged list** — Federal Pacific Stab-Lok, Zinsco/Sylvania, certain Challenger models, and aging Pushmatic panels.
+- Your panel brand is on a **known recall or insurance-flagged list**: Federal Pacific Stab-Lok, Zinsco/Sylvania, certain Challenger models, and aging Pushmatic panels.
 - Your **insurance carrier** asked for a panel swap as a condition of renewal.
 
 === SECTION: How we approach a panel upgrade ===
@@ -42,31 +42,31 @@ Spark Shark Electric in Moore, Oklahoma replaces residential electrical panels a
 - New main service panel sized for your load (200A is the most common upgrade target).
 - Meter base replacement if needed.
 - Whole-home surge protection at the panel.
-- All circuit re-terminations and labeling — every breaker labeled to its actual load.
+- All circuit re-terminations and labeling, with every breaker labeled to its actual load.
 - Code-required AFCI/GFCI breakers where applicable.
 - Permit and inspection.
 
 === SECTION: Common Oklahoma City–area panel scenarios ===
 - **Mid-century OKC homes** built in the 1960s–1970s often need a service upgrade to support modern HVAC and kitchen loads.
-- **Federal Pacific Stab-Lok and Zinsco** panels — well-documented failure modes (breakers that don't trip when they should) and replacement is increasingly insurance-driven.
-- **Older Moore and Norman neighborhoods** — meter bases and service masts that took storm damage often need replacement at the same time as the panel.
-- **EV charger and generator additions** — a 200A panel is usually the prerequisite, and we'll cross-quote the panel and the new equipment in one written estimate.
+- **Federal Pacific Stab-Lok and Zinsco** panels have well-documented failure modes (breakers that don't trip when they should), and replacement is increasingly insurance-driven.
+- **Older Moore and Norman neighborhoods**: meter bases and service masts that took storm damage often need replacement at the same time as the panel.
+- **EV charger and generator additions**: a 200A panel is usually the prerequisite, and we'll cross-quote the panel and the new equipment in one written estimate.
 
 === FAQ ===
 Q: How long does a panel upgrade take?
-A: Most residential panel upgrades are a single day, including the OG&E disconnect/reconnect window. More complex jobs — panel relocation, service mast replacement, sub-panel adds — can extend to a second day. We tell you the realistic schedule before we start.
+A: Most residential panel upgrades are a single day, including the OG&E disconnect/reconnect window. More complex jobs (panel relocation, service mast replacement, sub-panel adds) can extend to a second day. We tell you the realistic schedule before we start.
 
 Q: Do I need to be home?
-A: Yes — power to the home will be off for several hours during the upgrade. Plan for the day, and we'll coordinate the OG&E window to keep the outage as short as possible.
+A: Yes. Power to the home will be off for several hours during the upgrade. Plan for the day, and we'll coordinate the OG&E window to keep the outage as short as possible.
 
 Q: Do you pull the permit?
-A: Yes. Every panel job we do gets a permit and a city inspection. That's part of our flat rate — you don't pay the permit fee separately.
+A: Yes. Every panel job we do gets a permit and a city inspection. That's part of our flat rate, and you don't pay the permit fee separately.
 
 Q: Can you upgrade a Federal Pacific or Zinsco panel?
-A: Yes — and we usually recommend it. Both brands have well-documented failure modes, and many home insurance carriers now require replacement.
+A: Yes, and we usually recommend it. Both brands have well-documented failure modes, and many home insurance carriers now require replacement.
 
 Q: How much does a panel upgrade cost in Moore or OKC?
-A: It depends on the panel size you need, the condition of the meter base, the service mast, grounding/bonding, any code corrections, and any utility coordination. We give you a free site visit and a flat-rate written quote — no hidden fees and no pressure.
+A: It depends on the panel size you need, the condition of the meter base, the service mast, grounding/bonding, any code corrections, and any utility coordination. We give you a free site visit and a flat-rate written quote, with no hidden fees and no pressure.
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to Generators (panel upgrade often required for whole-home generator),

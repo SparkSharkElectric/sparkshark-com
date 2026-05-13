@@ -13,7 +13,7 @@
 Electrician Moore OK | Local Residential | Spark Shark Electric
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Spark Shark Electric is a Moore, Oklahoma-based residential electrician — panels, generators, repair, EV chargers, 24/7 emergency. Call (405) 436-4776.
+Spark Shark Electric is a Moore, Oklahoma-based residential electrician: panels, generators, repair, EV chargers, 24/7 emergency. Call (405) 436-4776.
 
 === H1 (main page heading — visible on page) ===
 Residential Electrician in Moore, OK
@@ -25,13 +25,13 @@ Spark Shark Electric is headquartered in Moore. Same flat-rate pricing for Moore
 Spark Shark Electric is a residential electrician headquartered in Moore, Oklahoma at [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]. Moore is our home base — every service we offer is delivered locally, the trucks are on the road in Moore neighborhoods every day, and there are no zone surcharges or separate dispatch fees for Moore addresses. Call (405) 436-4776 for service, repair, panel upgrades, generators, EV chargers, or a 24/7 electrical emergency.
 
 === SECTION: What we do for Moore homeowners ===
-- **Electrical panel upgrades** — service replacement, 100A→200A upgrades, sub-panels, code-compliance work.
-- **Whole-home Generac standby generators** — sized for Oklahoma storm season.
-- **24/7 emergency electrical service** — burning smells, hot panels, sparking outlets, partial power loss.
-- **Electrical repair** — flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
-- **Installation** — new circuits, rewires, smart-home, EV chargers, ceiling fans.
-- **Safety inspections** — pre-purchase, pre-renovation, insurance-required. Free with any paid service call.
-- **Lighting** — recessed indoor, outdoor landscape, security, soffit.
+- **Electrical panel upgrades**: service replacement, 100A→200A upgrades, sub-panels, code-compliance work.
+- **Whole-home Generac standby generators**, sized for Oklahoma storm season.
+- **24/7 emergency electrical service**: burning smells, hot panels, sparking outlets, partial power loss.
+- **Electrical repair**: flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
+- **Installation**: new circuits, rewires, smart-home, EV chargers, ceiling fans.
+- **Safety inspections**: pre-purchase, pre-renovation, insurance-required. Free with any paid service call.
+- **Lighting**: recessed indoor, outdoor landscape, security, soffit.
 
 === SECTION: Why we cover Moore ===
 - **Moore-headquartered, locally led.** Spark Shark Electric is led by Founder and CEO Brock Flanary. We live and work in the same neighborhoods we service.
@@ -43,7 +43,7 @@ Q: Where in Moore are you based?
 A: [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]. Headquartered in Moore.
 
 Q: Do you handle Moore permits and inspections?
-A: Yes — we pull the permit and schedule the City of Moore inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Moore permit/inspection language].
+A: Yes. We pull the permit and schedule the City of Moore inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Moore permit/inspection language].
 
 Q: How fast can you get to my Moore home?
 A: Moore is our home base, so response is typically as fast as we can arrive on the street. We'll give you a realistic ETA when you call. [VERIFY: emergency response/dispatch promise].
