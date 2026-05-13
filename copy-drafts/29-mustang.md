@@ -13,25 +13,25 @@
 Electrician Mustang OK | Panels & Lighting | Spark Shark
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Licensed residential electrician serving Mustang, OK — panel upgrades, generators, outlets, lighting, repair, 24/7 emergency. Spark Shark Electric.
+Licensed residential electrician serving Mustang, OK: panel upgrades, generators, outlets, lighting, repair, 24/7 emergency. Spark Shark Electric.
 
 === H1 (main page heading — visible on page) ===
 Residential Electrician in Mustang, OK
 
 === HERO SUBTITLE (1–2 sentences under H1) ===
-Licensed residential electrical service for Mustang — panel upgrades, generators, outlets, lighting, and 24/7 emergency dispatch.
+Licensed residential electrical service for Mustang: panel upgrades, generators, outlets, lighting, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
 Spark Shark Electric is a licensed residential electrician serving Mustang, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Mustang's growing residential neighborhoods with the same flat-rate, written pricing as every other city in the OKC metro — no zone surcharges, no separate dispatch fees, and a real, live phone for 24/7 emergencies. Call (405) 436-4776.
 
 === SECTION: What we do for Mustang homeowners ===
-- **Electrical panel upgrades** — service replacement, 100A→200A, sub-panels.
-- **Whole-home Generac generators** — sized to your load for Oklahoma storm season.
-- **Switches, outlets, and circuit additions** — GFCI, AFCI, USB, smart switches, tamper-resistant.
-- **Indoor and outdoor lighting** — recessed cans, under-cabinet, dimmers, landscape, security.
-- **Electrical repair** — flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
+- **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels.
+- **Whole-home Generac generators**: sized to your load for Oklahoma storm season.
+- **Switches, outlets, and circuit additions**: GFCI, AFCI, USB, smart switches, tamper-resistant.
+- **Indoor and outdoor lighting**: recessed cans, under-cabinet, dimmers, landscape, security.
+- **Electrical repair**: flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
 - **24/7 emergency electrical service.**
-- **Safety inspections** — free with any paid service call.
+- **Safety inspections**: free with any paid service call.
 
 === SECTION: Why we cover Mustang ===
 - **Growing residential community.** Mustang's newer subdivisions need lighting upgrades, additional circuits, and panel headroom for modern loads.
@@ -46,7 +46,7 @@ Q: Do you charge a separate dispatch fee for Mustang?
 A: No. Same flat-rate pricing as every other OKC-metro city. No trip charge, no diagnostic fee.
 
 Q: Do you handle Mustang permits and inspections?
-A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Mustang permit/inspection language].
+A: Yes. We pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Mustang permit/inspection language].
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to Electrical Panels, Generators, Switches & Outlets, Indoor Lighting, Outdoor Lighting,

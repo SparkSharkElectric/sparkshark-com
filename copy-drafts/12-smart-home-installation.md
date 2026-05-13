@@ -23,21 +23,21 @@ Smart switches, structured cable, in-wall A/V, hubs, and whole-home smart wiring
 Spark Shark Electric in Moore, Oklahoma installs smart-home wiring and devices for OKC-metro homeowners. Smart-home wiring goes wrong fastest when someone treats it as cheap low-voltage work that anyone can run. We treat it like real electrical: code, neutrals, ground, proper boxes, structured cable, and a labeling scheme you can actually follow a year later.
 
 === SECTION: What we install ===
-- **Smart switches and dimmers** — Lutron Caseta, Lutron RA, Leviton Decora Smart, and other major brands.
-- **Structured cabling** — Cat6/Cat6a runs to home offices, A/V locations, and Wi-Fi access points.
-- **In-wall A/V** — speaker pre-wires, projector pre-wires, recessed boxes for TVs.
-- **Hubs and panels** — central control panels, low-voltage cabinets, and cable management.
-- **Smoke/CO interconnection** — modern hardwired systems with smart hub integration.
+- **Smart switches and dimmers**: Lutron Caseta, Lutron RA, Leviton Decora Smart, and other major brands.
+- **Structured cabling**: Cat6/Cat6a runs to home offices, A/V locations, and Wi-Fi access points.
+- **In-wall A/V**: speaker pre-wires, projector pre-wires, recessed boxes for TVs.
+- **Hubs and panels**: central control panels, low-voltage cabinets, and cable management.
+- **Smoke/CO interconnection**: modern hardwired systems with smart hub integration.
 
 === FAQ ===
 Q: Do smart switches require a neutral?
-A: Most do. Older Moore and OKC homes often lack neutrals at the switch box — we can pull a neutral, or recommend a no-neutral model where it makes sense.
+A: Most do. Older Moore and OKC homes often lack neutrals at the switch box, we can pull a neutral, or recommend a no-neutral model where it makes sense.
 
 Q: Should I run Wi-Fi cable?
 A: If you're opening walls, run Cat6 to where you'd ever consider a wireless access point. It's the cheapest insurance for future bandwidth.
 
 Q: What about whole-home audio?
-A: Yes — speaker pre-wires, in-wall and in-ceiling speakers, and amplifier locations. We wire it; you bring your preferred system.
+A: Yes. Speaker pre-wires, in-wall and in-ceiling speakers, and amplifier locations. We wire it; you bring your preferred system.
 
 Q: Can you tie smart devices into my hub?
 A: We do the electrical wiring side of smart-home installs. For complex automation programming, we partner with smart-home integrators in the metro.

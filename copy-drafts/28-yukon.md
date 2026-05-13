@@ -13,25 +13,25 @@
 Electrician Yukon OK | Generators & Panels | Spark Shark
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Licensed residential electrician serving Yukon, OK — generators, panel upgrades, EV chargers, repair, 24/7 emergency. Spark Shark Electric. (405) 436-4776.
+Licensed residential electrician serving Yukon, OK: generators, panel upgrades, EV chargers, repair, 24/7 emergency. Spark Shark Electric. (405) 436-4776.
 
 === H1 (main page heading — visible on page) ===
 Residential Electrician in Yukon, OK
 
 === HERO SUBTITLE (1–2 sentences under H1) ===
-Licensed residential electrical service for Yukon — whole-home generators, panel upgrades, EV chargers, and 24/7 emergency dispatch.
+Licensed residential electrical service for Yukon: whole-home generators, panel upgrades, EV chargers, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
 Spark Shark Electric is a licensed residential electrician serving Yukon, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Yukon's growing residential subdivisions and established neighborhoods alike — whole-home Generac standby generators for Oklahoma storms, 200A panel upgrades to support modern loads, and Level 2 EV charger installs for the longer Yukon-to-OKC commute. Flat-rate, written pricing on every job. Call (405) 436-4776.
 
 === SECTION: What we do for Yukon homeowners ===
-- **Whole-home Generac generators** — sized to your load for ice storms, severe storms, and prolonged grid outages.
-- **Electrical panel upgrades** — service replacement, 100A→200A, sub-panels.
-- **Level 2 EV charger installation** — any UL-listed brand.
-- **24/7 emergency electrical service** — burning smells, hot panels, sparking outlets.
-- **Electrical repair** — flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
-- **Outdoor and indoor lighting** — landscape, security, recessed, under-cabinet.
-- **Safety inspections** — free with any paid service call.
+- **Whole-home Generac generators**: sized to your load for ice storms, severe storms, and prolonged grid outages.
+- **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels.
+- **Level 2 EV charger installation**: any UL-listed brand.
+- **24/7 emergency electrical service**: burning smells, hot panels, sparking outlets.
+- **Electrical repair**: flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
+- **Outdoor and indoor lighting**: landscape, security, recessed, under-cabinet.
+- **Safety inspections**: free with any paid service call.
 
 === SECTION: Why we cover Yukon ===
 - **Suburban growth.** Yukon has grown steadily — newer subdivisions add EV chargers and generators, established neighborhoods need panel upgrades.
@@ -46,7 +46,7 @@ Q: Are you licensed to work in Yukon?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 
 Q: Do you handle Yukon permits and inspections?
-A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Yukon permit/inspection language].
+A: Yes. We pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Yukon permit/inspection language].
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to Generators, Electrical Panels, EV Charger Installation, Emergency Electrician,

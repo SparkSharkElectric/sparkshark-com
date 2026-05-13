@@ -37,10 +37,10 @@ Q: How long does a fan installation take?
 A: Replacing an existing fan: about an hour. Installing a new fan where there's no existing fixture: 2–4 hours typically.
 
 Q: Can you install a fan in a room with no overhead light?
-A: Yes — we run new wire from a nearby switched circuit, install the fan-rated box, and add a wall switch.
+A: Yes. We run new wire from a nearby switched circuit, install the fan-rated box, and add a wall switch.
 
 Q: Do you take the old fan?
-A: Yes — we haul off the old unit as part of the installation.
+A: Yes. We haul off the old unit as part of the installation.
 
 Q: Smart fan or regular?
 A: Up to you. Smart fans are reliable now and worth it if you'd actually use the app or schedule features.

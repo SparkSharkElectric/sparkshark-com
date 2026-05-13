@@ -38,13 +38,13 @@ Q: How often should I replace smoke detectors?
 A: Every 10 years, regardless of whether the test button still works. The sensor degrades. The manufacture date is on the back of the unit.
 
 Q: Can you interconnect older detectors?
-A: Sometimes — depends on whether the existing wiring includes the third (interconnect) conductor. We check during the visit.
+A: Sometimes. Depends on whether the existing wiring includes the third (interconnect) conductor. We check during the visit.
 
 Q: Do I need carbon monoxide detectors?
 A: If you have any gas appliances, a fireplace, or an attached garage, carbon monoxide detectors are required by Oklahoma residential code near every sleeping area.
 
 Q: Are combination smoke/CO detectors okay?
-A: Yes — they're a good option for placement near sleeping areas and meet both requirements with a single unit.
+A: Yes. They're a good option for placement near sleeping areas and meet both requirements with a single unit.
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to Electrical Inspections, Switches & Outlets (often replaced together),

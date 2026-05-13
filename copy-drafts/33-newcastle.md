@@ -13,25 +13,25 @@
 Electrician Newcastle OK | Generators & Panels | Spark Shark
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Licensed residential electrician serving Newcastle, OK — panel upgrades, generators, outdoor lighting, EV chargers, 24/7 emergency. Spark Shark Electric.
+Licensed residential electrician serving Newcastle, OK: panel upgrades, generators, outdoor lighting, EV chargers, 24/7 emergency. Spark Shark Electric.
 
 === H1 (main page heading — visible on page) ===
 Residential Electrician in Newcastle, OK
 
 === HERO SUBTITLE (1–2 sentences under H1) ===
-Licensed residential electrical service for Newcastle — panel upgrades, whole-home generators, outdoor lighting, EV chargers, and 24/7 emergency dispatch.
+Licensed residential electrical service for Newcastle: panel upgrades, whole-home generators, outdoor lighting, EV chargers, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
 Spark Shark Electric is a licensed residential electrician serving Newcastle, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Newcastle's growing residential corridor with the services those homes most often request — whole-home Generac generators, 200A panel upgrades, Level 2 EV charger installs, and outdoor lighting for newer subdivisions and ranch-style properties. Same flat-rate pricing as the rest of the OKC metro. Call (405) 436-4776.
 
 === SECTION: What we do for Newcastle homeowners ===
-- **Electrical panel upgrades** — service replacement, 100A→200A, sub-panels.
-- **Whole-home Generac generators** — sized to your load for Oklahoma storm season.
-- **Outdoor and landscape lighting** — path, security, soffit, deck, architectural.
-- **Level 2 EV charger installation** — any UL-listed brand.
+- **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels.
+- **Whole-home Generac generators**: sized to your load for Oklahoma storm season.
+- **Outdoor and landscape lighting**: path, security, soffit, deck, architectural.
+- **Level 2 EV charger installation**: any UL-listed brand.
 - **24/7 emergency electrical service.**
-- **Electrical repair** — flickering lights, dead outlets, breaker trips.
-- **Safety inspections** — free with any paid service call.
+- **Electrical repair**: flickering lights, dead outlets, breaker trips.
+- **Safety inspections**: free with any paid service call.
 
 === SECTION: Why we cover Newcastle ===
 - **Growing residential demand.** Newcastle's residential growth means a steady mix of panel upgrades for older homes and new-construction adds (EV chargers, lighting, smart switches) for newer ones.
@@ -46,7 +46,7 @@ Q: How much does a generator install cost in Newcastle?
 A: It depends on generator size, gas-line work, ATS complexity, and any panel modifications. We give a written flat-rate quote after a free site visit.
 
 Q: Do you handle Newcastle permits and inspections?
-A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Newcastle permit/inspection language].
+A: Yes. We pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Newcastle permit/inspection language].
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to Generators, Electrical Panels, EV Charger Installation, Outdoor Lighting,

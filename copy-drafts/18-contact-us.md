@@ -13,13 +13,13 @@
 Contact Spark Shark Electric | Moore & OKC
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Contact Spark Shark Electric — call (405) 436-4776 24/7 or send a service request. Licensed Oklahoma residential electrician serving Moore and the OKC metro.
+Contact Spark Shark Electric: call (405) 436-4776 24/7 or send a service request. Licensed Oklahoma residential electrician serving Moore and the OKC metro.
 
 === H1 (main page heading — visible on page) ===
-Contact Spark Shark Electric — Moore & Oklahoma City
+Contact Spark Shark Electric: Moore & Oklahoma City
 
 === HERO SUBTITLE (1–2 sentences under H1) ===
-Call any time. Email any time. Or send a service request — we'll respond same-day.
+Call any time. Email any time. Or send a service request, and we'll respond same-day.
 
 === SECTION: DIRECT CONTACT BLOCK ===
 - Phone heading: Phone
@@ -37,7 +37,7 @@ Call any time. Email any time. Or send a service request — we'll respond same-
 - Form fields: Name (required) · Phone (required) · Email (required) · City (optional) · Message (required, placeholder: 'Briefly describe the electrical issue or project...')
 - Submit button: Request service
 - Privacy line: We don't sell your information. We use what you submit only to respond to your service request.
-- Below button: Or skip the form: call (405) 436-4776 — we answer 24/7.
+- Below button: Or skip the form: call (405) 436-4776, we answer 24/7.
 - NOTE: Form action endpoint pending Formspree form ID (Brock to provide before launch).
 
 <!-- INTERNAL LINK SUGGESTIONS:

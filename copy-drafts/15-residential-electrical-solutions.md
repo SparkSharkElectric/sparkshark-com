@@ -23,19 +23,19 @@ Everything we do, in one place — built around homes, homeowners, and the elect
 Spark Shark Electric in Moore, Oklahoma is a residential-only electrical contractor serving the OKC metro. That focus matters: we know homes, we know the wiring patterns of older OKC and Moore neighborhoods and the modern panels in newer Edmond and Yukon subdivisions, and we don't try to cross-sell you commercial-style work you don't need. Every job is flat-rate and written before work begins.
 
 === SECTION: Categories of work we do ===
-- **Panel upgrades** — service replacement, sub-panels, code upgrades.
-- **Generator installation** — whole-home Generac standby with automatic transfer.
-- **Emergency electrical service** — 24/7 dispatch.
-- **Repair** — flickering, dead outlets, breaker trips, GFCI/AFCI faults.
-- **Installation** — new circuits, rewires, smart-home, EV chargers.
-- **Safety inspections** — pre-purchase, pre-renovation, insurance-required.
-- **Smoke + CO detectors** — hardwired interconnected systems.
-- **Switches and outlets** — replacements, additions, GFCI/AFCI.
-- **Outdoor lighting** — landscape, security, architectural.
-- **Indoor lighting** — recessed, under-cabinet, pendants, dimmers.
-- **Ceiling fans** — replacements and new installs.
-- **EV chargers** — Level 2 home stations.
-- **Smart home** — smart switches, structured cable, A/V.
+- **Panel upgrades**: service replacement, sub-panels, code upgrades.
+- **Generator installation**: whole-home Generac standby with automatic transfer.
+- **Emergency electrical service**: 24/7 dispatch.
+- **Repair**: flickering, dead outlets, breaker trips, GFCI/AFCI faults.
+- **Installation**: new circuits, rewires, smart-home, EV chargers.
+- **Safety inspections**: pre-purchase, pre-renovation, insurance-required.
+- **Smoke + CO detectors**: hardwired interconnected systems.
+- **Switches and outlets**: replacements, additions, GFCI/AFCI.
+- **Outdoor lighting**: landscape, security, architectural.
+- **Indoor lighting**: recessed, under-cabinet, pendants, dimmers.
+- **Ceiling fans**: replacements and new installs.
+- **EV chargers**: Level 2 home stations.
+- **Smart home**: smart switches, structured cable, A/V.
 
 === FAQ ===
 Q: Do you do commercial electrical work?

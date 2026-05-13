@@ -13,25 +13,25 @@
 Electrician Choctaw OK | Panels & Generators | Spark Shark
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Licensed residential electrician serving Choctaw, OK — panel upgrades, whole-home generators, EV chargers, outdoor lighting, 24/7 emergency. Spark Shark Electric.
+Licensed residential electrician serving Choctaw, OK: panel upgrades, whole-home generators, EV chargers, outdoor lighting, 24/7 emergency. Spark Shark Electric.
 
 === H1 (main page heading — visible on page) ===
 Residential Electrician in Choctaw, OK
 
 === HERO SUBTITLE (1–2 sentences under H1) ===
-Licensed residential electrical service for Choctaw — panel upgrades, whole-home generators, outdoor lighting, EV chargers, and 24/7 emergency dispatch.
+Licensed residential electrical service for Choctaw: panel upgrades, whole-home generators, outdoor lighting, EV chargers, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Choctaw, Oklahoma. Headquartered in Moore — about 30–35 minutes via I-40 East — we cover Choctaw's residential mix: established neighborhoods near NE 23rd that often need 100A→200A panel upgrades, and newer subdivisions adding EV chargers, smart panels, and outdoor lighting. Same flat-rate pricing as the rest of the OKC metro. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Choctaw, Oklahoma. Headquartered in Moore, about 30–35 minutes via I-40 East, we cover Choctaw's residential mix: established neighborhoods near NE 23rd that often need 100A→200A panel upgrades, and newer subdivisions adding EV chargers, smart panels, and outdoor lighting. Same flat-rate pricing as the rest of the OKC metro. Call (405) 436-4776.
 
 === SECTION: What we do for Choctaw homeowners ===
-- **Electrical panel upgrades** — service replacement, 100A→200A, sub-panels, Federal Pacific/Zinsco swaps.
-- **Whole-home Generac generators** — sized for Oklahoma storm season; permitted, inspected, commissioned.
-- **Level 2 EV charger installation** — any UL-listed brand.
-- **Outdoor and landscape lighting** — soffit, path, security, deck.
+- **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels, Federal Pacific/Zinsco swaps.
+- **Whole-home Generac generators**: sized for Oklahoma storm season; permitted, inspected, commissioned.
+- **Level 2 EV charger installation**: any UL-listed brand.
+- **Outdoor and landscape lighting**: soffit, path, security, deck.
 - **24/7 emergency electrical service.**
-- **Electrical repair** — flickering lights, dead outlets, breaker trips, hot panels.
-- **Safety inspections** — free with any paid service call.
+- **Electrical repair**: flickering lights, dead outlets, breaker trips, hot panels.
+- **Safety inspections**: free with any paid service call.
 
 === SECTION: Why we cover Choctaw ===
 - **Mix of older + newer housing.** Choctaw spans 1980s neighborhoods (often still on original 100A panels) and newer subdivisions where EV charger installs and smart-home wiring are the common ask. We do both.
@@ -46,7 +46,7 @@ Q: How long does a panel upgrade in Choctaw take?
 A: Most are a single day, including the OG&E disconnect/reconnect window. We handle the permit and the inspection as part of the flat rate.
 
 Q: Do you handle Choctaw permits and inspections?
-A: Yes — every job that needs a permit gets one as part of our flat rate. [VERIFY: City of Choctaw permit/inspection language].
+A: Yes. Every job that needs a permit gets one as part of our flat rate. [VERIFY: City of Choctaw permit/inspection language].
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to Generators, Electrical Panels, EV Charger Installation, Outdoor Lighting,

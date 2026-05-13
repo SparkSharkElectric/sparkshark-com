@@ -13,24 +13,24 @@
 Electrician Norman OK | 24/7 Residential | Spark Shark
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Licensed residential electrician serving Norman, OK — evening, weekend, and 24/7 emergency dispatch. Panels, repair, generators. Spark Shark Electric.
+Licensed residential electrician serving Norman, OK: evening, weekend, and 24/7 emergency dispatch. Panels, repair, generators. Spark Shark Electric.
 
 === H1 (main page heading — visible on page) ===
 Residential Electrician in Norman, OK
 
 === HERO SUBTITLE (1–2 sentences under H1) ===
-Licensed residential electrical service for Norman — including evenings, weekends, and live 24/7 emergency dispatch.
+Licensed residential electrical service for Norman: including evenings, weekends, and live 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
 Spark Shark Electric is a licensed residential electrician serving Norman, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Norman with the same flat-rate pricing as the rest of the OKC metro — and a real, live, 24/7 phone for nights and weekends. Electrical issues don't keep business hours, and you shouldn't have to wait until Monday morning for a Mon–Fri shop to open. Call (405) 436-4776.
 
 === SECTION: What we do for Norman homeowners ===
-- **Electrical panel upgrades** — service replacement, 100A→200A, sub-panels.
-- **Whole-home Generac generators** — sized to your load.
-- **24/7 emergency electrical service** — including evenings, weekends, and holidays.
-- **Electrical repair** — flickering lights, dead outlets, breaker trips, GFCI faults.
-- **Installation** — new circuits, rewires, smart-home, EV chargers.
-- **Safety inspections** — free with any paid service call.
+- **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels.
+- **Whole-home Generac generators**: sized to your load.
+- **24/7 emergency electrical service**: including evenings, weekends, and holidays.
+- **Electrical repair**: flickering lights, dead outlets, breaker trips, GFCI faults.
+- **Installation**: new circuits, rewires, smart-home, EV chargers.
+- **Safety inspections**: free with any paid service call.
 
 === SECTION: Why we cover Norman ===
 - **Real evening and weekend availability.** Norman homeowners often run into electrical issues after work or on weekends — when many local shops are closed. Spark Shark Electric is a residential-only contractor with live 24/7 dispatch.
@@ -45,7 +45,7 @@ Q: Are you licensed to work in Norman?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603 active and in good standing]. Licensed and insured.
 
 Q: Do you handle Norman permits and inspections?
-A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Norman permit/inspection language].
+A: Yes. We pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Norman permit/inspection language].
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to every service page (especially Emergency, Panels, Generators),

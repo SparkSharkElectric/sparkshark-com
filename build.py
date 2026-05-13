@@ -554,7 +554,7 @@ def service_area_map_block():
     <div style="text-align:center;margin-bottom:24px;">
       <span class="eyebrow" style="color:#FFD700;">Where we work</span>
       <h2 id="svc-map-h" style="color:#fff;margin:8px 0 4px;font-size:1.75rem;">Service area at a glance</h2>
-      <p style="color:#94B6D8;margin:0;">12 OKC-metro cities — typically a 30-minute drive from Moore HQ.</p>
+      <p style="color:#94B6D8;margin:0;">12 OKC-metro cities, typically a 30-minute drive from Moore HQ.</p>
     </div>
     <div style="border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.4);">
     <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"
@@ -626,7 +626,7 @@ def service_area_map_block():
     </svg>
     </div>
     <p style="text-align:center;color:#94B6D8;margin:20px 0 0;font-size:0.95rem;">
-      Don't see your city? Call us at <a href="tel:+14054364776" style="color:#FFD700;">(405) 436-4776</a> — we cover most of the OKC metro and may still be able to help.
+      Don't see your city? Call us at <a href="tel:+14054364776" style="color:#FFD700;">(405) 436-4776</a>. We cover most of the OKC metro and may still be able to help.
     </p>
   </div>
 </section>'''
@@ -676,7 +676,7 @@ def services_grid_block():
     services = [
         ("⚡", "Electrical Panel Upgrades", "Replace outdated panels and fuse boxes. Bring your home up to current code, safely.", "/electrical-panels/"),
         ("🔋", "Generator Installation", "Whole-home standby generators sized for your load. Permitted, professionally commissioned.", "/generators/"),
-        ("🚨", "Emergency Service", "Burning smells, hot panels, sparking outlets — answered 24/7, dispatched to a licensed electrician.", "/services/emergency-electrician/"),
+        ("🚨", "Emergency Service", "Burning smells, hot panels, sparking outlets. Answered 24/7, dispatched to a licensed electrician.", "/services/emergency-electrician/"),
         ("🛠️", "Repair &amp; Service", "Flickering lights, dead outlets, repeated breaker trips, GFCI faults. Diagnosed and fixed.", "/electrical-repair-and-service/"),
         ("🏠", "Installation", "Whole-home rewiring, new circuits, smart-home wiring, EV charger circuits.", "/electrical-installation/"),
         ("🔍", "Safety Inspections", "Full home electrical safety inspection. Free with every service visit.", "/electrical-inspection-services/"),
@@ -1836,7 +1836,7 @@ def build_info_pages():
     title = (d and d["title"]) or "Contact Spark Shark Electric | Free Estimates | Moore & OKC"
     desc = (d and d["desc"]) or "Contact Spark Shark Electric — call (405) 436-4776 24/7 or request service online."
     h1 = "Call us. **We'll answer.**"
-    sub = "Live 24/7 dispatch — Moore, Oklahoma City, and the metro. Day or night, we pick up the phone. Or send a service request below and we'll respond same-day."
+    sub = "Live 24/7 dispatch across Moore, Oklahoma City, and the metro. Day or night, we pick up the phone. Or send a service request below and we'll respond same-day."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Contact", f"{SITE}/contact-us/")])
     html = head(title, desc, "/contact-us/", extra)
     html += locked_hero(h1, sub)
@@ -1863,7 +1863,7 @@ def build_info_pages():
           </div>
           <button class="btn btn--primary btn--lg" type="submit">Request service</button>
           <p id="contact-form-status" role="status" aria-live="polite" style="display:none;font-size:.95rem;margin-top:12px;"></p>
-          <p style="font-size:.85rem;color:var(--text-muted);">Or skip the form: <a href="tel:+14054364776"><strong>call (405) 436-4776</strong></a> — we answer 24/7.</p>
+          <p style="font-size:.85rem;color:var(--text-muted);">Or skip the form: <a href="tel:+14054364776"><strong>call (405) 436-4776</strong></a>. We answer 24/7.</p>
         </form>
         <script>
         (function(){
@@ -2183,19 +2183,19 @@ def build_blog_posts():
             "body": '''<p class="lede">When the power goes out, the first question is always the same: is this an OG&amp;E problem, or my problem? Here's how to tell — and what's safe to do while you figure it out.</p>
 
 <h2>Step 1: Check if it's just you</h2>
-<p>Look outside. Are your neighbors' lights on? Are streetlights and traffic signals working? If you're the only dark house on the block, the problem is almost certainly inside your home — at the panel or in the meter base. If the whole block is dark, it's an OG&amp;E outage.</p>
+<p>Look outside. Are your neighbors' lights on? Are streetlights and traffic signals working? If you're the only dark house on the block, the problem is almost certainly inside your home, at the panel or in the meter base. If the whole block is dark, it's an OG&amp;E outage.</p>
 
 <h2>Step 2: Report the outage to OG&amp;E</h2>
-<p>If it's a utility-side outage, report it through the OG&amp;E outage map or by calling them. They restore based on size of outage, critical infrastructure, and resource availability — there's nothing you can speed up.</p>
+<p>If it's a utility-side outage, report it through the OG&amp;E outage map or by calling them. They restore based on size of outage, critical infrastructure, and resource availability. There's nothing you can speed up.</p>
 
 <h2>Step 3: If it's just you, check the main breaker</h2>
-<p>Open your main electrical panel. Look at the largest breaker at the top — that's the main breaker. If it's tripped (sitting in the middle position rather than full ON), <strong>flip it to OFF first, then back to ON</strong>. If it stays on, you're back in business. If it trips immediately, stop. Don't keep resetting it.</p>
+<p>Open your main electrical panel. Look at the largest breaker at the top. That's the main breaker. If it's tripped (sitting in the middle position rather than full ON), <strong>flip it to OFF first, then back to ON</strong>. If it stays on, you're back in business. If it trips immediately, stop. Don't keep resetting it.</p>
 
 <h2>When to call an electrician right now</h2>
 <ul>
   <li><strong>Burning smell from the panel.</strong> Anything from "warm electronics" to actual smoke. This is an emergency.</li>
   <li><strong>The main breaker trips immediately on reset.</strong> Something is drawing current it shouldn't.</li>
-  <li><strong>Half the house is out.</strong> A "split" outage — one leg of your service is down. This is often a loose service neutral, which is dangerous.</li>
+  <li><strong>Half the house is out.</strong> A "split" outage: one leg of your service is down. This is often a loose service neutral, which is dangerous.</li>
   <li><strong>You hear buzzing or popping</strong> from the panel or any outlet.</li>
   <li><strong>Lights are dim throughout the house</strong> after coming back on, or one room is dim while another is too bright.</li>
   <li><strong>The meter on the side of your house</strong> is making noise, sparking, or smoking.</li>
@@ -2211,40 +2211,40 @@ def build_blog_posts():
 <h2>What never to do</h2>
 <ul>
   <li><strong>Never run a generator into your house through an outlet</strong> ("backfeeding"). It can kill an OG&amp;E line worker on the other end of the line. Always use a transfer switch.</li>
-  <li><strong>Never remove the cover from your panel</strong> if you're not a licensed electrician. The bus bars behind it are live even with the main breaker off — backfeed from the meter.</li>
+  <li><strong>Never remove the cover from your panel</strong> if you're not a licensed electrician. The bus bars behind it are live even with the main breaker off, due to backfeed from the meter.</li>
   <li><strong>Never reset a breaker repeatedly</strong> if it keeps tripping. The breaker is doing its job. Find out why before you keep resetting it.</li>
 </ul>
 
 <h2>Call us if any of the above is happening</h2>
-<p>We answer 24/7. Burning smell, hot panel, sparking outlet, partial power loss — call <a href="tel:+14054364776"><strong>(405) 436-4776</strong></a> right now and we'll dispatch a licensed electrician.</p>'''
+<p>We answer 24/7. Burning smell, hot panel, sparking outlet, partial power loss. Call <a href="tel:+14054364776"><strong>(405) 436-4776</strong></a> right now and we'll dispatch a licensed electrician.</p>'''
         },
         {
             "path": "/2026/05/07/signs-you-need-electrical-panel-upgrade/",
             "title": "6 Signs You Need an Electrical Panel Upgrade | Spark Shark Electric",
-            "desc": "Six warning signs your electrical panel needs replacing — including breaker trips, fuse boxes, hot panels, and dangerous brand recalls.",
+            "desc": "Six warning signs your electrical panel needs replacing: breaker trips, fuse boxes, hot panels, and dangerous brand recalls.",
             "h1": "6 Signs You Need an Electrical Panel Upgrade",
             "date": "2026-05-07",
             "body": '''<p class="lede">Most homeowners don't think about their electrical panel until something goes wrong. By that point, the warning signs were usually present for months. Here are the six most common ones.</p>
 
 <h2>1. You still have a fuse box</h2>
-<p>If your panel uses screw-in fuses instead of breakers, it's old enough that it's almost certainly undersized for modern electrical loads. Modern circuit breakers also offer features fuses cannot — including the AFCI and GFCI protection now required by code.</p>
+<p>If your panel uses screw-in fuses instead of breakers, it's old enough that it's almost certainly undersized for modern electrical loads. Modern circuit breakers also offer features fuses cannot, including the AFCI and GFCI protection now required by code.</p>
 
 <h2>2. Your panel is rated 100 amps or below</h2>
 <p>Older homes often have 60-amp or 100-amp service. With central A/C, electric range, electric water heater, and an EV charger, modern homes need 200 amps. If you're upgrading any major load, the panel often needs to grow with it.</p>
 
 <h2>3. Breakers trip repeatedly on the same circuit</h2>
-<p>A breaker doing its job is good. A breaker tripping repeatedly is telling you something — usually that the circuit is overloaded, that there's a short, or that the breaker itself is failing. Repeated tripping on the same circuit means it's time to investigate, not just keep resetting.</p>
+<p>A breaker doing its job is good. A breaker tripping repeatedly is telling you something: usually that the circuit is overloaded, that there's a short, or that the breaker itself is failing. Repeated tripping on the same circuit means it's time to investigate, not just keep resetting.</p>
 
 <h2>4. The panel is warm to the touch</h2>
-<p>Open the cover door (not the inside panel — never that). Touch the breakers. They should be cool. Warmth means resistance, which means heat, which means risk. A hot panel is a leading indicator of an upcoming failure.</p>
+<p>Open the cover door (not the inside panel; never that). Touch the breakers. They should be cool. Warmth means resistance, which means heat, which means risk. A hot panel is a leading indicator of an upcoming failure.</p>
 
 <h2>5. Your panel is a known recall brand</h2>
 <p>Two brands are notorious:</p>
 <ul>
-  <li><strong>Federal Pacific Stab-Lok</strong> panels — installed in millions of homes from the 1950s through the 1980s — have well-documented failure modes where breakers don't trip when they should. Major insurance carriers now flag them.</li>
-  <li><strong>Zinsco / Sylvania</strong> panels — similar issue with breakers that fail to trip and cause arcing.</li>
+  <li><strong>Federal Pacific Stab-Lok</strong> panels (installed in millions of homes from the 1950s through the 1980s) have well-documented failure modes where breakers don't trip when they should. Major insurance carriers now flag them.</li>
+  <li><strong>Zinsco / Sylvania</strong> panels: similar issue with breakers that fail to trip and cause arcing.</li>
 </ul>
-<p>If your panel says either name, replace it. This isn't optional safety — it's basic risk management.</p>
+<p>If your panel says either name, replace it. This isn't optional safety. It's basic risk management.</p>
 
 <h2>6. You're adding a major load</h2>
 <p>Whole-home generator. EV charger. New electric range. Hot tub. Pool equipment. Each of these adds significant load to the panel. If the panel is already maxed out (no spare slots, or full at the main), you need to upgrade before you add the load.</p>
@@ -2258,21 +2258,21 @@ def build_blog_posts():
         {
             "path": "/2024/01/03/stay-powered-up-essential-electrical-winter-safety-tips/",
             "title": "Essential Electrical Winter Safety Tips | Spark Shark Electric",
-            "desc": "Winter electrical safety tips for Oklahoma homeowners — space heaters, holiday lights, ice storms, generators, and outage prep.",
+            "desc": "Winter electrical safety tips for Oklahoma homeowners: space heaters, holiday lights, ice storms, generators, and outage prep.",
             "h1": "Essential Electrical Winter Safety Tips",
             "date": "2024-01-03",
             "body": '''<p class="lede">Oklahoma winters bring three reliable electrical risks: ice storms that take down lines, space heaters that overload circuits, and the holiday-light habits we all keep forgetting are dangerous. Here's how to handle all three.</p>
 
 <h2>Space heaters and circuit overload</h2>
-<p>A 1500-watt space heater pulls about 12.5 amps. A standard household circuit is 15 or 20 amps. Plug a heater in next to a TV, a lamp, and a phone charger and you're at the limit — close enough that the breaker may not trip but the wiring still runs hot.</p>
+<p>A 1500-watt space heater pulls about 12.5 amps. A standard household circuit is 15 or 20 amps. Plug a heater in next to a TV, a lamp, and a phone charger and you're at the limit. Close enough that the breaker may not trip but the wiring still runs hot.</p>
 <ul>
   <li>Plug space heaters directly into a wall outlet, never into a power strip or extension cord.</li>
   <li>Don't run two space heaters on the same circuit.</li>
-  <li>If the breaker for the room trips when you turn on the heater, the circuit is too loaded — stop and reassess.</li>
+  <li>If the breaker for the room trips when you turn on the heater, the circuit is too loaded. Stop and reassess.</li>
   <li>Unplug heaters when you leave the room or go to sleep.</li>
 </ul>
 
-<h2>Holiday lights — the underrated risk</h2>
+<h2>Holiday lights: the underrated risk</h2>
 <p>Holiday lights are responsible for hundreds of house fires every year. Almost all are preventable:</p>
 <ul>
   <li>Replace any string with frayed insulation, broken bulbs, or a discolored plug. Don't repair them.</li>
@@ -2285,36 +2285,36 @@ def build_blog_posts():
 <h2>Ice storms and outages</h2>
 <p>Oklahoma ice storms drop lines reliably. When power's out:</p>
 <ul>
-  <li>If you see a downed power line, stay away — assume it's energized. Call OG&amp;E and 911.</li>
+  <li>If you see a downed power line, stay away. Assume it's energized. Call OG&amp;E and 911.</li>
   <li>Don't run a portable generator inside a house, garage, or covered porch. Carbon monoxide kills.</li>
   <li>Don't backfeed your home through an outlet. It can electrocute a line worker on the other end of the wire.</li>
   <li>If you have a portable generator, run it outside, at least 20 feet from the house, with extension cords running through windows or doors.</li>
-  <li>If you have a standby generator, leave it to do its job — it's designed for exactly this.</li>
+  <li>If you have a standby generator, leave it to do its job. It's designed for exactly this.</li>
 </ul>
 
 <h2>Smoke and CO detector check</h2>
-<p>Winter is the highest fire-risk season — heating equipment, holiday lights, candles, and increased power use all stack up. Take 10 minutes:</p>
+<p>Winter is the highest fire-risk season: heating equipment, holiday lights, candles, and increased power use all stack up. Take 10 minutes:</p>
 <ul>
   <li>Test every smoke detector. The button on the front, all of them.</li>
-  <li>Test every CO detector — especially if you have gas appliances or an attached garage.</li>
+  <li>Test every CO detector, especially if you have gas appliances or an attached garage.</li>
   <li>If any detector is more than 10 years old, replace it. They expire.</li>
 </ul>
 
 <h2>Outage kit basics</h2>
 <ul>
-  <li>Flashlights and batteries (not candles — fire risk).</li>
-  <li>Phone chargers — battery-powered or car-powered.</li>
+  <li>Flashlights and batteries (not candles; fire risk).</li>
+  <li>Phone chargers: battery-powered or car-powered.</li>
   <li>Bottled water (well pumps don't run in an outage).</li>
   <li>Pre-loaded weather radio if you live in tornado-prone areas.</li>
 </ul>
 
 <h2>If something feels wrong, call</h2>
-<p>Burning smells, hot outlets, breakers tripping repeatedly, dim lights — call <a href="tel:+14054364776"><strong>(405) 436-4776</strong></a>. We answer 24/7.</p>'''
+<p>Burning smells, hot outlets, breakers tripping repeatedly, dim lights. Call <a href="tel:+14054364776"><strong>(405) 436-4776</strong></a>. We answer 24/7.</p>'''
         },
         {
             "path": "/2024/01/24/why-you-need-a-professional-for-generator-installation/",
             "title": "Why You Need a Professional for Generator Installation | Spark Shark Electric",
-            "desc": "What goes into a proper whole-home generator install — site prep, fuel, transfer switches, code, and the failure modes of cutting corners.",
+            "desc": "What goes into a proper whole-home generator install: site prep, fuel, transfer switches, code, and the failure modes of cutting corners.",
             "h1": "Why You Need a Professional for Generator Installation",
             "date": "2024-01-24",
             "body": '''<p class="lede">Generator installs are one of those jobs where the difference between &ldquo;works&rdquo; and &ldquo;works safely for fifteen years&rdquo; is mostly invisible — until it isn't. Here's what a proper install actually involves.</p>
@@ -2324,7 +2324,7 @@ def build_blog_posts():
   <li>A whole-home standby generator install touches electrical, gas, and concrete work. All three need to be code-compliant.</li>
   <li>Sizing is the most-skipped step. Too small and the generator can't carry your load. Too large and it costs more, runs less efficiently, and uses more fuel.</li>
   <li>The automatic transfer switch (ATS) is what makes a standby generator a standby generator. A bad ATS install is dangerous.</li>
-  <li>Permits and inspections aren't bureaucracy — they're the homeowner's safety net. Every install we do gets one.</li>
+  <li>Permits and inspections aren't bureaucracy. They're the homeowner's safety net. Every install we do gets one.</li>
 </ul>
 
 <h2>Site prep: where the generator goes matters</h2>
@@ -2342,23 +2342,23 @@ def build_blog_posts():
 <h2>Transfer switches: where most DIY installs go wrong</h2>
 <p>The ATS is what tells the generator the power is out, starts it up, and switches the house from utility to generator power. Within 10 seconds. Then back, when utility comes back. There are two common types:</p>
 <ul>
-  <li><strong>Whole-home ATS</strong> — every circuit in the house can run on the generator. Requires a generator sized for the full home load.</li>
-  <li><strong>Managed-load ATS</strong> — selectively turns large loads off during a power event so a smaller generator can run essentials. Common when the homeowner doesn't want to size the unit for full house.</li>
+  <li><strong>Whole-home ATS</strong>: every circuit in the house can run on the generator. Requires a generator sized for the full home load.</li>
+  <li><strong>Managed-load ATS</strong>: selectively turns large loads off during a power event so a smaller generator can run essentials. Common when the homeowner doesn't want to size the unit for full house.</li>
 </ul>
-<p>Either way, the ATS is wired into your service entrance — between the meter and the panel — and it has to be done correctly. A bad ATS install can backfeed the utility (kills line workers) or fail to transfer cleanly (damages appliances).</p>
+<p>Either way, the ATS is wired into your service entrance (between the meter and the panel) and it has to be done correctly. A bad ATS install can backfeed the utility (kills line workers) or fail to transfer cleanly (damages appliances).</p>
 
 <h2>Commissioning: the part that's easy to skip</h2>
 <p>Every generator we install gets commissioned before we leave. That means:</p>
 <ul>
-  <li>Load-bank test or actual load test — does the unit run under real load without faulting?</li>
-  <li>ATS dry-run — manually transfer to generator power, verify clean transfer, transfer back.</li>
-  <li>Automatic transfer test — kill the utility feed at the disconnect, verify the generator starts and the ATS transfers within spec.</li>
-  <li>Manual override test — verify you can manually start and transfer if the ATS ever fails.</li>
-  <li>Exercise schedule set — most units run for 5–10 minutes weekly to keep oil circulated and detect problems early.</li>
+  <li>Load-bank test or actual load test: does the unit run under real load without faulting?</li>
+  <li>ATS dry-run: manually transfer to generator power, verify clean transfer, transfer back.</li>
+  <li>Automatic transfer test: kill the utility feed at the disconnect, verify the generator starts and the ATS transfers within spec.</li>
+  <li>Manual override test: verify you can manually start and transfer if the ATS ever fails.</li>
+  <li>Exercise schedule set: most units run for 5–10 minutes weekly to keep oil circulated and detect problems early.</li>
 </ul>
 
 <h2>Permits and inspections</h2>
-<p>Generator installs need both an electrical permit and (typically) a gas permit. We pull them, schedule the inspections, and don't consider the job done until they pass. That permit is your written record that the install was done to code — useful for resale, useful for insurance, and required.</p>
+<p>Generator installs need both an electrical permit and (typically) a gas permit. We pull them, schedule the inspections, and don't consider the job done until they pass. That permit is your written record that the install was done to code: useful for resale, useful for insurance, and required.</p>
 
 <h2>What you actually buy when you hire us</h2>
 <ul>

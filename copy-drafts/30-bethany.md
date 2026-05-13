@@ -13,24 +13,24 @@
 Electrician Bethany OK | Inspections & Panels | Spark Shark
 
 === META DESCRIPTION (Google snippet — 140–160 chars) ===
-Licensed residential electrician serving Bethany, OK — safety inspections, panel upgrades, repair, 24/7 emergency. Spark Shark Electric. (405) 436-4776.
+Licensed residential electrician serving Bethany, OK: safety inspections, panel upgrades, repair, 24/7 emergency. Spark Shark Electric. (405) 436-4776.
 
 === H1 (main page heading — visible on page) ===
 Residential Electrician in Bethany, OK
 
 === HERO SUBTITLE (1–2 sentences under H1) ===
-Licensed residential electrical service for Bethany — safety inspections, panel upgrades, repair, and 24/7 emergency dispatch.
+Licensed residential electrical service for Bethany: safety inspections, panel upgrades, repair, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
 Spark Shark Electric is a licensed residential electrician serving Bethany, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Bethany's older housing stock with the services those homes most often need — written safety inspections, panel upgrades, and repair work for everyday issues like flickering lights, dead outlets, and repeated breaker trips. Flat-rate, written pricing on every job. Call (405) 436-4776.
 
 === SECTION: What we do for Bethany homeowners ===
-- **Electrical safety inspections** — pre-purchase, pre-renovation, insurance-required. Free with any paid service call.
-- **Electrical panel upgrades** — service replacement, 100A→200A, sub-panels, Federal Pacific / Zinsco swaps.
-- **Electrical repair** — flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
-- **24/7 emergency electrical service** — burning smells, hot panels, sparking outlets.
-- **Smoke and CO detector installation** — hardwired, interconnected.
-- **Whole-home Generac generators** — for Oklahoma storms.
+- **Electrical safety inspections**: pre-purchase, pre-renovation, insurance-required. Free with any paid service call.
+- **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels, Federal Pacific / Zinsco swaps.
+- **Electrical repair**: flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
+- **24/7 emergency electrical service**: burning smells, hot panels, sparking outlets.
+- **Smoke and CO detector installation**: hardwired, interconnected.
+- **Whole-home Generac generators**: for Oklahoma storms.
 
 === SECTION: Why we cover Bethany ===
 - **Older housing stock.** Bethany's mid-century homes routinely need panel upgrades, GFCI/AFCI compliance, and the safety inspections insurance carriers increasingly request.
@@ -45,7 +45,7 @@ Q: Are you licensed to work in Bethany?
 A: Yes. Licensed and insured.
 
 Q: Do you handle Bethany permits and inspections?
-A: Yes — we pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Bethany permit/inspection language].
+A: Yes. We pull the permit and schedule the inspection as part of every flat-rate quote where a permit applies. [VERIFY: City of Bethany permit/inspection language].
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Link to Electrical Inspections, Electrical Panels, Electrical Repair, Smoke Detectors,

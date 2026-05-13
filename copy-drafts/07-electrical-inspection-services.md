@@ -29,7 +29,7 @@ Spark Shark Electric in Moore, Oklahoma performs full residential electrical saf
 - **Before a renovation.** Know what your panel can support before you spec the new kitchen, addition, or finished basement.
 - **Your insurance carrier required it.** Carriers increasingly ask for one when the home is over 40 years old or has a Federal Pacific / Zinsco / aluminum-branch panel.
 - **After a flood, fire, or storm.** Even if everything looks normal, the wiring or panel may have taken damage.
-- **Adding a major load** — EV charger, hot tub, electric range, whole-home generator.
+- **Adding a major load**: EV charger, hot tub, electric range, whole-home generator.
 - **Just to know.** Free with any paid service call.
 
 === SECTION: What we check ===
@@ -53,7 +53,7 @@ Q: How long does an inspection take?
 A: Most homes take 60–90 minutes for the full inspection. Larger homes or homes with multiple sub-panels can run 2 hours.
 
 Q: Will you give me a written report?
-A: Yes — every inspection includes a written report you can hand to a buyer, seller, insurance carrier, or contractor.
+A: Yes. Every inspection includes a written report you can hand to a buyer, seller, insurance carrier, or contractor.
 
 Q: Do you fix what you find on the same visit?
 A: Often yes for small issues. Larger issues get a separate written quote so you can decide what to address.

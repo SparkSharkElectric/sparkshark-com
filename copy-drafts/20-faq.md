@@ -44,10 +44,10 @@ Q: Do you do commercial work?
 A: No. Spark Shark Electric is a residential-only electrical contractor. We focus exclusively on homes.
 
 Q: Can you upgrade my electrical panel?
-A: Yes — service replacement, 100A→200A upgrades, sub-panels, code-compliance work. Free site visit, written flat-rate quote, permit pulled, and inspection scheduled.
+A: Yes. Service replacement, 100A→200A upgrades, sub-panels, code-compliance work. Free site visit, written flat-rate quote, permit pulled, and inspection scheduled.
 
 Q: Do you install whole-home generators?
-A: Yes — whole-home Generac standby generators sized to your load, with the gas line coordinated and an automatic transfer switch installed and commissioned.
+A: Yes. Whole-home Generac standby generators sized to your load, with the gas line coordinated and an automatic transfer switch installed and commissioned.
 
 Q: Can you install an EV charger?
 A: Yes — Level 2 (240V) home charging stations, any UL-listed brand. We pull the permit, run the dedicated circuit, install the station, and commission it.

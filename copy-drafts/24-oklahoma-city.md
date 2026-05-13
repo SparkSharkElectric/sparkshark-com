@@ -25,12 +25,12 @@ Licensed residential electrical service for Oklahoma City and the surrounding me
 Spark Shark Electric is a licensed residential electrician serving Oklahoma City. Based in Moore, our team handles electrical repairs, panel upgrades, whole-home generator installs, EV charger circuits, and 24/7 emergency dispatch across OKC's older neighborhoods and newer subdivisions alike — every job flat-rate and written. Call (405) 436-4776.
 
 === SECTION: What we do for Oklahoma City homeowners ===
-- **Electrical panel upgrades** — service replacement, 100A→200A upgrades, sub-panels, and Federal Pacific / Zinsco swaps for older OKC homes.
-- **Whole-home Generac generators** — sized to your load for Oklahoma's storm season.
-- **24/7 emergency electrical service** — burning smells, hot panels, sparking outlets, partial power loss, storm damage.
-- **Electrical repair** — flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
-- **Installation** — new circuits, rewires, smart-home, EV chargers, ceiling fans.
-- **Safety inspections** — pre-purchase, pre-renovation, insurance-required. Free with any paid service call.
+- **Electrical panel upgrades**: service replacement, 100A→200A upgrades, sub-panels, and Federal Pacific / Zinsco swaps for older OKC homes.
+- **Whole-home Generac generators**: sized to your load for Oklahoma's storm season.
+- **24/7 emergency electrical service**: burning smells, hot panels, sparking outlets, partial power loss, storm damage.
+- **Electrical repair**: flickering lights, dead outlets, breaker trips, GFCI/AFCI faults.
+- **Installation**: new circuits, rewires, smart-home, EV chargers, ceiling fans.
+- **Safety inspections**: pre-purchase, pre-renovation, insurance-required. Free with any paid service call.
 
 === SECTION: Why we cover Oklahoma City ===
 - **Older OKC housing stock.** Many OKC neighborhoods include homes built in the 1950s–1970s with original panels, undersized service, or aluminum branch wiring. We replace, upgrade, and repair these every week.
@@ -48,7 +48,7 @@ Q: Are you licensed to work in Oklahoma City?
 A: Yes. Licensed and insured.
 
 Q: Do you handle Oklahoma City permits and inspections?
-A: Yes — we pull the permit and schedule the city inspection as part of every flat-rate quote where a permit applies.
+A: Yes. We pull the permit and schedule the city inspection as part of every flat-rate quote where a permit applies.
 
 Q: How fast can you get to my OKC home?
 A: For active emergencies we dispatch as quickly as the on-call electrician can arrive. For scheduled work we'll give you a realistic ETA when you call.
