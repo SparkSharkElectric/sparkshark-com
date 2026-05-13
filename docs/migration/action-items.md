@@ -26,7 +26,7 @@
 | A10 | **Verify Privacy Policy + T&Cs TCPA text is verbatim** — Coalition swapped from Termly to HTML-embedded policies on 2025-10-24 with STOP/CANCEL/UNSUBSCRIBE + message-types/frequency/HELP language for ServiceTitan brand registration. Confirm the static `/privacy-policy/` + `/terms-and-condition/` contain it. | Claude (verify) | coalition-findings §3; prior-seo §5.A | The `(405) 796-8111` carve-out memory covers part of this; this is the rest. |
 | A11 | **Diff every page Coalition edited** — Copy Batches #4 (approved 2025-11-27) + #5 (approved 2025-12-26) plus sticky-nav+CTA (2025-10-28) and the Announcement Bar (2026-01-06) hit the live WP site; `copy-drafts/*.md` may pre-date them. Decide per page: port / defer / accept loss. | Claude verify + Brock decision | coalition-findings §3; prior-seo §5.A | |
 | A12 | **Export SEOPress per-page meta + schema from WP** before flip — any title/description/JSON-LD Coalition tuned between 2025-11-27 and 2025-12-16 lives only in the WP DB. The static build has its own 4-node `@graph`; reconcile. | Brock/Claude | coalition-findings §4; prior-seo §5.A | Also: confirm the static site serves a sitemap equivalent to SEOPress's `/sitemap.xml` or GSC reports 0 indexable pages. |
-| A13 | **Fix the `llms.txt` ↔ `llms-full.txt` rating drift** — `llms.txt` says `4.9`; `llms-full.txt`, the `BRAND` dict, and rendered JSON-LD say `4.8`. RANK-08 FAIL. | Claude PR (single-file, via `build.py`) | re-verification audit; site-hygiene K10 | |
+| A13 | **Fix the `llms.txt` ↔ `llms-full.txt` rating drift** — `llms.txt` says `4.9`; `llms-full.txt`, the `BRAND` dict, and rendered JSON-LD say `4.8`. RANK-08 FAIL. | Claude PR (single-file, via `build.py`) | re-verification audit; site-hygiene K10 | **DONE 2026-05-13.** `build.py` line ~2584 now interpolates `{BRAND['rating']}` / `{BRAND['review_count']}`; the two reviews-page title/desc fallbacks (lines 1914–1915) also `BRAND`-driven. Rebuilt + grep on `llms.txt` + `llms-full.txt` returns 0 hits for `4.9`. |
 | A14 | **Make the `llms.txt + schema self-check` GH Action green** — failing on spark-fsm PRs #136/#137/#142. | Claude/Brock | online-presence §9 | Must be green before flip. |
 | A15 | **Investigate the GSC "Unparsable structured data issues" alert** (2026-05-08, 1 issue) — source is the current WP build; may resolve at cutover but confirm it isn't a pattern that will recur on the static build. | Claude/Brock | online-presence §5; prior-seo §5.F | |
 | A16 | **Decide the 5 missing landing pages from Tobes' keyword plan** (Generators hub 684 vol, Surge Protectors 145, Generator Repairs 143, Circuit Breaker Replacements 110, Panel Upgrades 97) — if `sitemap.xml` will list them at cutover, GSC surfaces 404s. Either build stubs or keep them out of the sitemap until ready. | Brock decision | prior-seo §1.1, §5.A | |
@@ -36,6 +36,12 @@
 | A20 | **Rollback trigger criteria** (when to roll DNS back) — documented? | Claude PR | SoT §5 | |
 | A21 | **Make `secret-scan / gitleaks` + `pr-checks / guardrails` workflows green** on the spark-fsm cutover PRs (138–147) — failing on several. | Claude/Brock | online-presence §11 | Also: add a one-line gitleaks CI workflow to `sparkshark-com` to close SEC-01 for future audits (it currently has no `.gitleaks.toml`). |
 | A22 | **Resolve the Vercel "1 domain needs configuration" warning** on team Spark Shark Electric (first seen 2026-04-29). | Brock | online-presence §11 | Likely the same root cause as A1. |
+| A23 | **Fix the `/contact-us/` JS syntax error.** Inline `<script>` in the contact-page `<head>` had `s.textContent='… if it\'s urgent.'` — the unescaped apostrophe in `it's` was breaking the JS string. | Claude PR | Seth audit 2026-05-13 §2.1 | **DONE 2026-05-13.** `build.py` line 1887 swapped to double-quoted JS literal. Verified in regenerated `contact-us/index.html:129`. |
+| A24 | **Kill duplicate `/industrial-electrical-solutions/` + `/commercial-electrical-solutions/` stub dirs.** On-disk meta-refresh stubs were beating the `vercel.json` 301s — page rendered 200 with `canonical=/`, risk of Google indexing as low-quality duplicates. | Claude PR | Seth audit 2026-05-13 §2.4 | **DONE 2026-05-13.** Removed entries from `build_redirect_stubs` in `build.py`; deleted `industrial-electrical-solutions/` + `commercial-electrical-solutions/` directories. `vercel.json` 301 → `/` is now the sole handler. Rebuilt + verified directories not regenerated; sitemap clean. |
+| A25 | **Add short-form URL 301s to `vercel.json`.** `/contact`, `/about`, `/blog`, `/terms-and-conditions`, `/terms`, `/privacy`, `/faq`, `/reviews`, `/locations` previously 404'd. People type these from memory. | Claude PR | Seth audit 2026-05-13 §2.3 + §4.2 + §4.3 | **DONE 2026-05-13.** Added 19 new redirect lines to `vercel.json` (with + without trailing slash for each). Will take effect on next Vercel deploy. |
+| A26 | **Add CAPTCHA to `/api/contact-form`.** Today only the `company` honeypot field blocks bots. Service-business forms are aggressively spammed/abused (dialer / voice-AI lead-fraud). Decide: Cloudflare Turnstile (free, recommended) vs. reCAPTCHA v3. Add Vercel Firewall rate-limit on the route too (≤5 req/min per IP). | Brock decision + Claude PR | Seth audit 2026-05-13 §2.2 + §3.4 | Recommended: Turnstile + Vercel Firewall rule. Needs site key/secret in Vercel env vars before the build can wire it. |
+| A27 | **Vercel project hygiene — Brock-only UI actions.** Five items, all in `vercel.com/spark-shark-electric-2b2f3a3a/sparkshark-com/settings`: (a) add a payment method to the Pro plan (period ends ~2026-05-19, current `paymentMethod: none` — bill will fail mid-launch); (b) Source Code Visibility → Private (`publicSource: true` today exposes `api/contact-form.js` source); (c) Git Fork Protection → on (forks can otherwise spin up preview deploys on this team's bill); (d) declare a framework preset (`framework: null` today blocks framework-specific optimizations — but this repo is intentionally Python-only with no Node toolchain, so "Other" is the right choice; confirm with Brock); (e) confirm apex `sparkshark.com` redirects → `www.sparkshark.com` at the domain level (Vercel reports both attached with `redirect: null` per Seth audit §2.5). | Brock | Seth audit 2026-05-13 §2.5 + §3.1 + §3.3 + §3.5 + §3.6 | Should take ~10 min total. (a) and (e) are the most important. |
+| A28 | **Decide Vercel Web Analytics + Speed Insights approach.** Seth's audit recommends installing `@vercel/analytics` + `@vercel/speed-insights` packages and mounting them in layout — but this repo has **no Node toolchain by design** (`build.py` is Python stdlib only; no `package.json`). Options: (i) skip Vercel-first-party RUM, rely on GA4 + GSC + (eventually) `GT-NGS794C2` for analytics, (ii) inject the Vercel Insights raw `<script>` tag manually in `build.py:head()`, accepting that we sidestep the npm-package install path. Either is fine; needs Brock decision. | Brock decision | Seth audit 2026-05-13 §3.2 + §3.7 | Recommend (ii) only if Brock wants Vercel's RUM dashboard; otherwise (i). Speed Insights data is nice-to-have for a Pro plan but not load-bearing for the cutover. |
 
 ## B — Blocks post-flip monitoring / attribution
 
@@ -82,13 +88,35 @@
 
 Per the "Surgical Patches Stay Single-File" rule, one scoped PR per change. Suggested order:
 
-1. **`build.py:153` GTM → `gtag.js?id=GT-NGS794C2` swap** (A2) — unblocks Gate #7's code dependency, closes the unowned `GTM-W7V4RS7C` payload. Verify the measurement-ID equivalence (A2 note) first.
-2. **Dedicated favicon set + `build.py:365-366` update** (C10) — cheapest single-file PR; closes the most-cached identity asset before the first post-cutover crawl. Needs the favicon art (C13) decided.
-3. **`llms.txt` ↔ `llms-full.txt` 4.8/4.9 fix** (A13) — tiny single-file `build.py` fix; closes RANK-08.
-4. **`scripts/cutover-smoke.sh` + typed-out DNS rollback values + rollback trigger criteria** (A18 + A19 + A20) — could be one PR or three; closes CUT-02 / ROLL-03 / SoT §2 Blocker #3.
+1. ~~**`llms.txt` ↔ `llms-full.txt` 4.8/4.9 fix** (A13)~~ — **DONE 2026-05-13** in the same working tree as A23–A25.
+2. ~~**`/contact-us/` JS syntax error fix** (A23)~~ — **DONE 2026-05-13.**
+3. ~~**Kill `/industrial-…/` + `/commercial-…/` stub dirs** (A24)~~ — **DONE 2026-05-13.**
+4. ~~**Short-form URL 301s in `vercel.json`** (A25)~~ — **DONE 2026-05-13.**
+5. **`build.py:153` GTM → `gtag.js?id=GT-NGS794C2` swap** (A2) — unblocks Gate #7's code dependency, closes the unowned `GTM-W7V4RS7C` payload. Verify the measurement-ID equivalence (A2 note) first.
+6. **CAPTCHA on `/api/contact-form`** (A26) — Brock decision (Turnstile vs reCAPTCHA), then Claude wires it in `build.py` + the `api/contact-form.js` handler. Spam-suppression for launch day.
+7. **Dedicated favicon set + `build.py:365-366` update** (C10) — cheapest single-file PR; closes the most-cached identity asset before the first post-cutover crawl. Needs the favicon art (C13) decided.
+8. **`scripts/cutover-smoke.sh` + typed-out DNS rollback values + rollback trigger criteria** (A18 + A19 + A20) — could be one PR or three; closes CUT-02 / ROLL-03 / SoT §2 Blocker #3.
+
+**Brock-owned (no PR, ~10 min Vercel UI work):** A27 (payment method, source private, fork protection, framework preset, apex→www redirect).
+
+**Brock decision (no PR yet):** A28 (Vercel Web Analytics approach — package install vs raw `<script>` vs skip).
 
 Also queued by the broader migration plan (SoT §13): GA4 property `488680346` move to the Spark Shark Analytics account (SoT §4 row 7 + §11) — Brock-owned UI action, not a code PR.
 
 ---
 
-*Compiled from the five 2026-05-11 evidence artifacts. When an item here disagrees with `launch-gate.md` / `SOURCE-OF-TRUTH.md` / `cutover-runbook.md`, prefer those.*
+## 2026-05-13 incremental session
+
+Triggered by Seth's two HTML audits delivered 2026-05-13 (`sparkshark-migration-audit 1.html` Nov 2025 — mostly stale; `sparkshark-migration-audit 2.html` 2026-05-13 — current). Diff vs §1–§12 of `SOURCE-OF-TRUTH.md` and vs A1–A22 above:
+
+**Stale (Audit 1, Nov 2025):** all 9 "missing page" claims (`/residential-…`, `/industrial-…`, `/smoke-detectors/`, `/ceiling-fans/`, `/electrician-for-outdoor-lighting/`, `/indoor-lighting-installation/`, `/smart-home-installation/`, `/blogs/`, `/locations-we-serve/bethany/`) are wrong against today's repo — all pages exist. The "no tracking" claim is also wrong (`GTM-TBCXCXGS` wired in `build.py:153` — though that itself is being swapped per A2). Audit 1's only still-valid finding was the rating discrepancy, which our own audits had already caught as A13. **Treat Audit 1 as a historical snapshot; do not action.**
+
+**New (Audit 2, 2026-05-13):** six items not previously tracked → A23, A24, A25, A26, A27, A28. Four are now DONE in this working tree (A23–A25 + A13). A26 + A27 + A28 remain open.
+
+**Audit 2 did NOT catch what our internal audit caught:** A13 (rating drift in `llms.txt` — Seth missed; we'd flagged), Gate #4/#7/#8/#9 Status promotions (Seth had no visibility into the launch gate), `cutover-smoke.sh` + typed-out DNS rollback values (A18/A19/A20).
+
+**Net effect on launch-gate state:** no Gate row flips — Seth's findings are all outside the 9-gate scope. The gate still reads 5 Approved / 4 Not Provided. A26 (CAPTCHA) is the only Audit-2 item that could plausibly be argued belongs to a gate row in the future; for today it's tracked here.
+
+---
+
+*Compiled from the five 2026-05-11 evidence artifacts; 2026-05-13 update layered on top with Seth's audit-2 findings. When an item here disagrees with `launch-gate.md` / `SOURCE-OF-TRUTH.md` / `cutover-runbook.md`, prefer those.*

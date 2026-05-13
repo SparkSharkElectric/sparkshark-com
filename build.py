@@ -1884,7 +1884,7 @@ def build_info_pages():
               .then(function(r){
                 if(r.ok){
                   s.style.color='#0a7a3c';
-                  s.textContent='Thanks \u2014 we got your request. We answer 24/7 at (405) 436-4776 if it\'s urgent.';
+                  s.textContent="Thanks \u2014 we got your request. We answer 24/7 at (405) 436-4776 if it's urgent.";
                   f.reset();
                   if(window.dataLayer)window.dataLayer.push({event:'contact_form_submit',form_id:'contact-form'});
                 }else{
@@ -1911,8 +1911,8 @@ def build_info_pages():
 
     # ====================== REVIEWS ======================
     d = parse_draft("19-reviews.md")
-    title = (d and d["title"]) or "Spark Shark Electric Reviews | 4.9 Stars | 117+ Reviews"
-    desc = (d and d["desc"]) or "Spark Shark Electric customer reviews — 4.9 stars across 117+ reviews on Google, BBB, and Yelp."
+    title = (d and d["title"]) or f"Spark Shark Electric Reviews | {BRAND['rating']} Stars | {BRAND['review_count']}+ Reviews"
+    desc = (d and d["desc"]) or f"Spark Shark Electric customer reviews — {BRAND['rating']} stars across {BRAND['review_count']}+ reviews on Google, BBB, and Yelp."
     h1 = "Real homeowners. Real reviews. In **the OKC metro**"
     sub = "Read every review on the third-party platforms below — Google, BBB, Thumbtack, Yelp, Facebook. We don't fabricate testimonials."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Reviews", f"{SITE}/reviews/")])
@@ -2414,9 +2414,8 @@ def build_blog_posts():
 def build_redirect_stubs():
     """For URLs that don't carry their own value but may have backlinks."""
     redirects = [
-        # Pages that returned homepage on the live WP site — preserve any link equity
-        ("/commercial-electrical-solutions/", "/"),
-        ("/industrial-electrical-solutions/", "/"),
+        # /commercial-electrical-solutions/ + /industrial-electrical-solutions/ stubs
+        # removed 2026-05-13: on-disk stubs were beating vercel.json 301s. vercel.json owns those now.
         # Viktor's staging page — dev artifact, send to home
         ("/home-staging-2026-05-07/", "/"),
         # Dropped blog posts — redirect to most relevant page
@@ -2581,7 +2580,7 @@ def build_llms_txt():
 ## About and reputation
 
 - [About {BRAND['name']}]({SITE}/about-us/)
-- [Reviews — 4.9 across 117+]({SITE}/reviews/)
+- [Reviews — {BRAND['rating']} across {BRAND['review_count']}+]({SITE}/reviews/)
 - [Frequently Asked Questions]({SITE}/frequently-asked-questions/)
 
 ## Reference

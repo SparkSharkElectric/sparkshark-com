@@ -305,4 +305,39 @@ Begin by reading the 5 artifacts in §9. After Phase 1 (triage + commit-destinat
 
 ---
 
+## 14. 2026-05-13 incremental session — Seth's two HTML audits + same-day code fixes
+
+**Trigger.** Brock delivered two HTML audits from Seth on 2026-05-13: `sparkshark-migration-audit 1.html` (dated Nov 2025, v1.0) and `sparkshark-migration-audit 2.html` (dated 2026-05-13, "Launch Readiness Vol. I"). Diff'd against repo state + the 2026-05-12 readiness audit + §1–§13 above. Captured in `docs/migration/action-items.md` "2026-05-13 incremental session" footer.
+
+**Audit 1 disposition: archive, do not action.** Authored from outside the repo months ago. All 9 "missing page" claims are wrong against today's repo (`residential-`, `industrial-`, `smoke-detectors`, `ceiling-fans`, `electrician-for-outdoor-lighting`, `indoor-lighting-installation`, `smart-home-installation`, `blogs`, `locations-we-serve/bethany` all exist). "No tracking" claim is also obsolete. Its only still-valid finding was the rating discrepancy, which we had already tracked as `action-items.md` A13.
+
+**Audit 2 disposition: six new items, four closed in this session.**
+
+Closed 2026-05-13 in this working tree (rebuilt + `qa.py --ci` clean + canary regression PASS):
+
+- **A13** — `llms.txt` ↔ `llms-full.txt` 4.9/4.8 drift fixed. `build.py` now interpolates `{BRAND['rating']}` / `{BRAND['review_count']}` in the llms.txt line (~2584) and in the reviews-page title/desc fallbacks (1914–1915). `grep "4.9" llms.txt llms-full.txt` returns 0 hits.
+- **A23** — `/contact-us/` JS syntax error fixed. `build.py:1887` JS string literal swapped from single-quoted to double-quoted so the unescaped apostrophe in `it's urgent` no longer breaks parsing. Verified at `contact-us/index.html:129` post-rebuild.
+- **A24** — `/industrial-electrical-solutions/` + `/commercial-electrical-solutions/` stub dirs killed. Removed the two entries from `build_redirect_stubs` in `build.py`; deleted both on-disk directories. `vercel.json` 301 → `/` for both URLs is now the sole handler.
+- **A25** — Short-form URL 301s added to `vercel.json`: `/contact`, `/about`, `/blog`, `/terms-and-conditions`, `/terms`, `/privacy`, `/faq`, `/reviews`, `/locations` (with and without trailing slash where applicable). Will take effect on next Vercel deploy.
+
+Still open after this session — covered by `action-items.md` A26–A28:
+
+- **A26** (CAPTCHA on `/api/contact-form` + Vercel Firewall rate-limit) — needs Brock decision (Turnstile recommended).
+- **A27** (Vercel project UI hygiene — payment method on Pro, Source Code Visibility → Private, Git Fork Protection → on, framework preset = "Other", apex→www redirect) — Brock-only UI actions.
+- **A28** (Vercel Web Analytics / Speed Insights approach) — needs Brock decision; constrained by the repo's no-Node-toolchain stance.
+
+**Net effect on §1 verdict.** Unchanged — still **HARD NO-GO** until `launch-gate.md` rows are all `Approved` / `Not Applicable: <reason>`. Seth's audit-2 findings are all outside the 9-gate scope (he had no launch-gate visibility), so no gate row flips off the back of his findings. Closing A23–A25 + A13 does materially reduce real launch risk (JS error on contact page, duplicate-content soft-canonicals, short-form 404s, rating-data inconsistency) but those risks were never gate-blocking on their own.
+
+**Sanity checks run this session.**
+
+- `BASE="" python3 build.py` — 50 pages, no errors.
+- `python3 qa.py --ci` — every page PASS, 0 issues, 0 warnings.
+- `bash tests/test-detection.sh` — both canary regressions PASS.
+- `grep -n "industrial\|commercial-electrical-solutions" sitemap.xml` — 0 hits (sitemap clean post-deletion).
+- `grep -c "4\.9" llms.txt llms-full.txt` — 0 / 0.
+
+**Working tree status at end of session.** All four fixes are uncommitted on local `main`. `BASE="" python3 build.py` regenerated production-path HTML; the diff in the working tree includes `build.py` + `vercel.json` source edits, the regenerated pages, the deleted stub dirs, and the doc updates (this §14 + `action-items.md` 2026-05-13 footer). **Not yet pushed.** Per repo `CLAUDE.md`, a push to `main` = a Vercel production deploy; Brock owns the go/no-go on commit + push.
+
+---
+
 *End of source-of-truth document. Do not edit gate-row Status cells from here — they live in `docs/migration/launch-gate.md` and only Brock may write `Approved` or `Not Applicable: <reason>`.*

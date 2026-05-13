@@ -31,7 +31,24 @@
     { "source": "/fiancing/", "destination": "/contact-us/", "statusCode": 301 },
     { "source": "/price/", "destination": "/contact-us/", "statusCode": 301 },
     { "source": "/repair/", "destination": "/electrical-repair-and-service/", "statusCode": 301 },
-    { "source": "/2023/12/28/where-does-it-come-from/", "destination": "/", "statusCode": 301 }
+    { "source": "/2023/12/28/where-does-it-come-from/", "destination": "/", "statusCode": 301 },
+    { "source": "/contact",                "destination": "/contact-us/",            "statusCode": 301 },
+    { "source": "/contact/",               "destination": "/contact-us/",            "statusCode": 301 },
+    { "source": "/about",                  "destination": "/about-us/",              "statusCode": 301 },
+    { "source": "/about/",                 "destination": "/about-us/",              "statusCode": 301 },
+    { "source": "/blog",                   "destination": "/blogs/",                 "statusCode": 301 },
+    { "source": "/blog/",                  "destination": "/blogs/",                 "statusCode": 301 },
+    { "source": "/terms-and-conditions",   "destination": "/terms-and-condition/",   "statusCode": 301 },
+    { "source": "/terms-and-conditions/",  "destination": "/terms-and-condition/",   "statusCode": 301 },
+    { "source": "/terms",                  "destination": "/terms-and-condition/",   "statusCode": 301 },
+    { "source": "/terms/",                 "destination": "/terms-and-condition/",   "statusCode": 301 },
+    { "source": "/privacy",                "destination": "/privacy-policy/",        "statusCode": 301 },
+    { "source": "/privacy/",               "destination": "/privacy-policy/",        "statusCode": 301 },
+    { "source": "/faq",                    "destination": "/frequently-asked-questions/", "statusCode": 301 },
+    { "source": "/faq/",                   "destination": "/frequently-asked-questions/", "statusCode": 301 },
+    { "source": "/reviews",                "destination": "/reviews/",               "statusCode": 301 },
+    { "source": "/locations",              "destination": "/locations-we-serve/",    "statusCode": 301 },
+    { "source": "/locations/",             "destination": "/locations-we-serve/",    "statusCode": 301 }
   ],
   "headers": [
     {
