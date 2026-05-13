@@ -48,7 +48,11 @@
     { "source": "/faq/",                   "destination": "/frequently-asked-questions/", "statusCode": 301 },
     { "source": "/reviews",                "destination": "/reviews/",               "statusCode": 301 },
     { "source": "/locations",              "destination": "/locations-we-serve/",    "statusCode": 301 },
-    { "source": "/locations/",             "destination": "/locations-we-serve/",    "statusCode": 301 }
+    { "source": "/locations/",             "destination": "/locations-we-serve/",    "statusCode": 301 },
+    { "source": "/2023/12",                "destination": "/blogs/",                 "statusCode": 301 },
+    { "source": "/2023/12/",               "destination": "/blogs/",                 "statusCode": 301 },
+    { "source": "/2024/01",                "destination": "/blogs/",                 "statusCode": 301 },
+    { "source": "/2024/01/",               "destination": "/blogs/",                 "statusCode": 301 }
   ],
   "headers": [
     {
