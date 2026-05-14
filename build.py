@@ -183,7 +183,8 @@ BRAND = {
     "service_area": [
         "Oklahoma City", "Moore", "Norman", "Edmond", "Yukon",
         "Mustang", "Bethany", "Midwest City", "Del City", "Choctaw",
-        "Newcastle", "Piedmont", "Nichols Hills", "The Village", "Warr Acres"
+        "Newcastle", "Noble", "Blanchard", "Piedmont", "Nichols Hills",
+        "The Village", "Warr Acres"
     ],
     "logo_url": f"{SITE}/img/logo.png",
     "mascot_url": f"{SITE}/img/mascot.png",
@@ -661,7 +662,7 @@ def area_chips_block():
             chips.append(f'<a class="chip chip--link" href="/oklahoma-city/">{c}</a>')
         elif c == "Moore":
             chips.append(f'<a class="chip chip--link" href="/moore/">{c}</a>')
-        elif c.lower().replace(" ", "-") in ["del-city","bethany","newcastle","mustang","yukon","midwest-city","norman","edmond"]:
+        elif c.lower().replace(" ", "-") in ["del-city","bethany","newcastle","mustang","yukon","midwest-city","norman","edmond","choctaw","noble","blanchard","piedmont","nichols-hills","the-village","warr-acres"]:
             slug = c.lower().replace(" ", "-")
             chips.append(f'<a class="chip chip--link" href="/locations-we-serve/{slug}/">{c}</a>')
         else:
@@ -1066,7 +1067,7 @@ def build_homepage():
 
     chips = []
     linked_cities = {"oklahoma city": "/oklahoma-city/", "moore": "/moore/"}
-    sub_cities = {"del city","bethany","newcastle","mustang","yukon","midwest city","norman","edmond"}
+    sub_cities = {"del city","bethany","newcastle","mustang","yukon","midwest city","norman","edmond","choctaw","noble","blanchard","piedmont","nichols hills","the village","warr acres"}
     for c in BRAND["service_area"]:
         cl = c.lower()
         if cl in linked_cities:
@@ -1702,6 +1703,10 @@ CITY_DRAFTS = {
     "/locations-we-serve/choctaw/": "39-choctaw.md",
     "/locations-we-serve/noble/": "40-noble.md",
     "/locations-we-serve/blanchard/": "41-blanchard.md",
+    "/locations-we-serve/piedmont/": "42-piedmont.md",
+    "/locations-we-serve/nichols-hills/": "43-nichols-hills.md",
+    "/locations-we-serve/the-village/": "44-the-village.md",
+    "/locations-we-serve/warr-acres/": "45-warr-acres.md",
 }
 
 
@@ -2525,6 +2530,10 @@ def build_sitemap():
         ("/locations-we-serve/choctaw/", "0.6"),
         ("/locations-we-serve/noble/", "0.6"),
         ("/locations-we-serve/blanchard/", "0.6"),
+        ("/locations-we-serve/piedmont/", "0.6"),
+        ("/locations-we-serve/nichols-hills/", "0.6"),
+        ("/locations-we-serve/the-village/", "0.6"),
+        ("/locations-we-serve/warr-acres/", "0.6"),
         ("/blogs/", "0.6"),
         ("/2026/05/07/power-out-what-to-do-when-call-electrician/", "0.6"),
         ("/2026/05/07/signs-you-need-electrical-panel-upgrade/", "0.6"),
@@ -2843,18 +2852,22 @@ def main():
         ("/locations-we-serve/choctaw/", "Choctaw"),
         ("/locations-we-serve/noble/", "Noble"),
         ("/locations-we-serve/blanchard/", "Blanchard"),
+        ("/locations-we-serve/piedmont/", "Piedmont"),
+        ("/locations-we-serve/nichols-hills/", "Nichols Hills"),
+        ("/locations-we-serve/the-village/", "The Village"),
+        ("/locations-we-serve/warr-acres/", "Warr Acres"),
     ]
     for path, city in locations:
         build_location_page(path, city)
 
     # Locations index
     title = "Areas We Serve | OKC Metro Cities | Spark Shark Electric"
-    desc = "Spark Shark Electric serves 13 cities across the Oklahoma City metro — Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Bethany, and more."
+    desc = "Spark Shark Electric serves 17 cities across the Oklahoma City metro — Moore, OKC, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Bethany, Piedmont, Nichols Hills, and more."
     extra = breadcrumb_schema([("Home", f"{SITE}/"), ("Service Area", f"{SITE}/locations-we-serve/")])
     html = head(title, desc, "/locations-we-serve/", extra)
     html += locked_hero(
         "Residential electrical service in the **OKC metro**",
-        "13 cities, same flat-rate pricing, same licensed Oklahoma team, same 24/7 phone.",
+        "17 cities, same flat-rate pricing, same licensed Oklahoma team, same 24/7 phone.",
         eyebrow_html="Where we work",
     )
     html += proof_block()
@@ -2875,6 +2888,10 @@ def main():
       <li><a href="/locations-we-serve/choctaw/">Choctaw</a></li>
       <li><a href="/locations-we-serve/noble/">Noble</a></li>
       <li><a href="/locations-we-serve/blanchard/">Blanchard</a></li>
+      <li><a href="/locations-we-serve/piedmont/">Piedmont</a></li>
+      <li><a href="/locations-we-serve/nichols-hills/">Nichols Hills</a></li>
+      <li><a href="/locations-we-serve/the-village/">The Village</a></li>
+      <li><a href="/locations-we-serve/warr-acres/">Warr Acres</a></li>
     </ul>
     </div></section>'''
     html += cta_block()
