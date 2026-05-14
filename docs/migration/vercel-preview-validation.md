@@ -1,5 +1,7 @@
 # Vercel Preview Validation — Spark Shark Electric
 
+> **STATUS: Historical.** Cutover completed 2026-05-14. Vercel is now serving production at sparkshark.com. This validation record is preserved as an archive of the pre-cutover acceptance check.
+
 ## 1. Purpose
 
 This document records the first successful Vercel preview validation after moving the Spark Shark Electric marketing site toward Vercel production hosting. It records what was tested, what passed, which deployment was validated, and what still does not authorize DNS cutover.

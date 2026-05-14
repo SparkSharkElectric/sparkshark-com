@@ -1,5 +1,7 @@
 # Prior SEO Evidence — Cumulative Notes
 
+> **STATUS: Historical (pre-cutover archive).** Cutover completed 2026-05-14. The keyword targets, backlink notes, and content-gap findings remain relevant for ongoing SEO work; the "pre-cutover" framing is now historical.
+
 **Authored:** 2026-05-11
 **Scope:** Captures what prior SEO vendors have told Spark Shark about the site's keyword targets, rankings, backlink profile, technical audit, and content gaps. Sourced from Brock's Gmail and Drive. Intent: inform migration redirect map, post-launch content priorities, and disavow / backlink-cleanup decisions.
 

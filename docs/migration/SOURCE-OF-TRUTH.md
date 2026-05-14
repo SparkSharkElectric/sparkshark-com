@@ -1,7 +1,9 @@
 # sparkshark.com → Vercel Migration — Source of Truth
 
+> **STATUS: Historical.** Cutover completed 2026-05-14. sparkshark.com now serves from Vercel. This doc was the canonical pre-cutover source of truth; preserved as an archive.
+
 **Authored:** 2026-05-11
-**Status:** Canonical. Supersedes every file listed in §10.
+**Status (at time of writing):** Canonical. Supersedes every file listed in §10.
 **Authority chain:** `docs/migration/launch-gate.md` controls DNS authority. This document summarizes state; it does not authorize cutover.
 
 > This is the one place to look. If anything in another doc disagrees with this one, prefer the readiness audit at `audits/migration-readiness/2026-05-11.md` and flag the disagreement in the §12 footnote.

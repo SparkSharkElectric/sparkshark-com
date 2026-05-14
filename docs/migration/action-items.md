@@ -1,5 +1,7 @@
 # Migration Action-Item Tracker — single ranked list
 
+> **STATUS: Historical.** Cutover completed 2026-05-14. The "A = blocks DNS flip" bucket is satisfied. Open "B" / "C" items may still be relevant as post-launch follow-ups; check current state before acting.
+
 **Compiled:** 2026-05-12 (Phase 2 of the SoT §13 intake). **Authority:** this is a *consolidation*, not a new authority — `launch-gate.md` + `SOURCE-OF-TRUTH.md` + `cutover-runbook.md` remain canonical, and only Brock may write Gate Status cells.
 
 **What this is:** every Action / Gap / Pending / Verify / TODO pulled out of the five 2026-05-11 evidence artifacts (`audits/migration-readiness/2026-05-11-2013utc-reverification.md`, `audits/site-hygiene/2026-05-11-technical.md` + `-plain-english.md`, `docs/migration/coalition-findings.md`, `docs/migration/online-presence-inventory.md`, `docs/migration/prior-seo-evidence.md`), de-duplicated against SoT §4 (Brock-owned queue) and §5 (Claude-owned queue), and ranked by: **A** = blocks DNS flip · **B** = blocks post-flip monitoring/attribution · **C** = optional / post-launch cleanup. Source is cited in brackets. Items already tracked in the launch gate are marked `[GATE #n]`.

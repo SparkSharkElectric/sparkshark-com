@@ -1,5 +1,7 @@
 # Brock-Owned DNS Cutover Launch Gate
 
+> **STATUS: Historical.** Cutover completed 2026-05-14. sparkshark.com now points at Vercel; this gate is satisfied and no longer authoritative. Document preserved as the cutover-period authority record.
+
 This file is **permanent repo memory**. Every Claude session, every contributor, every reviewer must treat this as the controlling document for DNS cutover authority.
 
 ---

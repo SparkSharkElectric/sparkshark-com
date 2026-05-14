@@ -1,5 +1,7 @@
 # Online Presence Inventory — Pre-Cutover Sweep
 
+> **STATUS: Historical.** Cutover completed 2026-05-14. This inventory of external Spark Shark / Flanco surfaces remains useful as reference; verify current state before acting on anything still flagged for update.
+
 **Compiled:** 2026-05-11 (read-only, Gmail + Drive only — no live-site crawl)
 **Scope:** Every external surface where `sparkshark.com`, "Spark Shark Electric", "Flanco Electric", or `flancoelectricok.com` has a representation that could break, drift, or need updating when DNS flips from WP Engine to Vercel.
 **Source-of-truth file:** `/Users/brock/Projects/sparkshark-com/docs/migration/SOURCE-OF-TRUTH.md` (not modified).
