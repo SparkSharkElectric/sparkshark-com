@@ -22,7 +22,7 @@ Residential Electrician in Norman, OK
 Licensed residential electrical service for Norman: including evenings, weekends, and live 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Norman, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Norman with the same flat-rate pricing as the rest of the OKC metro — and a real, live, 24/7 phone for nights and weekends. Electrical issues don't keep business hours, and you shouldn't have to wait until Monday morning for a Mon–Fri shop to open. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Norman, Oklahoma. Headquartered in Moore, we cover Norman with the same flat-rate pricing as the rest of the OKC metro — and a real, live, 24/7 phone for nights and weekends. Electrical issues don't keep business hours, and you shouldn't have to wait until Monday morning for a Mon–Fri shop to open. Call (405) 436-4776.
 
 === SECTION: What we do for Norman homeowners ===
 - **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels.

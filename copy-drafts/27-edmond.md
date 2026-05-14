@@ -22,7 +22,7 @@ Residential Electrician in Edmond, OK
 Licensed residential electrical service for Edmond: Level 2 EV chargers, smart-home wiring, panel upgrades, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Edmond, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we work in Edmond every week — newer homes adding Level 2 EV chargers, smart-home retrofits, recessed lighting upgrades, and the occasional panel change-out for a remodel or hot-tub addition. Every job is flat-rate and written before work begins. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Edmond, Oklahoma. Headquartered in Moore, we work in Edmond every week — newer homes adding Level 2 EV chargers, smart-home retrofits, recessed lighting upgrades, and the occasional panel change-out for a remodel or hot-tub addition. Every job is flat-rate and written before work begins. Call (405) 436-4776.
 
 === SECTION: What we do for Edmond homeowners ===
 - **Level 2 EV charger installation**: Tesla Wall Connector, ChargePoint, Wallbox, Ford Charge Station Pro, and other UL-listed brands.

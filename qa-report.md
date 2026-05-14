@@ -1,15 +1,118 @@
 # QA Report — sparkshark.com
 
-Run: 2026-05-13T21:41:54+00:00 | 42 pages | Pure-Python rule engine | strict=off
+Run: 2026-05-14T03:45:38+00:00 | 46 pages | Pure-Python rule engine | strict=off
 
 ## Summary
 
-- Verdict: **PASS**
-- Pages PASS: 42
-- Pages FAIL: 0
+- Verdict: **FAIL** — 15 pages flagged
+- Pages PASS: 31
+- Pages FAIL: 15
 - Warnings only: 0
 
-## Passes (42)
+## Failures
+
+### /moore/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/bethany/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/del-city/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/newcastle/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/mustang/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/yukon/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/norman/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/edmond/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/choctaw/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/noble/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/blanchard/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/piedmont/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/nichols-hills/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/the-village/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+### /locations-we-serve/warr-acres/
+
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+- double period: `. .` (likely VERIFY-tag strip leftover) — `. .`
+
+## Passes (31)
 
 - /
 - /services/
@@ -33,18 +136,7 @@ Run: 2026-05-13T21:41:54+00:00 | 42 pages | Pure-Python rule engine | strict=off
 - /frequently-asked-questions/
 - /locations-we-serve/
 - /oklahoma-city/
-- /moore/
-- /locations-we-serve/bethany/
-- /locations-we-serve/del-city/
-- /locations-we-serve/newcastle/
-- /locations-we-serve/mustang/
-- /locations-we-serve/yukon/
 - /locations-we-serve/midwest-city/
-- /locations-we-serve/norman/
-- /locations-we-serve/edmond/
-- /locations-we-serve/choctaw/
-- /locations-we-serve/noble/
-- /locations-we-serve/blanchard/
 - /blogs/
 - /2026/05/07/power-out-what-to-do-when-call-electrician/
 - /2026/05/07/signs-you-need-electrical-panel-upgrade/
@@ -57,4 +149,4 @@ Run: 2026-05-13T21:41:54+00:00 | 42 pages | Pure-Python rule engine | strict=off
 ## Coverage
 
 - Rules run: 9
-- Pages checked: 42
+- Pages checked: 46

@@ -22,7 +22,7 @@ Residential Electrician in Mustang, OK
 Licensed residential electrical service for Mustang: panel upgrades, generators, outlets, lighting, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Mustang, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Mustang's growing residential neighborhoods with the same flat-rate, written pricing as every other city in the OKC metro — no zone surcharges, no separate dispatch fees, and a real, live phone for 24/7 emergencies. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Mustang, Oklahoma. Headquartered in Moore, we cover Mustang's growing residential neighborhoods with the same flat-rate, written pricing as every other city in the OKC metro — no zone surcharges, no separate dispatch fees, and a real, live phone for 24/7 emergencies. Call (405) 436-4776.
 
 === SECTION: What we do for Mustang homeowners ===
 - **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels.

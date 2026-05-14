@@ -22,7 +22,7 @@ Residential Electrician in Del City, OK
 Licensed residential electrical service for Del City — repair, panel upgrades, 24/7 emergency dispatch, and free safety inspections with any paid call.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Del City, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we work in Del City's older neighborhoods every week — repair calls for flickering lights and breaker trips, panel upgrades for homes still on undersized service or older brand panels, and 24/7 emergency dispatch when something goes wrong overnight or on a weekend. Flat-rate, written pricing on every job. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Del City, Oklahoma. Headquartered in Moore, we work in Del City's older neighborhoods every week — repair calls for flickering lights and breaker trips, panel upgrades for homes still on undersized service or older brand panels, and 24/7 emergency dispatch when something goes wrong overnight or on a weekend. Flat-rate, written pricing on every job. Call (405) 436-4776.
 
 === SECTION: What we do for Del City homeowners ===
 - **Electrical repair**: flickering lights, dead outlets, breaker trips, GFCI/AFCI faults, partial power loss.

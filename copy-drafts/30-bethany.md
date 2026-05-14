@@ -22,7 +22,7 @@ Residential Electrician in Bethany, OK
 Licensed residential electrical service for Bethany: safety inspections, panel upgrades, repair, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Bethany, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Bethany's older housing stock with the services those homes most often need — written safety inspections, panel upgrades, and repair work for everyday issues like flickering lights, dead outlets, and repeated breaker trips. Flat-rate, written pricing on every job. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Bethany, Oklahoma. Headquartered in Moore, we cover Bethany's older housing stock with the services those homes most often need — written safety inspections, panel upgrades, and repair work for everyday issues like flickering lights, dead outlets, and repeated breaker trips. Flat-rate, written pricing on every job. Call (405) 436-4776.
 
 === SECTION: What we do for Bethany homeowners ===
 - **Electrical safety inspections**: pre-purchase, pre-renovation, insurance-required. Free with any paid service call.
