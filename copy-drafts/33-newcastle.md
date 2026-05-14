@@ -22,7 +22,7 @@ Residential Electrician in Newcastle, OK
 Licensed residential electrical service for Newcastle: panel upgrades, whole-home generators, outdoor lighting, EV chargers, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Newcastle, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Newcastle's growing residential corridor with the services those homes most often request — whole-home Generac generators, 200A panel upgrades, Level 2 EV charger installs, and outdoor lighting for newer subdivisions and ranch-style properties. Same flat-rate pricing as the rest of the OKC metro. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Newcastle, Oklahoma. Headquartered in Moore, we cover Newcastle's growing residential corridor with the services those homes most often request — whole-home Generac generators, 200A panel upgrades, Level 2 EV charger installs, and outdoor lighting for newer subdivisions and ranch-style properties. Same flat-rate pricing as the rest of the OKC metro. Call (405) 436-4776.
 
 === SECTION: What we do for Newcastle homeowners ===
 - **Electrical panel upgrades**: service replacement, 100A→200A, sub-panels.

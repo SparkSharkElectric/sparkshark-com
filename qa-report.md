@@ -1,15 +1,15 @@
 # QA Report — sparkshark.com
 
-Run: 2026-05-13T21:41:54+00:00 | 42 pages | Pure-Python rule engine | strict=off
+Run: 2026-05-14T13:52:49+00:00 | 46 pages | Pure-Python rule engine | strict=off
 
 ## Summary
 
 - Verdict: **PASS**
-- Pages PASS: 42
+- Pages PASS: 46
 - Pages FAIL: 0
 - Warnings only: 0
 
-## Passes (42)
+## Passes (46)
 
 - /
 - /services/
@@ -45,6 +45,10 @@ Run: 2026-05-13T21:41:54+00:00 | 42 pages | Pure-Python rule engine | strict=off
 - /locations-we-serve/choctaw/
 - /locations-we-serve/noble/
 - /locations-we-serve/blanchard/
+- /locations-we-serve/piedmont/
+- /locations-we-serve/nichols-hills/
+- /locations-we-serve/the-village/
+- /locations-we-serve/warr-acres/
 - /blogs/
 - /2026/05/07/power-out-what-to-do-when-call-electrician/
 - /2026/05/07/signs-you-need-electrical-panel-upgrade/
@@ -57,4 +61,4 @@ Run: 2026-05-13T21:41:54+00:00 | 42 pages | Pure-Python rule engine | strict=off
 ## Coverage
 
 - Rules run: 9
-- Pages checked: 42
+- Pages checked: 46

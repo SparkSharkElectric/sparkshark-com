@@ -63,11 +63,11 @@ Spark Shark Electric is a licensed residential electrical contractor based in Mo
 - 3. Licensed and accountable — Background-checked, licensed Oklahoma electricians. No subcontractors for residential service work.
 - 4. Live 24/7 emergency dispatch — A real person answers the phone, day or night. Emergency calls go straight to a licensed electrician on call.
 
-=== SECTION: SERVICE AREA (12 cities — chip row) ===
+=== SECTION: SERVICE AREA (17 cities — chip row) ===
 - Eyebrow: Service area
 - H2: Serving Moore, OKC & the surrounding metro
 - Subhead: Spark Shark Electric in Moore, Oklahoma, covering homeowners across the OKC metropolitan area with the same flat-rate pricing in every city.
-- Cities: Moore · Oklahoma City · Norman · Edmond · Yukon · Mustang · Midwest City · Del City · Choctaw · Newcastle · Noble · Blanchard
+- Cities: Moore · Oklahoma City · Bethany · Blanchard · Choctaw · Del City · Edmond · Midwest City · Mustang · Newcastle · Nichols Hills · Noble · Norman · Piedmont · The Village · Warr Acres · Yukon
 
 === SECTION: REVIEWS / SOCIAL PROOF ===
 - Eyebrow: What homeowners say
@@ -86,7 +86,7 @@ Spark Shark Electric is a licensed residential electrical contractor based in Mo
 
 <!-- INTERNAL LINK SUGGESTIONS:
      Hub-and-spoke. Every named service in the grid links to its dedicated service page.
-     Every city in the chip row links to its city page where one exists (10 cities currently).
+     Every city in the chip row links to its city page where one exists (17 cities currently — every chip has a page).
      About link in nav. Reviews page in nav and footer. Contact in nav and footer. FAQ in nav.
      Footer NAP must match the canonical address used on Contact page exactly. -->
 

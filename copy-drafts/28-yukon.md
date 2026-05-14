@@ -22,7 +22,7 @@ Residential Electrician in Yukon, OK
 Licensed residential electrical service for Yukon: whole-home generators, panel upgrades, EV chargers, and 24/7 emergency dispatch.
 
 === INTRO PARAGRAPH (lede paragraph at top of body) ===
-Spark Shark Electric is a licensed residential electrician serving Yukon, Oklahoma. Headquartered in Moore at [VERIFY: canonical business address], we cover Yukon's growing residential subdivisions and established neighborhoods alike — whole-home Generac standby generators for Oklahoma storms, 200A panel upgrades to support modern loads, and Level 2 EV charger installs for the longer Yukon-to-OKC commute. Flat-rate, written pricing on every job. Call (405) 436-4776.
+Spark Shark Electric is a licensed residential electrician serving Yukon, Oklahoma. Headquartered in Moore, we cover Yukon's growing residential subdivisions and established neighborhoods alike — whole-home Generac standby generators for Oklahoma storms, 200A panel upgrades to support modern loads, and Level 2 EV charger installs for the longer Yukon-to-OKC commute. Flat-rate, written pricing on every job. Call (405) 436-4776.
 
 === SECTION: What we do for Yukon homeowners ===
 - **Whole-home Generac generators**: sized to your load for ice storms, severe storms, and prolonged grid outages.

@@ -26,10 +26,21 @@ DRAFTS_DIR = ROOT / "copy-drafts"
 VERIFY_LOG = []  # collects all [VERIFY: ...] tags found, written to verify-report.md
 
 def _strip_verify(text):
-    """Remove [VERIFY: ...] tags entirely; log them for the report."""
+    """Remove [VERIFY: ...] tags entirely; log them for the report.
+
+    Also tidies up the punctuation artifacts the strip leaves behind so qa.py
+    doesn't flag them as "double period: . ." failures:
+      - "Yes. [VERIFY: x]." -> "Yes."  (sentence-terminal tag)
+      - " . " -> " "                     (orphan period after mid-sentence tag)
+    """
     found = re.findall(r'\[VERIFY:[^\]]*\]', text)
     VERIFY_LOG.extend(found)
-    return re.sub(r'[ \t]*\[VERIFY:[^\]]*\][ \t]*', ' ', text).strip()
+    text = re.sub(r'[ \t]*\[VERIFY:[^\]]*\][ \t]*', ' ', text)
+    # Collapse double-period artifacts left when a [VERIFY] tag sat at sentence end.
+    text = re.sub(r'\.\s+\.', '.', text)
+    # Collapse runs of whitespace produced by the strip.
+    text = re.sub(r'[ \t]{2,}', ' ', text)
+    return text.strip()
 
 def _strip_html_comments(text):
     return re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
@@ -563,14 +574,14 @@ def service_area_map_block():
     <div style="text-align:center;margin-bottom:24px;">
       <span class="eyebrow" style="color:#FFD700;">Where we work</span>
       <h2 id="svc-map-h" style="color:#fff;margin:8px 0 4px;font-size:1.75rem;">Service area at a glance</h2>
-      <p style="color:#94B6D8;margin:0;">12 OKC-metro cities, typically a 30-minute drive from Moore HQ.</p>
+      <p style="color:#94B6D8;margin:0;">17 OKC-metro cities, typically a 30-minute drive from Moore HQ.</p>
     </div>
     <div style="border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.4);">
     <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"
          role="img" aria-labelledby="map-title map-desc"
          style="display:block;width:100%;height:auto;background:#0C192B;">
       <title id="map-title">Spark Shark Electric service area map</title>
-      <desc id="map-desc">Moore, Oklahoma City, and 10 nearby OKC-metro communities served by Spark Shark Electric.</desc>
+      <desc id="map-desc">Moore, Oklahoma City, and 15 nearby OKC-metro communities served by Spark Shark Electric.</desc>
       <defs>
         <radialGradient id="sm-bg" cx="55%" cy="50%" r="65%">
           <stop offset="0%" stop-color="#142139"/>
@@ -603,7 +614,7 @@ def service_area_map_block():
       </g>
       <!-- Title -->
       <text x="40" y="60" font-family="Inter,system-ui,sans-serif" font-size="32" font-weight="800" fill="#FFD700">Service area</text>
-      <text x="40" y="92" font-family="Inter,system-ui,sans-serif" font-size="17" fill="#E6EDF7">12 OKC-metro cities · same flat-rate · same 24/7 phone</text>
+      <text x="40" y="92" font-family="Inter,system-ui,sans-serif" font-size="17" fill="#E6EDF7">17 OKC-metro cities · same flat-rate · same 24/7 phone</text>
       <!-- Non-featured cities -->
       <g font-family="Inter,system-ui,sans-serif" font-size="20" font-weight="500" fill="#E6EDF7">
         <circle cx="450" cy="115" r="6" fill="#94B6D8"/><text x="464" y="121">Edmond</text>
@@ -2560,7 +2571,7 @@ def build_llms_txt():
 
 > Licensed residential electrician serving Oklahoma City and the OKC metro. Flat-rate pricing, 24/7 availability, no upselling, free electrical safety inspection on every visit.
 
-{BRAND['name']} is a licensed residential electrical contractor based in {BRAND['city']}, Oklahoma. Oklahoma Electrical License {BRAND['license']}. BBB Accredited since July 2025. The company serves the Oklahoma City metropolitan area: Oklahoma City, Moore, Norman, Edmond, Yukon, Mustang, Midwest City, Del City, Choctaw, Newcastle, Noble, and Blanchard. Tagline: "{BRAND['tagline']}"
+{BRAND['name']} is a licensed residential electrical contractor based in {BRAND['city']}, Oklahoma. Oklahoma Electrical License {BRAND['license']}. BBB Accredited since July 2025. The company serves 17 cities across the Oklahoma City metropolitan area: Moore, Oklahoma City, Bethany, Blanchard, Choctaw, Del City, Edmond, Midwest City, Mustang, Newcastle, Nichols Hills, Noble, Norman, Piedmont, The Village, Warr Acres, and Yukon. Tagline: "{BRAND['tagline']}"
 
 ## Core services
 
