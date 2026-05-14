@@ -34,7 +34,7 @@ Spark Shark Electric is a residential electrician headquartered in Moore, Oklaho
 - **Lighting**: recessed indoor, outdoor landscape, security, soffit.
 
 === SECTION: Why we cover Moore ===
-- **Moore-headquartered, locally led.** Spark Shark Electric is led by Founder and CEO Brock Flanary. We live and work in the same neighborhoods we service.
+- **Moore-headquartered, locally led.** Spark Shark Electric is based in Moore — we live and work in the same neighborhoods we service.
 - **Storm-prone region.** Moore has a documented history with Oklahoma's storm and tornado patterns. We handle service-mast repair, meter-base replacement, surge protection, and whole-home generator installs that keep families safe between events.
 - **Mixed housing stock.** Moore spans mid-century homes that often need panel upgrades and newer subdivisions adding EV chargers, smart switches, and outdoor lighting. We work on both every week.
 
