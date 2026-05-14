@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Edmond, Oklah
 - **Flat-rate, written pricing.** No trip charge, no diagnostic fee. The number we quote is the number you pay.
 - **Residential-only.** We don't split focus between commercial and homes — every job is a residence.
 
-=== SECTION: Edmond FAQ ===
+=== FAQ ===
 Q: Can you install any EV charger I buy?
 A: Yes. Any UL-listed Level 2 charger. We don't lock you into a brand. [VERIFY: EV charger brands/certifications].
 

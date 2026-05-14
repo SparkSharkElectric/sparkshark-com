@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Mustang, Okla
 - **Same flat-rate as the rest of the metro.** No zone surcharges. Mustang homeowners pay what every other OKC-metro homeowner pays.
 - **Storm-prone region.** Whole-home generators are a practical Mustang call, not a luxury one.
 
-=== SECTION: Mustang FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Mustang?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 

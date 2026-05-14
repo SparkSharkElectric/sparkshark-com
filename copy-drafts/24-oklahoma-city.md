@@ -43,7 +43,7 @@ Spark Shark Electric is a licensed residential electrician serving Oklahoma City
 - **Aluminum-branch wiring** in homes built 1965–1975.
 - **EV charger circuits** in newer infill builds and renovated bungalows.
 
-=== SECTION: Oklahoma City FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Oklahoma City?
 A: Yes. Licensed and insured.
 

@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Nichols Hills
 - **High-end finish work is the norm.** Chandelier hangs at 12–18 ft, period sconces with modern dimmers, smart switches that don't require a neutral wire, low-voltage runs for landscape and accent lighting. We've done the variants.
 - **About 30 minutes from Moore HQ.** Same-day for emergencies; scheduled for the bigger jobs. We pre-pull permits and coordinate with the City of Nichols Hills inspector before we arrive.
 
-=== SECTION: Nichols Hills FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Nichols Hills?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 

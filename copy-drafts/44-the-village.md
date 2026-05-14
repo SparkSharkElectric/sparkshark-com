@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving The Village, 
 - **Aluminum branch wiring shows up.** Some 1960s additions used aluminum on 15A and 20A branch circuits. It's not automatically a remove-it situation — properly pigtailed with COPALUM or AlumiConn, it's safe. We do the work to code and document it for insurance.
 - **Quick run from Moore HQ.** About 30 minutes via I-44. Same-day for emergencies.
 
-=== SECTION: The Village FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in The Village?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 

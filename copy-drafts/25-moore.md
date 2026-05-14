@@ -38,7 +38,7 @@ Spark Shark Electric is a residential electrician headquartered in Moore, Oklaho
 - **Storm-prone region.** Moore has a documented history with Oklahoma's storm and tornado patterns. We handle service-mast repair, meter-base replacement, surge protection, and whole-home generator installs that keep families safe between events.
 - **Mixed housing stock.** Moore spans mid-century homes that often need panel upgrades and newer subdivisions adding EV chargers, smart switches, and outdoor lighting. We work on both every week.
 
-=== SECTION: Moore FAQ ===
+=== FAQ ===
 Q: Where in Moore are you based?
 A: [VERIFY: canonical business address — 621 Sally Ct OR 1033 NW 9th St, Moore, OK 73160]. Headquartered in Moore.
 

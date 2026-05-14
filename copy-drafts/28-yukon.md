@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Yukon, Oklaho
 - **Storm-prone region.** The same severe-weather corridor as the rest of the metro. Standby generators are practical, not luxury.
 - **Same pricing as the rest of the metro.** No zone surcharges. Yukon homeowners pay the same flat-rate quote as any other city we cover.
 
-=== SECTION: Yukon FAQ ===
+=== FAQ ===
 Q: How long does a whole-home generator install take in Yukon?
 A: Typical installs are two days — pad set, gas line tied in by a licensed plumber (we coordinate), ATS wired, and commissioning the next day. We pull the permit and schedule the inspection.
 

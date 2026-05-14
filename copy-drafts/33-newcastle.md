@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Newcastle, Ok
 - **Storm-prone region.** Whole-home generators are practical, not luxury. We size, install, permit, and commission.
 - **Outdoor lighting.** Larger lots and ranch properties benefit from professionally installed landscape lighting on properly GFCI-protected outdoor circuits.
 
-=== SECTION: Newcastle FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Newcastle?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 

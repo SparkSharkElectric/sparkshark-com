@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Choctaw, Okla
 - **Storm-prone east OKC corridor.** Whole-home generators are practical year-round. We size, install, permit, and commission with OG&E coordination.
 - **Quick reach from Moore HQ.** About 30–35 minutes via I-40 East. Same-day service is the norm.
 
-=== SECTION: Choctaw FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Choctaw?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 

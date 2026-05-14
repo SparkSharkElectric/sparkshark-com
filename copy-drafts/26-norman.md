@@ -37,7 +37,7 @@ Spark Shark Electric is a licensed residential electrician serving Norman, Oklah
 - **Mixed housing stock.** Norman spans older neighborhoods near campus, mid-century ranches, and newer construction. We work on all of them.
 - **Storm preparedness.** Norman is in the same severe-weather corridor as the rest of the metro. Whole-home generators and surge protection are common Norman calls.
 
-=== SECTION: Norman FAQ ===
+=== FAQ ===
 Q: Are you really 24/7?
 A: Yes. Live phone, day or night. For true emergencies we dispatch a licensed electrician as soon as one is available. [VERIFY: emergency response/dispatch promise].
 

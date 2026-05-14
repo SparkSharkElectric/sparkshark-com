@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Piedmont, Okl
 - **Acreage homes have different needs.** Detached shops, barns, well pumps, and outdoor equipment all need their own circuits. We've wired plenty of them across NW Oklahoma County and Canadian County.
 - **Newer subdivisions add EV chargers and smart panels.** The growth along Piedmont Road and NW 178th is mostly 200A from the start — we add the Level 2 charger, the surge protection, and the soft-start retrofit cleanly.
 
-=== SECTION: Piedmont FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Piedmont?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured statewide.
 

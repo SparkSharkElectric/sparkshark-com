@@ -37,7 +37,7 @@ Spark Shark Electric is a licensed residential electrician serving Midwest City,
 - **Active military and first-responder community.** Ask our team when scheduling about any current promotions or available discounts.
 - **Storm-prone region.** Service-mast and meter-base damage are routine post-storm calls. Whole-home generators are practical.
 
-=== SECTION: Midwest City FAQ ===
+=== FAQ ===
 Q: Do you offer a military or first-responder discount?
 A: Ask our team when scheduling about any current promotions or available discounts.
 
