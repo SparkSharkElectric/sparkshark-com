@@ -1,5 +1,7 @@
 # Migration risk defense — pre-flip runbook
 
+> **STATUS: Historical.** Cutover completed 2026-05-14. This pre-flip runbook is preserved as a record of how the cutover was sequenced.
+
 **Authored:** 2026-05-11 (converted from `spark-fsm/audits/migration-risk-defense-runbook-2026-05-11.html`)
 **Purpose:** Map the six catastrophic migration failure modes to current sparkshark.com → Vercel cutover state, identify remaining gaps, and sequence pre-flip + post-flip actions to close them.
 **Read alongside:** `docs/migration/launch-gate.md` (DNS authority) and `docs/migration/SOURCE-OF-TRUTH.md` (verdict + score).

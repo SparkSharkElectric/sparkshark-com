@@ -1,5 +1,7 @@
 # Coalition Technologies — Pre-Cutover Findings
 
+> **STATUS: Historical.** Cutover completed 2026-05-14. This pre-cutover SEO research remains useful as reference; the "pre-cutover" framing is now historical.
+
 **Source:** Gmail dig of `brock@sparkshark.com`, 2026-05-11.
 **Engagement basis:** Basecamp project "BSF Investment Group, LLC DBA Spark Shark // Joint // SEO & Local PPC" (Basecamp ID 3140673, bucket 40751486). All Basecamp to-do content below is preserved from email snippets and verbatim-quoted plaintext; full to-do bodies live behind Basecamp URLs we can no longer access post-cancellation.
 **Read-only audit. No site changes proposed here.**
