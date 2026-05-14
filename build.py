@@ -26,10 +26,21 @@ DRAFTS_DIR = ROOT / "copy-drafts"
 VERIFY_LOG = []  # collects all [VERIFY: ...] tags found, written to verify-report.md
 
 def _strip_verify(text):
-    """Remove [VERIFY: ...] tags entirely; log them for the report."""
+    """Remove [VERIFY: ...] tags entirely; log them for the report.
+
+    Also tidies up the punctuation artifacts the strip leaves behind so qa.py
+    doesn't flag them as "double period: . ." failures:
+      - "Yes. [VERIFY: x]." -> "Yes."  (sentence-terminal tag)
+      - " . " -> " "                     (orphan period after mid-sentence tag)
+    """
     found = re.findall(r'\[VERIFY:[^\]]*\]', text)
     VERIFY_LOG.extend(found)
-    return re.sub(r'[ \t]*\[VERIFY:[^\]]*\][ \t]*', ' ', text).strip()
+    text = re.sub(r'[ \t]*\[VERIFY:[^\]]*\][ \t]*', ' ', text)
+    # Collapse double-period artifacts left when a [VERIFY] tag sat at sentence end.
+    text = re.sub(r'\.\s+\.', '.', text)
+    # Collapse runs of whitespace produced by the strip.
+    text = re.sub(r'[ \t]{2,}', ' ', text)
+    return text.strip()
 
 def _strip_html_comments(text):
     return re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
