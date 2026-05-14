@@ -52,7 +52,11 @@
     { "source": "/2023/12",                "destination": "/blogs/",                 "statusCode": 301 },
     { "source": "/2023/12/",               "destination": "/blogs/",                 "statusCode": 301 },
     { "source": "/2024/01",                "destination": "/blogs/",                 "statusCode": 301 },
-    { "source": "/2024/01/",               "destination": "/blogs/",                 "statusCode": 301 }
+    { "source": "/2024/01/",               "destination": "/blogs/",                 "statusCode": 301 },
+    { "source": "/lander",                 "destination": "/",                       "statusCode": 301 },
+    { "source": "/lander/",                "destination": "/",                       "statusCode": 301 },
+    { "source": "/category/flanco-blog",   "destination": "/blogs/",                 "statusCode": 301 },
+    { "source": "/category/flanco-blog/",  "destination": "/blogs/",                 "statusCode": 301 }
   ],
   "headers": [
     {
