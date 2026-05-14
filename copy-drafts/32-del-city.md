@@ -37,7 +37,7 @@ Spark Shark Electric is a licensed residential electrician serving Del City, Okl
 - **Same flat-rate as the rest of the metro.** No zone surcharges, no separate dispatch fees.
 - **24/7 dispatch matters.** Older wiring sometimes fails after hours. We answer the phone live.
 
-=== SECTION: Del City FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Del City?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 

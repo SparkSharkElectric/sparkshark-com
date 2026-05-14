@@ -37,7 +37,7 @@ Spark Shark Electric is a licensed residential electrician serving Bethany, Okla
 - **Storm-prone region.** Whole-home generators and surge protection are practical Bethany calls.
 - **Same flat-rate as the rest of the metro.** No zone surcharges, no separate dispatch fees.
 
-=== SECTION: Bethany FAQ ===
+=== FAQ ===
 Q: Will an inspection report from you satisfy my insurance carrier?
 A: Most carriers accept a written safety inspection from a licensed Oklahoma electrical contractor. [VERIFY: Oklahoma CIB license #00163603]. If your carrier has a specific form, we'll complete it.
 

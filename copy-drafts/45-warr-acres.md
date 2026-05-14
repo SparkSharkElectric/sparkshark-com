@@ -39,7 +39,7 @@ Spark Shark Electric is a licensed residential electrician serving Warr Acres, O
 - **Storm corridor.** When OKC's NW side takes a hit, weather heads and service entrances are the first thing to fail. We carry the parts and coordinate with OG&E for the reconnect.
 - **Quick reach from Moore HQ.** About 30 minutes via I-44. Same-day for emergencies; scheduled the next morning for everything else.
 
-=== SECTION: Warr Acres FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Warr Acres?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 

@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Blanchard, Ok
 - **Storm-prone SW metro.** Whole-home generators are practical, not luxury, we handle sizing, gas-line coordination, ATS install, and commissioning.
 - **Newer subdivisions.** EV charger installs, smart panels, and code-driven new-build add-ons are the common ask in newer developments.
 
-=== SECTION: Blanchard FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Blanchard?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 

@@ -38,7 +38,7 @@ Spark Shark Electric is a licensed residential electrician serving Noble, Oklaho
 - **Ranch-style outdoor wiring.** Larger lots and acreage benefit from properly GFCI-protected outdoor circuits — landscape lighting, shop sub-panels, well-pump feeders.
 - **Storm prep.** Whole-home generators are common asks; we handle gas-line coordination, ATS install, and commissioning.
 
-=== SECTION: Noble FAQ ===
+=== FAQ ===
 Q: Are you licensed to work in Noble?
 A: Yes. [VERIFY: Oklahoma CIB license #00163603]. Licensed and insured.
 
