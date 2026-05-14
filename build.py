@@ -136,21 +136,30 @@ ST_SCHEDULER_ID = "sched_b2upae383kzlb9qjuhmqnyvt"
 
 # Tracking & verification — single source of truth.
 #
-# GTM_CONTAINER_ID:
-#   Single tracking deploy mechanism per the 2026-05-10 cutover decision. All
-#   downstream tag reconciliation (GA4, Google Ads, Clarity, etc.) happens inside
-#   the GTM UI — never hardcoded back into build.py. This sidesteps the multi-tag
-#   sprawl problem documented in migration-evidence-pack 6/06-current-tracking/
-#   tracking-ids.md.
+# GOOGLE_TAG_ID:
+#   Per the 2026-05-11 cutover decision (docs/migration/cutover-runbook.md
+#   Risk 6): emit the unified Google Tag (gtag.js) rather than a GTM container.
+#   GT-NGS794C2 is the Site-Kit-managed tag that was already proxying GA4
+#   (measurement ID G-QK02QH3SWY, property 488680346) and Google Ads
+#   (AW-17076116496, label Hf8UCO6r84cZEN7Iyq0p) on the live WordPress site.
+#   Reusing it preserves the historical GA4 destination and the existing Ads
+#   conversion wiring with zero GTM UI work — the GA4 + Ads tags are already
+#   configured behind GT-NGS794C2.
+#
+#   The prior constant was GTM_CONTAINER_ID = "GTM-TBCXCXGS". That container
+#   was documented as "different/unused" in SOURCE-OF-TRUTH.md §11 and was
+#   the root cause of the 2026-05-13 post-cutover analytics gap (pageviews
+#   were firing into a container with no downstream tags). Retired here.
 #
 # GSC_VERIFICATION_VALUE:
 #   The value Google Search Console expects in the `google-site-verification`
-#   meta tag. When empty, the meta is NOT emitted (conditional). This lets the
-#   tracking PR ship without blocking on GSC value resolution. To enable: paste
-#   the value GSC's HTML-tag-method dialog shows (not what GSC finds on the live
-#   WordPress site — that belongs to a different account). After updating: rerun
+#   meta tag. When empty, the meta is NOT emitted (conditional). GSC for
+#   sparkshark.com is already verified via DNS TXT at the apex
+#   (token 1DyR8lUg..., confirmed 2026-05-11), so this is optional
+#   belt-and-suspenders. To enable: paste the value GSC's HTML-tag-method
+#   dialog shows for the Spark-Shark-owned property. After updating: rerun
 #   `python3 build.py` and push.
-GTM_CONTAINER_ID = "GTM-TBCXCXGS"
+GOOGLE_TAG_ID = "GT-NGS794C2"
 GSC_VERIFICATION_VALUE = ""
 
 # ============================================================================
@@ -331,21 +340,20 @@ def head(title, description, path, extra_schema=None):
         if GSC_VERIFICATION_VALUE
         else ""
     )
+    # Google tag (gtag.js) — see GOOGLE_TAG_ID comment block above for rationale.
+    # gtag.js has no <noscript> fallback, so gtm_body stays empty. Variable name
+    # kept (vs. renamed to "tag_head" / "tag_body") to keep the diff minimal and
+    # the call sites stable across templates.
     gtm_head = (
-        f"<!-- Google Tag Manager -->\n"
-        f"<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':"
-        f"new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],"
-        f"j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src="
-        f"'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);"
-        f"}})(window,document,'script','dataLayer','{GTM_CONTAINER_ID}');</script>\n"
-        f"<!-- End Google Tag Manager -->"
+        f"<!-- Google tag (gtag.js) -->\n"
+        f'<script async src="https://www.googletagmanager.com/gtag/js?id={GOOGLE_TAG_ID}"></script>\n'
+        f"<script>window.dataLayer = window.dataLayer || [];"
+        f"function gtag(){{dataLayer.push(arguments);}}"
+        f"gtag('js', new Date());"
+        f"gtag('config', '{GOOGLE_TAG_ID}');</script>\n"
+        f"<!-- End Google tag -->"
     )
-    gtm_body = (
-        f'<!-- Google Tag Manager (noscript) -->\n'
-        f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_CONTAINER_ID}" '
-        f'height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n'
-        f'<!-- End Google Tag Manager (noscript) -->'
-    )
+    gtm_body = ""  # gtag.js has no noscript fallback; nothing to emit in <body>.
     return f'''<!DOCTYPE html>
 <html lang="en-US">
 <head>
