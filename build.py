@@ -337,7 +337,12 @@ def service_schema(name, description, path):
 # ============================================================================
 def head(title, description, path, extra_schema=None):
     canonical = f"{SITE}{path}"
-    schemas = [base_schema()]
+    base = base_schema()
+    # Strip global FAQPage from non-home @graph to avoid duplicate FAQPage with
+    # page-specific emitters on service/city/FAQ pages (Google may de-dupe).
+    if path != "/":
+        base["@graph"] = [n for n in base["@graph"] if n.get("@type") != "FAQPage"]
+    schemas = [base]
     if extra_schema:
         if isinstance(extra_schema, list):
             schemas.extend(extra_schema)
